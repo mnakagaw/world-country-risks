@@ -1,134 +1,97 @@
-# World Country Risks — Logic Transparency & GitHub Pages Mirror
+# Country Risks App（国家機能リスク早期警戒ダッシュボード）
 
-**Live dashboards**
-- Primary (custom domain): https://world.countryrisks.org/
-- Secondary mirror (GitHub Pages): https://mnakagaw.github.io/world-country-risks/
+本プロジェクトは、各国で「国家機能（state capacity / state fragility）」に関わる兆候が同時多発的に強まっていないかを、**日次で可視化**するダッシュボードです。  
+これは「予測（prediction）」ではなく、公開情報に基づく **早期警戒（early warning）** のための観測・整理ツールです。
 
-This repository is the **public transparency layer** of the World Country Risks project:
-- Publishes core **logic and UI** for reproducibility (research/policy).
-- Hosts a **read-only mirror** site via GitHub Pages.
-
-> This dashboard provides risk *signals* derived from open data pipelines. It is not a definitive statement of ground truth.
+- 公開サイト（GitHub Pages）: https://mnakagaw.github.io/world-country-risks/
+- 独自ドメイン版: 既存運用を維持（Private側で更新）
 
 ---
 
-## What the dashboard measures (R1–R4)
+## 1. 背景：なぜ「国家機能」を観測するのか
 
-The system tracks country-level stress signals as four operational bundles:
+国家の安定は、選挙やGDPだけではなく、日々の「政治的サービス（political goods）」の供給能力によって左右されます。  
+本ダッシュボードは、国家崩壊研究（state failure / state fragility）で参照される議論を、観測可能なシグナルへ落とし込む試みです。
 
-- **R1 — Security / Violence**
-- **R2 — Living / Basic Services**
-- **R3 — Governance / Legitimacy**
-- **R4 — Fiscal / Economic stress**
+- **Rotberg（政治的サービス / political goods）**の観点：治安、生活サービス、統治、財政の機能不全は連鎖しうる  
+- **Besley & Persson（国家能力 / state capacity）**の観点：徴税・法執行・行政能力が「平時の耐性」を規定する  
+- **Sen（飢饉研究など）**の観点：危機は“出来事”だけでなく“制度・配分・統治”で増幅する
 
-Implementation details (generation, scoring, and UI) are in `scripts/` and `src/`.
-
----
-
-## Branches and what they contain
-
-This public repository uses two branches with different purposes:
-
-### `main` — logic transparency (source code)
-Contains the source code and configuration needed to understand and reproduce the logic:
-- `src/` (UI)
-- `scripts/` (generation pipeline)
-- `config/`, `tests/`, `public/` (light assets)
-- `LICENSE`, `SECURITY.md`, `.env.example`
-
-To keep `main` lightweight, large runtime datasets are excluded (for example `public/data/`, `public/geo/`).
-
-### `gh-pages` — published site artifacts
-Contains the built static site output (equivalent to `dist/`). GitHub Pages serves **this branch**.
+> ねらい：出来事（Event）だけでなく、国家機能の「束（bundle）」として兆候を捉える
 
 ---
 
-## How public updates work (two-stage sync)
+## 2. 監視対象：R1〜R4（国家機能の4束）
 
-### 1) Source sync (logic) — when code changes
-When the **private build repo** updates its `main`, a workflow syncs an allowlist of safe files to this public repo’s `main`.
+本プロジェクトでは、国家機能を4つの束（R1–R4）に分けて監視します。
 
-- Goal: publish logic for transparency
-- Safety: credentials and large data are excluded by design
+- **R1 Security（治安・暴力）**  
+  暴力、治安悪化、武力衝突、住民への脅威など
+- **R2 Living（生活・基礎サービス）**  
+  物価、供給、インフラ障害、医療、生活不安など
+- **R3 Governance（統治・正統性）**  
+  政治危機、抗議、選挙紛争、腐敗、司法・行政の混乱など
+- **R4 Fiscal/Economy（財政・経済）**  
+  財政不安、通貨・金融不安、制度的な資金繰り悪化など
 
-### 2) Artifact sync (site) — when daily builds run
-Daily (or manual) runs generate data and build the site **once**, then deploy the same artifacts to:
-1) the primary custom-domain site (FTP)
-2) GitHub Pages (`gh-pages` branch)
-
-This is the **Build Once, Deploy Twice** design to avoid double BigQuery execution.
-
----
-
-## Reproducibility (local)
-
-### Requirements
-- Node.js 20+
-- npm
-- BigQuery project + credentials (only if running full generation)
-
-### Install
-
-    npm ci
-
-### Run UI locally
-
-    npm run dev
-
-### Generate data + build (may incur BigQuery cost)
-
-    npm run generate
-    npm run build
-
-### Environment variables
-See `.env.example`. Typical variables:
-- `BQ_PROJECT_ID` (or `GOOGLE_CLOUD_PROJECT`)
-- `GOOGLE_APPLICATION_CREDENTIALS` (service account JSON path)
-- `GEMINI_API_KEY` (optional; depends on configuration)
-
-> Cost note: `npm run generate` may scan large datasets depending on query windows and baselines.
+> 重要：R4はR1〜R3の“原因”にも“結果”にもなり得ます。  
+> 本ダッシュボードは、因果を断定せず「同時に強まっている束」を観測します。
 
 ---
 
-## Security
-Do **not** commit secrets or credentials. For vulnerability reporting, see `SECURITY.md`.
+## 3. データソース：Event / Air（注目の高まり）/ News補助
+
+### 3.1 Event（出来事の観測）
+- **GDELT v2 Events（イベント）**を中心に、国別・類型別の出来事を集計します。  
+  ※「報道量」そのものではなく、ニュース由来のイベント抽出を通じて“起きたこと”を近似します。
+
+### 3.2 Air signals（ニュース以外の“注目の高まり”）
+ニュース以外の外部シグナルとして、注目の高まりを補足します。
+- Google Trends（国別の検索トレンド上昇語）
+- GetDayTrends（X等の急上昇トピック：国別）
+- Polymarket（予測市場で注目されるテーマ）
+
+### 3.3 News補助（要約生成の材料）
+- GDELT GKG / RSS 等を用い、表示や要約の補助となる見出し情報を取得します。  
+  （取得できない場合は決定的なフォールバックを表示）
 
 ---
 
-## License
-MIT — see `LICENSE`.
+## 4. スコアリング：ベースライン比較とR-INDEX
+
+### 4.1 なぜ「平時との比較」なのか
+国によって平時の事件・報道の多寡が違うため、単純な件数比較では国際比較が歪みます。  
+そこで本プロジェクトは、各国の平時（baseline）に対する**倍率（ratio）**を重視します。
+
+### 4.2 ベースライン（baseline）
+- 各国×R1–R4について、一定期間の分布から「平時の代表値（例：median）」を作り、当日値を相対比較します。
+- 極端に小さいベースラインの項目は、ノイズになりやすいため安全弁（ガード）で抑制します。
+
+### 4.3 警戒レベル（例）
+倍率に基づき、Yellow / Orange / Red を判定します（閾値は実装で管理）。  
+また、外圧ノイズ等の条件では、判定を保守的にするゲート（抑制）を入れます。
+
+### 4.4 R-INDEX（統合リスク指標）
+画面の **R-INDEX** は、概念的には以下の統合を目指します：
+
+- 「現状の負荷（Raw/状態）」 × 「平時からの跳ね上がり（Surge/倍率）」  
+- さらに、R1–R4の“束”として同時性（bundle concurrency）を重視
+
+※ 具体の計算は scripts/ 配下に実装されています。
 
 ---
 
-<details>
-<summary><strong>日本語（概要）</strong></summary>
+## 5. 日次生成パイプライン（Build Once, Deploy Twice）
 
-## このリポジトリは何？
-World Country Risks は、国家機能の不安定化を **R1–R4（治安・生活・統治・財政）** の4束で日次モニタリングする早期警戒ダッシュボードです。  
-このリポジトリは **ロジック公開（透明性）** と **GitHub Pages ミラー公開** のための公開レイヤーです。
+BigQueryコストを抑えるため、**生成＋ビルドは1回だけ**行い、その成果物（dist）を二系統へ配布します。
 
-- 本番（独自ドメイン）: https://world.countryrisks.org/
-- ミラー（GitHub Pages）: https://mnakagaw.github.io/world-country-risks/
-
-## ブランチの役割
-- `main`：ロジック（`src/`, `scripts/`, `config/`, `tests/`）。巨大データは除外して軽量化。  
-- `gh-pages`：表示サイトの成果物（`dist` 相当）。Pages はここを配信。
-
-## 更新の仕組み
-- ソース同期：Private側の変更を allowlist で抽出し Public `main` に同期  
-- 成果物同期：日次で生成＋ビルドを **1回だけ** 実行し、同じ成果物を FTP と Pages に二重配布（Build Once, Deploy Twice）
-
-</details>
-
-<details>
-<summary><strong>Español (resumen)</strong></summary>
-
-Este repositorio es la capa pública de transparencia del proyecto World Country Risks:
-- `main`: código (UI y lógica) para reproducibilidad.
-- `gh-pages`: artefactos compilados del sitio (equivalente a dist) para GitHub Pages.
-
-Actualizaciones:
-- Sincronización de lógica cuando cambia el código (allowlist).
-- Compilación diaria una sola vez y despliegue a FTP + Pages (Build Once, Deploy Twice) para minimizar costo de BigQuery.
-
-</details>
+```mermaid
+graph TD
+  A[Private Repo: daily_update] --> B[BigQuery / Data generation]
+  B --> C[Build dist]
+  C --> D[Deploy 1: FTP (独自ドメイン)]
+  C --> E[Artifact dist]
+  E --> F[Deploy 2: GitHub Pages (Public repo gh-pages)]
+  G[Private Repo: push] --> H[sync_public_source]
+  H --> I[Public repo main (ロジック公開)]
+```
