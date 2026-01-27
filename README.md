@@ -170,3 +170,39 @@ AIR は **危機スコアの主因ではなく補助情報**です。
   ※巨大データ（例：`public/data` 等）や機密（`credentials`）は除外して軽量化
 - **gh-pages：公開サイト成果物（配布）**  
   ビルド成果物（`dist` 相当）を配置し、GitHub Pages が配信
+
+---
+
+## 8. 参考文献・理論的支柱
+
+### ダッシュボードの中心理論（骨格）
+本ダッシュボードは、Rotberg、Besley & Persson、North らの議論を骨格として設計されています。
+
+1.  **Rotberg（政治的財）**  
+    国家が最低限提供すべき「政治財（political goods）」を軸に、R1–R4（治安・生活・統治・財政）という観測束の“規範軸（何を見るべきか）”を与えます。
+2.  **Besley & Persson（国家能力の柱）**  
+    国家能力・暴力・徴税・統治が「束（クラスター）」として結びつくという見方を提示し、複数兆候の同時点灯（R-concurrency）を“因果の束”として正当化します。
+3.  **North（制度の作動）**  
+    制度は紙の上ではなく「実際に作動するか（incentives & enforcement）」が重要であるという立場から、運用・執行・解除規律（点灯→裏取り→解除）を“制度の作動確認”として位置づけます。
+
+### 参考文献一覧
+
+#### 中心理論（ダッシュボードの骨格）
+
+*   Rotberg, Robert I. (2002). *The New Nature of Nation-State Failure*.
+*   Rotberg, Robert I. (ed.). (2003). *When States Fail: Causes and Consequences*.
+*   Rotberg, Robert I. (ed.). (2003). *Failed States, Collapsed States, Weak States: Causes and Indicators*.
+*   Besley, Timothy, & Persson, Torsten. (2011). *Pillars of Prosperity: Political Economics of State Building and Violence*.
+*   North, Douglass C. (1990). *Institutions, Institutional Change and Economic Performance*.（邦訳：『制度・制度変化・経済成果』）
+
+#### 理論補強（運用・可視化・高頻度の正当化）
+
+*   Andrews, Matt, Pritchett, Lant, & Woolcock, Michael. (2017). *Building State Capability: Evidence, Analysis, Action*.
+*   Scott, James C. (1998). *Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed*.（邦訳：『国家のように見る』）
+*   Epstein, Richard A. (1995). *Simple Rules for a Complex World: Legal Principles*.
+*   Lipsky, Michael. (1980). *Street-Level Bureaucracy: Dilemmas of the Individual in Public Services*.（邦訳：『ストリート・レベルの官僚制』）
+*   Taleb, Nassim Nicholas. (2012). *Antifragile: Things That Gain from Disorder*.（邦訳：『反脆弱性』）
+*   Rosa, Hartmut. (2013). *Social Acceleration: A New Theory of Modernity*.
+*   Rothstein, Bo (ed.). (2012). *The Oxford Handbook of Quality of Government*.
+*   Basu, Kaushik, & Cordella, Tito (eds.). (2018). *Institutions, Governance and the Control of Corruption*.
+
