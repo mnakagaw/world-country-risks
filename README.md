@@ -4,8 +4,8 @@
 World Country Risks は、各国の「国家機能の不安定化（state fragility / stress on state capacity）」を、ニュース由来の出来事データを中心に **日次で可視化**する早期警戒ダッシュボードです。  
 本プロジェクトの目的は「政権崩壊の予言」ではなく、国家が担うべき中核機能（治安・生活・統治・財政）が **どの方向に、どれくらい強く、平時から逸脱しているか**を国別に把握し、研究・政策・報道の初動判断を支援することにあります。
 
-- 表示サイト（GitHub Pages）：`https://mnakagaw.github.io/world-country-risks/`
-- 公開リポジトリ（ロジック公開）：`mnakagaw/world-country-risks`
+- 表示サイト（GitHub Pages）：[https://mnakagaw.github.io/world-country-risks/](https://mnakagaw.github.io/world-country-risks/)
+- 公開リポジトリ（ロジック公開）：[mnakagaw/world-country-risks](https://github.com/mnakagaw/world-country-risks)
 
 ---
 
