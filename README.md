@@ -116,6 +116,11 @@ AIR は **危機スコアの主因ではなく補助情報**です。
 
 （※TRENDING は AIR ではありません。TRENDING は探索の入口として扱います。）
 
+### 4.4 データ種別の関係（まとめ）
+- **Events（GDELT）**：R-INDEX（中核スコア）の主要入力（出来事の兆候）
+- **AIR**：検索・SNS・予測市場などの補助的な注目シグナル（文脈・注意喚起）
+- **TRENDING**：探索の入口（何が注目されているか）。※スコアの確度・深刻度ランキングではありません
+
 ---
 
 ## 5. ロジック：なぜ“件数”ではなく“平時からのズレ”を見るのか
@@ -134,6 +139,9 @@ AIR は **危機スコアの主因ではなく補助情報**です。
 ### 5.3 R-INDEX（危機兆候スコア）
 **R-INDEX は“平時からのズレ（倍率）”を中心に構成された危機兆候スコア**です。  
 画面での Red / Orange / Yellow は、単なる件数ではなく、主にこの「ズレ」と安全弁（ゲート）を通過した結果として表現されます。
+
+**R-INDEX** は「出来事の件数」ではなく、各国の平時ベースラインに対する **ズレ（Ratio）** を中心に算出する“兆候”指標です。欠損・外圧ノイズ・不安定入力などは **Gate（安全弁）** で抑制し、誤点灯を減らします。  
+**Yellow / Orange / Red** は「絶対件数」ではなく **R-INDEX＋Gate** の結果で決まります。
 
 ### 5.4 誤検知抑制：ゲート（Gate）と安全弁
 倍率が跳ねても、それが
@@ -205,4 +213,23 @@ AIR は **危機スコアの主因ではなく補助情報**です。
 *   Rosa, Hartmut. (2013). *Social Acceleration: A New Theory of Modernity*.
 *   Rothstein, Bo (ed.). (2012). *The Oxford Handbook of Quality of Government*.
 *   Basu, Kaushik, & Cordella, Tito (eds.). (2018). *Institutions, Governance and the Control of Corruption*.
+
+---
+
+## 9. 引用（Cite this）
+
+本ダッシュボード／リポジトリを論文・報告書等で参照する場合は、以下の形式を推奨します（アクセス日を記載）：
+
+> Nakagawa, M. (2026). *World Country Risks — Global Early Warning Dashboard* (GitHub repository). Retrieved YYYY-MM-DD, from https://github.com/mnakagaw/world-country-risks
+
+（※年は適宜更新、Retrievedは参照日）
+
+## 10. データソース（Credits）
+
+本プロジェクトは公開データソースを利用しています（例）：
+- **GDELT 2.x**（Events / GKG）
+- Google Trends / GetDayTrends / Polymarket（AIRとして表示）
+
+### 注意書き
+データの網羅性や報道・言語の偏りは国ごとに異なります。本表示は「観測されたデータにもとづく兆候」であり、現地の実態そのもの（ground truth）を直接表すものではありません。
 
