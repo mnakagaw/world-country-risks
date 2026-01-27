@@ -1,0 +1,40 @@
+{
+  "name": "world-country-risks",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "generate": "node scripts/generate_daily.js",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "cost:baseline5y": "node scripts/bigquery/dryrun_5y_baseline_cost.mjs --years 5",
+    "baselines:build": "node scripts/bigquery/build_country_baselines_5y.mjs --years 5",
+    "baselines:build:force": "node scripts/bigquery/build_country_baselines_5y.mjs --years 5 --max_gb 500",
+    "deploy": "node scripts/deploy.mjs"
+  },
+  "dependencies": {
+    "@google-cloud/bigquery": "^8.1.1",
+    "@google/generative-ai": "^0.24.1",
+    "basic-ftp": "^5.1.0",
+    "dotenv": "^17.2.3",
+    "leaflet": "^1.9.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "^7.12.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "vite": "^7.2.4"
+  }
+}

@@ -1,0 +1,62 @@
+{
+    "version": "rdefs-v2",
+    "description": "R1-R4 GDELT Events definitions for country risk signals",
+    "country_field": "ActionGeo_CountryCode",
+    "note": "Do NOT modify definitions here without updating weekly_query.sql and baseline scripts to match. Run validate_rdefs_vs_weekly_sql.mjs after changes.",
+    "R1": {
+        "name": "Security",
+        "description": "Military action, violence, armed conflict",
+        "rootCodes": [
+            "18",
+            "19",
+            "20"
+        ],
+        "eventCodes": [],
+        "eventCodePrefixes": []
+    },
+    "R2": {
+        "name": "Living",
+        "description": "Humanitarian aid appeals/demands, living condition protests",
+        "rootCodes": [],
+        "eventCodes": [
+            "023",
+            "073",
+            "0233",
+            "1033",
+            "1623",
+            "1663"
+        ],
+        "eventCodePrefixes": [
+            "023"
+        ]
+    },
+    "R3": {
+        "name": "Governance",
+        "description": "Protests, corruption investigations, policy demands",
+        "rootCodes": [
+            "14",
+            "17"
+        ],
+        "eventCodes": [
+            "091",
+            "1121",
+            "104"
+        ],
+        "eventCodePrefixes": []
+    },
+    "R4": {
+        "name": "Fiscal",
+        "description": "Aid, sanctions, economic pressure",
+        "rootCodes": [],
+        "eventCodes": [
+            "1031",
+            "071",
+            "163",
+            "1312",
+            "1311"
+        ],
+        "eventCodePrefixes": [
+            "162"
+        ]
+    }
+}

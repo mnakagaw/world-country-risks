@@ -1,0 +1,70 @@
+{
+    "version": "v4.3-trial-C",
+    "event_count_floor": 200,
+    "r1_security": {
+        "absolute_threshold": 300,
+        "ratio_threshold": 0.06,
+        "use_jump_gate": true,
+        "jump_threshold": 1.4,
+        "min_median_floor": 150,
+        "min_history_days": 10
+    },
+    "r2_living": {
+        "absolute_threshold": 180,
+        "ratio_threshold": 0.035,
+        "use_jump_gate": false
+    },
+    "r3_governance": {
+        "absolute_threshold": 150,
+        "ratio_threshold": 0.045,
+        "use_jump_gate": true,
+        "jump_threshold": 1.4,
+        "min_median_floor": 80,
+        "min_history_days": 10
+    },
+    "r4_fiscal": {
+        "absolute_threshold": 200,
+        "ratio_threshold": 0.04,
+        "use_jump_gate": false
+    },
+    "volume": {
+        "threshold": 5000
+    },
+    "tone": {
+        "bad_threshold": -3,
+        "mild_threshold": -1.8
+    },
+    "alert_levels": {
+        "red_bundles": 3,
+        "orange_bundles": 2,
+        "yellow_min_bundles": 1,
+        "yellow_requires_tone": true
+    },
+    "high_volume_suppression": {
+        "enabled": false
+    },
+    "vol_jump": {
+        "enabled": true,
+        "window_days": 14,
+        "threshold": 2.0,
+        "min_history_days": 10,
+        "min_median_floor": 800
+    },
+    "baseline_adjustment": {
+        "enabled": true,
+        "mode": "ratio",
+        "k": 1.0,
+        "floor": 50,
+        "epsilon": 1
+    },
+    "surge_r": {
+        "min_baseline_median_for_surge": 3,
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "thresholds": {
+            "yellow": 1.75,
+            "orange": 2.75,
+            "red": 3.75
+        }
+    }
+}
