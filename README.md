@@ -1,10 +1,9 @@
 # Country Risks App（国家機能リスク早期警戒ダッシュボード）
 
-本プロジェクトは、各国で「国家機能（state capacity / state fragility）」に関わる兆候が同時多発的に強まっていないかを、**日次で可視化**するダッシュボードです。  
+本プロジェクトは、各国で「国家機能（state capacity / state fragility）」に関わる兆候の高まりを、**日次で可視化**するダッシュボードです。  
 これは「予測（prediction）」ではなく、公開情報に基づく **早期警戒（early warning）** のための観測・整理ツールです。
 
 - 公開サイト（GitHub Pages）: https://mnakagaw.github.io/world-country-risks/
-- 独自ドメイン版: 既存運用を維持（Private側で更新）
 
 ---
 
