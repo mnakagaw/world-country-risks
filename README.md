@@ -1,216 +1,3 @@
-<details open>
-<summary><strong>日本語</strong></summary>
-
-# World Country Risks（国家機能リスク早期警戒ダッシュボード）
-
-## 0. 概要
-World Country Risks は、各国の「国家機能の不安定化（state fragility / stress on state capacity）」を、ニュース由来の出来事データを中心に 日次で可視化する早期警戒ダッシュボードです。  
-本プロジェクトの目的は「政権崩壊の予言」ではなく、国家が担うべき中核機能（R1:治安・R2:生活・R3:統治・R4:財政）が どの方向に、どれくらい強く、平時から逸脱しているかを国別に把握し、研究・政策・報道の初動判断を支援することにあります。
-
-- 表示サイト（GitHub Pages）：https://mnakagaw.github.io/world-country-risks/
-- 公開リポジトリ（ロジック公開）：mnakagaw/world-country-risks
-
-## 1. 使用法
-### 1) 日付の切替
-画面上部の日付操作（← / → / TODAY）で対象日を切り替えます。
-
-### 2) 表示モードの切替
-画面右上の表示モードで、可視化の観点を切り替えます。
-
-- **R-INDEX**：平時からのズレ（倍率）を中心に国家の中核機能に対する「危機兆候」を見る（メイン）
-- **RAW / 生データ**：その日の件数など“量”を中心に見る（比較用）
-- **TRENDING / トレンド**：話題化している国・トピック（報道ベース）
-
-### 3) 国別詳細の確認
-地図上の国、または右側の国リストをクリックすると国別パネルが開き、以下を確認できます。
-
-- どの領域（R1〜R4）が強まっているか
-- Today / Baseline / Ratio（当日値・平時参照・倍率）
-- 根拠となるニュース（タイトル／ソース）
-
-### 4) ヒストリー（週次の推移）の確認（Expand）
-国別パネル上部の **Expand** をクリックすると、その国の **週次ヒストリー表示（Historical Analysis）** を開けます。ここでは「危機兆候がいつから・どの束（R1〜R4）で点灯し始めたか」を、直近最大52週などの範囲で確認できます。
-
-**上段のタイル（Bundle / R1〜R4）**  
-週ごとの状態を色で表示します。Bundle は総合（束全体）、R1〜R4 は各領域の週次シグナルです。  
-表示は Signal View（ゲート適用後の is_active に基づく離散色）が基本で、週ごとの「点灯」を追う用途に向きます。
-
-**View（表示切替）の意味**
-- **Signal (Discrete)**：週ごとの警戒シグナル（離散表示）。運用上の判断・時系列比較に適します。
-- **State (Absolute)**：絶対量（件数）寄りの見方。慢性的負荷（平時から多い）を把握する補助に使います。
-- **Intensity (Heatmap)**：強度（比率）寄りの見方。点灯の“手前”や上昇の度合いを把握する補助に使います。
-
-**First Lit Analysis（初回点灯分析）**  
-R1〜R4それぞれについて、最初に Yellow / Orange / Red が点灯した週を表示します。  
-これにより「どの領域が先行して悪化し始めたか（例：R3→R1 の波及）」を読み取れます。
-
-## 2. 背景理論：なぜ「国家機能」を束で捉えるのか
-### 2.1 国家機能＝国家が供給すべき中核的な公共財
-本プロジェクトは国家を、領土支配の装置としてだけでなく、社会が最低限成り立つために必要な機能（公共財）を継続的に供給する主体として捉えます。  
-国家の不安定化は、クーデターや選挙結果のような単発イベントだけでなく、国家が供給すべき機能が、じわじわと（あるいは急激に）劣化するプロセスとして現れます。  
-本ダッシュボードは、この劣化プロセスを「兆候」として日次で観測可能な形に整理し、国際比較に耐える視点で提示します。
-
-### 2.2 Rotberg：国家崩壊研究における「政治的財（political goods）」
-Robert I. Rotberg の議論では、国家は市民に対して「政治的財（political goods）」を供給する責務があり、国家の危機はそれらの供給不全として観測される、という発想が強調されます。  
-政治的財を日常語で言い換えると、概ね次のような機能です。
-
-- 人々の **安全** と秩序が維持されること
-- 生活の基盤となる **基本サービス** が継続して提供されること
-- ルールが **正当に運用** され、統治が機能すること
-- 国家運営に必要な **財政的基盤** が維持されること
-
-本プロジェクトは、これらを観測可能なシグナルへ落とし込み、R1〜R4の4束として操作化します。
-
-### 2.3 Besley & Persson（Pillars）：国家能力を支える4要素
-本プロジェクトのもう一つの参照枠は、Besley & Persson による国家能力（state capacity）に関する議論です。  
-国家能力を「平時の耐性（shock absorption / resilience）」として捉える際、一般に次のような柱（pillars）が中核になります（本プロジェクトでは概念的整理として参照します）。
-
-- **徴税能力（fiscal/tax capacity）**：税を公平・継続的に集め、国家運営の財源を確保する力
-- **法の執行能力（legal capacity）**：契約・権利・治安を法制度により担保し、秩序を維持する力
-- **行政実施能力（administrative capacity）**：政策を実装し、サービスを現場まで届ける運用能力
-- **統治の正統性・協力基盤（legitimacy / compliance）**：統治への受容・協力が成立し、制度が機能する土台
-
-これらの柱は、短期ショックが生じた際に「どれだけ早く、どれだけ損傷を局限できるか」を規定します。  
-本ダッシュボードは、出来事（イベント）を通じて観測されるストレスが、国家機能のどの束に集中しているかを見える化します。
-
-## 3. R1〜R4（国家機能の4束）
-本ダッシュボードは、国家機能の劣化兆候を4領域（4つの束）に整理します。  
-これはニュースのジャンル分類ではなく、国家のどの機能が傷んでいるかを表す操作概念です。
-
-- **R1：治安・暴力（Security）**  
-  暴力、武装衝突、治安機関との衝突、重大な犯罪的暴力など
-- **R2：生活・基礎サービス（Living / Basic Services）**  
-  物資不足、インフラ障害、災害影響、人道危機、生活基盤の動揺など
-- **R3：統治・正統性・予測可能性（Governance / Legitimacy）**  
-  法の支配・抗議・政治対立、制度不信、行政・司法・選挙等の統治過程の混乱、腐敗など
-- **R4：財政・経済（Fiscal / Economic stress）**  
-  財政逼迫、通貨・物価・金融ショック、経済政策の混乱など  
-  （※R4は短期イベントよりも構造要因として効く場合が多く、他領域の不安定化の背景要因になり得ます。）
-
-## 4. データソース：何を観測しているのか
-### 4.1 中心：GDELT Events（「起きたこと」寄り）
-本プロジェクトの中心は **GDELT Events（ニュースから抽出されたイベントを集計したデータベース）**です。  
-GDELT Events はニュース記事を元に「どんな種類の出来事がどの国で発生したか」をイベントコードとして集計できるため、国別・日次で兆候を追跡できます。
-
-本プロジェクトが測りたいのは **“注目された量（報道量）”そのものではなく、“各国で起きた事の性質と数”**です。  
-ただしニュースを源泉にしている以上、観測バイアス（報道密度や情報アクセス差）の影響を完全には免れません。
-
-### 4.2 補助：GDELT GKG / RSS（根拠見出し・表示材料）
-国別パネルやブリーフィングで表示する「根拠ニュース」は主に以下から構成されます。
-
-- **GDELT GKG（記事・テーマ・トーンなどのメタ情報）**
-- **RSS 等（欠損時のフォールバックとして）**
-
-目的は「根拠の手がかり」を提示し、ブラックボックス化を避けることにあります。
-
-### 4.3 補助：AIR SIGNALS（注目の高まり）
-AIR は 危機スコアの主因ではなく補助情報です。  
-ニュース以外の外部信号から「注目の高まり」を補助的に表示します（例：検索トレンド、SNSの急上昇、予測市場の主要テーマなど）。
-
-### 4.4 データ種別の関係（まとめ）
-- **Events（GDELT）**：R-INDEX（中核スコア）の主要入力（出来事の兆候）
-- **AIR**：検索・SNS・予測市場などの補助的な注目シグナル（文脈・注意喚起）
-
-## 5. ロジック：なぜ“件数”ではなく“平時からのズレ”を見るのか
-### 5.1 国ごとの平時が異なる問題
-国によってニュース量や出来事量は構造的に異なります。  
-単純な件数ランキングでは、大国が常に上位に出る／小国はデータが薄く揺れやすい等の歪みが生じます。
-
-### 5.2 ベースライン（平時参照）と倍率（Ratio）
-本プロジェクトは、各国について **平時の参照分布（ベースライン）**を持ち、
-
-- 今日（Today）
-- 平時参照（Baseline）
-- 倍率（Ratio = Today / Baseline）
-
-により「ズレ」を測ります。
-
-### 5.3 R-INDEX（危機兆候スコア）
-R-INDEX は“平時からのズレ（倍率）”を中心に構成された危機兆候スコアです。  
-画面での Red / Orange / Yellow は、単なる件数ではなく、主にこの「ズレ」と安全弁（ゲート）を通過した結果として表現されます。
-
-R-INDEX は「出来事の件数」ではなく、各国の平時ベースラインに対する ズレ（Ratio） を中心に算出する“兆候”指標です。欠損・外圧ノイズ・不安定入力などは Gate（安全弁） で抑制し、誤点灯を減らします。  
-Yellow / Orange / Red は「絶対件数」ではなく R-INDEX＋Gate の結果で決まります。
-
-### 5.4 誤検知抑制：ゲート（Gate）と安全弁
-倍率が跳ねても、それが
-
-- データが薄いことによる偶然
-- 外部要因・報道偏り
-- 一過性ノイズ
-
-である場合は、アラートとして扱うべきではありません。  
-そのため実装では、欠損・異常値・不安定入力の抑制や、過剰反応を避ける条件（ゲート）を設け、**“倍率が高い＝即アラート”**にならないよう制御します（詳細は config/ と scripts/ を参照）。
-
-## 6. 表示モードの意味
-### R-INDEX（メイン）
-その国の平時と比べて、どれだけ兆候が強まったかを見る  
-早期警戒の主画面
-
-### RAW / 生データ（比較用）
-純粋な件数・量に近いビュー  
-“今日は多いが平時も多い”などの比較に用いる
-
-### TRENDING / トレンド（報道ベース）
-いま話題になっている国・トピックを見つける  
-危機スコアの確度を決める場所ではなく、深掘り対象を見つける用途
-
-## 7. 再現性と透明性：公開リポジトリの構造（main と gh-pages）
-公開リポジトリ（mnakagaw/world-country-risks）は、透明性（論文・検証）と配布（閲覧用）を分離するため、2ブランチ運用とします。
-
-- **main：ロジック公開（透明性）**  
-  src/, scripts/, config/, tests/ 等  
-  ※巨大データ（例：public/data 等）や機密（credentials）は除外して軽量化
-- **gh-pages：公開サイト成果物（配布）**  
-  ビルド成果物（dist 相当）を配置し、GitHub Pages が配信
-
-## 8. 参考文献・理論的支柱
-### ダッシュボードの中心理論（骨格）
-本ダッシュボードは、Rotberg、Besley & Persson、North らの議論を骨格として設計されています。
-
-- **Rotberg（政治的財）**  
-  国家が最低限提供すべき「政治財（political goods）」を軸に、R1–R4（治安・生活・統治・財政）という観測束の“規範軸（何を見るべきか）”を与えます。
-- **Besley & Persson（国家能力の柱）**  
-  国家能力・暴力・徴税・統治が「束（クラスター）」として結びつくという見方を提示し、複数兆候の同時点灯（R-concurrency）を“因果の束”として正当化します。
-- **North（制度の作動）**  
-  制度は紙の上ではなく「実際に作動するか（incentives & enforcement）」が重要であるという立場から、運用・執行・解除規律（点灯→裏取り→解除）を“制度の作動確認”として位置づけます。
-
-### 参考文献一覧
-**中心理論（ダッシュボードの骨格）**
-- Rotberg, Robert I. (2002). *The New Nature of Nation-State Failure.*
-- Rotberg, Robert I. (ed.). (2003). *When States Fail: Causes and Consequences.*
-- Rotberg, Robert I. (ed.). (2003). *Failed States, Collapsed States, Weak States: Causes and Indicators.*
-- Besley, Timothy, & Persson, Torsten. (2011). *Pillars of Prosperity: Political Economics of State Building and Violence.*
-- North, Douglass C. (1990). *Institutions, Institutional Change and Economic Performance.*（邦訳：『制度・制度変化・経済成果』）
-
-**理論補強（運用・可視化・高頻度の正当化）**
-- Andrews, Matt, Pritchett, Lant, & Woolcock, Michael. (2017). *Building State Capability: Evidence, Analysis, Action.*
-- Scott, James C. (1998). *Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed.*（邦訳：『国家のように見る』）
-- Epstein, Richard A. (1995). *Simple Rules for a Complex World: Legal Principles.*
-- Lipsky, Michael. (1980). *Street-Level Bureaucracy: Dilemmas of the Individual in Public Services.*（邦訳：『ストリート・レベルの官僚制』）
-- Taleb, Nassim Nicholas. (2012). *Antifragile: Things That Gain from Disorder.*（邦訳：『反脆弱性』）
-- Rosa, Hartmut. (2013). *Social Acceleration: A New Theory of Modernity.*
-- Rothstein, Bo (ed.). (2012). *The Oxford Handbook of Quality of Government.*
-- Basu, Kaushik, & Cordella, Tito (eds.). (2018). *Institutions, Governance and the Control of Corruption.*
-
-## 9. 引用（Cite this）
-本ダッシュボード／リポジトリを論文・報告書等で参照する場合は、以下の形式を推奨します（アクセス日を記載）：
-
-Nakagawa, M. (2026). *World Country Risks — Global Early Warning Dashboard (GitHub repository).* Retrieved YYYY-MM-DD, from https://github.com/mnakagaw/world-country-risks
-
-（※年は適宜更新、Retrievedは参照日）
-
-## 10. データソース（Credits）
-本プロジェクトは公開データソースを利用しています（例）：
-
-- GDELT 2.x（Events / GKG）
-- Google Trends / GetDayTrends / Polymarket（AIRとして表示）
-
-### 注意書き
-データの網羅性や報道・言語の偏りは国ごとに異なります。本表示は「観測されたデータにもとづく兆候」であり、現地の実態そのもの（ground truth）を直接表すものではありません。
-
-</details>
-
 <details>
 <summary><strong>English</strong></summary>
 
@@ -628,5 +415,218 @@ Este proyecto utiliza fuentes públicas de datos (ejemplos):
 
 ### Aviso
 La cobertura y los sesgos de reporte/idioma varían por país. Esta visualización muestra **señales basadas en datos observados** y no representa directamente la realidad en terreno (ground truth).
+
+</details>
+
+<details open>
+<summary><strong>Japanese</strong></summary>
+
+# World Country Risks（国家機能リスク早期警戒ダッシュボード）
+
+## 0. 概要
+World Country Risks は、各国の「国家機能の不安定化（state fragility / stress on state capacity）」を、ニュース由来の出来事データを中心に 日次で可視化する早期警戒ダッシュボードです。  
+本プロジェクトの目的は「政権崩壊の予言」ではなく、国家が担うべき中核機能（R1:治安・R2:生活・R3:統治・R4:財政）が どの方向に、どれくらい強く、平時から逸脱しているかを国別に把握し、研究・政策・報道の初動判断を支援することにあります。
+
+- 表示サイト（GitHub Pages）：https://mnakagaw.github.io/world-country-risks/
+- 公開リポジトリ（ロジック公開）：mnakagaw/world-country-risks
+
+## 1. 使用法
+### 1) 日付の切替
+画面上部の日付操作（← / → / TODAY）で対象日を切り替えます。
+
+### 2) 表示モードの切替
+画面右上の表示モードで、可視化の観点を切り替えます。
+
+- **R-INDEX**：平時からのズレ（倍率）を中心に国家の中核機能に対する「危機兆候」を見る（メイン）
+- **RAW / 生データ**：その日の件数など“量”を中心に見る（比較用）
+- **TRENDING / トレンド**：話題化している国・トピック（報道ベース）
+
+### 3) 国別詳細の確認
+地図上の国、または右側の国リストをクリックすると国別パネルが開き、以下を確認できます。
+
+- どの領域（R1〜R4）が強まっているか
+- Today / Baseline / Ratio（当日値・平時参照・倍率）
+- 根拠となるニュース（タイトル／ソース）
+
+### 4) ヒストリー（週次の推移）の確認（Expand）
+国別パネル上部の **Expand** をクリックすると、その国の **週次ヒストリー表示（Historical Analysis）** を開けます。ここでは「危機兆候がいつから・どの束（R1〜R4）で点灯し始めたか」を、直近最大52週などの範囲で確認できます。
+
+**上段のタイル（Bundle / R1〜R4）**  
+週ごとの状態を色で表示します。Bundle は総合（束全体）、R1〜R4 は各領域の週次シグナルです。  
+表示は Signal View（ゲート適用後の is_active に基づく離散色）が基本で、週ごとの「点灯」を追う用途に向きます。
+
+**View（表示切替）の意味**
+- **Signal (Discrete)**：週ごとの警戒シグナル（離散表示）。運用上の判断・時系列比較に適します。
+- **State (Absolute)**：絶対量（件数）寄りの見方。慢性的負荷（平時から多い）を把握する補助に使います。
+- **Intensity (Heatmap)**：強度（比率）寄りの見方。点灯の“手前”や上昇の度合いを把握する補助に使います。
+
+**First Lit Analysis（初回点灯分析）**  
+R1〜R4それぞれについて、最初に Yellow / Orange / Red が点灯した週を表示します。  
+これにより「どの領域が先行して悪化し始めたか（例：R3→R1 の波及）」を読み取れます。
+
+## 2. 背景理論：なぜ「国家機能」を束で捉えるのか
+### 2.1 国家機能＝国家が供給すべき中核的な公共財
+本プロジェクトは国家を、領土支配の装置としてだけでなく、社会が最低限成り立つために必要な機能（公共財）を継続的に供給する主体として捉えます。  
+国家の不安定化は、クーデターや選挙結果のような単発イベントだけでなく、国家が供給すべき機能が、じわじわと（あるいは急激に）劣化するプロセスとして現れます。  
+本ダッシュボードは、この劣化プロセスを「兆候」として日次で観測可能な形に整理し、国際比較に耐える視点で提示します。
+
+### 2.2 Rotberg：国家崩壊研究における「政治的財（political goods）」
+Robert I. Rotberg の議論では、国家は市民に対して「政治的財（political goods）」を供給する責務があり、国家の危機はそれらの供給不全として観測される、という発想が強調されます。  
+政治的財を日常語で言い換えると、概ね次のような機能です。
+
+- 人々の **安全** と秩序が維持されること
+- 生活の基盤となる **基本サービス** が継続して提供されること
+- ルールが **正当に運用** され、統治が機能すること
+- 国家運営に必要な **財政的基盤** が維持されること
+
+本プロジェクトは、これらを観測可能なシグナルへ落とし込み、R1〜R4の4束として操作化します。
+
+### 2.3 Besley & Persson（Pillars）：国家能力を支える4要素
+本プロジェクトのもう一つの参照枠は、Besley & Persson による国家能力（state capacity）に関する議論です。  
+国家能力を「平時の耐性（shock absorption / resilience）」として捉える際、一般に次のような柱（pillars）が中核になります（本プロジェクトでは概念的整理として参照します）。
+
+- **徴税能力（fiscal/tax capacity）**：税を公平・継続的に集め、国家運営の財源を確保する力
+- **法の執行能力（legal capacity）**：契約・権利・治安を法制度により担保し、秩序を維持する力
+- **行政実施能力（administrative capacity）**：政策を実装し、サービスを現場まで届ける運用能力
+- **統治の正統性・協力基盤（legitimacy / compliance）**：統治への受容・協力が成立し、制度が機能する土台
+
+これらの柱は、短期ショックが生じた際に「どれだけ早く、どれだけ損傷を局限できるか」を規定します。  
+本ダッシュボードは、出来事（イベント）を通じて観測されるストレスが、国家機能のどの束に集中しているかを見える化します。
+
+## 3. R1〜R4（国家機能の4束）
+本ダッシュボードは、国家機能の劣化兆候を4領域（4つの束）に整理します。  
+これはニュースのジャンル分類ではなく、国家のどの機能が傷んでいるかを表す操作概念です。
+
+- **R1：治安・暴力（Security）**  
+  暴力、武装衝突、治安機関との衝突、重大な犯罪的暴力など
+- **R2：生活・基礎サービス（Living / Basic Services）**  
+  物資不足、インフラ障害、災害影響、人道危機、生活基盤の動揺など
+- **R3：統治・正統性・予測可能性（Governance / Legitimacy）**  
+  法の支配・抗議・政治対立、制度不信、行政・司法・選挙等の統治過程の混乱、腐敗など
+- **R4：財政・経済（Fiscal / Economic stress）**  
+  財政逼迫、通貨・物価・金融ショック、経済政策の混乱など  
+  （※R4は短期イベントよりも構造要因として効く場合が多く、他領域の不安定化の背景要因になり得ます。）
+
+## 4. データソース：何を観測しているのか
+### 4.1 中心：GDELT Events（「起きたこと」寄り）
+本プロジェクトの中心は **GDELT Events（ニュースから抽出されたイベントを集計したデータベース）**です。  
+GDELT Events はニュース記事を元に「どんな種類の出来事がどの国で発生したか」をイベントコードとして集計できるため、国別・日次で兆候を追跡できます。
+
+本プロジェクトが測りたいのは **“注目された量（報道量）”そのものではなく、“各国で起きた事の性質と数”**です。  
+ただしニュースを源泉にしている以上、観測バイアス（報道密度や情報アクセス差）の影響を完全には免れません。
+
+### 4.2 補助：GDELT GKG / RSS（根拠見出し・表示材料）
+国別パネルやブリーフィングで表示する「根拠ニュース」は主に以下から構成されます。
+
+- **GDELT GKG（記事・テーマ・トーンなどのメタ情報）**
+- **RSS 等（欠損時のフォールバックとして）**
+
+目的は「根拠の手がかり」を提示し、ブラックボックス化を避けることにあります。
+
+### 4.3 補助：AIR SIGNALS（注目の高まり）
+AIR は 危機スコアの主因ではなく補助情報です。  
+ニュース以外の外部信号から「注目の高まり」を補助的に表示します（例：検索トレンド、SNSの急上昇、予測市場の主要テーマなど）。
+
+### 4.4 データ種別の関係（まとめ）
+- **Events（GDELT）**：R-INDEX（中核スコア）の主要入力（出来事の兆候）
+- **AIR**：検索・SNS・予測市場などの補助的な注目シグナル（文脈・注意喚起）
+
+## 5. ロジック：なぜ“件数”ではなく“平時からのズレ”を見るのか
+### 5.1 国ごとの平時が異なる問題
+国によってニュース量や出来事量は構造的に異なります。  
+単純な件数ランキングでは、大国が常に上位に出る／小国はデータが薄く揺れやすい等の歪みが生じます。
+
+### 5.2 ベースライン（平時参照）と倍率（Ratio）
+本プロジェクトは、各国について **平時の参照分布（ベースライン）**を持ち、
+
+- 今日（Today）
+- 平時参照（Baseline）
+- 倍率（Ratio = Today / Baseline）
+
+により「ズレ」を測ります。
+
+### 5.3 R-INDEX（危機兆候スコア）
+R-INDEX は“平時からのズレ（倍率）”を中心に構成された危機兆候スコアです。  
+画面での Red / Orange / Yellow は、単なる件数ではなく、主にこの「ズレ」と安全弁（ゲート）を通過した結果として表現されます。
+
+R-INDEX は「出来事の件数」ではなく、各国の平時ベースラインに対する ズレ（Ratio） を中心に算出する“兆候”指標です。欠損・外圧ノイズ・不安定入力などは Gate（安全弁） で抑制し、誤点灯を減らします。  
+Yellow / Orange / Red は「絶対件数」ではなく R-INDEX＋Gate の結果で決まります。
+
+### 5.4 誤検知抑制：ゲート（Gate）と安全弁
+倍率が跳ねても、それが
+
+- データが薄いことによる偶然
+- 外部要因・報道偏り
+- 一過性ノイズ
+
+である場合は、アラートとして扱うべきではありません。  
+そのため実装では、欠損・異常値・不安定入力の抑制や、過剰反応を避ける条件（ゲート）を設け、**“倍率が高い＝即アラート”**にならないよう制御します（詳細は config/ と scripts/ を参照）。
+
+## 6. 表示モードの意味
+### R-INDEX（メイン）
+その国の平時と比べて、どれだけ兆候が強まったかを見る  
+早期警戒の主画面
+
+### RAW / 生データ（比較用）
+純粋な件数・量に近いビュー  
+“今日は多いが平時も多い”などの比較に用いる
+
+### TRENDING / トレンド（報道ベース）
+いま話題になっている国・トピックを見つける  
+危機スコアの確度を決める場所ではなく、深掘り対象を見つける用途
+
+## 7. 再現性と透明性：公開リポジトリの構造（main と gh-pages）
+公開リポジトリ（mnakagaw/world-country-risks）は、透明性（論文・検証）と配布（閲覧用）を分離するため、2ブランチ運用とします。
+
+- **main：ロジック公開（透明性）**  
+  src/, scripts/, config/, tests/ 等  
+  ※巨大データ（例：public/data 等）や機密（credentials）は除外して軽量化
+- **gh-pages：公開サイト成果物（配布）**  
+  ビルド成果物（dist 相当）を配置し、GitHub Pages が配信
+
+## 8. 参考文献・理論的支柱
+### ダッシュボードの中心理論（骨格）
+本ダッシュボードは、Rotberg、Besley & Persson、North らの議論を骨格として設計されています。
+
+- **Rotberg（政治的財）**  
+  国家が最低限提供すべき「政治財（political goods）」を軸に、R1–R4（治安・生活・統治・財政）という観測束の“規範軸（何を見るべきか）”を与えます。
+- **Besley & Persson（国家能力の柱）**  
+  国家能力・暴力・徴税・統治が「束（クラスター）」として結びつくという見方を提示し、複数兆候の同時点灯（R-concurrency）を“因果の束”として正当化します。
+- **North（制度の作動）**  
+  制度は紙の上ではなく「実際に作動するか（incentives & enforcement）」が重要であるという立場から、運用・執行・解除規律（点灯→裏取り→解除）を“制度の作動確認”として位置づけます。
+
+### 参考文献一覧
+**中心理論（ダッシュボードの骨格）**
+- Rotberg, Robert I. (2002). *The New Nature of Nation-State Failure.*
+- Rotberg, Robert I. (ed.). (2003). *When States Fail: Causes and Consequences.*
+- Rotberg, Robert I. (ed.). (2003). *Failed States, Collapsed States, Weak States: Causes and Indicators.*
+- Besley, Timothy, & Persson, Torsten. (2011). *Pillars of Prosperity: Political Economics of State Building and Violence.*
+- North, Douglass C. (1990). *Institutions, Institutional Change and Economic Performance.*（邦訳：『制度・制度変化・経済成果』）
+
+**理論補強（運用・可視化・高頻度の正当化）**
+- Andrews, Matt, Pritchett, Lant, & Woolcock, Michael. (2017). *Building State Capability: Evidence, Analysis, Action.*
+- Scott, James C. (1998). *Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed.*（邦訳：『国家のように見る』）
+- Epstein, Richard A. (1995). *Simple Rules for a Complex World: Legal Principles.*
+- Lipsky, Michael. (1980). *Street-Level Bureaucracy: Dilemmas of the Individual in Public Services.*（邦訳：『ストリート・レベルの官僚制』）
+- Taleb, Nassim Nicholas. (2012). *Antifragile: Things That Gain from Disorder.*（邦訳：『反脆弱性』）
+- Rosa, Hartmut. (2013). *Social Acceleration: A New Theory of Modernity.*
+- Rothstein, Bo (ed.). (2012). *The Oxford Handbook of Quality of Government.*
+- Basu, Kaushik, & Cordella, Tito (eds.). (2018). *Institutions, Governance and the Control of Corruption.*
+
+## 9. 引用（Cite this）
+本ダッシュボード／リポジトリを論文・報告書等で参照する場合は、以下の形式を推奨します（アクセス日を記載）：
+
+Nakagawa, M. (2026). *World Country Risks — Global Early Warning Dashboard (GitHub repository).* Retrieved YYYY-MM-DD, from https://github.com/mnakagaw/world-country-risks
+
+（※年は適宜更新、Retrievedは参照日）
+
+## 10. データソース（Credits）
+本プロジェクトは公開データソースを利用しています（例）：
+
+- GDELT 2.x（Events / GKG）
+- Google Trends / GetDayTrends / Polymarket（AIRとして表示）
+
+### 注意書き
+データの網羅性や報道・言語の偏りは国ごとに異なります。本表示は「観測されたデータにもとづく兆候」であり、現地の実態そのもの（ground truth）を直接表すものではありません。
 
 </details>
