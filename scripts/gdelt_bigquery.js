@@ -134,6 +134,10 @@ export async function fetchHotCountries() {
     dateEnd.setHours(dateEnd.getHours() + 48); // Bound to 48h window from start
     const dateEndInt = parseInt(dateEnd.toISOString().replace(/[-:T.]/g, '').slice(0, 14));
 
+    // SQLDATE (YYYYMMDD) for Partition Pruning
+    const dateSql = parseInt(date.toISOString().slice(0, 10).replace(/-/g, ''));
+    const dateEndSql = parseInt(dateEnd.toISOString().slice(0, 10).replace(/-/g, ''));
+
     const query = `
         SELECT 
             ActionGeo_CountryCode AS iso2,
@@ -165,6 +169,7 @@ export async function fetchHotCountries() {
             ) AS domestic_ratio
         FROM \`gdelt-bq.gdeltv2.events\`
         WHERE DATEADDED BETWEEN ${dateInt} AND ${dateEndInt}
+        AND SQLDATE BETWEEN ${dateSql} AND ${dateEndSql} -- Partition Pruning
         AND ActionGeo_CountryCode IS NOT NULL
         -- [P0] SPORTS EXCLUSION (Common Filter) - Strict Path Boundary
         -- [P0] SPORTS EXCLUSION (Common Filter) - Strict Path/Subdomain Boundary
@@ -231,6 +236,10 @@ export async function fetchEventUrls(isoCodes) {
     dateEnd.setHours(dateEnd.getHours() + 96);
     const dateEndInt = parseInt(dateEnd.toISOString().replace(/[-:T.]/g, '').slice(0, 14));
 
+    // SQLDATE (YYYYMMDD) for Partition Pruning
+    const dateSql = parseInt(date.toISOString().slice(0, 10).replace(/-/g, ''));
+    const dateEndSql = parseInt(dateEnd.toISOString().slice(0, 10).replace(/-/g, ''));
+
     // Convert ISO2 -> FIPS 10-4 for GDELT Query
     const countryList = isoCodes
         .map(c => {
@@ -267,6 +276,7 @@ export async function fetchEventUrls(isoCodes) {
                 ROW_NUMBER() OVER(PARTITION BY ActionGeo_CountryCode ORDER BY NumMentions DESC) as rn
             FROM \`gdelt-bq.gdeltv2.events\`
             WHERE DATEADDED BETWEEN ${dateInt} AND ${dateEndInt}
+            AND SQLDATE BETWEEN ${dateSql} AND ${dateEndSql} -- Partition Pruning
             AND ActionGeo_CountryCode IN (${countryList})
             AND SOURCEURL IS NOT NULL
             -- [P0] STRICT FILTER: Must contribute to R-Score
