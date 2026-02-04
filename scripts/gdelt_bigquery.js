@@ -76,11 +76,13 @@ export async function fetchGkgThemeCounts() {
             iso2,
             COUNTIF(REGEXP_CONTAINS(V2Themes, r'${r2Regex}')) AS r2_living_count,
             COUNTIF(REGEXP_CONTAINS(V2Themes, r'${r4Regex}')) AS r4_fiscal_count
-        FROM \`gdelt-bq.gdeltv2.gkg\`,
+        FROM \`gdelt-bq.gdeltv2.gkg_partitioned\`,
         UNNEST(SPLIT(V2Locations, ';')) AS location_str,
         UNNEST([REGEXP_EXTRACT(location_str, r'#([A-Z]{2})#')]) AS iso2_raw,
         UNNEST([IF(iso2_raw = 'UK', 'GB', iso2_raw)]) AS iso2
-        WHERE DATE >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 48 HOUR)
+        WHERE _PARTITIONDATE >= DATE_SUB(CURRENT_DATE(), INTERVAL 3 DAY)
+        -- DATE column in gkg_partitioned is INT64 (YYYYMMDDHHMMSS), not TIMESTAMP
+        AND DATE >= CAST(FORMAT_TIMESTAMP('%Y%m%d%H%M%S', TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 48 HOUR)) AS INT64)
         AND iso2 IS NOT NULL
         AND LENGTH(iso2) = 2
         GROUP BY 1
@@ -134,9 +136,18 @@ export async function fetchHotCountries() {
     dateEnd.setHours(dateEnd.getHours() + 48); // Bound to 48h window from start
     const dateEndInt = parseInt(dateEnd.toISOString().replace(/[-:T.]/g, '').slice(0, 14));
 
-    // SQLDATE (YYYYMMDD) for Partition Pruning
+    // SQLDATE (YYYYMMDD) for Partition Pruning (Fallback)
     const dateSql = parseInt(date.toISOString().slice(0, 10).replace(/-/g, ''));
     const dateEndSql = parseInt(dateEnd.toISOString().slice(0, 10).replace(/-/g, ''));
+
+    // PARTITION DATE (YYYY-MM-DD) for Main Pruning
+    // We scan [StartDate - 1 day] to [EndDate + 1 day] to be safe
+    const pStart = new Date(date);
+    pStart.setDate(pStart.getDate() - 1);
+    const pEnd = new Date(dateEnd);
+    pEnd.setDate(pEnd.getDate() + 1);
+    const pStartStr = pStart.toISOString().split('T')[0];
+    const pEndStr = pEnd.toISOString().split('T')[0];
 
     const query = `
         SELECT 
@@ -167,9 +178,10 @@ export async function fetchHotCountries() {
                 ),
                 1.0
             ) AS domestic_ratio
-        FROM \`gdelt-bq.gdeltv2.events\`
-        WHERE DATEADDED BETWEEN ${dateInt} AND ${dateEndInt}
-        AND SQLDATE BETWEEN ${dateSql} AND ${dateEndSql} -- Partition Pruning
+        FROM \`gdelt-bq.gdeltv2.events_partitioned\`
+        WHERE _PARTITIONDATE BETWEEN '${pStartStr}' AND '${pEndStr}'
+        AND DATEADDED BETWEEN ${dateInt} AND ${dateEndInt}
+        AND SQLDATE BETWEEN ${dateSql} AND ${dateEndSql} -- Extra safety
         AND ActionGeo_CountryCode IS NOT NULL
         -- [P0] SPORTS EXCLUSION (Common Filter) - Strict Path Boundary
         -- [P0] SPORTS EXCLUSION (Common Filter) - Strict Path/Subdomain Boundary
@@ -240,6 +252,14 @@ export async function fetchEventUrls(isoCodes) {
     const dateSql = parseInt(date.toISOString().slice(0, 10).replace(/-/g, ''));
     const dateEndSql = parseInt(dateEnd.toISOString().slice(0, 10).replace(/-/g, ''));
 
+    // PARTITION DATE (YYYY-MM-DD)
+    const pStart = new Date(date);
+    pStart.setDate(pStart.getDate() - 1);
+    const pEnd = new Date(dateEnd);
+    pEnd.setDate(pEnd.getDate() + 1);
+    const pStartStr = pStart.toISOString().split('T')[0];
+    const pEndStr = pEnd.toISOString().split('T')[0];
+
     // Convert ISO2 -> FIPS 10-4 for GDELT Query
     const countryList = isoCodes
         .map(c => {
@@ -274,8 +294,9 @@ export async function fetchEventUrls(isoCodes) {
                 IF(${r4}, 1, 0) as is_r4,
                 -- Prioritize High Mention counts
                 ROW_NUMBER() OVER(PARTITION BY ActionGeo_CountryCode ORDER BY NumMentions DESC) as rn
-            FROM \`gdelt-bq.gdeltv2.events\`
-            WHERE DATEADDED BETWEEN ${dateInt} AND ${dateEndInt}
+            FROM \`gdelt-bq.gdeltv2.events_partitioned\`
+            WHERE _PARTITIONDATE BETWEEN '${pStartStr}' AND '${pEndStr}'
+            AND DATEADDED BETWEEN ${dateInt} AND ${dateEndInt}
             AND SQLDATE BETWEEN ${dateSql} AND ${dateEndSql} -- Partition Pruning
             AND ActionGeo_CountryCode IN (${countryList})
             AND SOURCEURL IS NOT NULL
