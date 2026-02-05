@@ -60,7 +60,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
     useEffect(() => {
         if (hasHistory && iso2) {
-            fetch(`/data/weekly/countries/${iso2}.json`)
+            fetch(`./data/weekly/countries/${iso2}.json`)
                 .then(res => res.ok ? res.json() : null)
                 .then(data => setWeeklyCache(data))
                 .catch(() => setWeeklyCache(null));
@@ -336,19 +336,19 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
                         if (isActive) {
                             const level = ratio7 >= redThr ? 'red' : ratio7 >= orangeThr ? 'orange' : ratio7 >= yellowThr ? 'yellow' : 'none';
-                            const levelColor = level === 'red' ? 'var(--color-red)' : level === 'orange' ? 'var(--color-orange)' : level === 'yellow' ? 'var(--color-yellow)' : (theme === 'light' ? '#ccc' : '#333');
+                            const levelColor = level === 'red' ? 'var(--color-red)' : level === 'orange' ? 'var(--color-orange)' : level === 'yellow' ? 'var(--color-yellow)' : (theme === 'light' ? '#ccc' : '#444');
                             return { state: 'active', color: levelColor, text: ratio7.toFixed(1), reason: `ACTIVE: ${ratio7.toFixed(2)}x` };
                         } else if (ratio7 >= yellowThr) {
-                            return { state: 'gated', color: theme === 'light' ? '#999' : '#555', text: 'G', reason: `GATED: ${sr.reason || 'gate condition'}\nRatio: ${ratio7.toFixed(2)}x` };
+                            return { state: 'gated', color: theme === 'light' ? '#999' : '#666', text: 'G', reason: `GATED: ${sr.reason || 'gate condition'}\nRatio: ${ratio7.toFixed(2)}x` };
                         } else {
-                            return { state: 'none', color: theme === 'light' ? '#e0e0e0' : '#333', text: '', reason: `NONE: ratio7 ${ratio7.toFixed(2)}x < ${yellowThr}` };
+                            return { state: 'none', color: theme === 'light' ? '#e0e0e0' : (theme === 'dark' ? '#222' : '#333'), text: '', reason: `NONE: ratio7 ${ratio7.toFixed(2)}x < ${yellowThr}` };
                         }
                     };
 
                     const thresholds = { yellow: 1.75, orange: 2.75, red: 3.75 };
 
                     return (
-                        <div style={{ marginTop: '1rem', padding: '10px', background: theme === 'light' ? 'rgba(0,0,0,0.03)' : 'rgba(0,0,0,0.2)', borderRadius: '4px', border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(255,255,255,0.1)' }}>
+                        <div style={{ marginTop: '1rem', padding: '10px', background: theme === 'light' ? 'rgba(0,0,0,0.03)' : 'rgba(0,0,0,0.3)', borderRadius: '4px', border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(255,255,255,0.05)' }}>
                             <div style={{ fontSize: '0.7rem', fontWeight: 'bold', color: theme === 'light' ? 'var(--color-accent)' : '#6fa5b5', marginBottom: '8px' }}>4-WEEK TREND (Weekly ISO)</div>
 
                             {/* Bundle Strip */}
