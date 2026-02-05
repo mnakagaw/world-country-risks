@@ -6,7 +6,7 @@ import CountryModal from './components/CountryModal';
 import Header from './components/Header';
 import CountryDetailView from './components/CountryDetailView';
 import { translations, languages } from './i18n';
-import './App.css';
+import './Styles.css';
 
 // Reusable Dashboard Component (The original content of App)
 function Dashboard({ lang, setLang, t }) {
