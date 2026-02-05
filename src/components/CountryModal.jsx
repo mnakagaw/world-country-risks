@@ -242,7 +242,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                         <div style={{ fontSize: '0.7rem', fontWeight: 'bold', color: '#6fa5b5', marginBottom: '8px' }}>SURGE R BREAKDOWN</div>
                         <table style={{ width: '100%', fontSize: '0.65rem', borderCollapse: 'collapse' }}>
                             <thead>
-                                <tr style={{ borderBottom: '1px solid #333', color: '#888' }}>
+                                <tr style={{ borderBottom: theme === 'light' ? '1px solid #ddd' : '1px solid #333', color: theme === 'light' ? '#666' : '#888' }}>
                                     <th style={{ textAlign: 'left', padding: '4px' }}>Type</th>
                                     <th style={{ textAlign: 'center', padding: '4px' }}>Today</th>
                                     <th style={{ textAlign: 'center', padding: '4px' }}>Baseline</th>
@@ -314,7 +314,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                 })}
                             </tbody>
                         </table>
-                        <div style={{ fontSize: '0.55rem', color: '#666', marginTop: '8px', fontStyle: 'italic', wordBreak: 'break-all' }}>
+                        <div style={{ fontSize: '0.55rem', color: theme === 'light' ? '#888' : '#666', marginTop: '8px', fontStyle: 'italic', wordBreak: 'break-all' }}>
                             * Colors follow is_active (Gate applied). High ratio alone does not trigger alert.
                         </div>
                     </div>
@@ -364,8 +364,8 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                     });
 
                                     const bundleLabel = activeTypes.length > 0 ? activeTypes.join('+') : (hasGated ? 'G' : '');
-                                    let bundleColor = '#444';
-                                    let textColor = '#888';
+                                    let bundleColor = theme === 'light' ? '#e0e0e0' : '#444';
+                                    let textColor = theme === 'light' ? '#666' : '#888';
 
                                     if (activeTypes.length > 0) {
                                         const maxRatio = Math.max(...activeTypes.map(r => w.weekly_surge_r_by_type?.[r]?.ratio7 || 0));
@@ -375,8 +375,8 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                     }
 
                                     return (
-                                        <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(255,255,255,0.05)', padding: '4px 2px', borderRadius: '3px' }}>
-                                            <span style={{ fontSize: '0.55rem', color: '#888', marginBottom: '2px' }}>{w.week?.slice(-3) || `W${i}`}</span>
+                                        <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', background: theme === 'light' ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)', padding: '4px 2px', borderRadius: '3px' }}>
+                                            <span style={{ fontSize: '0.55rem', color: theme === 'light' ? '#666' : '#888', marginBottom: '2px' }}>{w.week?.slice(-3) || `W${i}`}</span>
                                             <span style={{ fontSize: '0.6rem', fontWeight: 'bold', backgroundColor: bundleColor, color: textColor, padding: '1px 4px', borderRadius: '2px', width: '100%', textAlign: 'center' }}>
                                                 {bundleLabel}
                                             </span>
@@ -388,7 +388,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                             {/* 4x4 Grid - Signal (Discrete) style */}
                             <table style={{ width: '100%', fontSize: '0.65rem', borderCollapse: 'collapse', marginBottom: '8px' }}>
                                 <thead>
-                                    <tr style={{ color: '#888' }}>
+                                    <tr style={{ color: theme === 'light' ? '#666' : '#888' }}>
                                         <th style={{ textAlign: 'left', padding: '2px' }}>Type</th>
                                         {last4Weeks.map(w => (
                                             <th key={w.week} style={{ textAlign: 'center', padding: '2px' }}>{w.week?.slice(-3) || ''}</th>
@@ -397,10 +397,10 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                 </thead>
                                 <tbody>
                                     {['R1', 'R2', 'R3', 'R4'].map(rKey => (
-                                        <tr key={rKey} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                                        <tr key={rKey} style={{ borderBottom: theme === 'light' ? '1px solid rgba(0,0,0,0.05)' : '1px solid rgba(255,255,255,0.05)' }}>
                                             <td style={{ textAlign: 'left', padding: '2px' }}>
-                                                <div style={{ color: '#ccc' }}>{rKey}</div>
-                                                <div style={{ fontSize: '0.5rem', opacity: 0.5, color: '#888' }}>{t.panel.rLabels[rKey.toLowerCase()]}</div>
+                                                <div style={{ color: theme === 'light' ? '#333' : '#ccc' }}>{rKey}</div>
+                                                <div style={{ fontSize: '0.5rem', opacity: theme === 'light' ? 0.8 : 0.5, color: theme === 'light' ? '#666' : '#888' }}>{t.panel.rLabels[rKey.toLowerCase()]}</div>
                                             </td>
                                             {last4Weeks.map((w, idx) => {
                                                 const sr = w.weekly_surge_r_by_type?.[rKey];
@@ -426,7 +426,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                                             title={tooltipParts.join('\n')}
                                                             style={{
                                                                 backgroundColor: signal.color,
-                                                                color: signal.state === 'gated' ? '#aaa' : (signal.color === 'var(--color-yellow)' ? '#000' : '#fff'),
+                                                                color: signal.state === 'gated' ? (theme === 'light' ? '#666' : '#aaa') : (signal.color === 'var(--color-yellow)' ? '#000' : '#fff'),
                                                                 borderRadius: '2px',
                                                                 padding: '1px 0',
                                                                 display: 'flex',
@@ -470,14 +470,14 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                 else { pattern = 'Quiet'; detail = 'No active surges'; }
 
                                 return (
-                                    <div style={{ fontSize: '0.6rem', color: '#ccc', fontStyle: 'italic', background: 'rgba(255,255,255,0.05)', padding: '4px', borderRadius: '2px', display: 'flex', justifyContent: 'space-between' }}>
-                                        <span>Pattern: <strong style={{ color: '#fff' }}>{pattern}</strong> {detail && <span style={{ opacity: 0.7 }}>({detail})</span>}</span>
+                                    <div style={{ fontSize: '0.6rem', color: theme === 'light' ? '#666' : '#ccc', fontStyle: 'italic', background: theme === 'light' ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)', padding: '4px', borderRadius: '2px', display: 'flex', justifyContent: 'space-between' }}>
+                                        <span>Pattern: <strong style={{ color: theme === 'light' ? '#000' : '#fff' }}>{pattern}</strong> {detail && <span style={{ opacity: 0.7 }}>({detail})</span>}</span>
                                     </div>
                                 );
                             })()}
 
                             {/* Updated Note */}
-                            <div style={{ fontSize: '10px', opacity: 0.6, marginTop: '6px', lineHeight: '1.2' }}>
+                            <div style={{ fontSize: '10px', opacity: theme === 'light' ? 0.8 : 0.6, color: theme === 'light' ? '#666' : 'inherit', marginTop: '6px', lineHeight: '1.2' }}>
                                 Note: Uses weekly cache (same Signal logic as Historical).<br />
                                 Colors follow is_active (Gate applied). "G" = gated. baseline_mode shown in tooltips.
                             </div>
@@ -490,7 +490,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                     <div className="score-comparison-table" style={{ marginTop: '1rem', background: 'rgba(0,0,0,0.2)', borderRadius: '4px', padding: '6px' }}>
                         <table style={{ width: '100%', fontSize: '0.65rem', borderCollapse: 'collapse' }}>
                             <thead>
-                                <tr style={{ borderBottom: '1px solid #333', color: '#888' }}>
+                                <tr style={{ borderBottom: theme === 'light' ? '1px solid #ddd' : '1px solid #333', color: theme === 'light' ? '#666' : '#888' }}>
                                     <th style={{ textAlign: 'left', padding: '2px' }}>{t.panel.indicator}</th>
                                     <th style={{ textAlign: 'center', padding: '2px' }}>Raw</th>
                                     <th style={{ textAlign: 'center', padding: '2px' }}>Adj</th>
@@ -499,10 +499,10 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                             </thead>
                             <tbody>
                                 {['R1', 'R2', 'R3', 'R4'].map(key => (
-                                    <tr key={key} style={{ borderBottom: '1px dotted #222' }}>
+                                    <tr key={key} style={{ borderBottom: theme === 'light' ? '1px dotted #ddd' : '1px dotted #222' }}>
                                         <td style={{ padding: '2px' }}>
-                                            <div style={{ color: '#aaa' }}>{key}</div>
-                                            <div style={{ fontSize: '0.55rem', opacity: 0.6 }}>{t.panel.rLabels[key.toLowerCase()]}</div>
+                                            <div style={{ color: theme === 'light' ? '#333' : '#aaa' }}>{key}</div>
+                                            <div style={{ fontSize: '0.55rem', opacity: 0.6, color: theme === 'light' ? '#666' : '#888' }}>{t.panel.rLabels[key.toLowerCase()]}</div>
                                         </td>
                                         <td style={{ textAlign: 'center', color: '#fff', padding: '2px' }}>{country.r_scores[key]}</td>
                                         <td style={{ textAlign: 'center', color: '#2dd4bf', padding: '2px' }}>{country.r_scores_adj[key]}</td>
@@ -513,7 +513,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                 ))}
                             </tbody>
                         </table>
-                        <div style={{ fontSize: '0.55rem', color: '#555', marginTop: '4px', fontStyle: 'italic' }}>
+                        <div style={{ fontSize: '0.55rem', color: theme === 'light' ? '#888' : '#555', marginTop: '4px', fontStyle: 'italic' }}>
                             * Mode: {country.v4_scoring?.debug?.mode || 'none'}
                         </div>
                     </div>
