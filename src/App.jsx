@@ -286,6 +286,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                     hasHistory={!!historyIndex[selectedData.iso2]}
                     side={popupSide}
                     viewMode={viewMode}
+                    theme={theme}
                     signals={{
                         gt: enrichedRiskData?.air?.countries?.[selectedData.iso2]?.top20_terms || [],
                         pm: (enrichedRiskData?.polymarket || []).filter(s => s.iso2 === selectedData.iso2),

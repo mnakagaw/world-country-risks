@@ -579,16 +579,18 @@ function IntensityView({ data, range, scale, paperMode, t }) {
 
 
 /* ================= MAIN VIEW ================= */
-export default function CountryDetailView({ lang, t }) {
+export default function CountryDetailView({ lang, t, theme }) {
     const { iso2 } = useParams();
     const [data, setData] = useState(null);
     const [config, setConfig] = useState({ range: 52, view: 'signal', scale: 'abs' });
-    const [paperMode, setPaperMode] = useState(() => localStorage.getItem('rw_paper_mode') === 'true');
-    const [error, setError] = useState(null);
+
+    // Sync paperMode with global theme
+    const [paperMode, setPaperMode] = useState(theme === 'light');
 
     useEffect(() => {
-        localStorage.setItem('rw_paper_mode', paperMode);
-    }, [paperMode]);
+        setPaperMode(theme === 'light');
+    }, [theme]);
+
 
     useEffect(() => {
         // Fetch specific country history from new Tier B cache
