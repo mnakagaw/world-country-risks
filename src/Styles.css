@@ -18,32 +18,72 @@
 }
 
 .light-mode {
-  --color-bg: #f0f2f5;
+  --color-bg: #f3f4f6;
+  /* Lighter grey background */
   --color-surface: #ffffff;
   --color-text: #1f2937;
-  --color-text-muted: #6b7280;
+  --color-text-muted: #4b5563;
+  /* Darker muted text for better contrast */
   --color-border: #e5e7eb;
   --color-accent: #0284c7;
-  /* Darker cyan/blue for contrast on white */
   --color-accent-dim: #e0f2fe;
 }
 
 /* Light Mode Overrides for Hardcoded Components */
 .light-mode .country-popup {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--color-border);
   color: var(--color-text);
+}
+
+.light-mode .country-popup .modal-close {
+  color: var(--color-text) !important;
+  /* Force black X */
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-mode .expand-btn {
+  color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  background: rgba(2, 132, 199, 0.05) !important;
+  font-weight: 600;
+}
+
+/* Force text colors in modal to respect theme */
+.light-mode .modal-summary,
+.light-mode .driver-label,
+.light-mode .score-label span,
+.light-mode .score-value {
+  color: var(--color-text) !important;
+}
+
+.light-mode .modal-brief div {
+  color: var(--color-text) !important;
+}
+
+.light-mode .score-track {
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .light-mode .signal-item {
   border-bottom: 1px solid var(--color-border);
 }
 
+.light-mode .signal-text,
+.light-mode .popup-content {
+  color: var(--color-text) !important;
+}
+
 .light-mode .signal-item:hover,
 .light-mode .signal-item--selected {
   background: rgba(0, 0, 0, 0.05);
-  /* Darken on hover instead of lighten */
 }
 
 .light-mode .app-header {
@@ -60,12 +100,12 @@
 .light-mode .nav-arrow:hover {
   background: rgba(0, 0, 0, 0.1);
   color: var(--color-text);
-  /* Ensure arrows turn dark on hover */
 }
 
 .light-mode .calendar-popup {
   background-color: var(--color-surface);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: var(--color-text);
 }
 
 .light-mode .calendar-day.available {
@@ -85,12 +125,25 @@
 }
 
 .light-mode .leaflet-container {
-  background: #cbd5e1 !important;
-  /* Slate-300: Blue-ish grey for sea */
+  background: #94a3b8 !important;
+  /* Slate-400: Darker Blue-ish grey for sea */
 }
 
 .light-mode .nav-arrow {
   color: var(--color-accent);
+}
+
+/* Legend (Threat Level) Light Mode */
+.light-mode .legend {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .legend-item span {
+  color: var(--color-text);
+  font-weight: 500;
 }
 
 * {

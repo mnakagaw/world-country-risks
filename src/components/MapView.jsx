@@ -20,7 +20,7 @@ const ALERT_COLORS_LIGHT = {
     red: '#ee2c2c',
     orange: '#f57c00',
     yellow: '#fbc02d', // Slightly darker yellow for readability on white
-    green: '#ffffff'   // White for stable countries in light mode
+    green: '#e5e7eb'   // Light Grey (Gray-200) for stable countries in light mode
 };
 
 // Component to handle map movement
