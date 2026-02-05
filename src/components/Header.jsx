@@ -11,7 +11,9 @@ export default function Header({
     onDateChange,
     availableDates = [],
     viewMode,
-    onViewModeChange
+    onViewModeChange,
+    theme,
+    toggleTheme
 }) {
     const [isCalendarOpen, setIsCalendarOpen] = useState(false);
     const dateRef = useRef(null);
@@ -147,7 +149,27 @@ export default function Header({
                         </button>
                     </div>
                 </div>
-            </div>
-        </header>
+
+                <div className="theme-toggle">
+                    <button
+                        className="theme-btn"
+                        onClick={toggleTheme}
+                        title={theme === 'light' ? t.darkMode || "Dark Mode" : t.lightMode || "Light Mode"}
+                        style={{
+                            background: 'none',
+                            border: '1px solid var(--color-border)',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            padding: '0.25rem 0.5rem',
+                            fontSize: '1rem',
+                            marginLeft: '0.5rem',
+                            color: 'var(--color-text)'
+                        }}
+                    >
+                        {theme === 'light' ? '🌙' : '☀'}
+                    </button>
+                </div>
+            </div >
+        </header >
     );
 }

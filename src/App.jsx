@@ -8,8 +8,8 @@ import CountryDetailView from './components/CountryDetailView';
 import { translations, languages } from './i18n';
 import './Styles.css';
 
-// Reusable Dashboard Component (The original content of App)
-function Dashboard({ lang, setLang, t }) {
+// Reusable Dashboard Component
+function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
     const [riskData, setRiskData] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -232,6 +232,8 @@ function Dashboard({ lang, setLang, t }) {
                 onDateChange={handleDateChange}
                 viewMode={viewMode}
                 onViewModeChange={setViewMode}
+                theme={theme}
+                toggleTheme={toggleTheme}
             />
 
             <div className="app-main">
@@ -307,6 +309,21 @@ function App() {
         return 'en';
     });
 
+    const [theme, setTheme] = useState(() => localStorage.getItem('rw_theme') || 'dark');
+
+    useEffect(() => {
+        localStorage.setItem('rw_theme', theme);
+        if (theme === 'light') {
+            document.body.classList.add('light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+        }
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    };
+
     useEffect(() => {
         localStorage.setItem('rw_lang', lang);
     }, [lang]);
@@ -316,8 +333,8 @@ function App() {
     return (
         <HashRouter>
             <Routes>
-                <Route path="/" element={<Dashboard lang={lang} setLang={setLang} t={t} />} />
-                <Route path="/country/:iso2" element={<CountryDetailView lang={lang} t={t} />} />
+                <Route path="/" element={<Dashboard lang={lang} setLang={setLang} t={t} theme={theme} toggleTheme={toggleTheme} />} />
+                <Route path="/country/:iso2" element={<CountryDetailView lang={lang} t={t} theme={theme} />} />
             </Routes>
         </HashRouter>
     );

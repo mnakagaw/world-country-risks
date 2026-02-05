@@ -17,6 +17,74 @@
   --color-orange-vibrant: #f57c00;
 }
 
+.light-mode {
+  --color-bg: #f0f2f5;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #0284c7; /* Darker cyan/blue for contrast on white */
+  --color-accent-dim: #e0f2fe;
+}
+
+/* Light Mode Overrides for Hardcoded Components */
+.light-mode .country-popup {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.light-mode .signal-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.light-mode .signal-item:hover,
+.light-mode .signal-item--selected {
+  background: rgba(0, 0, 0, 0.05); /* Darken on hover instead of lighten */
+}
+
+.light-mode .app-header {
+  background: var(--color-surface);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .date-navigator {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .date-display:hover,
+.light-mode .cal-nav-btn:hover, 
+.light-mode .nav-arrow:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--color-text); /* Ensure arrows turn dark on hover */
+}
+
+.light-mode .calendar-popup {
+  background-color: var(--color-surface);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.light-mode .calendar-day.available {
+  color: var(--color-text);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .calendar-day.available:hover {
+  background-color: var(--color-accent-dim);
+}
+
+.light-mode .leaflet-popup-content-wrapper,
+.light-mode .leaflet-popup-tip {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .nav-arrow {
+  color: var(--color-accent);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
