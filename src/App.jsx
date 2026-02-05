@@ -250,6 +250,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                         onSignalHover={setHoveredSignal}
                         displayMode={viewMode === 'surge' ? 'bento' : viewMode}
                         viewMode={viewMode}
+                        theme={theme}
                     />
                     <div className="legend">
                         <div className="legend-item"><span className="legend-color legend-color--red"></span><span>Critical</span></div>

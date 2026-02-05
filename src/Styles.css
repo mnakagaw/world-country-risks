@@ -23,7 +23,8 @@
   --color-text: #1f2937;
   --color-text-muted: #6b7280;
   --color-border: #e5e7eb;
-  --color-accent: #0284c7; /* Darker cyan/blue for contrast on white */
+  --color-accent: #0284c7;
+  /* Darker cyan/blue for contrast on white */
   --color-accent-dim: #e0f2fe;
 }
 
@@ -41,7 +42,8 @@
 
 .light-mode .signal-item:hover,
 .light-mode .signal-item--selected {
-  background: rgba(0, 0, 0, 0.05); /* Darken on hover instead of lighten */
+  background: rgba(0, 0, 0, 0.05);
+  /* Darken on hover instead of lighten */
 }
 
 .light-mode .app-header {
@@ -54,10 +56,11 @@
 }
 
 .light-mode .date-display:hover,
-.light-mode .cal-nav-btn:hover, 
+.light-mode .cal-nav-btn:hover,
 .light-mode .nav-arrow:hover {
   background: rgba(0, 0, 0, 0.1);
-  color: var(--color-text); /* Ensure arrows turn dark on hover */
+  color: var(--color-text);
+  /* Ensure arrows turn dark on hover */
 }
 
 .light-mode .calendar-popup {
@@ -79,6 +82,11 @@
   background: var(--color-surface);
   color: var(--color-text);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .leaflet-container {
+  background: #cbd5e1 !important;
+  /* Slate-300: Blue-ish grey for sea */
 }
 
 .light-mode .nav-arrow {

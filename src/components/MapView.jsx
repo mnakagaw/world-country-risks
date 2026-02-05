@@ -16,6 +16,13 @@ const ALERT_COLORS = {
     green: '#000000'
 };
 
+const ALERT_COLORS_LIGHT = {
+    red: '#ee2c2c',
+    orange: '#f57c00',
+    yellow: '#fbc02d', // Slightly darker yellow for readability on white
+    green: '#ffffff'   // White for stable countries in light mode
+};
+
 // Component to handle map movement
 function MapController({ selectedIso, centroids, selectedSignal }) {
     const map = useMap();
@@ -118,7 +125,7 @@ const getCentroid = (geometry) => {
     return null;
 };
 
-export default function MapView({ riskData, onCountrySelect, onCountryHover, onCountryLeave, selectedCountry, selectedSignal, onSignalSelect, onSignalHover, viewMode }) {
+export default function MapView({ riskData, onCountrySelect, onCountryHover, onCountryLeave, selectedCountry, selectedSignal, onSignalSelect, onSignalHover, viewMode, theme }) {
     const [geoData, setGeoData] = useState(null);
     const [expandedCluster, setExpandedCluster] = useState(null); // 'US-gt' format
     const collapseTimeoutRef = useRef(null);
@@ -259,31 +266,33 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
         const countryRisk = riskData?.countries?.[iso2];
         const isSelected = selectedCountry === iso2;
 
-        let color = '#000000';
+        const colors = theme === 'light' ? ALERT_COLORS_LIGHT : ALERT_COLORS;
+
+        let color = colors.green;
         if (viewMode === 'surge') {
             const rank = countryRisk?.surge?.rank;
             if (rank) {
-                if (rank <= 10) color = ALERT_COLORS.red;
-                else if (rank <= 20) color = ALERT_COLORS.orange;
-                else if (rank <= 40) color = ALERT_COLORS.yellow;
-                else color = '#3d4654'; // Grey for 41+
+                if (rank <= 10) color = colors.red;
+                else if (rank <= 20) color = colors.orange;
+                else if (rank <= 40) color = colors.yellow;
+                else color = theme === 'light' ? '#e0e0e0' : '#3d4654'; // Grey for 41+
             }
         } else if (viewMode === 'surge_r') {
             const surgeRLevel = countryRisk?.surge_r?.level?.toLowerCase() || 'green';
-            color = ALERT_COLORS[surgeRLevel] || ALERT_COLORS.green;
+            color = colors[surgeRLevel] || colors.green;
         } else if (viewMode === 'index') {
             const indexLevel = countryRisk?.index?.level?.toLowerCase() || 'green';
-            color = ALERT_COLORS[indexLevel] || ALERT_COLORS.green;
+            color = colors[indexLevel] || colors.green;
         } else {
             const alertLevel = countryRisk?.alert_level || 'green';
-            color = ALERT_COLORS[alertLevel];
+            color = colors[alertLevel];
         }
 
         return {
             fillColor: isSelected ? '#06b6d4' : color, // Cyan-500 for selection
             weight: isSelected ? 1.5 : 0.5,
             opacity: 1,
-            color: isSelected ? '#ffffff' : '#555555',
+            color: isSelected ? '#ffffff' : (theme === 'light' ? '#94a3b8' : '#555555'), // Lighter border in light mode
             fillOpacity: isSelected ? 1.0 : 0.9,
             className: '' // Avoid class-based issues
         };
@@ -297,7 +306,7 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
         if (geoJsonRef.current) {
             geoJsonRef.current.setStyle(getCountryStyle);
         }
-    }, [selectedCountry, riskData, viewMode]);
+    }, [selectedCountry, riskData, viewMode, theme]);
 
     const onEachCountry = (feature, layer) => {
         const iso2 = feature.properties['ISO3166-1-Alpha-2'];
