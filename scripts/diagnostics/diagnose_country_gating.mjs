@@ -47,25 +47,23 @@ async function main() {
             const sr = h.weekly_surge_r_by_type?.[r];
             if (!sr) return;
 
-            const reason = sr.reason || 'unknown';
+            const reason = sr.is_active ? 'active' : (sr.reason || 'unknown');
             const isActive = sr.is_active;
             const ratio7 = sr.ratio7 || 0;
             const rawLevel = h.levels?.[r] || 'None';
 
-            if (!isActive) {
-                stats.reasons[reason] = (stats.reasons[reason] || 0) + 1;
-                stats.r_type_reasons[r][reason] = (stats.r_type_reasons[r][reason] || 0) + 1;
+            stats.reasons[reason] = (stats.reasons[reason] || 0) + 1;
+            stats.r_type_reasons[r][reason] = (stats.r_type_reasons[r][reason] || 0) + 1;
 
-                if (rawLevel !== 'None' && rawLevel !== 'NoData') {
-                    stats.raw_highlights.push({
-                        week: h.week,
-                        r,
-                        rawLevel,
-                        ratio7: ratio7.toFixed(2),
-                        reason,
-                        evCount
-                    });
-                }
+            if (!isActive && rawLevel !== 'None' && rawLevel !== 'NoData') {
+                stats.raw_highlights.push({
+                    week: h.week,
+                    r,
+                    rawLevel,
+                    ratio7: ratio7.toFixed(2),
+                    reason,
+                    evCount
+                });
             }
         });
     });

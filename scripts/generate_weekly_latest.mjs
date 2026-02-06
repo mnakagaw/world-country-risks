@@ -199,11 +199,16 @@ async function main() {
             const share7 = today7 / Math.max(1, eventCount7);
 
             // Abs/Share Gates
+            // Dynamic Absolute Threshold (New)
+            const rGating = scoringConfig.gating?.low_abs || {};
+            const absFloor = rGating.floors?.[r] || 0;
+            const absShare = rGating.shares?.[r] || 0;
+            const dynamicAbsThreshold = Math.max(absFloor, Math.ceil(eventCount7 * absShare));
+
             const rConf = rTypeConfigs[r];
-            const absThreshold = rConf.absolute_threshold || 0;
             const ratioThreshold = rConf.ratio_threshold || 0;
 
-            const absHit = today7 >= absThreshold;
+            const absHit = today7 >= dynamicAbsThreshold;
             const shareHitFixed = share7 >= ratioThreshold;
 
             // Dynamic Share Threshold (Option 1)
@@ -229,8 +234,13 @@ async function main() {
                 triggered = true;
             }
 
+            // Tiered Baseline Floor (New)
+            let dynamicMinBaseline = scoringConfig.surge_r?.min_baseline_median_for_surge || 3;
+            if (eventCount7 < 500) dynamicMinBaseline = 1.0;
+            else if (eventCount7 < 2000) dynamicMinBaseline = 1.5;
+
             // Stability check
-            const isStable = baselineDaily >= minBaseline;
+            const isStable = baselineDaily >= dynamicMinBaseline;
             const activeThreshold = scoringConfig.surge_r?.thresholds?.yellow ?? 1.75;
             const isActive = triggered && isStable && (ratio7 >= activeThreshold);
 

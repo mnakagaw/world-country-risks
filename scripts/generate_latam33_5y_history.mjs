@@ -154,18 +154,27 @@ async function main() {
             result.levels[r] = lvl;
 
             // Full Gating Logic (Mirroring generate_weekly_latest.mjs)
+            const rGating = scoringConfig.gating?.low_abs || {};
+            const absFloor = rGating.floors?.[r] || 0;
+            const absShare = rGating.shares?.[r] || 0;
+            const dynamicAbsThreshold = Math.max(absFloor, Math.ceil(eventCount7 * absShare));
+
             const rConf = rTypeConfigs[r];
-            const absThreshold = rConf.absolute_threshold || 0;
             const ratioThreshold = rConf.ratio_threshold || 0;
 
-            const absHit = today7 >= absThreshold;
+            const absHit = today7 >= dynamicAbsThreshold;
             const shareHit = share7 >= ratioThreshold;
             const redOverride = ratio7 >= THRESHOLDS.red;
 
             let triggered = shareHit || (absHit && !isHighVolCountry);
             if (redOverride) triggered = true;
 
-            const isStable = b[r]?.median !== undefined && b[r]?.median >= minBaseline;
+            // Tiered Baseline Floor (New)
+            let dynamicMinBaseline = scoringConfig.surge_r?.min_baseline_median_for_surge || 3;
+            if (eventCount7 < 500) dynamicMinBaseline = 1.0;
+            else if (eventCount7 < 2000) dynamicMinBaseline = 1.5;
+
+            const isStable = b[r]?.median !== undefined && b[r]?.median >= dynamicMinBaseline;
             const activeThreshold = THRESHOLDS.yellow;
             const isActive = triggered && isStable && (ratio7 >= activeThreshold);
 
