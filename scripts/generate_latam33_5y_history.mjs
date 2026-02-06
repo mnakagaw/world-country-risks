@@ -109,6 +109,7 @@ async function main() {
             R4: { median: bCalm.median_r4 || b5y.R4?.median || 1 }
         };
 
+        const eventCount7 = row.event_count || 0;
         const result = {
             week: row.iso_week,
             ratios: {},
@@ -119,17 +120,29 @@ async function main() {
                 R3: row.r3_governance || 0,
                 R4: row.r4_fiscal || 0
             },
-            event_count: row.event_count || 0
+            event_count: eventCount7,
+            weekly_surge_r_by_type: {}
         };
 
         let maxLvl = 'None';
         const levelWeights = { 'None': 0, 'Yellow': 1, 'Orange': 2, 'Red': 3 };
+        const minBaseline = scoringConfig.surge_r?.min_baseline_median_for_surge || 3;
+        const highVolFloor = scoringConfig.surge_r?.high_volume_floor || 5000;
+        const isHighVolCountry = eventCount7 >= highVolFloor;
+
+        const rTypeConfigs = {
+            R1: scoringConfig.r1_security || { absolute_threshold: 300, ratio_threshold: 0.06 },
+            R2: scoringConfig.r2_living || { absolute_threshold: 180, ratio_threshold: 0.035 },
+            R3: scoringConfig.r3_governance || { absolute_threshold: 150, ratio_threshold: 0.045 },
+            R4: scoringConfig.r4_fiscal || { absolute_threshold: 200, ratio_threshold: 0.04 }
+        };
 
         ['R1', 'R2', 'R3', 'R4'].forEach(r => {
             const baselineDaily = b[r]?.median || 1;
             const baseline7 = baselineDaily * 7;
             const today7 = result.counts[r];
             const ratio7 = (today7 + k) / (baseline7 + k);
+            const share7 = today7 / Math.max(1, eventCount7);
 
             result.ratios[r] = parseFloat(ratio7.toFixed(3));
 
@@ -139,8 +152,67 @@ async function main() {
             else if (ratio7 >= THRESHOLDS.yellow) lvl = 'Yellow';
 
             result.levels[r] = lvl;
-            if (levelWeights[lvl] > levelWeights[maxLvl]) maxLvl = lvl;
+
+            // Full Gating Logic (Mirroring generate_weekly_latest.mjs)
+            const rConf = rTypeConfigs[r];
+            const absThreshold = rConf.absolute_threshold || 0;
+            const ratioThreshold = rConf.ratio_threshold || 0;
+
+            const absHit = today7 >= absThreshold;
+            const shareHit = share7 >= ratioThreshold;
+            const redOverride = ratio7 >= THRESHOLDS.red;
+
+            let triggered = shareHit || (absHit && !isHighVolCountry);
+            if (redOverride) triggered = true;
+
+            const isStable = b[r]?.median !== undefined && b[r]?.median >= minBaseline;
+            const activeThreshold = THRESHOLDS.yellow;
+            const isActive = triggered && isStable && (ratio7 >= activeThreshold);
+
+            let reason = isActive ? "active" : "unknown";
+            if (!isActive) {
+                if (!triggered) {
+                    if (absHit && isHighVolCountry && !shareHit) reason = "high-vol";
+                    else if (absHit && !shareHit) reason = "low-share";
+                    else if (!absHit) reason = "low-abs";
+                } else if (!isStable) {
+                    reason = "low-baseline";
+                } else if (ratio7 < activeThreshold) {
+                    reason = "below-threshold";
+                }
+            }
+
+            result.weekly_surge_r_by_type[r] = {
+                today7,
+                baseline7: parseFloat(baseline7.toFixed(1)),
+                ratio7: result.ratios[r],
+                share7: parseFloat(share7.toFixed(4)),
+                is_active: isActive,
+                reason: reason,
+                gate_status: isStable ? "stable" : "unknown"
+            };
+
+            if (isActive && levelWeights[lvl] > levelWeights[maxLvl]) {
+                maxLvl = lvl;
+            }
         });
+
+        // Add top-level weekly_surge_r for bundle consistency
+        const activeRatios = Object.values(result.weekly_surge_r_by_type)
+            .filter(r => r.is_active)
+            .map(r => r.ratio7);
+        const maxRatioActive = activeRatios.length > 0 ? Math.max(...activeRatios) : 0;
+        const activeTypes = Object.entries(result.weekly_surge_r_by_type)
+            .filter(([_, v]) => v.is_active)
+            .map(([k, _]) => k);
+
+        result.weekly_surge_r = {
+            level: maxLvl.toLowerCase(),
+            max_ratio_active: parseFloat(maxRatioActive.toFixed(3)),
+            active_types: activeTypes,
+            thresholds: THRESHOLDS,
+            smoothing_k: k
+        };
 
         result.overall_level = maxLvl;
         countriesHistory[iso2].push(result);
