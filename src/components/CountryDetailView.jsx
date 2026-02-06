@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
+import { getIsoWeek, weekKeyToInt, getWeeksFromEnum, getEnumFromWeeks, RANGE_ENUMS } from '../utils/dateUtils';
 
 /* ================= UTILS ================= */
 const getLevels = (paperMode) => ({
@@ -14,8 +15,20 @@ const getLevels = (paperMode) => ({
 /* ================= COMPONENTS ================= */
 
 // 1. HEADER & CONTROLS
-function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode }) {
+function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode, warnings }) {
     if (!meta) return <div className="detail-header">Loading...</div>;
+
+    const t0Week = getIsoWeek(config.anchorDate || new Date());
+
+    const handleRangeChange = (e) => {
+        const newEnum = e.target.value;
+        const weeks = getWeeksFromEnum(newEnum);
+        setConfig(prev => ({ ...prev, rangeEnum: newEnum, range: weeks }));
+    };
+
+    const handleDateChange = (e) => {
+        setConfig(prev => ({ ...prev, anchorDate: e.target.value || new Date().toISOString().split('T')[0] }));
+    };
 
     return (
         <div className="detail-header" style={{
@@ -35,10 +48,33 @@ function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode }
                         {meta.anomalies?.includes('LOW_COVERAGE') && (
                             <span style={{ background: '#444', color: '#aaa', fontSize: '0.65rem', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontWeight: 'bold' }}>Low coverage</span>
                         )}
+                        {warnings.map((w, i) => (
+                            <span key={i} style={{ background: '#dda15e', color: '#000', fontSize: '0.65rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>{w}</span>
+                        ))}
                     </div>
                 </div>
 
-                <div className="controls" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div className="controls" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+
+                    {/* Date Picker (Anchor T0) */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <label style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>T0:</label>
+                        <input
+                            type="date"
+                            value={config.anchorDate}
+                            onChange={handleDateChange}
+                            style={{
+                                background: paperMode ? '#fff' : '#333',
+                                color: paperMode ? '#000' : '#fff',
+                                border: '1px solid #555',
+                                padding: '4px',
+                                borderRadius: '4px',
+                                fontSize: '0.8rem'
+                            }}
+                        />
+                        <span style={{ fontSize: '0.75rem', opacity: 0.7 }}>({t0Week})</span>
+                    </div>
+
                     <button
                         onClick={() => setPaperMode(!paperMode)}
                         style={{
@@ -52,20 +88,21 @@ function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode }
                             fontWeight: 'bold'
                         }}
                     >
-                        {paperMode ? '🌙 Normal View' : '📄 Paper Mode'}
+                        {paperMode ? '🌙' : '📄'}
                     </button>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         <label style={{ fontSize: '0.8rem' }}>Range:</label>
                         <select
-                            value={config.range}
-                            onChange={(e) => setConfig({ ...config, range: parseInt(e.target.value) })}
+                            value={config.rangeEnum}
+                            onChange={handleRangeChange}
                             style={{ background: paperMode ? '#fff' : '#333', color: paperMode ? '#000' : '#fff', border: '1px solid #555', padding: '4px' }}
                         >
-                            <option value={12}>12 Weeks</option>
-                            <option value={26}>26 Weeks</option>
-                            <option value={52}>52 Weeks</option>
-                            <option value={260}>5 Years</option>
+                            <option value="12w">12 Weeks</option>
+                            <option value="26w">26 Weeks</option>
+                            <option value="52w">52 Weeks</option>
+                            <option value="3y">3 Years</option>
+                            <option value="5y">5 Years</option>
                         </select>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -87,17 +124,16 @@ function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode }
 }
 
 // 2. SIGNAL VIEW (Matrix)
-function SignalView({ data, range, paperMode, t }) {
+function SignalView({ history, range, paperMode, t }) {
     const LEVELS = getLevels(paperMode);
-    // Support files with few weeks
-    const history = data.history.slice(-range).reverse();
-    const labels = history.map(h => h.week);
+    // history is already filtered and sliced by parent
+    const displayHistory = [...history].reverse();
+    const labels = displayHistory.map(h => h.week);
 
     const getGateColor = (isActive, ratio7, level, thresholds) => {
         if (level === 'NoData' || level === 'nodata' || !level) return LEVELS['NoData'].color;
-
-        // If backfill data doesn't have is_active, we treat Non-None levels as active
         if (isActive === undefined) {
+            // Backfill fallback
             if (level === 'Red') return '#ff3b3b';
             if (level === 'Orange') return '#ff8c00';
             if (level === 'Yellow') return '#ffd700';
@@ -113,14 +149,13 @@ function SignalView({ data, range, paperMode, t }) {
         return LEVELS['None'].color;
     };
 
-    const overallData = history.map(h => {
+    const overallData = displayHistory.map(h => {
         const sr = h.weekly_surge_r || {};
         const level = sr.level || h.overall_level?.toLowerCase() || 'green';
         const levelColors = {
             'red': '#ff3b3b', 'orange': '#ff8c00', 'yellow': '#ffd700', 'green': LEVELS['None'].color, 'nodata': LEVELS['NoData'].color
         };
 
-        // Fallback maxRatio calculation if missing (for backfill data)
         let maxRatio = sr.max_ratio_active;
         if (maxRatio === undefined || maxRatio === null) {
             maxRatio = Math.max(...Object.values(h.ratios || {}), 0);
@@ -171,7 +206,7 @@ function SignalView({ data, range, paperMode, t }) {
                             <td style={{ textAlign: 'right', paddingRight: '1rem', color: headerColor }}>
                                 <div style={{ fontWeight: 'bold' }}>{rKey}</div>
                             </td>
-                            {history.map((h, i) => {
+                            {displayHistory.map((h, i) => {
                                 const sr = h.weekly_surge_r_by_type?.[rKey];
                                 const isActive = sr?.is_active;
                                 const ratio7 = sr?.ratio7 || h.ratios?.[rKey] || 0;
@@ -204,10 +239,10 @@ function SignalView({ data, range, paperMode, t }) {
 const WEEKLY_ABS_THRESHOLDS = { R1: 2100, R2: 1260, R3: 1050, R4: 1400 };
 const STATE_COLOR_THRESHOLDS = { yellow: 1.0, orange: 2.0, red: 3.0 };
 
-function StateView({ data, range, paperMode, t }) {
+function StateView({ history, range, paperMode, t }) {
     const LEVELS = getLevels(paperMode);
-    const history = data.history.slice(-range).reverse();
-    const labels = history.map(h => h.week);
+    const displayHistory = [...history].reverse();
+    const labels = displayHistory.map(h => h.week);
 
     const getAbsScoreColor = (absScore7, isNoData) => {
         if (isNoData) return LEVELS['NoData'].color;
@@ -217,7 +252,7 @@ function StateView({ data, range, paperMode, t }) {
         return LEVELS['None'].color;
     };
 
-    const bundleData = history.map(h => {
+    const bundleData = displayHistory.map(h => {
         let activeCount = 0;
         let maxScore = 0;
         ['R1', 'R2', 'R3', 'R4'].forEach(r => {
@@ -264,7 +299,7 @@ function StateView({ data, range, paperMode, t }) {
                             <td style={{ textAlign: 'right', paddingRight: '1rem', color: headerColor }}>
                                 <div style={{ fontWeight: 'bold' }}>{rKey}</div>
                             </td>
-                            {history.map((h, i) => {
+                            {displayHistory.map((h, i) => {
                                 const today7 = h.weekly_surge_r_by_type?.[rKey]?.today7 || h.counts?.[rKey] || 0;
                                 const absScore7 = today7 / WEEKLY_ABS_THRESHOLDS[rKey];
                                 const isNoData = !h.levels?.[rKey] || h.levels?.[rKey] === 'NoData';
@@ -287,9 +322,9 @@ function StateView({ data, range, paperMode, t }) {
 }
 
 // 3. INTENSITY VIEW
-function IntensityView({ data, range, scale, paperMode, t }) {
-    const history = data.history.slice(-range).reverse();
-    const labels = history.map(h => h.week);
+function IntensityView({ history, range, scale, paperMode, t }) {
+    const displayHistory = [...history].reverse();
+    const labels = displayHistory.map(h => h.week);
     const borderColor = paperMode ? '#ddd' : '#222';
     const textColor = paperMode ? '#333' : '#888';
     const headerColor = paperMode ? '#000' : '#fff';
@@ -318,7 +353,7 @@ function IntensityView({ data, range, scale, paperMode, t }) {
                             <td style={{ textAlign: 'right', paddingRight: '1rem', color: headerColor }}>
                                 <div style={{ fontWeight: 'bold' }}>{rKey}</div>
                             </td>
-                            {history.map((h, i) => {
+                            {displayHistory.map((h, i) => {
                                 const val = h.ratios?.[rKey];
                                 const lvl = h.levels?.[rKey];
                                 return (
@@ -341,10 +376,32 @@ function IntensityView({ data, range, scale, paperMode, t }) {
 /* ================= MAIN VIEW ================= */
 export default function CountryDetailView({ lang, t, theme }) {
     const { iso2 } = useParams();
+    const [searchParams, setSearchParams] = useSearchParams();
     const [data, setData] = useState(null);
-    const [config, setConfig] = useState({ range: 52, view: 'signal', scale: 'abs' });
+
+    // Initialize state from URL params
+    const initialRangeEnum = searchParams.get('range') || '52w';
+    const initialAnchor = searchParams.get('base') || new Date().toISOString().split('T')[0];
+
+    // Config State
+    const [config, setConfig] = useState({
+        rangeEnum: initialRangeEnum,
+        range: getWeeksFromEnum(initialRangeEnum),
+        view: 'signal',
+        scale: 'abs',
+        anchorDate: initialAnchor
+    });
+
     const [fetchError, setFetchError] = useState(null);
     const [paperMode, setPaperMode] = useState(theme === 'light');
+
+    // Sync URL when config changes
+    useEffect(() => {
+        const params = {};
+        if (config.anchorDate) params.base = config.anchorDate;
+        if (config.rangeEnum) params.range = config.rangeEnum;
+        setSearchParams(params, { replace: true });
+    }, [config.anchorDate, config.rangeEnum, setSearchParams]);
 
     useEffect(() => { setPaperMode(theme === 'light'); }, [theme]);
 
@@ -352,9 +409,18 @@ export default function CountryDetailView({ lang, t, theme }) {
         setData(null);
         setFetchError(null);
 
-        const fetchPaths = config.range === 260
+        // Always try to fetch 5y data if range > 52 to ensure we have enough data (naive approach)
+        // Optimization: Could check if we already have enough data, but for simplicity always fetch based on max potential need.
+        // Actually, let's keep it simple: if range is 3y (156) or 5y (260), fetch 5y file.
+        // Also if we use T0 deep in the past, we might need 5y file even if range is small, but for now we rely on range logic.
+        // To cover deep past T0, we should probably always prefer 5y file if available, OR logic needs to be smarter.
+        // Current logic: If range > 52 use 5y. 
+        // Improvement: If logic requires deep history, we should fetch 5y.
+        // Let's stick to range-based fetch for now to match verified fix.
+
+        const fetchPaths = config.range > 52
             ? [`./data/history/weekly_5y/${iso2}.json`, `./data/weekly/countries/${iso2}.json`]
-            : [`./data/weekly/countries/${iso2}.json`];
+            : [`./data/weekly/countries/${iso2}.json`, `./data/history/weekly_5y/${iso2}.json`]; // Fallback to 5y if 52w missing?
 
         const tryFetch = async (paths) => {
             for (const path of paths) {
@@ -375,23 +441,56 @@ export default function CountryDetailView({ lang, t, theme }) {
         };
 
         tryFetch(fetchPaths);
-    }, [iso2, config.range]);
+    }, [iso2, config.range]); // Re-fetch only if range bracket changes (e.g. 52 -> 260)
 
     if (fetchError) return <div style={{ color: 'red', padding: '2rem' }}>Error: {fetchError}</div>;
     if (!data) return <div style={{ padding: '2rem', color: '#fff' }}>Loading data for {iso2}...</div>;
+
+    // --- FILTERING LOGIC ---
+    const t0WeekStr = getIsoWeek(config.anchorDate);
+    const t0WeekInt = weekKeyToInt(t0WeekStr);
+
+    // Sort data just in case
+    const allItems = (data.history || []).sort((a, b) => weekKeyToInt(a.week) - weekKeyToInt(b.week));
+
+    // Check if T0 is beyond latest data
+    const lastDataWeekStr = allItems.length > 0 ? allItems[allItems.length - 1].week : '';
+    const lastDataWeekInt = weekKeyToInt(lastDataWeekStr);
+
+    const warnings = [];
+    let effectiveT0Int = t0WeekInt;
+
+    if (t0WeekInt > lastDataWeekInt && lastDataWeekInt > 0) {
+        effectiveT0Int = lastDataWeekInt;
+        warnings.push(`T0 clamped to available data (${lastDataWeekStr})`);
+    }
+
+    // Filter items <= effective T0
+    const relevantItems = allItems.filter(item => weekKeyToInt(item.week) <= effectiveT0Int);
+
+    // Slice the last N items (N = range)
+    const displayItems = relevantItems.slice(-config.range);
 
     return (
         <div className={`country-detail-view ${paperMode ? 'paper-mode' : ''}`} style={{
             minHeight: '100vh', background: paperMode ? '#fff' : '#111', color: paperMode ? '#333' : '#eee', transition: 'all 0.3s ease'
         }}>
-            <DetailHeader iso2={iso2} meta={data} config={config} setConfig={setConfig} paperMode={paperMode} setPaperMode={setPaperMode} />
+            <DetailHeader
+                iso2={iso2}
+                meta={data}
+                config={config}
+                setConfig={setConfig}
+                paperMode={paperMode}
+                setPaperMode={setPaperMode}
+                warnings={warnings}
+            />
             <div className="view-container">
                 {config.view === 'signal' ? (
-                    <SignalView data={data} range={config.range} paperMode={paperMode} t={t} />
+                    <SignalView history={displayItems} range={config.range} paperMode={paperMode} t={t} />
                 ) : config.view === 'state' ? (
-                    <StateView data={data} range={config.range} paperMode={paperMode} t={t} />
+                    <StateView history={displayItems} range={config.range} paperMode={paperMode} t={t} />
                 ) : (
-                    <IntensityView data={data} range={config.range} scale={config.scale} paperMode={paperMode} t={t} />
+                    <IntensityView history={displayItems} range={config.range} scale={config.scale} paperMode={paperMode} t={t} />
                 )}
             </div>
             <div style={{ padding: '1rem', borderTop: `1px solid ${paperMode ? '#eee' : '#333'}`, textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
