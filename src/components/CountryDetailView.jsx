@@ -177,11 +177,13 @@ function SignalView({ data, range, paperMode, t }) {
                                 const ratio7 = sr?.ratio7 || h.ratios?.[rKey] || 0;
                                 const level = h.levels?.[rKey] || 'NoData';
                                 const bg = getGateColor(isActive, ratio7, level, h.weekly_surge_r?.thresholds);
+                                const reason = sr?.reason;
+                                const tooltipText = `${rKey} @ ${labels[i]}\nRatio: ${ratio7.toFixed(2)}x\nLevel: ${level}${!isActive && reason && reason !== 'active' ? `\nGate: ${reason}` : ''}`;
 
                                 return (
                                     <td key={i} style={{ padding: 2 }}>
                                         <div
-                                            title={`${rKey} @ ${labels[i]}\nRatio: ${ratio7.toFixed(2)}x\nLevel: ${level}`}
+                                            title={tooltipText}
                                             style={{
                                                 height: 24, background: bg, borderRadius: 2,
                                                 opacity: (level === 'None' || level === 'NoData') ? 0.2 : 0.9,
