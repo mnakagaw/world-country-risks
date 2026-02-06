@@ -15,6 +15,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+import { buildRCondition } from '../gdelt_bigquery.js';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const RDEFS_PATH = path.resolve(__dirname, '../../config/r_definitions.json');
 const SQL_PATH = path.resolve(__dirname, '../weekly_query.sql');
@@ -23,7 +25,7 @@ function main() {
     console.log('[VALIDATE] Checking r_definitions.json vs weekly_query.sql...');
 
     // 1. Load files
-    let rDefs, sqlContent;
+    let rDefs, sqlContentRaw;
     try {
         rDefs = JSON.parse(fs.readFileSync(RDEFS_PATH, 'utf-8'));
         console.log(`[LOAD] r_definitions.json version: ${rDefs.version}`);
@@ -33,12 +35,21 @@ function main() {
     }
 
     try {
-        sqlContent = fs.readFileSync(SQL_PATH, 'utf-8');
-        console.log(`[LOAD] weekly_query.sql loaded (${sqlContent.length} chars)`);
+        sqlContentRaw = fs.readFileSync(SQL_PATH, 'utf-8');
+        console.log(`[LOAD] weekly_query.sql template loaded (${sqlContentRaw.length} chars)`);
     } catch (err) {
         console.error(`[FATAL] Could not load ${SQL_PATH}: ${err.message}`);
         process.exit(1);
     }
+
+    // Render Template
+    const sqlContent = sqlContentRaw
+        .replace(/\${R1_CONDITION}/g, buildRCondition(rDefs.R1))
+        .replace(/\${R2_CONDITION}/g, buildRCondition(rDefs.R2))
+        .replace(/\${R3_CONDITION}/g, buildRCondition(rDefs.R3))
+        .replace(/\${R4_CONDITION}/g, buildRCondition(rDefs.R4));
+
+    console.log(`[RENDER] Template rendered for validation.`);
 
     const errors = [];
 

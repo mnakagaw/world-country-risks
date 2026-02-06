@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { BigQuery } from "@google-cloud/bigquery";
+import { buildRCondition } from "./gdelt_bigquery.js";
 
 function parseArgs(argv) {
     const out = {};
@@ -42,7 +43,15 @@ async function main() {
         console.error("SQL file not found:", sqlPath);
         process.exit(1);
     }
-    const query = fs.readFileSync(sqlPath, "utf8");
+    const queryRaw = fs.readFileSync(sqlPath, "utf8");
+    const rDefsPath = path.join(process.cwd(), "config", "r_definitions.json");
+    const rDefs = JSON.parse(fs.readFileSync(rDefsPath, "utf8"));
+
+    const query = queryRaw
+        .replace(/\${R1_CONDITION}/g, buildRCondition(rDefs.R1))
+        .replace(/\${R2_CONDITION}/g, buildRCondition(rDefs.R2))
+        .replace(/\${R3_CONDITION}/g, buildRCondition(rDefs.R3))
+        .replace(/\${R4_CONDITION}/g, buildRCondition(rDefs.R4));
 
     const keyPath = path.join(process.cwd(), 'credentials', 'gcp-service-account.json');
     const BQ_PROJECT_ID = process.env.BQ_PROJECT_ID || process.env.GOOGLE_CLOUD_PROJECT || 'countryrisks-prod';

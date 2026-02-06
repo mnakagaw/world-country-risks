@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import { BigQuery } from '@google-cloud/bigquery';
 import 'dotenv/config';
 import { fipsToIso2, loadCountryNameMap } from './fips_to_iso2.js';
+import { buildRCondition } from './gdelt_bigquery.js';
 import { execSync } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -15,12 +16,14 @@ const COUNTRIES_DIR = path.resolve(WEEKLY_DIR, 'countries');
 const BASELINES_5Y_PATH = path.resolve(DATA_DIR, 'baselines/gdelt_r_baselines_5y.json');
 const BASELINES_CALMEST3Y_PATH = path.resolve(DATA_DIR, 'baselines/gdelt_calmest3y_baselines.json');
 const SCORING_PATH = path.resolve(__dirname, '../config/scoring.json');
+const RDEFS_PATH = path.resolve(__dirname, '../config/r_definitions.json');
 const SQL_PATH = path.resolve(__dirname, 'weekly_query.sql');
 
 // Load Scoring Config for Gate Logic
 const scoringConfig = JSON.parse(fs.readFileSync(SCORING_PATH, 'utf-8'));
+const rDefs = JSON.parse(fs.readFileSync(RDEFS_PATH, 'utf-8'));
 
-const THRESHOLDS = { yellow: 1.75, orange: 2.75, red: 3.75 };
+const THRESHOLDS = scoringConfig.surge_r?.thresholds || { yellow: 1.75, orange: 2.75, red: 3.75 };
 
 function parseArgs(argv) {
     const out = {};
@@ -74,6 +77,13 @@ async function main() {
     console.log(`[BASELINES] Loaded 5y baselines and calmest3y baselines`);
     const sqlBase = fs.readFileSync(SQL_PATH, 'utf-8');
 
+    // Inject R-Definitions into SQL template
+    const sql = sqlBase
+        .replace(/\${R1_CONDITION}/g, buildRCondition(rDefs.R1))
+        .replace(/\${R2_CONDITION}/g, buildRCondition(rDefs.R2))
+        .replace(/\${R3_CONDITION}/g, buildRCondition(rDefs.R3))
+        .replace(/\${R4_CONDITION}/g, buildRCondition(rDefs.R4));
+
     // Init BigQuery
     const BQ_PROJECT_ID = process.env.BQ_PROJECT_ID || process.env.GOOGLE_CLOUD_PROJECT || 'countryrisks-prod';
 
@@ -83,13 +93,23 @@ async function main() {
     });
     const nameMap = loadCountryNameMap();
 
-    const [rows] = await bigquery.query({
-        query: sqlBase,
+    const [job] = await bigquery.createQueryJob({
+        query: sql,
         params: {
             start_date: start,
             end_date: new Date(new Date(end).getTime() + 86400000).toISOString().split('T')[0]
         }
     });
+    console.log(`[BIGQUERY] Job ${job.id} started...`);
+    const [rows] = await job.getQueryResults();
+
+    // Cost Visibility
+    const [metadata] = await job.getMetadata();
+    const bytes = parseInt(metadata.statistics?.totalBytesProcessed || 0);
+    const cost = (bytes / (1024 ** 4) * 5).toFixed(6);
+    console.log(`[COST] Weekly Query: ${(bytes / (1024 ** 3)).toFixed(4)} GB scanned, ~$${cost} USD`);
+
+    console.log(`[BIGQUERY] Received ${rows.length} rows.`);
 
     const weekResult = {};
     let weekId = null;
