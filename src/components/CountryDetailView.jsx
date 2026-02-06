@@ -353,7 +353,7 @@ export default function CountryDetailView({ lang, t, theme }) {
         setFetchError(null);
 
         const fetchPaths = config.range === 260
-            ? [`./data/history/latam33_5y/${iso2}.json`, `./data/weekly/countries/${iso2}.json`]
+            ? [`./data/history/weekly_5y/${iso2}.json`, `./data/weekly/countries/${iso2}.json`]
             : [`./data/weekly/countries/${iso2}.json`];
 
         const tryFetch = async (paths) => {
