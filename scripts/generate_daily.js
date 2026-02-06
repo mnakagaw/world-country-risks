@@ -22,8 +22,13 @@ console.log(`[CONFIG] SCORING_ENGINE=${SCORING_ENGINE}`);
 
 const parser = new Parser();
 
-// Always include
-const ALWAYS_INCLUDE = ['JP', 'UA', 'RU', 'IL', 'PS', 'US', 'CN', 'TW'];
+// TIER CONFIGS
+const TIER_A_PATH = path.resolve(__dirname, '../config/latam33.json');
+const TIER_S_PATH = path.resolve(__dirname, '../config/sensor_countries.json');
+
+const TIER_A_LIST = JSON.parse(fsSync.readFileSync(TIER_A_PATH, 'utf-8'));
+const TIER_S_LIST = JSON.parse(fsSync.readFileSync(TIER_S_PATH, 'utf-8'));
+
 const TARGET_DATE_STR = process.env.TARGET_DATE || new Date().toISOString().split('T')[0];
 const TARGET_DATE_OBJ = new Date(TARGET_DATE_STR);
 const IS_HISTORICAL = (new Date() - TARGET_DATE_OBJ) > (48 * 60 * 60 * 1000); // 48h buffer
@@ -806,11 +811,18 @@ async function main() {
     console.log("Fetching RSS feeds...");
     const countryData = []; // { code, name, rssArticles }
 
-    // Determine process list (Hot + Important + R-Index Surge)
-    // [P0 Fix] Must include R-Index candidates, otherwise countries like Spain (Green Raw, High Surge) are skipped!
+    // Determine process list (Tier A + Tier S + Tier B + R-Index Surge)
+    // - Tier A: latam33 (Fixed)
+    // - Tier S: sensor_countries (Fixed, GKG criteria)
+    // - Tier B: Top N dynamic
+    const tierASet = new Set(TIER_A_LIST);
+    const tierSSet = new Set(TIER_S_LIST);
+    const tierBSet = new Set(diverseHotCodes); // Dynamic Hot Countries
+
     let processList = countriesList.filter(c =>
-        diverseHotCodes.has(c.code) ||
-        ALWAYS_INCLUDE.includes(c.code) ||
+        tierASet.has(c.code) ||
+        tierSSet.has(c.code) ||
+        tierBSet.has(c.code) ||
         v4YellowPlus.has(c.code) ||
         rIndexTop40.includes(c.code)
     );
@@ -885,7 +897,7 @@ async function main() {
         ...rawYellowPlusList,
         ...rIndexTop30,
         ...rssMissing,
-        ...ALWAYS_INCLUDE
+        ...TIER_S_LIST // Sensor countries always get GKG
     ]);
     let gkgTargetArray = Array.from(gkgSet);
 
@@ -1061,8 +1073,9 @@ async function main() {
         daily_briefing_en: "", daily_briefing_ja: "", daily_briefing_es: ""
     };
 
-    const ENABLE_GOOGLE_TRENDS = true;
-    const ENABLE_POLYMARKET = true;
+    // Use the variables defined at the top of the file
+    // const ENABLE_GOOGLE_TRENDS = true;
+    // const ENABLE_POLYMARKET = true;
     const briefings = [];
 
     // 7a. Google Trends
@@ -1587,6 +1600,13 @@ async function main() {
             r_scores_raw: rScoresRawSafe,    // RAW mode display (absolute P2 fix)
             r_scores_raw_abs: rScoresRawAbsSafe, // RAW absolute (sqrt-scaled) for comparison
             v4_scoring: v4Score,
+            tiers: (() => {
+                const groups = [];
+                if (tierASet.has(iso2)) groups.push("A");
+                if (tierSSet.has(iso2)) groups.push("S");
+                if (tierBSet.has(iso2)) groups.push("B");
+                return groups;
+            })(),
             gdelt: {
                 event_count: v4Score.event_count || 0,
                 avg_tone: v4Score.tone || 0,

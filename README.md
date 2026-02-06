@@ -139,6 +139,12 @@ Even if the ratio spikes, it should not be treated as an alert when it may refle
 
 Therefore, the implementation includes conditions (gates) to suppress missing/abnormal/unstable inputs and avoid overreaction, so that **“high ratio ≠ immediate alert.”** (See config/ and scripts/ for details.)
 
+### 5.5 Monitoring Tiers
+To ensure consistent coverage, countries are categorized into tiers:
+- **Tier A: LATAM33**: Fixed monitoring for 33 Latin American and Caribbean countries.
+- **Tier B: World Top N**: Dynamic list of high-volume countries currently gaining attention.
+- **Tier S: Sensor Countries**: Key world actors monitored daily for GKG acquisition regardless of score.
+
 ## 6. Meaning of view modes
 ### R-INDEX (main)
 See how strongly signals intensified compared to the country’s normal baseline  
@@ -348,6 +354,12 @@ Incluso si el ratio se dispara, no debe tratarse como alerta si puede reflejar:
 - Ruido transitorio
 
 Por ello, la implementación incluye condiciones (gates) para suprimir entradas faltantes/anómalas/inestables y evitar sobrerreacción, de modo que **“ratio alto ≠ alerta inmediata.”** (Ver config/ y scripts/ para detalles.)
+
+### 5.5 Niveles de monitoreo (Monitoring Tiers)
+Para asegurar una cobertura consistente, los países se categorizan en niveles:
+- **Tier A: LATAM33**: Monitoreo fijo para 33 países de América Latina y el Caribe.
+- **Tier B: World Top N**: Lista dinámica de países con alto volumen de eventos.
+- **Tier S: Sensor Countries**: Países clave monitoreados diariamente para adquisición de GKG independientemente de su puntaje.
 
 ## 6. Significado de los modos de visualización
 ### R-INDEX (principal)
@@ -561,6 +573,12 @@ Yellow / Orange / Red は「絶対件数」ではなく R-INDEX＋Gate の結果
 
 である場合は、アラートとして扱うべきではありません。  
 そのため実装では、欠損・異常値・不安定入力の抑制や、過剰反応を避ける条件（ゲート）を設け、**“倍率が高い＝即アラート”**にならないよう制御します（詳細は config/ と scripts/ を参照）。
+
+### 5.5 監視ティア（Monitoring Tiers）
+安定した観測を維持するため、国々を以下のティアに分類して運用しています。
+- **Tier A: LATAM33**：中南米・カリブ海 33カ国の固定監視。
+- **Tier B: World Top N**：出来事量が多い国々の動的な抽出。
+- **Tier S: Sensor Countries**：スコアに関係なく毎日GKG（個別ニュース）を取得する世界の中核国。
 
 ## 6. 表示モードの意味
 ### R-INDEX（メイン）

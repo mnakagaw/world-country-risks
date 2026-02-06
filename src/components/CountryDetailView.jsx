@@ -583,6 +583,7 @@ export default function CountryDetailView({ lang, t, theme }) {
     const { iso2 } = useParams();
     const [data, setData] = useState(null);
     const [config, setConfig] = useState({ range: 52, view: 'signal', scale: 'abs' });
+    const [fetchError, setFetchError] = useState(null);
 
     // Sync paperMode with global theme
     const [paperMode, setPaperMode] = useState(theme === 'light');
@@ -605,10 +606,10 @@ export default function CountryDetailView({ lang, t, theme }) {
                 const anomalies = report?.countries?.[iso2]?.anomalies || [];
                 setData({ ...historyData, anomalies });
             })
-            .catch(err => setError(err.message));
+            .catch(err => setFetchError(err.message));
     }, [iso2]);
 
-    if (error) return <div style={{ color: 'red', padding: '2rem' }}>Error: {error}. This country may not have historical tracking enabled.</div>;
+    if (fetchError) return <div style={{ color: 'red', padding: '2rem' }}>Error: {fetchError}. This country may not have historical tracking enabled.</div>;
     if (!data) return <div style={{ padding: '2rem', color: '#fff' }}>Loading historical data for {iso2}...</div>;
 
     return (

@@ -29,7 +29,7 @@ try {
  * @param {Object} def - { rootCodes: [], eventCodes: [], eventCodePrefixes: [] }
  * @returns {string} - SQL condition for COUNTIF
  */
-function buildRCondition(def) {
+export function buildRCondition(def) {
     const parts = [];
     if (def.rootCodes && def.rootCodes.length > 0) {
         const quoted = def.rootCodes.map(c => `'${c}'`).join(', ');
