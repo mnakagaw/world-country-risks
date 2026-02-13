@@ -1,0 +1,3679 @@
+{
+    "meta": {
+        "version": "v1",
+        "generated_at": "2026-01-15T05:04:33.590Z",
+        "country_count": 215,
+        "window": {
+            "years": 5,
+            "start_date": "2021-01-15",
+            "end_date": "2026-01-15"
+        },
+        "sources": {
+            "gdelt_events": {
+                "table": "gdelt-bq.gdeltv2.events",
+                "metric": "events_per_day"
+            }
+        },
+        "cost_estimate": {
+            "bytes_processed": 10363066928,
+            "usd": 0.0589072154070891
+        }
+    },
+    "countries": {
+        "CN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 4514,
+                    "median_5y": 4519,
+                    "p90_5y": 6361,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 4519
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "HU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 521,
+                    "median_5y": 447,
+                    "p90_5y": 873,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 447
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 128,
+                    "median_5y": 125,
+                    "p90_5y": 210,
+                    "days_counted": 1818
+                },
+                "GDELTweight": 125
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 746,
+                    "median_5y": 450,
+                    "p90_5y": 1695,
+                    "days_counted": 3636
+                },
+                "GDELTweight": 450
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CF": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 32,
+                    "median_5y": 24,
+                    "p90_5y": 64,
+                    "days_counted": 1803
+                },
+                "GDELTweight": 24
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "HK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 176,
+                    "median_5y": 160,
+                    "p90_5y": 281,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 160
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 31,
+                    "median_5y": 19,
+                    "p90_5y": 60,
+                    "days_counted": 1779
+                },
+                "GDELTweight": 19
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 400,
+                    "median_5y": 387,
+                    "p90_5y": 587,
+                    "days_counted": 1819
+                },
+                "GDELTweight": 387
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "HR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 326,
+                    "median_5y": 329,
+                    "p90_5y": 466,
+                    "days_counted": 1819
+                },
+                "GDELTweight": 329
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 543,
+                    "median_5y": 526,
+                    "p90_5y": 755,
+                    "days_counted": 1826
+                },
+                "GDELTweight": 526
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TD": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 112,
+                    "median_5y": 92,
+                    "p90_5y": 191,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 92
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 188,
+                    "median_5y": 164,
+                    "p90_5y": 267,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 164
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "RW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 220,
+                    "median_5y": 173,
+                    "p90_5y": 386,
+                    "days_counted": 1820
+                },
+                "GDELTweight": 173
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 255,
+                    "median_5y": 226,
+                    "p90_5y": 425,
+                    "days_counted": 1817
+                },
+                "GDELTweight": 226
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 186,
+                    "median_5y": 121,
+                    "p90_5y": 266,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 121
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 41,
+                    "median_5y": 32,
+                    "p90_5y": 81,
+                    "days_counted": 1805
+                },
+                "GDELTweight": 32
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 69,
+                    "median_5y": 64,
+                    "p90_5y": 122,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 64
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "FO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 5,
+                    "median_5y": 3,
+                    "p90_5y": 11,
+                    "days_counted": 1112
+                },
+                "GDELTweight": 3
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1289,
+                    "median_5y": 1258,
+                    "p90_5y": 1917,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 1258
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 73,
+                    "median_5y": 60,
+                    "p90_5y": 133,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 60
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 683,
+                    "median_5y": 653,
+                    "p90_5y": 1040,
+                    "days_counted": 1824
+                },
+                "GDELTweight": 653
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 384,
+                    "median_5y": 366,
+                    "p90_5y": 563,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 366
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CD": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 86,
+                    "median_5y": 75,
+                    "p90_5y": 147,
+                    "days_counted": 1817
+                },
+                "GDELTweight": 75
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ST": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 7,
+                    "median_5y": 5,
+                    "p90_5y": 14,
+                    "days_counted": 1458
+                },
+                "GDELTweight": 5
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 477,
+                    "median_5y": 465,
+                    "p90_5y": 690,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 465
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MC": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 41,
+                    "median_5y": 36,
+                    "p90_5y": 68,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 36
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 110,
+                    "median_5y": 97,
+                    "p90_5y": 169,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 97
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GQ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 15,
+                    "median_5y": 9,
+                    "p90_5y": 32,
+                    "days_counted": 1715
+                },
+                "GDELTweight": 9
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 71,
+                    "median_5y": 59,
+                    "p90_5y": 130,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 59
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 3266,
+                    "median_5y": 3320,
+                    "p90_5y": 4762,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 3320
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "UZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 144,
+                    "median_5y": 121,
+                    "p90_5y": 266,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 121
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KH": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 243,
+                    "median_5y": 208,
+                    "p90_5y": 389,
+                    "days_counted": 1819
+                },
+                "GDELTweight": 208
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BJ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 70,
+                    "median_5y": 61,
+                    "p90_5y": 114,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 61
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SD": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 553,
+                    "median_5y": 436,
+                    "p90_5y": 827,
+                    "days_counted": 1819
+                },
+                "GDELTweight": 436
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "XK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 174,
+                    "median_5y": 143,
+                    "p90_5y": 292,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 143
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 395,
+                    "median_5y": 371,
+                    "p90_5y": 546,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 371
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SB": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 40,
+                    "median_5y": 26,
+                    "p90_5y": 81,
+                    "days_counted": 1772
+                },
+                "GDELTweight": 26
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ZA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1498,
+                    "median_5y": 1555,
+                    "p90_5y": 2161,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 1555
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "JO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 438,
+                    "median_5y": 375,
+                    "p90_5y": 685,
+                    "days_counted": 1817
+                },
+                "GDELTweight": 375
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 42,
+                    "median_5y": 22,
+                    "p90_5y": 105,
+                    "days_counted": 1757
+                },
+                "GDELTweight": 22
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 72,
+                    "median_5y": 65,
+                    "p90_5y": 114,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 65
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 161,
+                    "median_5y": 141,
+                    "p90_5y": 269,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 141
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 20,
+                    "median_5y": 16,
+                    "p90_5y": 39,
+                    "days_counted": 1798
+                },
+                "GDELTweight": 16
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "VG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 7,
+                    "median_5y": 4,
+                    "p90_5y": 13,
+                    "days_counted": 1365
+                },
+                "GDELTweight": 4
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 132,
+                    "median_5y": 126,
+                    "p90_5y": 202,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 126
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "DO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 68,
+                    "median_5y": 59,
+                    "p90_5y": 113,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 59
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 358,
+                    "median_5y": 336,
+                    "p90_5y": 550,
+                    "days_counted": 1812
+                },
+                "GDELTweight": 336
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ZW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 361,
+                    "median_5y": 347,
+                    "p90_5y": 526,
+                    "days_counted": 1821
+                },
+                "GDELTweight": 347
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 40,
+                    "median_5y": 28,
+                    "p90_5y": 78,
+                    "days_counted": 1796
+                },
+                "GDELTweight": 28
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 96,
+                    "median_5y": 86,
+                    "p90_5y": 169,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 86
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "VA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 56,
+                    "median_5y": 42,
+                    "p90_5y": 95,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 42
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 150,
+                    "median_5y": 123,
+                    "p90_5y": 263,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 123
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 67,
+                    "median_5y": 49,
+                    "p90_5y": 126,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 49
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "EE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 167,
+                    "median_5y": 150,
+                    "p90_5y": 278,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 150
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 443,
+                    "median_5y": 395,
+                    "p90_5y": 630,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 395
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "WS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 37,
+                    "median_5y": 26,
+                    "p90_5y": 72,
+                    "days_counted": 1797
+                },
+                "GDELTweight": 26
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 10,
+                    "median_5y": 6,
+                    "p90_5y": 19,
+                    "days_counted": 1620
+                },
+                "GDELTweight": 6
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 49,
+                    "median_5y": 41,
+                    "p90_5y": 79,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 41
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 12,
+                    "median_5y": 8,
+                    "p90_5y": 25,
+                    "days_counted": 1620
+                },
+                "GDELTweight": 8
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "OM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 131,
+                    "median_5y": 115,
+                    "p90_5y": 211,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 115
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 72,
+                    "median_5y": 64,
+                    "p90_5y": 125,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 64
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CH": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 677,
+                    "median_5y": 666,
+                    "p90_5y": 964,
+                    "days_counted": 1824
+                },
+                "GDELTweight": 666
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 22,
+                    "median_5y": 18,
+                    "p90_5y": 41,
+                    "days_counted": 1796
+                },
+                "GDELTweight": 18
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 8,
+                    "median_5y": 6,
+                    "p90_5y": 18,
+                    "days_counted": 1319
+                },
+                "GDELTweight": 6
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 8,
+                    "median_5y": 5,
+                    "p90_5y": 17,
+                    "days_counted": 1628
+                },
+                "GDELTweight": 5
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 66,
+                    "median_5y": 57,
+                    "p90_5y": 122,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 57
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1211,
+                    "median_5y": 1122,
+                    "p90_5y": 1846,
+                    "days_counted": 1819
+                },
+                "GDELTweight": 1122
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 29,
+                    "median_5y": 24,
+                    "p90_5y": 51,
+                    "days_counted": 1809
+                },
+                "GDELTweight": 24
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 377,
+                    "median_5y": 367,
+                    "p90_5y": 563,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 367
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 124,
+                    "median_5y": 110,
+                    "p90_5y": 202,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 110
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 48,
+                    "median_5y": 39,
+                    "p90_5y": 87,
+                    "days_counted": 1808
+                },
+                "GDELTweight": 39
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 131,
+                    "median_5y": 122,
+                    "p90_5y": 202,
+                    "days_counted": 1812
+                },
+                "GDELTweight": 122
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 17,
+                    "median_5y": 11,
+                    "p90_5y": 38,
+                    "days_counted": 1537
+                },
+                "GDELTweight": 11
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 115,
+                    "median_5y": 107,
+                    "p90_5y": 191,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 107
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 79,
+                    "median_5y": 26,
+                    "p90_5y": 90,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 26
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "IL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 7310,
+                    "median_5y": 4998,
+                    "p90_5y": 13850,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 4998
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ES": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 2248,
+                    "median_5y": 2217,
+                    "p90_5y": 3135,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 2217
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 189,
+                    "median_5y": 180,
+                    "p90_5y": 266,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 180
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 309,
+                    "median_5y": 283,
+                    "p90_5y": 489,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 283
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AD": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 22,
+                    "median_5y": 18,
+                    "p90_5y": 38,
+                    "days_counted": 1806
+                },
+                "GDELTweight": 18
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 78,
+                    "median_5y": 59,
+                    "p90_5y": 142,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 59
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 100,
+                    "median_5y": 91,
+                    "p90_5y": 172,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 91
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 618,
+                    "median_5y": 610,
+                    "p90_5y": 909,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 610
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "RS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 382,
+                    "median_5y": 360,
+                    "p90_5y": 572,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 360
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 258,
+                    "median_5y": 228,
+                    "p90_5y": 408,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 228
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "DM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 29,
+                    "median_5y": 25,
+                    "p90_5y": 50,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 25
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "EG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1681,
+                    "median_5y": 1522,
+                    "p90_5y": 2499,
+                    "days_counted": 1824
+                },
+                "GDELTweight": 1522
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MH": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 13,
+                    "median_5y": 9,
+                    "p90_5y": 28,
+                    "days_counted": 1716
+                },
+                "GDELTweight": 9
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "IR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1957,
+                    "median_5y": 1714,
+                    "p90_5y": 2944,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 1714
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 133,
+                    "median_5y": 114,
+                    "p90_5y": 217,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 114
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1710,
+                    "median_5y": 1692,
+                    "p90_5y": 2406,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 1692
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1022,
+                    "median_5y": 1006,
+                    "p90_5y": 1363,
+                    "days_counted": 1820
+                },
+                "GDELTweight": 1006
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TV": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 10,
+                    "median_5y": 5,
+                    "p90_5y": 22,
+                    "days_counted": 1265
+                },
+                "GDELTweight": 5
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 7,
+                    "median_5y": 4,
+                    "p90_5y": 14,
+                    "days_counted": 1155
+                },
+                "GDELTweight": 4
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 366,
+                    "median_5y": 339,
+                    "p90_5y": 540,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 339
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SC": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 43,
+                    "median_5y": 34,
+                    "p90_5y": 80,
+                    "days_counted": 1800
+                },
+                "GDELTweight": 34
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 669,
+                    "median_5y": 605,
+                    "p90_5y": 1115,
+                    "days_counted": 1820
+                },
+                "GDELTweight": 605
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1225,
+                    "median_5y": 1214,
+                    "p90_5y": 1705,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 1214
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 149,
+                    "median_5y": 134,
+                    "p90_5y": 232,
+                    "days_counted": 1812
+                },
+                "GDELTweight": 134
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PF": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 8,
+                    "median_5y": 5,
+                    "p90_5y": 18,
+                    "days_counted": 1476
+                },
+                "GDELTweight": 5
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "YE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 338,
+                    "median_5y": 272,
+                    "p90_5y": 588,
+                    "days_counted": 1817
+                },
+                "GDELTweight": 272
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 113,
+                    "median_5y": 88,
+                    "p90_5y": 204,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 88
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TJ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 89,
+                    "median_5y": 66,
+                    "p90_5y": 171,
+                    "days_counted": 1809
+                },
+                "GDELTweight": 66
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 243,
+                    "median_5y": 223,
+                    "p90_5y": 397,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 223
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "DJ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 96,
+                    "median_5y": 56,
+                    "p90_5y": 182,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 56
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 67,
+                    "median_5y": 53,
+                    "p90_5y": 113,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 53
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 606,
+                    "median_5y": 554,
+                    "p90_5y": 978,
+                    "days_counted": 1821
+                },
+                "GDELTweight": 554
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "IN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 6211,
+                    "median_5y": 5958,
+                    "p90_5y": 8496,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 5958
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 133,
+                    "median_5y": 121,
+                    "p90_5y": 222,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 121
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TH": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 517,
+                    "median_5y": 468,
+                    "p90_5y": 771,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 468
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "RO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 861,
+                    "median_5y": 802,
+                    "p90_5y": 1409,
+                    "days_counted": 1820
+                },
+                "GDELTweight": 802
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ZM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 96,
+                    "median_5y": 88,
+                    "p90_5y": 158,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 88
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ME": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 51,
+                    "median_5y": 46,
+                    "p90_5y": 82,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 46
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 164,
+                    "median_5y": 158,
+                    "p90_5y": 226,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 158
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 50,
+                    "median_5y": 48,
+                    "p90_5y": 80,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 48
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 9,
+                    "median_5y": 5,
+                    "p90_5y": 19,
+                    "days_counted": 1340
+                },
+                "GDELTweight": 5
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 50,
+                    "median_5y": 49,
+                    "p90_5y": 81,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 49
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 226,
+                    "median_5y": 159,
+                    "p90_5y": 376,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 159
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 102,
+                    "median_5y": 91,
+                    "p90_5y": 171,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 91
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LC": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 13,
+                    "median_5y": 9,
+                    "p90_5y": 27,
+                    "days_counted": 1691
+                },
+                "GDELTweight": 9
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 20,
+                    "median_5y": 15,
+                    "p90_5y": 39,
+                    "days_counted": 1607
+                },
+                "GDELTweight": 15
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "IS": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 79,
+                    "median_5y": 70,
+                    "p90_5y": 125,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 70
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NC": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 18,
+                    "median_5y": 9,
+                    "p90_5y": 34,
+                    "days_counted": 1600
+                },
+                "GDELTweight": 9
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "RU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 9337,
+                    "median_5y": 9023,
+                    "p90_5y": 13271,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 9023
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 2808,
+                    "median_5y": 2737,
+                    "p90_5y": 4245,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 2737
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1167,
+                    "median_5y": 1045,
+                    "p90_5y": 1906,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 1045
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 73,
+                    "median_5y": 66,
+                    "p90_5y": 127,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 66
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 26,
+                    "median_5y": 21,
+                    "p90_5y": 49,
+                    "days_counted": 1785
+                },
+                "GDELTweight": 21
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BB": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 68,
+                    "median_5y": 62,
+                    "p90_5y": 109,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 62
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "UY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 135,
+                    "median_5y": 126,
+                    "p90_5y": 203,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 126
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "IT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 2422,
+                    "median_5y": 2318,
+                    "p90_5y": 3394,
+                    "days_counted": 1826
+                },
+                "GDELTweight": 2318
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "FM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 10,
+                    "median_5y": 6,
+                    "p90_5y": 22,
+                    "days_counted": 1536
+                },
+                "GDELTweight": 6
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "FK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 5,
+                    "median_5y": 3,
+                    "p90_5y": 10,
+                    "days_counted": 430
+                },
+                "GDELTweight": 3
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 762,
+                    "median_5y": 726,
+                    "p90_5y": 1229,
+                    "days_counted": 1823
+                },
+                "GDELTweight": 726
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NP": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 332,
+                    "median_5y": 314,
+                    "p90_5y": 528,
+                    "days_counted": 1817
+                },
+                "GDELTweight": 314
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 230,
+                    "median_5y": 196,
+                    "p90_5y": 357,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 196
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ID": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1708,
+                    "median_5y": 1721,
+                    "p90_5y": 2330,
+                    "days_counted": 1824
+                },
+                "GDELTweight": 1721
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GH": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 744,
+                    "median_5y": 749,
+                    "p90_5y": 1097,
+                    "days_counted": 1818
+                },
+                "GDELTweight": 749
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 36,
+                    "median_5y": 26,
+                    "p90_5y": 57,
+                    "days_counted": 1812
+                },
+                "GDELTweight": 26
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 56,
+                    "median_5y": 49,
+                    "p90_5y": 91,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 49
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MV": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 61,
+                    "median_5y": 44,
+                    "p90_5y": 114,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 44
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GD": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 33,
+                    "median_5y": 26,
+                    "p90_5y": 63,
+                    "days_counted": 1807
+                },
+                "GDELTweight": 26
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KP": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 400,
+                    "median_5y": 298,
+                    "p90_5y": 736,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 298
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BD": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 956,
+                    "median_5y": 874,
+                    "p90_5y": 1381,
+                    "days_counted": 1820
+                },
+                "GDELTweight": 874
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 623,
+                    "median_5y": 507,
+                    "p90_5y": 1054,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 507
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "HT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 289,
+                    "median_5y": 212,
+                    "p90_5y": 507,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 212
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ML": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 270,
+                    "median_5y": 212,
+                    "p90_5y": 521,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 212
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 67,
+                    "median_5y": 62,
+                    "p90_5y": 108,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 62
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "FJ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 103,
+                    "median_5y": 96,
+                    "p90_5y": 163,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 96
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "VE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1025,
+                    "median_5y": 856,
+                    "p90_5y": 1539,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 856
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "JM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 214,
+                    "median_5y": 205,
+                    "p90_5y": 294,
+                    "days_counted": 1821
+                },
+                "GDELTweight": 205
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LV": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 170,
+                    "median_5y": 164,
+                    "p90_5y": 270,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 164
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 26,
+                    "median_5y": 16,
+                    "p90_5y": 43,
+                    "days_counted": 1745
+                },
+                "GDELTweight": 16
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 177,
+                    "median_5y": 171,
+                    "p90_5y": 315,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 171
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BF": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 101,
+                    "median_5y": 80,
+                    "p90_5y": 180,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 80
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 54,
+                    "median_5y": 38,
+                    "p90_5y": 110,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 38
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "JP": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1425,
+                    "median_5y": 1396,
+                    "p90_5y": 2024,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 1396
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 241,
+                    "median_5y": 214,
+                    "p90_5y": 390,
+                    "days_counted": 1812
+                },
+                "GDELTweight": 214
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AF": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1163,
+                    "median_5y": 754,
+                    "p90_5y": 1723,
+                    "days_counted": 1824
+                },
+                "GDELTweight": 754
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 3332,
+                    "median_5y": 3333,
+                    "p90_5y": 4287,
+                    "days_counted": 1826
+                },
+                "GDELTweight": 3333
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1074,
+                    "median_5y": 852,
+                    "p90_5y": 1629,
+                    "days_counted": 1826
+                },
+                "GDELTweight": 852
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "DE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 2682,
+                    "median_5y": 2717,
+                    "p90_5y": 3692,
+                    "days_counted": 1826
+                },
+                "GDELTweight": 2717
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "DZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 264,
+                    "median_5y": 244,
+                    "p90_5y": 396,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 244
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 921,
+                    "median_5y": 900,
+                    "p90_5y": 1306,
+                    "days_counted": 1819
+                },
+                "GDELTweight": 900
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 543,
+                    "median_5y": 467,
+                    "p90_5y": 799,
+                    "days_counted": 1824
+                },
+                "GDELTweight": 467
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 108,
+                    "median_5y": 89,
+                    "p90_5y": 187,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 89
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CV": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 13,
+                    "median_5y": 9,
+                    "p90_5y": 25,
+                    "days_counted": 1730
+                },
+                "GDELTweight": 9
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "FR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 3018,
+                    "median_5y": 3055,
+                    "p90_5y": 4131,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 3055
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 9,
+                    "median_5y": 5,
+                    "p90_5y": 20,
+                    "days_counted": 1458
+                },
+                "GDELTweight": 5
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "US": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 40130,
+                    "median_5y": 42504,
+                    "p90_5y": 54144,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 42504
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TR": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 2177,
+                    "median_5y": 2082,
+                    "p90_5y": 3118,
+                    "days_counted": 1826
+                },
+                "GDELTweight": 2082
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 307,
+                    "median_5y": 261,
+                    "p90_5y": 498,
+                    "days_counted": 1818
+                },
+                "GDELTweight": 261
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "UG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 264,
+                    "median_5y": 247,
+                    "p90_5y": 423,
+                    "days_counted": 1816
+                },
+                "GDELTweight": 247
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 17,
+                    "median_5y": 13,
+                    "p90_5y": 36,
+                    "days_counted": 1729
+                },
+                "GDELTweight": 13
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "IE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1256,
+                    "median_5y": 1278,
+                    "p90_5y": 1783,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 1278
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 92,
+                    "median_5y": 75,
+                    "p90_5y": 165,
+                    "days_counted": 1811
+                },
+                "GDELTweight": 75
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BH": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 142,
+                    "median_5y": 126,
+                    "p90_5y": 229,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 126
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GB": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 7071,
+                    "median_5y": 7369,
+                    "p90_5y": 9380,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 7369
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "DK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 409,
+                    "median_5y": 362,
+                    "p90_5y": 627,
+                    "days_counted": 1817
+                },
+                "GDELTweight": 362
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "HN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 169,
+                    "median_5y": 151,
+                    "p90_5y": 260,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 151
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "VI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 15,
+                    "median_5y": 13,
+                    "p90_5y": 28,
+                    "days_counted": 1761
+                },
+                "GDELTweight": 13
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 18,
+                    "median_5y": 10,
+                    "p90_5y": 36,
+                    "days_counted": 1688
+                },
+                "GDELTweight": 10
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "UA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 7675,
+                    "median_5y": 7307,
+                    "p90_5y": 12175,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 7307
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SV": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 144,
+                    "median_5y": 100,
+                    "p90_5y": 228,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 100
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "VU": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 26,
+                    "median_5y": 18,
+                    "p90_5y": 52,
+                    "days_counted": 1727
+                },
+                "GDELTweight": 18
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MX": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 2474,
+                    "median_5y": 2487,
+                    "p90_5y": 3377,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 2487
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 415,
+                    "median_5y": 401,
+                    "p90_5y": 613,
+                    "days_counted": 1819
+                },
+                "GDELTweight": 401
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PY": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 119,
+                    "median_5y": 107,
+                    "p90_5y": 192,
+                    "days_counted": 1818
+                },
+                "GDELTweight": 107
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "GI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 21,
+                    "median_5y": 16,
+                    "p90_5y": 40,
+                    "days_counted": 1798
+                },
+                "GDELTweight": 16
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TT": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 128,
+                    "median_5y": 121,
+                    "p90_5y": 183,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 121
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "NZ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 669,
+                    "median_5y": 695,
+                    "p90_5y": 993,
+                    "days_counted": 1826
+                },
+                "GDELTweight": 695
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PH": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 1053,
+                    "median_5y": 1031,
+                    "p90_5y": 1517,
+                    "days_counted": 1823
+                },
+                "GDELTweight": 1031
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SM": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 6,
+                    "median_5y": 4,
+                    "p90_5y": 11,
+                    "days_counted": 1492
+                },
+                "GDELTweight": 4
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 492,
+                    "median_5y": 461,
+                    "p90_5y": 682,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 461
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "EC": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 249,
+                    "median_5y": 213,
+                    "p90_5y": 393,
+                    "days_counted": 1817
+                },
+                "GDELTweight": 213
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 152,
+                    "median_5y": 134,
+                    "p90_5y": 248,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 134
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "TG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 34,
+                    "median_5y": 30,
+                    "p90_5y": 58,
+                    "days_counted": 1809
+                },
+                "GDELTweight": 30
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BG": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 434,
+                    "median_5y": 433,
+                    "p90_5y": 642,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 433
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 5,
+                    "median_5y": 3,
+                    "p90_5y": 10,
+                    "days_counted": 847
+                },
+                "GDELTweight": 3
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "SA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 954,
+                    "median_5y": 823,
+                    "p90_5y": 1553,
+                    "days_counted": 1823
+                },
+                "GDELTweight": 823
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "LB": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 809,
+                    "median_5y": 616,
+                    "p90_5y": 1315,
+                    "days_counted": 1821
+                },
+                "GDELTweight": 616
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "FI": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 407,
+                    "median_5y": 353,
+                    "p90_5y": 627,
+                    "days_counted": 1815
+                },
+                "GDELTweight": 353
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "IQ": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 667,
+                    "median_5y": 599,
+                    "p90_5y": 1031,
+                    "days_counted": 1818
+                },
+                "GDELTweight": 599
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AE": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 500,
+                    "median_5y": 473,
+                    "p90_5y": 734,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 473
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "MD": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 318,
+                    "median_5y": 283,
+                    "p90_5y": 553,
+                    "days_counted": 1813
+                },
+                "GDELTweight": 283
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "AO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 86,
+                    "median_5y": 75,
+                    "p90_5y": 147,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 75
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "VN": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 744,
+                    "median_5y": 624,
+                    "p90_5y": 1411,
+                    "days_counted": 1822
+                },
+                "GDELTweight": 624
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "CL": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 357,
+                    "median_5y": 320,
+                    "p90_5y": 582,
+                    "days_counted": 1814
+                },
+                "GDELTweight": 320
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "KW": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 172,
+                    "median_5y": 161,
+                    "p90_5y": 262,
+                    "days_counted": 1812
+                },
+                "GDELTweight": 161
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "QA": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 476,
+                    "median_5y": 372,
+                    "p90_5y": 862,
+                    "days_counted": 1825
+                },
+                "GDELTweight": 372
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ET": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 314,
+                    "median_5y": 264,
+                    "p90_5y": 551,
+                    "days_counted": 1820
+                },
+                "GDELTweight": 264
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "ER": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 43,
+                    "median_5y": 31,
+                    "p90_5y": 84,
+                    "days_counted": 1808
+                },
+                "GDELTweight": 31
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "VC": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 32,
+                    "median_5y": 26,
+                    "p90_5y": 58,
+                    "days_counted": 1790
+                },
+                "GDELTweight": 26
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "BO": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 236,
+                    "median_5y": 221,
+                    "p90_5y": 327,
+                    "days_counted": 1810
+                },
+                "GDELTweight": 221
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        },
+        "PK": {
+            "name_en": "",
+            "name_ja": "",
+            "gdelt": {
+                "baseline": {
+                    "avg_5y": 2241,
+                    "median_5y": 2167,
+                    "p90_5y": 2853,
+                    "days_counted": 1827
+                },
+                "GDELTweight": 2167
+            },
+            "basics": {
+                "population": null,
+                "gdp_nominal": null
+            }
+        }
+    }
+}
