@@ -27,7 +27,8 @@ const bigquery = new BigQuery({
 });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
+const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 const parser = new Parser();
 
 // ============ MEDIA BASKET CONFIG ============

@@ -20,6 +20,11 @@ const HISTORY_PATH = path.resolve(__dirname, '../public/data/v4_history_30d.json
 const SCORING_ENGINE = process.env.SCORING_ENGINE || 'v4';
 console.log(`[CONFIG] SCORING_ENGINE=${SCORING_ENGINE}`);
 
+// Keep the production model configurable so future model retirements do not
+// require replacing model IDs throughout the generator.
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.6-flash';
+console.log(`[CONFIG] GEMINI_MODEL=${GEMINI_MODEL}`);
+
 const parser = new Parser();
 
 // TIER CONFIGS
@@ -64,33 +69,7 @@ const COUNTRY_ALIASES = {
     'TR': ['Turkey', 'Türkiye', 'Turkish', 'Erdogan', 'Istanbul', 'Ankara']
 };
 
-// Helper for Rate Limit Handling (429)
-async function callGeminiWithRetry(model, prompt, retries = 5) {
-    for (let i = 0; i < retries; i++) {
-        try {
-            return await model.generateContent(prompt);
-        } catch (err) {
-            const msg = err.message || '';
-            const isQuota = msg.includes('429') || msg.includes('Quota') || msg.includes('Resource has been exhausted');
-
-            // [Fix] Fail fast if Limit is 0 (Permanent exhaustion)
-            if (msg.includes('limit: 0') || msg.includes('limit:0')) {
-                console.warn(`[GEMINI] Permanent Quota Exhausted (Limit 0). Disabling Gemini for this run.`);
-                process.env.DISABLE_GEMINI = '1';
-                throw new Error("GEMINI_LIMIT_0");
-            }
-
-            if (isQuota && i < retries - 1) {
-                // Exponential backoff: 10s, 20s, 40s, 80s, ...
-                const delay = Math.pow(2, i) * 5000 + 5000 + (Math.random() * 2000);
-                console.warn(`[GEMINI] Quota hit. Retrying in ${(delay / 1000).toFixed(1)}s... (Attempt ${i + 1}/${retries})`);
-                await new Promise(r => setTimeout(r, delay));
-                continue;
-            }
-            throw err;
-        }
-    }
-}
+import { callGeminiWithBudget, aiState, logAIReport, getOverallReport } from './lib/ai_runtime.js';
 
 // [NEW] CLI Args
 const args = {};
@@ -212,8 +191,10 @@ async function analyzeCountry(countryCode, countryName, articles, v4Score, signa
     `;
 
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-        const result = await callGeminiWithRetry(model, prompt);
+        const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
+        const result = await callGeminiWithBudget(model, prompt, 'medium', () => null);
+        if (!result) return analyzeWithHeuristics(countryCode, countryName, articles, v4Score, signalStatus);
+
         const text = result.response.text().replace(/```json/g, '').replace(/```/g, '').trim();
         const json = JSON.parse(text);
 
@@ -398,8 +379,19 @@ ${itemsPool.map(c => `[${c.key}]\n${c.terms.map(t => `${t.term}${t.description ?
 Output JSON only.`;
 
     try {
-        const result = await callGeminiWithRetry(model, prompt);
-        let text = result.response.text();
+        const result = await callGeminiWithBudget(model, prompt, 'medium', () => null);
+        if (!result) {
+            console.log(`[${type}] skipped_due_to_budget=true`);
+            console.log(`[${type}] mode=fallback`);
+            return null; // Fallback will be handled by the caller
+        }
+        let text = '';
+        try {
+            text = result.response.text();
+        } catch (err) {
+            console.warn(`[${type}] Error reading response text: ${err.message}. Assuming empty output.`);
+            return null;
+        }
 
         // [Fix] Attempt to extract from markdown block first
         const mdMatch = text.match(/```json\s*(\{[\s\S]*?\})\s*```/);
@@ -471,7 +463,11 @@ Output JSON only.`;
 
     try {
         console.log(`[Translit] Requesting for ${nonLatin.length} terms: ${nonLatin.slice(0, 3).join(', ')}...`);
-        const result = await model.generateContent(prompt);
+        const result = await callGeminiWithBudget(model, prompt, 'low', () => ({}));
+        if (!result || Object.keys(result).length === 0 && result.constructor === Object) {
+            console.log("[Translit] Skipped or failed due to budget. Falling back to empty mapping.");
+            return {};
+        }
         const text = result.response.text();
         // console.log("[Translit] Raw response:", text.substring(0, 200)); 
         const jsonMatch = text.match(/\{[\s\S]*\}/);
@@ -636,6 +632,86 @@ async function getHistoricalPS(iso2, currentToday) {
     if (psValues.length === 0) return null;
     const avg = psValues.reduce((a, b) => a + b, 0) / psValues.length;
     return avg;
+}
+
+// --- PHASE FUNCTIONS for GT/PM ---
+let _gtCache = null;
+let _gtRunCount = 0;
+async function runPhaseGoogleTrends(ENABLE_GOOGLE_TRENDS, genAI) {
+    if (!ENABLE_GOOGLE_TRENDS) return [];
+    _gtRunCount++;
+    console.log(`[PHASE-GT] Executing Google Trends phase (Call count: ${_gtRunCount})`);
+    if (_gtCache) {
+        console.log(`[PHASE-GT] Returning cached result. (Double execution verified and neutralized)`);
+        return _gtCache;
+    }
+    try {
+        console.log("[GT] Fetching trends...");
+        const rawGTItems = await fetchGoogleTrends({
+            geos: ["US", "GB", "IN", "BR", "JP", "RU", "UA", "IL", "DE", "FR", "TR", "KR"],
+            limitPerGeo: 30,
+            outLimit: 360
+        });
+        console.log(`[GT] Raw items fetched: ${rawGTItems?.length}`);
+
+        const gtData = {
+            provider: "googletrends_rss",
+            fetched_at: new Date().toISOString(),
+            items: rawGTItems
+        };
+
+        const modelGT = genAI.getGenerativeModel({ model: GEMINI_MODEL });
+        const classifiedGT = await classifyTrendsGemini(modelGT, gtData.items);
+        if (classifiedGT) {
+            let politicalGT = classifiedGT.filter(t => t.is_political);
+            console.log(`[GT] Classified: ${classifiedGT.length}, Political: ${politicalGT.length}`);
+
+            if (politicalGT.length === 0 && classifiedGT.length > 0) {
+                console.log("[GT] No political trends found. Falling back to top 5 raw trends.");
+                politicalGT = classifiedGT.slice(0, 5);
+            }
+
+            _gtCache = politicalGT.slice(0, 10);
+            return _gtCache;
+        } else {
+            console.warn("[GT] Classification returned null/empty");
+        }
+    } catch (e) { console.warn("[GT] Main flow failed", e); }
+    return [];
+}
+
+let _pmCache = null;
+let _pmRunCount = 0;
+async function runPhasePolymarket(ENABLE_POLYMARKET, genAI) {
+    if (!ENABLE_POLYMARKET) return [];
+    _pmRunCount++;
+    console.log(`[PHASE-PM] Executing Polymarket phase (Call count: ${_pmRunCount})`);
+    if (_pmCache) {
+        console.log(`[PHASE-PM] Returning cached result. (Double execution verified and neutralized)`);
+        return _pmCache;
+    }
+    try {
+        console.log("[PM] Fetching events...");
+        const pmEvents = await fetchPolymarketEvents({ limit: 40 });
+        console.log(`[PM] Raw events: ${pmEvents?.length}`);
+
+        const modelPM = genAI.getGenerativeModel({ model: GEMINI_MODEL });
+        console.log(`[PM] Consolidating ${pmEvents.length} events logic...`);
+
+        const pmWithIso = [];
+        for (const ev of pmEvents) {
+            const mappedIso = await mapPolymarketToCountry(modelPM, ev.title);
+            if (mappedIso) {
+                pmWithIso.push({ ...ev, country: mappedIso, iso2: mappedIso });
+            }
+            // Small throttle if necessary, but we have budget
+            await new Promise(resolve => setTimeout(resolve, 500));
+        }
+        console.log(`[PM] Mapped with ISO: ${pmWithIso.length}`);
+        _pmCache = pmWithIso.slice(0, 10);
+        return _pmCache;
+    } catch (e) { console.warn("[PM] Main flow failed", e); }
+    return [];
 }
 
 /* ============ MAIN ============ */
@@ -975,7 +1051,7 @@ async function main() {
 
                 console.log(`[AIR] Classifying ${pool.length} countries in batches...`);
                 const allClassifications = {};
-                const modelClassification = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+                const modelClassification = genAI.getGenerativeModel({ model: GEMINI_MODEL });
 
                 for (let i = 0; i < pool.length; i += 8) {
                     const chunk = pool.slice(i, i + 8);
@@ -1079,59 +1155,10 @@ async function main() {
     const briefings = [];
 
     // 7a. Google Trends
-    if (ENABLE_GOOGLE_TRENDS) {
-        try {
-            console.log("[GT] Fetching trends...");
-            const rawGTItems = await fetchGoogleTrends({
-                geos: ["US", "GB", "IN", "BR", "JP", "RU", "UA", "IL", "DE", "FR", "TR", "KR"],
-                limitPerGeo: 30,
-                outLimit: 360
-            });
-            console.log(`[GT] Raw items fetched: ${rawGTItems?.length}`);
-
-            const gtData = {
-                provider: "googletrends_rss",
-                fetched_at: new Date().toISOString(),
-                items: rawGTItems
-            };
-
-            const modelGT = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-            const classifiedGT = await classifyTrendsGemini(modelGT, gtData.items);
-            if (classifiedGT) {
-                // Filter only political
-                const politicalGT = classifiedGT.filter(t => t.is_political);
-                console.log(`[GT] Classified: ${classifiedGT.length}, Political: ${politicalGT.length}`);
-                output.google_trends = politicalGT.slice(0, 10);
-            } else {
-                console.warn("[GT] Classification returned null/empty");
-            }
-        } catch (e) { console.warn("[GT] Main flow failed", e); }
-    }
+    output.google_trends = await runPhaseGoogleTrends(ENABLE_GOOGLE_TRENDS, genAI);
 
     // 7b. Polymarket
-    if (ENABLE_POLYMARKET) {
-        try {
-            console.log("[PM] Fetching events...");
-            const pmEvents = await fetchPolymarketEvents({ limit: 40 });
-            console.log(`[PM] Raw events: ${pmEvents?.length}`);
-
-            // Map to ISO2
-            const modelPM = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-            console.log(`[PM] Consolidating ${pmEvents.length} events logic...`);
-
-            const pmWithIso = [];
-            for (const ev of pmEvents) {
-                const mappedIso = await mapPolymarketToCountry(modelPM, ev.title);
-                if (mappedIso) {
-                    pmWithIso.push({ ...ev, country: mappedIso });
-                }
-                // Throttle to 15 RPM (1 req every 4s) to avoid 429s on Free Tier
-                await new Promise(resolve => setTimeout(resolve, 4000));
-            }
-            console.log(`[PM] Mapped with ISO: ${pmWithIso.length}`);
-            output.polymarket = pmWithIso.slice(0, 10);
-        } catch (e) { console.warn("[PM] Main flow failed", e); }
-    }
+    output.polymarket = await runPhasePolymarket(ENABLE_POLYMARKET, genAI);
 
 
     // 8. Final Assembly Loop - ENSURING ALL BASELINE COUNTRIES
@@ -1899,7 +1926,7 @@ async function main() {
     // Generate Trending
     let briefingTrending = null;
     if (!DISABLE_GEMINI) {
-        briefingTrending = await generateDailyBriefingTrending(genAI.getGenerativeModel({ model: "gemini-2.0-flash" }), candidatesTrending);
+        briefingTrending = await generateDailyBriefingTrending(genAI.getGenerativeModel({ model: GEMINI_MODEL }), candidatesTrending);
     }
     if (!briefingTrending) {
         if (!DISABLE_GEMINI) console.warn("[BRIEFING] Trending Fallback triggered");
@@ -1909,7 +1936,7 @@ async function main() {
     // Generate Ops
     let briefingOps = null;
     if (!DISABLE_GEMINI) {
-        briefingOps = await generateDailyBriefingOps(genAI.getGenerativeModel({ model: "gemini-2.0-flash" }), candidatesOps);
+        briefingOps = await generateDailyBriefingOps(genAI.getGenerativeModel({ model: GEMINI_MODEL }), candidatesOps);
     }
     if (!briefingOps) {
         if (!DISABLE_GEMINI) console.warn("[BRIEFING] Ops Fallback triggered");
@@ -1930,64 +1957,13 @@ async function main() {
 
     // AUDIT LOG
 
-    // 7a. Google Trends
-    if (ENABLE_GOOGLE_TRENDS) {
-        try {
-            console.log("[GT] Fetching trends...");
-            const rawGTItems = await fetchGoogleTrends({
-                geos: ["US", "GB", "IN", "BR", "JP", "RU", "UA", "IL", "DE", "FR", "TR", "KR"],
-                limitPerGeo: 30,
-                outLimit: 360
-            });
-            console.log(`[GT] Raw items fetched: ${rawGTItems?.length}`);
+    // 7a. Google Trends (Duplicate run check)
+    const _dupGT = await runPhaseGoogleTrends(ENABLE_GOOGLE_TRENDS, genAI);
+    if (_dupGT && _dupGT.length > 0) output.google_trends = _dupGT;
 
-            const gtData = {
-                provider: "googletrends_rss",
-                fetched_at: new Date().toISOString(),
-                items: rawGTItems
-            };
-
-            const modelGT = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-            const classifiedGT = await classifyTrendsGemini(modelGT, gtData.items);
-            if (classifiedGT) {
-                // Filter only political
-                let politicalGT = classifiedGT.filter(t => t.is_political);
-                console.log(`[GT] Classified: ${classifiedGT.length}, Political: ${politicalGT.length}`);
-
-                if (politicalGT.length === 0 && classifiedGT.length > 0) {
-                    console.log("[GT] No political trends found. Falling back to top 5 raw trends.");
-                    politicalGT = classifiedGT.slice(0, 5);
-                }
-
-                output.google_trends = politicalGT.slice(0, 10);
-            } else {
-                console.warn("[GT] Classification returned null/empty");
-            }
-        } catch (e) { console.warn("[GT] Main flow failed", e); }
-    }
-
-    // 7b. Polymarket
-    if (ENABLE_POLYMARKET) {
-        try {
-            console.log("[PM] Fetching events...");
-            const pmEvents = await fetchPolymarketEvents({ limit: 40 });
-            console.log(`[PM] Raw events: ${pmEvents?.length}`);
-
-            // Map to ISO2
-            const modelPM = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-            console.log(`[PM] Consolidating ${pmEvents.length} events logic...`);
-
-            const pmWithIso = [];
-            for (const ev of pmEvents) {
-                const mappedIso = await mapPolymarketToCountry(modelPM, ev.title);
-                if (mappedIso) {
-                    pmWithIso.push({ ...ev, country: mappedIso, iso2: mappedIso });
-                }
-            }
-            console.log(`[PM] Mapped with ISO: ${pmWithIso.length}`);
-            output.polymarket = pmWithIso.slice(0, 10);
-        } catch (e) { console.warn("[PM] Main flow failed", e); }
-    }
+    // 7b. Polymarket (Duplicate run check)
+    const _dupPM = await runPhasePolymarket(ENABLE_POLYMARKET, genAI);
+    if (_dupPM && _dupPM.length > 0) output.polymarket = _dupPM;
 
     // AUDIT LOG
     const outCount = Object.keys(output.countries).length;
@@ -2035,6 +2011,8 @@ async function main() {
     // 1. Daily Archive
     const dailyPath = path.resolve(__dirname, `../public/data/${today}.json`);
     await fs.writeFile(dailyPath, JSON.stringify(output, null, 2));
+    const finalReport = getOverallReport();
+    console.log("[AI-REPORT] Final AI Runtime Summary:", JSON.stringify(finalReport, null, 2));
     console.log(`Daily data saved to ${dailyPath}`);
 
     // 2. Latest Update
@@ -2180,7 +2158,8 @@ async function generateDailyBriefingTrending(model, candidates) {
     `;
 
     try {
-        const result = await model.generateContent(prompt);
+        const result = await callGeminiWithBudget(model, prompt, 'low', () => null);
+        if (!result) return null;
         let text = result.response.text().replace(/```json/g, '').replace(/```/g, '').trim();
         const json = JSON.parse(text);
 
@@ -2218,7 +2197,8 @@ async function generateDailyBriefingOps(model, candidates) {
     `;
 
     try {
-        const result = await model.generateContent(prompt);
+        const result = await callGeminiWithBudget(model, prompt, 'low', () => null);
+        if (!result) return null;
         let text = result.response.text().replace(/```json/g, '').replace(/```/g, '').trim();
         const json = JSON.parse(text);
 

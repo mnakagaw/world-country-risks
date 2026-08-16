@@ -128,27 +128,7 @@ export async function fetchPolymarketTop10({ limit = 10 } = {}) {
     }
 }
 
-async function callGeminiWithRetry(model, prompt, retries = 5) {
-    for (let i = 0; i < retries; i++) {
-        try {
-            return await model.generateContent(prompt);
-        } catch (err) {
-            const msg = err.message || '';
-            const isQuota = msg.includes('429') || msg.includes('Quota') || msg.includes('Resource has been exhausted');
-            if (isQuota && i < retries - 1) {
-                if (msg.includes('limit: 0') || msg.includes('limit:0')) {
-                    console.warn("[PM] Gemini API Limit is 0. Failing fast.");
-                    throw err; // Stop retrying
-                }
-                const delay = Math.pow(2, i) * 5000 + 5000 + (Math.random() * 2000);
-                console.warn(`[PM] Gemini Quota hit. Retrying in ${(delay / 1000).toFixed(1)}s...`);
-                await new Promise(r => setTimeout(r, delay));
-                continue;
-            }
-            throw err;
-        }
-    }
-}
+import { callGeminiWithBudget } from './lib/ai_runtime.js';
 
 /**
  * Map Polymarket Question to ISO2 using Gemini and Heuristics
@@ -177,7 +157,8 @@ Question: ${title}
 ISO2:`;
 
     try {
-        const result = await callGeminiWithRetry(model, prompt);
+        const result = await callGeminiWithBudget(model, prompt, 'medium', () => null);
+        if (!result) return null;
         const text = result.response.text().trim().toUpperCase();
         if (text === 'NULL' || text.length > 5) return null;
         return text;

@@ -148,27 +148,7 @@ const IGNORE_KEYWORDS = [
     ' vs ', 'score', 'highlight', 'prediction', 'fantasy', 'warriors', 'knicks', 'lakers', 'nba', 'nfl', 'football', 'soccer', 'cricket', 'game', 'movie', 'trailer', 'review'
 ];
 
-async function callGeminiWithRetry(model, prompt, retries = 5) {
-    for (let i = 0; i < retries; i++) {
-        try {
-            return await model.generateContent(prompt);
-        } catch (err) {
-            const msg = err.message || '';
-            const isQuota = msg.includes('429') || msg.includes('Quota') || msg.includes('Resource has been exhausted');
-            if (isQuota && i < retries - 1) {
-                if (msg.includes('limit: 0') || msg.includes('limit:0')) {
-                    console.warn("[GT] Gemini API Limit is 0. Failing fast.");
-                    throw err; // Stop retrying
-                }
-                const delay = Math.pow(2, i) * 5000 + 5000 + (Math.random() * 2000);
-                console.warn(`[GT] Gemini Quota hit. Retrying in ${(delay / 1000).toFixed(1)}s...`);
-                await new Promise(r => setTimeout(r, delay));
-                continue;
-            }
-            throw err;
-        }
-    }
-}
+import { callGeminiWithBudget } from './lib/ai_runtime.js';
 
 /**
  * Classify trends using Gemini (Strict Political Filter) with Heuristic Fallback
@@ -222,7 +202,11 @@ ${trends.map(t => t.title).join('\n')}
 Output JSON only.`;
 
     try {
-        const result = await callGeminiWithRetry(model, prompt);
+        const result = await callGeminiWithBudget(model, prompt, 'medium', () => null); // Return null on fallback to trigger runHeuristic
+        if (!result) {
+            console.log("[GT] Gemini classification skipped or failed due to budget. Falling back to keyword heuristics...");
+            return runHeuristic();
+        }
         let text = result.response.text();
 
         // [Fix] Extract JSON from Markdown block if present

@@ -40,22 +40,45 @@ async function deploy() {
             host,
             user,
             password,
-            secure: false // Set to true for explicit FTPS, or 'implicit'
+            secure: false
         });
 
         console.log(`📂 Remote root: ${REMOTE_ROOT}`);
         await client.ensureDir(REMOTE_ROOT);
 
-        console.log(`🚀 Starting upload from '${BUILD_DIR}'...`);
+        console.log(`🚀 Starting incremental upload from '${BUILD_DIR}'...`);
+        const stats = { uploaded: 0, skipped: 0 };
 
-        // uploadFromDir automatically uploads the contents of a local directory to the current remote directory.
-        // It's efficient but blindly overwrites by default. 
-        // For a true "diff" we could manually walk, but basic-ftp is fast enough for 400 files.
-        // We will stick to standard upload for reliability first.
+        async function uploadDirRecursive(localDirPath, remoteDirPath) {
+            await client.ensureDir(remoteDirPath);
+            const localFiles = fs.readdirSync(localDirPath, { withFileTypes: true });
+            const remoteFiles = await client.list(remoteDirPath);
+            const remoteMap = new Map(remoteFiles.map(f => [f.name, f]));
 
-        await client.uploadFromDir(BUILD_DIR);
+            for (const file of localFiles) {
+                const localPath = path.join(localDirPath, file.name);
+                const remotePath = path.posix.join(remoteDirPath, file.name);
 
-        console.log("✅ Deployment complete!");
+                if (file.isDirectory()) {
+                    await uploadDirRecursive(localPath, remotePath);
+                } else {
+                    const localStat = fs.statSync(localPath);
+                    const remoteFile = remoteMap.get(file.name);
+
+                    if (remoteFile && remoteFile.size === localStat.size) {
+                        stats.skipped++;
+                    } else {
+                        console.log(`  [UPLOAD] ${remotePath} (${localStat.size} bytes)`);
+                        await client.uploadFrom(localPath, remotePath);
+                        stats.uploaded++;
+                    }
+                }
+            }
+        }
+
+        await uploadDirRecursive(BUILD_DIR, REMOTE_ROOT);
+
+        console.log(`✅ Deployment complete! (Uploaded: ${stats.uploaded}, Skipped: ${stats.skipped})`);
 
     } catch (err) {
         console.error("❌ Deployment failed:", err);

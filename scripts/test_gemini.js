@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const models = ["gemini-1.5-flash", "gemini-1.5-flash-001", "gemini-1.5-pro", "gemini-pro"];
+const models = [process.env.GEMINI_MODEL || 'gemini-3.6-flash'];
 
 async function test() {
     console.log("Testing Gemini API...");
