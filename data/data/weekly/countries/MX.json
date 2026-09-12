@@ -1,0 +1,6065 @@
+{
+  "iso2": "MX",
+  "generated_at": "2026-01-23T02:28:16.710Z",
+  "weeks_total": 52,
+  "weeks_available": 52,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1853,
+        "R2": 340,
+        "R3": 1667,
+        "R4": 225
+      },
+      "event_count": 27184,
+      "ratios": {
+        "R1": 1.785,
+        "R2": 2.27,
+        "R3": 2.082,
+        "R4": 1.586
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.082,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1853,
+          "baseline7": 1036,
+          "ratio7": 1.785,
+          "share7": 0.0682,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0257,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 340,
+          "baseline7": 147,
+          "ratio7": 2.27,
+          "share7": 0.0125,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.015,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1667,
+          "baseline7": 798,
+          "ratio7": 2.082,
+          "share7": 0.0613,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0193,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 225,
+          "baseline7": 140,
+          "ratio7": 1.586,
+          "share7": 0.0083,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0172,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1924,
+        "R2": 165,
+        "R3": 1438,
+        "R4": 199
+      },
+      "event_count": 24020,
+      "ratios": {
+        "R1": 1.853,
+        "R2": 1.118,
+        "R3": 1.797,
+        "R4": 1.407
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.853,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1924,
+          "baseline7": 1036,
+          "ratio7": 1.853,
+          "share7": 0.0801,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0274,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 165,
+          "baseline7": 147,
+          "ratio7": 1.118,
+          "share7": 0.0069,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.016,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1438,
+          "baseline7": 798,
+          "ratio7": 1.797,
+          "share7": 0.0599,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0205,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 199,
+          "baseline7": 140,
+          "ratio7": 1.407,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0182,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1948,
+        "R2": 164,
+        "R3": 1426,
+        "R4": 245
+      },
+      "event_count": 28088,
+      "ratios": {
+        "R1": 1.876,
+        "R2": 1.112,
+        "R3": 1.782,
+        "R4": 1.724
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.876,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1948,
+          "baseline7": 1036,
+          "ratio7": 1.876,
+          "share7": 0.0694,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0253,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 164,
+          "baseline7": 147,
+          "ratio7": 1.112,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0148,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1426,
+          "baseline7": 798,
+          "ratio7": 1.782,
+          "share7": 0.0508,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.019,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 245,
+          "baseline7": 140,
+          "ratio7": 1.724,
+          "share7": 0.0087,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0169,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1604,
+        "R2": 169,
+        "R3": 1241,
+        "R4": 239
+      },
+      "event_count": 21092,
+      "ratios": {
+        "R1": 1.546,
+        "R2": 1.145,
+        "R3": 1.552,
+        "R4": 1.683
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1604,
+          "baseline7": 1036,
+          "ratio7": 1.546,
+          "share7": 0.076,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0292,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 169,
+          "baseline7": 147,
+          "ratio7": 1.145,
+          "share7": 0.008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.017,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1241,
+          "baseline7": 798,
+          "ratio7": 1.552,
+          "share7": 0.0588,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0219,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 239,
+          "baseline7": 140,
+          "ratio7": 1.683,
+          "share7": 0.0113,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0195,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1614,
+        "R2": 195,
+        "R3": 1327,
+        "R4": 183
+      },
+      "event_count": 21203,
+      "ratios": {
+        "R1": 1.555,
+        "R2": 1.316,
+        "R3": 1.659,
+        "R4": 1.297
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1614,
+          "baseline7": 1036,
+          "ratio7": 1.555,
+          "share7": 0.0761,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0291,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 195,
+          "baseline7": 147,
+          "ratio7": 1.316,
+          "share7": 0.0092,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.017,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1327,
+          "baseline7": 798,
+          "ratio7": 1.659,
+          "share7": 0.0626,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0219,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 183,
+          "baseline7": 140,
+          "ratio7": 1.297,
+          "share7": 0.0086,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0194,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1863,
+        "R2": 169,
+        "R3": 1675,
+        "R4": 221
+      },
+      "event_count": 23498,
+      "ratios": {
+        "R1": 1.794,
+        "R2": 1.145,
+        "R3": 2.092,
+        "R4": 1.559
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.092,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1863,
+          "baseline7": 1036,
+          "ratio7": 1.794,
+          "share7": 0.0793,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0277,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 169,
+          "baseline7": 147,
+          "ratio7": 1.145,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0161,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1675,
+          "baseline7": 798,
+          "ratio7": 2.092,
+          "share7": 0.0713,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0208,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 221,
+          "baseline7": 140,
+          "ratio7": 1.559,
+          "share7": 0.0094,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0185,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1743,
+        "R2": 127,
+        "R3": 1339,
+        "R4": 190
+      },
+      "event_count": 25272,
+      "ratios": {
+        "R1": 1.679,
+        "R2": 0.868,
+        "R3": 1.674,
+        "R4": 1.345
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1743,
+          "baseline7": 1036,
+          "ratio7": 1.679,
+          "share7": 0.069,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0267,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 127,
+          "baseline7": 147,
+          "ratio7": 0.868,
+          "share7": 0.005,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0156,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1339,
+          "baseline7": 798,
+          "ratio7": 1.674,
+          "share7": 0.053,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.02,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 190,
+          "baseline7": 140,
+          "ratio7": 1.345,
+          "share7": 0.0075,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0178,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1259,
+        "R2": 114,
+        "R3": 1319,
+        "R4": 138
+      },
+      "event_count": 19232,
+      "ratios": {
+        "R1": 1.214,
+        "R2": 0.783,
+        "R3": 1.649,
+        "R4": 0.986
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1259,
+          "baseline7": 1036,
+          "ratio7": 1.214,
+          "share7": 0.0655,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0306,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 114,
+          "baseline7": 147,
+          "ratio7": 0.783,
+          "share7": 0.0059,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0178,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1319,
+          "baseline7": 798,
+          "ratio7": 1.649,
+          "share7": 0.0686,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0229,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 138,
+          "baseline7": 140,
+          "ratio7": 0.986,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0204,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1542,
+        "R2": 203,
+        "R3": 1334,
+        "R4": 120
+      },
+      "event_count": 19491,
+      "ratios": {
+        "R1": 1.486,
+        "R2": 1.368,
+        "R3": 1.667,
+        "R4": 0.862
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1542,
+          "baseline7": 1036,
+          "ratio7": 1.486,
+          "share7": 0.0791,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0304,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 203,
+          "baseline7": 147,
+          "ratio7": 1.368,
+          "share7": 0.0104,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0177,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1334,
+          "baseline7": 798,
+          "ratio7": 1.667,
+          "share7": 0.0684,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0228,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 120,
+          "baseline7": 140,
+          "ratio7": 0.862,
+          "share7": 0.0062,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0203,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1444,
+        "R2": 192,
+        "R3": 1369,
+        "R4": 157
+      },
+      "event_count": 19889,
+      "ratios": {
+        "R1": 1.392,
+        "R2": 1.296,
+        "R3": 1.711,
+        "R4": 1.117
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1444,
+          "baseline7": 1036,
+          "ratio7": 1.392,
+          "share7": 0.0726,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 192,
+          "baseline7": 147,
+          "ratio7": 1.296,
+          "share7": 0.0097,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0175,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1369,
+          "baseline7": 798,
+          "ratio7": 1.711,
+          "share7": 0.0688,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0226,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 157,
+          "baseline7": 140,
+          "ratio7": 1.117,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0201,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1337,
+        "R2": 136,
+        "R3": 1044,
+        "R4": 119
+      },
+      "event_count": 17926,
+      "ratios": {
+        "R1": 1.289,
+        "R2": 0.928,
+        "R3": 1.306,
+        "R4": 0.855
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1337,
+          "baseline7": 1036,
+          "ratio7": 1.289,
+          "share7": 0.0746,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 136,
+          "baseline7": 147,
+          "ratio7": 0.928,
+          "share7": 0.0076,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0185,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1044,
+          "baseline7": 798,
+          "ratio7": 1.306,
+          "share7": 0.0582,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0238,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 119,
+          "baseline7": 140,
+          "ratio7": 0.855,
+          "share7": 0.0066,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0211,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1420,
+        "R2": 178,
+        "R3": 1003,
+        "R4": 135
+      },
+      "event_count": 18327,
+      "ratios": {
+        "R1": 1.369,
+        "R2": 1.204,
+        "R3": 1.255,
+        "R4": 0.966
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1420,
+          "baseline7": 1036,
+          "ratio7": 1.369,
+          "share7": 0.0775,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 178,
+          "baseline7": 147,
+          "ratio7": 1.204,
+          "share7": 0.0097,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0183,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1003,
+          "baseline7": 798,
+          "ratio7": 1.255,
+          "share7": 0.0547,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0235,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 135,
+          "baseline7": 140,
+          "ratio7": 0.966,
+          "share7": 0.0074,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0209,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1260,
+        "R2": 191,
+        "R3": 969,
+        "R4": 120
+      },
+      "event_count": 15182,
+      "ratios": {
+        "R1": 1.215,
+        "R2": 1.289,
+        "R3": 1.213,
+        "R4": 0.862
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1260,
+          "baseline7": 1036,
+          "ratio7": 1.215,
+          "share7": 0.083,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0344,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 191,
+          "baseline7": 147,
+          "ratio7": 1.289,
+          "share7": 0.0126,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0201,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 969,
+          "baseline7": 798,
+          "ratio7": 1.213,
+          "share7": 0.0638,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0258,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 120,
+          "baseline7": 140,
+          "ratio7": 0.862,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.023,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1377,
+        "R2": 131,
+        "R3": 1070,
+        "R4": 103
+      },
+      "event_count": 17394,
+      "ratios": {
+        "R1": 1.328,
+        "R2": 0.895,
+        "R3": 1.339,
+        "R4": 0.745
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1377,
+          "baseline7": 1036,
+          "ratio7": 1.328,
+          "share7": 0.0792,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0322,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 131,
+          "baseline7": 147,
+          "ratio7": 0.895,
+          "share7": 0.0075,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0188,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1070,
+          "baseline7": 798,
+          "ratio7": 1.339,
+          "share7": 0.0615,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0241,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 103,
+          "baseline7": 140,
+          "ratio7": 0.745,
+          "share7": 0.0059,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0214,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1394,
+        "R2": 243,
+        "R3": 1130,
+        "R4": 159
+      },
+      "event_count": 18599,
+      "ratios": {
+        "R1": 1.344,
+        "R2": 1.632,
+        "R3": 1.413,
+        "R4": 1.131
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1394,
+          "baseline7": 1036,
+          "ratio7": 1.344,
+          "share7": 0.075,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0311,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 243,
+          "baseline7": 147,
+          "ratio7": 1.632,
+          "share7": 0.0131,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0181,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1130,
+          "baseline7": 798,
+          "ratio7": 1.413,
+          "share7": 0.0608,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0233,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 159,
+          "baseline7": 140,
+          "ratio7": 1.131,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0207,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1343,
+        "R2": 124,
+        "R3": 1028,
+        "R4": 114
+      },
+      "event_count": 17879,
+      "ratios": {
+        "R1": 1.295,
+        "R2": 0.849,
+        "R3": 1.286,
+        "R4": 0.821
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1343,
+          "baseline7": 1036,
+          "ratio7": 1.295,
+          "share7": 0.0751,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 124,
+          "baseline7": 147,
+          "ratio7": 0.849,
+          "share7": 0.0069,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0185,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1028,
+          "baseline7": 798,
+          "ratio7": 1.286,
+          "share7": 0.0575,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0238,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 114,
+          "baseline7": 140,
+          "ratio7": 0.821,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0212,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 2111,
+        "R2": 177,
+        "R3": 1343,
+        "R4": 139
+      },
+      "event_count": 20715,
+      "ratios": {
+        "R1": 2.033,
+        "R2": 1.197,
+        "R3": 1.679,
+        "R4": 0.993
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.033,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 2111,
+          "baseline7": 1036,
+          "ratio7": 2.033,
+          "share7": 0.1019,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0295,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 177,
+          "baseline7": 147,
+          "ratio7": 1.197,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0172,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1343,
+          "baseline7": 798,
+          "ratio7": 1.679,
+          "share7": 0.0648,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0221,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 139,
+          "baseline7": 140,
+          "ratio7": 0.993,
+          "share7": 0.0067,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0197,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 2408,
+        "R2": 187,
+        "R3": 1137,
+        "R4": 146
+      },
+      "event_count": 20413,
+      "ratios": {
+        "R1": 2.318,
+        "R2": 1.263,
+        "R3": 1.422,
+        "R4": 1.041
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.318,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 2408,
+          "baseline7": 1036,
+          "ratio7": 2.318,
+          "share7": 0.118,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0297,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 187,
+          "baseline7": 147,
+          "ratio7": 1.263,
+          "share7": 0.0092,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0173,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1137,
+          "baseline7": 798,
+          "ratio7": 1.422,
+          "share7": 0.0557,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0223,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 146,
+          "baseline7": 140,
+          "ratio7": 1.041,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0198,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1410,
+        "R2": 119,
+        "R3": 1176,
+        "R4": 130
+      },
+      "event_count": 17451,
+      "ratios": {
+        "R1": 1.359,
+        "R2": 0.816,
+        "R3": 1.471,
+        "R4": 0.931
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1410,
+          "baseline7": 1036,
+          "ratio7": 1.359,
+          "share7": 0.0808,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0321,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 119,
+          "baseline7": 147,
+          "ratio7": 0.816,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0187,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1176,
+          "baseline7": 798,
+          "ratio7": 1.471,
+          "share7": 0.0674,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0241,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 130,
+          "baseline7": 140,
+          "ratio7": 0.931,
+          "share7": 0.0074,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0214,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1556,
+        "R2": 132,
+        "R3": 1257,
+        "R4": 120
+      },
+      "event_count": 18615,
+      "ratios": {
+        "R1": 1.5,
+        "R2": 0.901,
+        "R3": 1.572,
+        "R4": 0.862
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1556,
+          "baseline7": 1036,
+          "ratio7": 1.5,
+          "share7": 0.0836,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0311,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 132,
+          "baseline7": 147,
+          "ratio7": 0.901,
+          "share7": 0.0071,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0181,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1257,
+          "baseline7": 798,
+          "ratio7": 1.572,
+          "share7": 0.0675,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0233,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 120,
+          "baseline7": 140,
+          "ratio7": 0.862,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0207,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1891,
+        "R2": 100,
+        "R3": 1810,
+        "R4": 123
+      },
+      "event_count": 18407,
+      "ratios": {
+        "R1": 1.821,
+        "R2": 0.691,
+        "R3": 2.26,
+        "R4": 0.883
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.26,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1891,
+          "baseline7": 1036,
+          "ratio7": 1.821,
+          "share7": 0.1027,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 100,
+          "baseline7": 147,
+          "ratio7": 0.691,
+          "share7": 0.0054,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0182,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1810,
+          "baseline7": 798,
+          "ratio7": 2.26,
+          "share7": 0.0983,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0235,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 123,
+          "baseline7": 140,
+          "ratio7": 0.883,
+          "share7": 0.0067,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0208,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 2,
+        "R2": 0,
+        "R3": 3,
+        "R4": 0
+      },
+      "event_count": 43,
+      "ratios": {
+        "R1": 0.007,
+        "R2": 0.033,
+        "R3": 0.01,
+        "R4": 0.034
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 2,
+          "baseline7": 1036,
+          "ratio7": 0.007,
+          "share7": 0.0465,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 147,
+          "ratio7": 0.033,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 3,
+          "baseline7": 798,
+          "ratio7": 0.01,
+          "share7": 0.0698,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 140,
+          "ratio7": 0.034,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 3,
+        "R4": 0
+      },
+      "event_count": 51,
+      "ratios": {
+        "R1": 0.005,
+        "R2": 0.033,
+        "R3": 0.01,
+        "R4": 0.034
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 1036,
+          "ratio7": 0.005,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 147,
+          "ratio7": 0.033,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 3,
+          "baseline7": 798,
+          "ratio7": 0.01,
+          "share7": 0.0588,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 140,
+          "ratio7": 0.034,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 892,
+        "R2": 109,
+        "R3": 862,
+        "R4": 117
+      },
+      "event_count": 12043,
+      "ratios": {
+        "R1": 0.862,
+        "R2": 0.75,
+        "R3": 1.08,
+        "R4": 0.841
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 892,
+          "baseline7": 1036,
+          "ratio7": 0.862,
+          "share7": 0.0741,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0387,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 109,
+          "baseline7": 147,
+          "ratio7": 0.75,
+          "share7": 0.0091,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0226,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 862,
+          "baseline7": 798,
+          "ratio7": 1.08,
+          "share7": 0.0716,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.029,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 117,
+          "baseline7": 140,
+          "ratio7": 0.841,
+          "share7": 0.0097,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0258,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1505,
+        "R2": 215,
+        "R3": 1461,
+        "R4": 128
+      },
+      "event_count": 19870,
+      "ratios": {
+        "R1": 1.451,
+        "R2": 1.447,
+        "R3": 1.826,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.826,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1505,
+          "baseline7": 1036,
+          "ratio7": 1.451,
+          "share7": 0.0757,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 215,
+          "baseline7": 147,
+          "ratio7": 1.447,
+          "share7": 0.0108,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0176,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1461,
+          "baseline7": 798,
+          "ratio7": 1.826,
+          "share7": 0.0735,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0226,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 128,
+          "baseline7": 140,
+          "ratio7": 0.917,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0201,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1286,
+        "R2": 149,
+        "R3": 1099,
+        "R4": 165
+      },
+      "event_count": 17991,
+      "ratios": {
+        "R1": 1.24,
+        "R2": 1.013,
+        "R3": 1.375,
+        "R4": 1.172
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1286,
+          "baseline7": 1036,
+          "ratio7": 1.24,
+          "share7": 0.0715,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0316,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 149,
+          "baseline7": 147,
+          "ratio7": 1.013,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0185,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1099,
+          "baseline7": 798,
+          "ratio7": 1.375,
+          "share7": 0.0611,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0237,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 165,
+          "baseline7": 140,
+          "ratio7": 1.172,
+          "share7": 0.0092,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0211,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1337,
+        "R2": 130,
+        "R3": 1076,
+        "R4": 141
+      },
+      "event_count": 16994,
+      "ratios": {
+        "R1": 1.289,
+        "R2": 0.888,
+        "R3": 1.346,
+        "R4": 1.007
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1337,
+          "baseline7": 1036,
+          "ratio7": 1.289,
+          "share7": 0.0787,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0325,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 130,
+          "baseline7": 147,
+          "ratio7": 0.888,
+          "share7": 0.0076,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.019,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1076,
+          "baseline7": 798,
+          "ratio7": 1.346,
+          "share7": 0.0633,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 141,
+          "baseline7": 140,
+          "ratio7": 1.007,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0217,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1247,
+        "R2": 102,
+        "R3": 973,
+        "R4": 127
+      },
+      "event_count": 17061,
+      "ratios": {
+        "R1": 1.203,
+        "R2": 0.704,
+        "R3": 1.218,
+        "R4": 0.91
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1247,
+          "baseline7": 1036,
+          "ratio7": 1.203,
+          "share7": 0.0731,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0325,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 102,
+          "baseline7": 147,
+          "ratio7": 0.704,
+          "share7": 0.006,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0189,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 973,
+          "baseline7": 798,
+          "ratio7": 1.218,
+          "share7": 0.057,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 127,
+          "baseline7": 140,
+          "ratio7": 0.91,
+          "share7": 0.0074,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0217,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1329,
+        "R2": 150,
+        "R3": 1113,
+        "R4": 132
+      },
+      "event_count": 17800,
+      "ratios": {
+        "R1": 1.281,
+        "R2": 1.02,
+        "R3": 1.392,
+        "R4": 0.945
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1329,
+          "baseline7": 1036,
+          "ratio7": 1.281,
+          "share7": 0.0747,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0318,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 150,
+          "baseline7": 147,
+          "ratio7": 1.02,
+          "share7": 0.0084,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0185,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1113,
+          "baseline7": 798,
+          "ratio7": 1.392,
+          "share7": 0.0625,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0238,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 132,
+          "baseline7": 140,
+          "ratio7": 0.945,
+          "share7": 0.0074,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0212,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1467,
+        "R2": 158,
+        "R3": 1163,
+        "R4": 137
+      },
+      "event_count": 18352,
+      "ratios": {
+        "R1": 1.414,
+        "R2": 1.072,
+        "R3": 1.455,
+        "R4": 0.979
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1467,
+          "baseline7": 1036,
+          "ratio7": 1.414,
+          "share7": 0.0799,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 158,
+          "baseline7": 147,
+          "ratio7": 1.072,
+          "share7": 0.0086,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0183,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1163,
+          "baseline7": 798,
+          "ratio7": 1.455,
+          "share7": 0.0634,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0235,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 137,
+          "baseline7": 140,
+          "ratio7": 0.979,
+          "share7": 0.0075,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0209,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1475,
+        "R2": 131,
+        "R3": 975,
+        "R4": 138
+      },
+      "event_count": 16357,
+      "ratios": {
+        "R1": 1.422,
+        "R2": 0.895,
+        "R3": 1.22,
+        "R4": 0.986
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1475,
+          "baseline7": 1036,
+          "ratio7": 1.422,
+          "share7": 0.0902,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0332,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 131,
+          "baseline7": 147,
+          "ratio7": 0.895,
+          "share7": 0.008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0194,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 975,
+          "baseline7": 798,
+          "ratio7": 1.22,
+          "share7": 0.0596,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0249,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 138,
+          "baseline7": 140,
+          "ratio7": 0.986,
+          "share7": 0.0084,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0221,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1406,
+        "R2": 157,
+        "R3": 1099,
+        "R4": 165
+      },
+      "event_count": 18394,
+      "ratios": {
+        "R1": 1.355,
+        "R2": 1.066,
+        "R3": 1.375,
+        "R4": 1.172
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1406,
+          "baseline7": 1036,
+          "ratio7": 1.355,
+          "share7": 0.0764,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 157,
+          "baseline7": 147,
+          "ratio7": 1.066,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0182,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1099,
+          "baseline7": 798,
+          "ratio7": 1.375,
+          "share7": 0.0597,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0235,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 165,
+          "baseline7": 140,
+          "ratio7": 1.172,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0209,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1359,
+        "R2": 126,
+        "R3": 1008,
+        "R4": 135
+      },
+      "event_count": 18401,
+      "ratios": {
+        "R1": 1.31,
+        "R2": 0.862,
+        "R3": 1.262,
+        "R4": 0.966
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1359,
+          "baseline7": 1036,
+          "ratio7": 1.31,
+          "share7": 0.0739,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 126,
+          "baseline7": 147,
+          "ratio7": 0.862,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0182,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1008,
+          "baseline7": 798,
+          "ratio7": 1.262,
+          "share7": 0.0548,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0235,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 135,
+          "baseline7": 140,
+          "ratio7": 0.966,
+          "share7": 0.0073,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0209,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1328,
+        "R2": 145,
+        "R3": 965,
+        "R4": 128
+      },
+      "event_count": 17023,
+      "ratios": {
+        "R1": 1.28,
+        "R2": 0.987,
+        "R3": 1.208,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1328,
+          "baseline7": 1036,
+          "ratio7": 1.28,
+          "share7": 0.078,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0325,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 145,
+          "baseline7": 147,
+          "ratio7": 0.987,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.019,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 965,
+          "baseline7": 798,
+          "ratio7": 1.208,
+          "share7": 0.0567,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 128,
+          "baseline7": 140,
+          "ratio7": 0.917,
+          "share7": 0.0075,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0217,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1164,
+        "R2": 116,
+        "R3": 935,
+        "R4": 138
+      },
+      "event_count": 17818,
+      "ratios": {
+        "R1": 1.123,
+        "R2": 0.796,
+        "R3": 1.171,
+        "R4": 0.986
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1164,
+          "baseline7": 1036,
+          "ratio7": 1.123,
+          "share7": 0.0653,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0318,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 116,
+          "baseline7": 147,
+          "ratio7": 0.796,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0185,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 935,
+          "baseline7": 798,
+          "ratio7": 1.171,
+          "share7": 0.0525,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0238,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 138,
+          "baseline7": 140,
+          "ratio7": 0.986,
+          "share7": 0.0077,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0212,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1397,
+        "R2": 111,
+        "R3": 967,
+        "R4": 155
+      },
+      "event_count": 17259,
+      "ratios": {
+        "R1": 1.347,
+        "R2": 0.763,
+        "R3": 1.21,
+        "R4": 1.103
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1397,
+          "baseline7": 1036,
+          "ratio7": 1.347,
+          "share7": 0.0809,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0323,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 111,
+          "baseline7": 147,
+          "ratio7": 0.763,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0188,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 967,
+          "baseline7": 798,
+          "ratio7": 1.21,
+          "share7": 0.056,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0242,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 155,
+          "baseline7": 140,
+          "ratio7": 1.103,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0215,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1527,
+        "R2": 184,
+        "R3": 1000,
+        "R4": 179
+      },
+      "event_count": 16949,
+      "ratios": {
+        "R1": 1.472,
+        "R2": 1.243,
+        "R3": 1.252,
+        "R4": 1.269
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1527,
+          "baseline7": 1036,
+          "ratio7": 1.472,
+          "share7": 0.0901,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0326,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 184,
+          "baseline7": 147,
+          "ratio7": 1.243,
+          "share7": 0.0109,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.019,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1000,
+          "baseline7": 798,
+          "ratio7": 1.252,
+          "share7": 0.059,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 179,
+          "baseline7": 140,
+          "ratio7": 1.269,
+          "share7": 0.0106,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0217,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1310,
+        "R2": 202,
+        "R3": 902,
+        "R4": 122
+      },
+      "event_count": 16901,
+      "ratios": {
+        "R1": 1.263,
+        "R2": 1.362,
+        "R3": 1.13,
+        "R4": 0.876
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1310,
+          "baseline7": 1036,
+          "ratio7": 1.263,
+          "share7": 0.0775,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0326,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 202,
+          "baseline7": 147,
+          "ratio7": 1.362,
+          "share7": 0.012,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.019,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 902,
+          "baseline7": 798,
+          "ratio7": 1.13,
+          "share7": 0.0534,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0245,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 122,
+          "baseline7": 140,
+          "ratio7": 0.876,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0218,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1247,
+        "R2": 225,
+        "R3": 793,
+        "R4": 167
+      },
+      "event_count": 16973,
+      "ratios": {
+        "R1": 1.203,
+        "R2": 1.513,
+        "R3": 0.994,
+        "R4": 1.186
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1247,
+          "baseline7": 1036,
+          "ratio7": 1.203,
+          "share7": 0.0735,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0326,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 225,
+          "baseline7": 147,
+          "ratio7": 1.513,
+          "share7": 0.0133,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.019,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 793,
+          "baseline7": 798,
+          "ratio7": 0.994,
+          "share7": 0.0467,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 167,
+          "baseline7": 140,
+          "ratio7": 1.186,
+          "share7": 0.0098,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0217,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1309,
+        "R2": 136,
+        "R3": 1133,
+        "R4": 152
+      },
+      "event_count": 16437,
+      "ratios": {
+        "R1": 1.262,
+        "R2": 0.928,
+        "R3": 1.417,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1309,
+          "baseline7": 1036,
+          "ratio7": 1.262,
+          "share7": 0.0796,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0331,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 136,
+          "baseline7": 147,
+          "ratio7": 0.928,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0193,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1133,
+          "baseline7": 798,
+          "ratio7": 1.417,
+          "share7": 0.0689,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0248,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 152,
+          "baseline7": 140,
+          "ratio7": 1.083,
+          "share7": 0.0092,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0221,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1523,
+        "R2": 243,
+        "R3": 888,
+        "R4": 131
+      },
+      "event_count": 18784,
+      "ratios": {
+        "R1": 1.468,
+        "R2": 1.632,
+        "R3": 1.112,
+        "R4": 0.938
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1523,
+          "baseline7": 1036,
+          "ratio7": 1.468,
+          "share7": 0.0811,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.031,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 243,
+          "baseline7": 147,
+          "ratio7": 1.632,
+          "share7": 0.0129,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0181,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 888,
+          "baseline7": 798,
+          "ratio7": 1.112,
+          "share7": 0.0473,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0232,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 131,
+          "baseline7": 140,
+          "ratio7": 0.938,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0206,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 2438,
+        "R2": 279,
+        "R3": 1055,
+        "R4": 160
+      },
+      "event_count": 21844,
+      "ratios": {
+        "R1": 2.347,
+        "R2": 1.868,
+        "R3": 1.32,
+        "R4": 1.138
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.347,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 2438,
+          "baseline7": 1036,
+          "ratio7": 2.347,
+          "share7": 0.1116,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 279,
+          "baseline7": 147,
+          "ratio7": 1.868,
+          "share7": 0.0128,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0167,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1055,
+          "baseline7": 798,
+          "ratio7": 1.32,
+          "share7": 0.0483,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0215,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 160,
+          "baseline7": 140,
+          "ratio7": 1.138,
+          "share7": 0.0073,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0191,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1761,
+        "R2": 138,
+        "R3": 1197,
+        "R4": 189
+      },
+      "event_count": 17755,
+      "ratios": {
+        "R1": 1.696,
+        "R2": 0.941,
+        "R3": 1.497,
+        "R4": 1.338
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1761,
+          "baseline7": 1036,
+          "ratio7": 1.696,
+          "share7": 0.0992,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0318,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 138,
+          "baseline7": 147,
+          "ratio7": 0.941,
+          "share7": 0.0078,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0186,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1197,
+          "baseline7": 798,
+          "ratio7": 1.497,
+          "share7": 0.0674,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0239,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 189,
+          "baseline7": 140,
+          "ratio7": 1.338,
+          "share7": 0.0106,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0212,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1874,
+        "R2": 119,
+        "R3": 1352,
+        "R4": 155
+      },
+      "event_count": 18212,
+      "ratios": {
+        "R1": 1.805,
+        "R2": 0.816,
+        "R3": 1.69,
+        "R4": 1.103
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.805,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1874,
+          "baseline7": 1036,
+          "ratio7": 1.805,
+          "share7": 0.1029,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0314,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 119,
+          "baseline7": 147,
+          "ratio7": 0.816,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0183,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 1352,
+          "baseline7": 798,
+          "ratio7": 1.69,
+          "share7": 0.0742,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0236,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 155,
+          "baseline7": 140,
+          "ratio7": 1.103,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.021,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1169,
+        "R2": 111,
+        "R3": 938,
+        "R4": 111
+      },
+      "event_count": 16639,
+      "ratios": {
+        "R1": 1.128,
+        "R2": 0.763,
+        "R3": 1.174,
+        "R4": 0.8
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1169,
+          "baseline7": 1036,
+          "ratio7": 1.128,
+          "share7": 0.0703,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0329,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 111,
+          "baseline7": 147,
+          "ratio7": 0.763,
+          "share7": 0.0067,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0192,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 938,
+          "baseline7": 798,
+          "ratio7": 1.174,
+          "share7": 0.0564,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0247,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 111,
+          "baseline7": 140,
+          "ratio7": 0.8,
+          "share7": 0.0067,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0219,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1119,
+        "R2": 85,
+        "R3": 932,
+        "R4": 113
+      },
+      "event_count": 16384,
+      "ratios": {
+        "R1": 1.08,
+        "R2": 0.592,
+        "R3": 1.167,
+        "R4": 0.814
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1119,
+          "baseline7": 1036,
+          "ratio7": 1.08,
+          "share7": 0.0683,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0331,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 85,
+          "baseline7": 147,
+          "ratio7": 0.592,
+          "share7": 0.0052,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0193,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 932,
+          "baseline7": 798,
+          "ratio7": 1.167,
+          "share7": 0.0569,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0249,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 113,
+          "baseline7": 140,
+          "ratio7": 0.814,
+          "share7": 0.0069,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0221,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1183,
+        "R2": 185,
+        "R3": 847,
+        "R4": 129
+      },
+      "event_count": 16633,
+      "ratios": {
+        "R1": 1.141,
+        "R2": 1.25,
+        "R3": 1.061,
+        "R4": 0.924
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1183,
+          "baseline7": 1036,
+          "ratio7": 1.141,
+          "share7": 0.0711,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0329,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 185,
+          "baseline7": 147,
+          "ratio7": 1.25,
+          "share7": 0.0111,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0192,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 847,
+          "baseline7": 798,
+          "ratio7": 1.061,
+          "share7": 0.0509,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0247,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 129,
+          "baseline7": 140,
+          "ratio7": 0.924,
+          "share7": 0.0078,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0219,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1070,
+        "R2": 156,
+        "R3": 841,
+        "R4": 129
+      },
+      "event_count": 14999,
+      "ratios": {
+        "R1": 1.033,
+        "R2": 1.059,
+        "R3": 1.054,
+        "R4": 0.924
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1070,
+          "baseline7": 1036,
+          "ratio7": 1.033,
+          "share7": 0.0713,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0346,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 156,
+          "baseline7": 147,
+          "ratio7": 1.059,
+          "share7": 0.0104,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0202,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 841,
+          "baseline7": 798,
+          "ratio7": 1.054,
+          "share7": 0.0561,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.026,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 129,
+          "baseline7": 140,
+          "ratio7": 0.924,
+          "share7": 0.0086,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0231,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 848,
+        "R2": 146,
+        "R3": 572,
+        "R4": 66
+      },
+      "event_count": 10246,
+      "ratios": {
+        "R1": 0.819,
+        "R2": 0.993,
+        "R3": 0.719,
+        "R4": 0.49
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 848,
+          "baseline7": 1036,
+          "ratio7": 0.819,
+          "share7": 0.0828,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0419,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 146,
+          "baseline7": 147,
+          "ratio7": 0.993,
+          "share7": 0.0142,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 572,
+          "baseline7": 798,
+          "ratio7": 0.719,
+          "share7": 0.0558,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0314,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 66,
+          "baseline7": 140,
+          "ratio7": 0.49,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0279,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 983,
+        "R2": 105,
+        "R3": 750,
+        "R4": 59
+      },
+      "event_count": 11995,
+      "ratios": {
+        "R1": 0.949,
+        "R2": 0.724,
+        "R3": 0.94,
+        "R4": 0.441
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 983,
+          "baseline7": 1036,
+          "ratio7": 0.949,
+          "share7": 0.082,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0387,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 105,
+          "baseline7": 147,
+          "ratio7": 0.724,
+          "share7": 0.0088,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0226,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 750,
+          "baseline7": 798,
+          "ratio7": 0.94,
+          "share7": 0.0625,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0291,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 59,
+          "baseline7": 140,
+          "ratio7": 0.441,
+          "share7": 0.0049,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0258,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1462,
+        "R2": 89,
+        "R3": 914,
+        "R4": 105
+      },
+      "event_count": 15427,
+      "ratios": {
+        "R1": 1.409,
+        "R2": 0.618,
+        "R3": 1.144,
+        "R4": 0.759
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1462,
+          "baseline7": 1036,
+          "ratio7": 1.409,
+          "share7": 0.0948,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0342,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 89,
+          "baseline7": 147,
+          "ratio7": 0.618,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0199,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 914,
+          "baseline7": 798,
+          "ratio7": 1.144,
+          "share7": 0.0592,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0256,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 105,
+          "baseline7": 140,
+          "ratio7": 0.759,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0228,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Mexico",
+      "counts": {
+        "R1": 1237,
+        "R2": 116,
+        "R3": 982,
+        "R4": 155
+      },
+      "event_count": 15976,
+      "ratios": {
+        "R1": 1.193,
+        "R2": 0.796,
+        "R3": 1.229,
+        "R4": 1.103
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1237,
+          "baseline7": 1036,
+          "ratio7": 1.193,
+          "share7": 0.0774,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0336,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 116,
+          "baseline7": 147,
+          "ratio7": 0.796,
+          "share7": 0.0073,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0196,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 982,
+          "baseline7": 798,
+          "ratio7": 1.229,
+          "share7": 0.0615,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0252,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 155,
+          "baseline7": 140,
+          "ratio7": 1.103,
+          "share7": 0.0097,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0224,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    }
+  ]
+}
