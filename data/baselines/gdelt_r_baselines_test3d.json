@@ -1,0 +1,6491 @@
+{
+  "meta": {
+    "version": "v1.2-test3d",
+    "generated_at": "2026-01-17T06:35:17.163Z",
+    "country_count": 215,
+    "countries_from_data": 214,
+    "zero_filled_count": 1,
+    "zero_filled_examples": [
+      "FK"
+    ],
+    "window": {
+      "days": 3,
+      "start_date": "2026-01-15",
+      "end_date": "2026-01-17"
+    },
+    "aggregation": "FIPS→ISO2 daily merge, then stats, then zero-fill",
+    "sources": {
+      "gdelt_events": {
+        "table": "gdelt-bq.gdeltv2.events",
+        "metrics": [
+          "r1_security",
+          "r2_living",
+          "r3_governance",
+          "r4_fiscal"
+        ]
+      }
+    },
+    "cost_estimate": {
+      "bytes_processed": 18255849035,
+      "usd": 0.10377248733561828
+    },
+    "days_counted_stats": {
+      "min": 1,
+      "median": 3,
+      "max": 3
+    },
+    "note": "TEST FILE - 3 day window only. Not for production use."
+  },
+  "countries": {
+    "AW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "AG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 5,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 11,
+            "median": 11,
+            "p90": 20,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 5,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AF": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 29,
+            "median": 40,
+            "p90": 44,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 4,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 28,
+            "median": 36,
+            "p90": 46,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "DZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 2,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 10,
+            "median": 12,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 16,
+            "median": 17,
+            "p90": 29,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 28,
+            "median": 40,
+            "p90": 43,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 2,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 17,
+            "median": 24,
+            "p90": 27,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 22,
+            "median": 24,
+            "p90": 39,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 6,
+            "median": 7,
+            "p90": 12,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 16,
+            "median": 10,
+            "p90": 36,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 21,
+            "median": 15,
+            "p90": 48,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AD": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 1,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 2,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 4,
+            "median": 4,
+            "p90": 4,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "AR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 46,
+            "median": 59,
+            "p90": 65,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 25,
+            "median": 33,
+            "p90": 36,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 8,
+            "median": 11,
+            "p90": 13,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 141,
+            "median": 149,
+            "p90": 243,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 13,
+            "median": 17,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 132,
+            "median": 155,
+            "p90": 213,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 46,
+            "median": 53,
+            "p90": 74,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 7,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 11,
+            "median": 9,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 4,
+            "median": 2,
+            "p90": 10,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "AI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "BH": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 1,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BB": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 0,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 0,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 17,
+            "median": 23,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 15,
+            "median": 21,
+            "p90": 25,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 12,
+            "median": 16,
+            "p90": 20,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 2,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 6,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 0,
+            "p90": 7,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BD": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 76,
+            "median": 62,
+            "p90": 143,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 6,
+            "median": 7,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 34,
+            "median": 43,
+            "p90": 54,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 4,
+            "median": 4,
+            "p90": 8,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 4,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 4,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 10,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 8,
+            "median": 8,
+            "p90": 16,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 9,
+            "p90": 15,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 11,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BJ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 4,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 0,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 12,
+            "median": 14,
+            "p90": 23,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 14,
+            "median": 17,
+            "p90": 26,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SB": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 79,
+            "median": 112,
+            "p90": 113,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 84,
+            "median": 116,
+            "p90": 122,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 20,
+            "median": 29,
+            "p90": 30,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "BG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 7,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 8,
+            "median": 8,
+            "p90": 15,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 4,
+            "median": 6,
+            "p90": 7,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 14,
+            "median": 16,
+            "p90": 21,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 3,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "CA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 163,
+            "median": 196,
+            "p90": 237,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 19,
+            "median": 17,
+            "p90": 34,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 140,
+            "median": 169,
+            "p90": 207,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 59,
+            "median": 72,
+            "p90": 88,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KH": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 7,
+            "median": 9,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 6,
+            "median": 6,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TD": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 14,
+            "median": 9,
+            "p90": 25,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 5,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 13,
+            "median": 10,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 3,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 0,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CD": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 1,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 3,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 112,
+            "median": 149,
+            "p90": 155,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 6,
+            "median": 7,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 136,
+            "median": 173,
+            "p90": 194,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 40,
+            "median": 44,
+            "p90": 69,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 11,
+            "median": 14,
+            "p90": 16,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 11,
+            "median": 13,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 6,
+            "p90": 9,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "CM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 4,
+            "median": 3,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 1,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 1,
+            "p90": 8,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "CO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 56,
+            "median": 54,
+            "p90": 89,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 4,
+            "median": 4,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 36,
+            "median": 39,
+            "p90": 52,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 8,
+            "median": 5,
+            "p90": 19,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CF": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "CU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 64,
+            "median": 79,
+            "p90": 86,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 6,
+            "median": 9,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 42,
+            "median": 27,
+            "p90": 83,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 7,
+            "median": 7,
+            "p90": 11,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CV": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "CY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 13,
+            "median": 18,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 7,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "DK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 60,
+            "median": 60,
+            "p90": 106,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 35,
+            "median": 35,
+            "p90": 51,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 30,
+            "median": 39,
+            "p90": 44,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "DJ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 7,
+            "median": 7,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "DM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "DO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "EC": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 16,
+            "median": 20,
+            "p90": 21,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 9,
+            "median": 9,
+            "p90": 16,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "EG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 56,
+            "median": 50,
+            "p90": 104,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 6,
+            "median": 5,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 33,
+            "median": 39,
+            "p90": 56,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 12,
+            "median": 13,
+            "p90": 22,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "IE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 47,
+            "median": 63,
+            "p90": 73,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 4,
+            "median": 5,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 47,
+            "median": 62,
+            "p90": 67,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 12,
+            "median": 16,
+            "p90": 21,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GQ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "EE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 5,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 5,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ER": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 0,
+            "p90": 15,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SV": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 10,
+            "median": 5,
+            "p90": 21,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 10,
+            "median": 9,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ET": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 7,
+            "median": 8,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 8,
+            "median": 9,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 1,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 24,
+            "median": 17,
+            "p90": 53,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 22,
+            "median": 32,
+            "p90": 32,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 6,
+            "median": 6,
+            "p90": 10,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "FI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 10,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 12,
+            "median": 18,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "FJ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 0,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 6,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "FM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "FO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "PF": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "FR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 96,
+            "median": 131,
+            "p90": 133,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 6,
+            "median": 6,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 93,
+            "median": 115,
+            "p90": 130,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 28,
+            "median": 39,
+            "p90": 42,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 15,
+            "median": 13,
+            "p90": 29,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 9,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 4,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 12,
+            "median": 12,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GH": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 14,
+            "median": 18,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 28,
+            "median": 29,
+            "p90": 47,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 10,
+            "median": 11,
+            "p90": 16,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GD": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 84,
+            "median": 93,
+            "p90": 134,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 6,
+            "median": 7,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 41,
+            "median": 55,
+            "p90": 57,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 23,
+            "median": 28,
+            "p90": 29,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "DE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 86,
+            "median": 116,
+            "p90": 130,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 7,
+            "median": 10,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 96,
+            "median": 116,
+            "p90": 147,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 27,
+            "median": 36,
+            "p90": 44,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 0,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 59,
+            "median": 78,
+            "p90": 88,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 15,
+            "median": 17,
+            "p90": 25,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 45,
+            "median": 65,
+            "p90": 66,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 19,
+            "median": 24,
+            "p90": 29,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 8,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 8,
+            "median": 9,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 2,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 8,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 82,
+            "median": 99,
+            "p90": 125,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 4,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 16,
+            "median": 20,
+            "p90": 27,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 2,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "HT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 7,
+            "median": 3,
+            "p90": 16,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 1,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 8,
+            "median": 5,
+            "p90": 14,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "HK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 5,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 3,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "HN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 10,
+            "median": 12,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 14,
+            "median": 14,
+            "p90": 21,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "HR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 6,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 12,
+            "median": 16,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "HU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 7,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 11,
+            "median": 14,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 14,
+            "median": 17,
+            "p90": 23,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "IS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ID": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 42,
+            "median": 39,
+            "p90": 70,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 10,
+            "median": 6,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 64,
+            "median": 85,
+            "p90": 94,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 28,
+            "median": 24,
+            "p90": 55,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "IN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 308,
+            "median": 385,
+            "p90": 425,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 16,
+            "median": 16,
+            "p90": 30,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 251,
+            "median": 300,
+            "p90": 371,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 52,
+            "median": 59,
+            "p90": 84,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "IR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 664,
+            "median": 751,
+            "p90": 1099,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 23,
+            "median": 31,
+            "p90": 32,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 572,
+            "median": 561,
+            "p90": 1008,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 90,
+            "median": 103,
+            "p90": 152,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "IL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 598,
+            "median": 783,
+            "p90": 830,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 14,
+            "median": 17,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 292,
+            "median": 333,
+            "p90": 489,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 65,
+            "median": 76,
+            "p90": 100,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "IT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 117,
+            "median": 150,
+            "p90": 177,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 8,
+            "median": 10,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 96,
+            "median": 135,
+            "p90": 143,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 27,
+            "median": 37,
+            "p90": 40,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "IQ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 42,
+            "median": 47,
+            "p90": 58,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 6,
+            "median": 0,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 17,
+            "median": 14,
+            "p90": 32,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "JP": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 33,
+            "median": 43,
+            "p90": 48,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 5,
+            "median": 8,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 26,
+            "median": 22,
+            "p90": 47,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 21,
+            "median": 20,
+            "p90": 39,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "JM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 11,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 6,
+            "median": 7,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "JO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 13,
+            "median": 8,
+            "p90": 26,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 10,
+            "median": 15,
+            "p90": 15,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 7,
+            "p90": 9,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 27,
+            "median": 33,
+            "p90": 41,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 14,
+            "median": 14,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 13,
+            "median": 17,
+            "p90": 19,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 3,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KP": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 10,
+            "median": 6,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 4,
+            "median": 4,
+            "p90": 7,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "KR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 35,
+            "median": 39,
+            "p90": 59,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 4,
+            "median": 4,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 82,
+            "median": 57,
+            "p90": 168,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 15,
+            "median": 18,
+            "p90": 27,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 4,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "XK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 10,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 5,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 5,
+            "p90": 14,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 13,
+            "median": 16,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 6,
+            "p90": 8,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 8,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 6,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LB": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 52,
+            "median": 63,
+            "p90": 84,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 11,
+            "median": 8,
+            "p90": 23,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 9,
+            "median": 9,
+            "p90": 14,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LV": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 6,
+            "median": 5,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 7,
+            "median": 4,
+            "p90": 17,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 11,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 5,
+            "median": 3,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 15,
+            "median": 16,
+            "p90": 26,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 6,
+            "p90": 8,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 11,
+            "median": 15,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 14,
+            "median": 12,
+            "p90": 29,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 4,
+            "median": 4,
+            "p90": 7,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 7,
+            "median": 10,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 6,
+            "median": 5,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 0,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "LS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 3,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 0,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 7,
+            "p90": 14,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 6,
+            "p90": 15,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "MD": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 2,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 6,
+            "p90": 15,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "MW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 6,
+            "median": 8,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ME": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 4,
+            "median": 5,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 5,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 4,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 1,
+            "p90": 7,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ML": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 7,
+            "median": 6,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 5,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 1,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MC": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 0,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 14,
+            "median": 18,
+            "p90": 22,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 10,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 8,
+            "median": 8,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 6,
+            "median": 5,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 8,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 10,
+            "median": 13,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 4,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "OM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 11,
+            "median": 15,
+            "p90": 17,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 4,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MV": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MX": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 141,
+            "median": 172,
+            "p90": 183,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 12,
+            "median": 12,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 99,
+            "median": 104,
+            "p90": 152,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 14,
+            "median": 17,
+            "p90": 23,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 9,
+            "median": 10,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 2,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 35,
+            "median": 38,
+            "p90": 53,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 6,
+            "median": 4,
+            "p90": 13,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 3,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 2,
+            "p90": 7,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NC": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 12,
+            "median": 15,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "VU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 194,
+            "median": 248,
+            "p90": 288,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 21,
+            "median": 23,
+            "p90": 36,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 120,
+            "median": 159,
+            "p90": 178,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 36,
+            "median": 44,
+            "p90": 58,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 34,
+            "median": 47,
+            "p90": 52,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 25,
+            "median": 30,
+            "p90": 39,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 5,
+            "p90": 9,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 24,
+            "median": 28,
+            "p90": 39,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 29,
+            "median": 33,
+            "p90": 37,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 5,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NP": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 10,
+            "median": 12,
+            "p90": 14,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 0,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 16,
+            "median": 17,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 4,
+            "median": 3,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "SR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 4,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 6,
+            "median": 2,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 23,
+            "median": 16,
+            "p90": 47,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 7,
+            "median": 8,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 17,
+            "median": 12,
+            "p90": 38,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 8,
+            "median": 7,
+            "p90": 16,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 1,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 10,
+            "median": 12,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 3,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 20,
+            "median": 16,
+            "p90": 33,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 16,
+            "median": 20,
+            "p90": 22,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 4,
+            "median": 3,
+            "p90": 7,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 130,
+            "median": 167,
+            "p90": 197,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 69,
+            "median": 81,
+            "p90": 103,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 12,
+            "median": 13,
+            "p90": 21,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 46,
+            "median": 62,
+            "p90": 72,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 30,
+            "median": 35,
+            "p90": 48,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 16,
+            "median": 19,
+            "p90": 27,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 9,
+            "median": 9,
+            "p90": 16,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 11,
+            "median": 11,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 22,
+            "median": 16,
+            "p90": 41,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 15,
+            "median": 18,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 7,
+            "p90": 8,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "PW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "GW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "QA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 29,
+            "median": 30,
+            "p90": 48,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 12,
+            "median": 10,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 7,
+            "median": 6,
+            "p90": 13,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "RS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 15,
+            "median": 21,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 14,
+            "median": 18,
+            "p90": 25,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 7,
+            "median": 5,
+            "p90": 17,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "MH": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "RO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 25,
+            "median": 27,
+            "p90": 40,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 31,
+            "median": 44,
+            "p90": 47,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 20,
+            "median": 29,
+            "p90": 32,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PH": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 49,
+            "median": 38,
+            "p90": 107,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 4,
+            "median": 4,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 48,
+            "median": 71,
+            "p90": 71,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 12,
+            "median": 14,
+            "p90": 22,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "PR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 4,
+            "median": 1,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 5,
+            "median": 3,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "RU": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 563,
+            "median": 768,
+            "p90": 771,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 22,
+            "median": 29,
+            "p90": 34,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 275,
+            "median": 360,
+            "p90": 417,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 85,
+            "median": 110,
+            "p90": 130,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "RW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 5,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 38,
+            "median": 52,
+            "p90": 62,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 19,
+            "median": 27,
+            "p90": 28,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 10,
+            "median": 6,
+            "p90": 24,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "KN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "SC": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ZA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 67,
+            "median": 91,
+            "p90": 106,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 21,
+            "median": 17,
+            "p90": 44,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 40,
+            "median": 51,
+            "p90": 61,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 10,
+            "median": 13,
+            "p90": 16,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 5,
+            "median": 6,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 9,
+            "median": 13,
+            "p90": 15,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 4,
+            "median": 2,
+            "p90": 9,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 3,
+            "p90": 9,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "SG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 13,
+            "median": 16,
+            "p90": 22,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 18,
+            "median": 19,
+            "p90": 32,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 39,
+            "median": 38,
+            "p90": 70,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 25,
+            "median": 28,
+            "p90": 44,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 8,
+            "median": 8,
+            "p90": 16,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ES": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 92,
+            "median": 116,
+            "p90": 143,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 11,
+            "median": 12,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 90,
+            "median": 113,
+            "p90": 143,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 63,
+            "median": 83,
+            "p90": 89,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "LC": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "SD": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 36,
+            "median": 46,
+            "p90": 47,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 5,
+            "median": 4,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 7,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 8,
+            "median": 6,
+            "p90": 19,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 66,
+            "median": 89,
+            "p90": 91,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 9,
+            "median": 10,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 68,
+            "median": 76,
+            "p90": 120,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 16,
+            "median": 20,
+            "p90": 24,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 122,
+            "median": 130,
+            "p90": 198,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 3,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 54,
+            "median": 74,
+            "p90": 75,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 15,
+            "median": 13,
+            "p90": 28,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "CH": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 33,
+            "median": 43,
+            "p90": 49,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 28,
+            "median": 30,
+            "p90": 45,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 10,
+            "median": 12,
+            "p90": 17,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TT": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TH": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 20,
+            "median": 11,
+            "p90": 42,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 3,
+            "median": 2,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 29,
+            "median": 36,
+            "p90": 38,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 3,
+            "p90": 5,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TJ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 1,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TO": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "ST": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "TN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 8,
+            "median": 7,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TL": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 0,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TR": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 96,
+            "median": 133,
+            "p90": 141,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 5,
+            "median": 3,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 47,
+            "median": 57,
+            "p90": 77,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 13,
+            "median": 14,
+            "p90": 25,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TV": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 10,
+            "median": 8,
+            "p90": 20,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 13,
+            "median": 11,
+            "p90": 18,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 7,
+            "median": 7,
+            "p90": 13,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "TZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 2,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 9,
+            "p90": 11,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 3,
+            "median": 3,
+            "p90": 6,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "UG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 35,
+            "median": 23,
+            "p90": 60,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 27,
+            "median": 26,
+            "p90": 38,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 2,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "GB": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 263,
+            "median": 352,
+            "p90": 389,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 16,
+            "median": 14,
+            "p90": 32,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 330,
+            "median": 414,
+            "p90": 522,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 96,
+            "median": 116,
+            "p90": 147,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "UA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 439,
+            "median": 575,
+            "p90": 615,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 10,
+            "median": 12,
+            "p90": 12,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 130,
+            "median": 186,
+            "p90": 193,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 69,
+            "median": 91,
+            "p90": 111,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "US": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2930,
+            "median": 3599,
+            "p90": 4000,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 185,
+            "median": 215,
+            "p90": 245,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2677,
+            "median": 3348,
+            "p90": 3486,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 864,
+            "median": 1054,
+            "p90": 1228,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "BF": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 1,
+            "p90": 4,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 0,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "UY": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 4,
+            "median": 5,
+            "p90": 6,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 4,
+            "median": 3,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "UZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "VC": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 3,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "VE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 332,
+            "median": 367,
+            "p90": 527,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 5,
+            "median": 8,
+            "p90": 8,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 253,
+            "median": 328,
+            "p90": 370,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 55,
+            "median": 67,
+            "p90": 78,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "VG": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 1
+          },
+          "R4": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 1
+          }
+        }
+      }
+    },
+    "VN": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 23,
+            "median": 24,
+            "p90": 33,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 17,
+            "median": 24,
+            "p90": 24,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 6,
+            "median": 5,
+            "p90": 10,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "VI": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 1,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "VA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 1,
+            "median": 0,
+            "p90": 2,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "NA": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 2,
+            "median": 2,
+            "p90": 2,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 3,
+            "median": 3,
+            "p90": 3,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 1,
+            "median": 1,
+            "p90": 2,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "WS": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 1,
+            "median": 1,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 2,
+            "median": 1,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "SZ": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 2
+          }
+        }
+      }
+    },
+    "YE": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 21,
+            "median": 22,
+            "p90": 38,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 7,
+            "median": 7,
+            "p90": 13,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 5,
+            "median": 6,
+            "p90": 7,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ZM": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 4,
+            "median": 4,
+            "p90": 5,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 3,
+            "median": 1,
+            "p90": 7,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 1,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "ZW": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 6,
+            "median": 7,
+            "p90": 10,
+            "days_counted": 3
+          },
+          "R2": {
+            "avg": 2,
+            "median": 2,
+            "p90": 3,
+            "days_counted": 3
+          },
+          "R3": {
+            "avg": 12,
+            "median": 11,
+            "p90": 19,
+            "days_counted": 3
+          },
+          "R4": {
+            "avg": 7,
+            "median": 6,
+            "p90": 10,
+            "days_counted": 3
+          }
+        }
+      }
+    },
+    "FK": {
+      "gdelt_r": {
+        "baseline": {
+          "R1": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 0
+          },
+          "R2": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 0
+          },
+          "R3": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 0
+          },
+          "R4": {
+            "avg": 0,
+            "median": 0,
+            "p90": 0,
+            "days_counted": 0
+          }
+        }
+      }
+    }
+  }
+}

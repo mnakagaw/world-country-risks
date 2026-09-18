@@ -1,0 +1,6188 @@
+{
+  "iso2": "SE",
+  "generated_at": "2026-01-23T02:28:17.019Z",
+  "weeks_total": 52,
+  "weeks_available": 52,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 686,
+        "R2": 79,
+        "R3": 543,
+        "R4": 143
+      },
+      "event_count": 9715,
+      "ratios": {
+        "R1": 2.366,
+        "R2": 2.545,
+        "R3": 2.132,
+        "R4": 1.973
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.366,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 686,
+          "baseline7": 287,
+          "ratio7": 2.366,
+          "share7": 0.0706,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.043,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 79,
+          "baseline7": 28,
+          "ratio7": 2.545,
+          "share7": 0.0081,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0251,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 543,
+          "baseline7": 252,
+          "ratio7": 2.132,
+          "share7": 0.0559,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0323,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 143,
+          "baseline7": 70,
+          "ratio7": 1.973,
+          "share7": 0.0147,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 1093,
+        "R2": 77,
+        "R3": 881,
+        "R4": 133
+      },
+      "event_count": 11798,
+      "ratios": {
+        "R1": 3.76,
+        "R2": 2.485,
+        "R3": 3.447,
+        "R4": 1.84
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.76,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 1093,
+          "baseline7": 287,
+          "ratio7": 3.76,
+          "share7": 0.0926,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0391,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 77,
+          "baseline7": 28,
+          "ratio7": 2.485,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0228,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 881,
+          "baseline7": 252,
+          "ratio7": 3.447,
+          "share7": 0.0747,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0293,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 133,
+          "baseline7": 70,
+          "ratio7": 1.84,
+          "share7": 0.0113,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.026,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 2136,
+        "R2": 87,
+        "R3": 677,
+        "R4": 143
+      },
+      "event_count": 13415,
+      "ratios": {
+        "R1": 7.332,
+        "R2": 2.788,
+        "R3": 2.654,
+        "R4": 1.973
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 7.332,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 2136,
+          "baseline7": 287,
+          "ratio7": 7.332,
+          "share7": 0.1592,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0366,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 87,
+          "baseline7": 28,
+          "ratio7": 2.788,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0214,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 677,
+          "baseline7": 252,
+          "ratio7": 2.654,
+          "share7": 0.0505,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0275,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 143,
+          "baseline7": 70,
+          "ratio7": 1.973,
+          "share7": 0.0107,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 764,
+        "R2": 71,
+        "R3": 620,
+        "R4": 145
+      },
+      "event_count": 9986,
+      "ratios": {
+        "R1": 2.634,
+        "R2": 2.303,
+        "R3": 2.432,
+        "R4": 2
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.634,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 764,
+          "baseline7": 287,
+          "ratio7": 2.634,
+          "share7": 0.0765,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0425,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 71,
+          "baseline7": 28,
+          "ratio7": 2.303,
+          "share7": 0.0071,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0248,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 620,
+          "baseline7": 252,
+          "ratio7": 2.432,
+          "share7": 0.0621,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0318,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 145,
+          "baseline7": 70,
+          "ratio7": 2,
+          "share7": 0.0145,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0283,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 677,
+        "R2": 64,
+        "R3": 558,
+        "R4": 142
+      },
+      "event_count": 10297,
+      "ratios": {
+        "R1": 2.336,
+        "R2": 2.091,
+        "R3": 2.191,
+        "R4": 1.96
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.336,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 677,
+          "baseline7": 287,
+          "ratio7": 2.336,
+          "share7": 0.0657,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0418,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 64,
+          "baseline7": 28,
+          "ratio7": 2.091,
+          "share7": 0.0062,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 558,
+          "baseline7": 252,
+          "ratio7": 2.191,
+          "share7": 0.0542,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0314,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 142,
+          "baseline7": 70,
+          "ratio7": 1.96,
+          "share7": 0.0138,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0279,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 665,
+        "R2": 80,
+        "R3": 531,
+        "R4": 157
+      },
+      "event_count": 9946,
+      "ratios": {
+        "R1": 2.295,
+        "R2": 2.576,
+        "R3": 2.086,
+        "R4": 2.16
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.295,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 665,
+          "baseline7": 287,
+          "ratio7": 2.295,
+          "share7": 0.0669,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0425,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 80,
+          "baseline7": 28,
+          "ratio7": 2.576,
+          "share7": 0.008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0248,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 531,
+          "baseline7": 252,
+          "ratio7": 2.086,
+          "share7": 0.0534,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0319,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 157,
+          "baseline7": 70,
+          "ratio7": 2.16,
+          "share7": 0.0158,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0284,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 739,
+        "R2": 68,
+        "R3": 521,
+        "R4": 166
+      },
+      "event_count": 9739,
+      "ratios": {
+        "R1": 2.548,
+        "R2": 2.212,
+        "R3": 2.047,
+        "R4": 2.28
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.548,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 739,
+          "baseline7": 287,
+          "ratio7": 2.548,
+          "share7": 0.0759,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.043,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 68,
+          "baseline7": 28,
+          "ratio7": 2.212,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0251,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 521,
+          "baseline7": 252,
+          "ratio7": 2.047,
+          "share7": 0.0535,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0322,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 166,
+          "baseline7": 70,
+          "ratio7": 2.28,
+          "share7": 0.017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 663,
+        "R2": 92,
+        "R3": 579,
+        "R4": 230
+      },
+      "event_count": 10007,
+      "ratios": {
+        "R1": 2.288,
+        "R2": 2.939,
+        "R3": 2.272,
+        "R4": 3.133
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.288,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 663,
+          "baseline7": 287,
+          "ratio7": 2.288,
+          "share7": 0.0663,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0424,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 92,
+          "baseline7": 28,
+          "ratio7": 2.939,
+          "share7": 0.0092,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0247,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 579,
+          "baseline7": 252,
+          "ratio7": 2.272,
+          "share7": 0.0579,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0318,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 230,
+          "baseline7": 70,
+          "ratio7": 3.133,
+          "share7": 0.023,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0283,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 695,
+        "R2": 83,
+        "R3": 561,
+        "R4": 156
+      },
+      "event_count": 9749,
+      "ratios": {
+        "R1": 2.397,
+        "R2": 2.667,
+        "R3": 2.202,
+        "R4": 2.147
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.397,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 695,
+          "baseline7": 287,
+          "ratio7": 2.397,
+          "share7": 0.0713,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.043,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 83,
+          "baseline7": 28,
+          "ratio7": 2.667,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0251,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 561,
+          "baseline7": 252,
+          "ratio7": 2.202,
+          "share7": 0.0575,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0322,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 156,
+          "baseline7": 70,
+          "ratio7": 2.147,
+          "share7": 0.016,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0286,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 668,
+        "R2": 74,
+        "R3": 828,
+        "R4": 167
+      },
+      "event_count": 10157,
+      "ratios": {
+        "R1": 2.305,
+        "R2": 2.394,
+        "R3": 3.241,
+        "R4": 2.293
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.241,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 668,
+          "baseline7": 287,
+          "ratio7": 2.305,
+          "share7": 0.0658,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0421,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 74,
+          "baseline7": 28,
+          "ratio7": 2.394,
+          "share7": 0.0073,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0246,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 828,
+          "baseline7": 252,
+          "ratio7": 3.241,
+          "share7": 0.0815,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0316,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 167,
+          "baseline7": 70,
+          "ratio7": 2.293,
+          "share7": 0.0164,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0281,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 610,
+        "R2": 101,
+        "R3": 631,
+        "R4": 177
+      },
+      "event_count": 10128,
+      "ratios": {
+        "R1": 2.106,
+        "R2": 3.212,
+        "R3": 2.475,
+        "R4": 2.427
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.475,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 610,
+          "baseline7": 287,
+          "ratio7": 2.106,
+          "share7": 0.0602,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0422,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 101,
+          "baseline7": 28,
+          "ratio7": 3.212,
+          "share7": 0.01,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0246,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 631,
+          "baseline7": 252,
+          "ratio7": 2.475,
+          "share7": 0.0623,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0316,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 177,
+          "baseline7": 70,
+          "ratio7": 2.427,
+          "share7": 0.0175,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0281,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 665,
+        "R2": 107,
+        "R3": 572,
+        "R4": 158
+      },
+      "event_count": 9914,
+      "ratios": {
+        "R1": 2.295,
+        "R2": 3.394,
+        "R3": 2.245,
+        "R4": 2.173
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.295,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 665,
+          "baseline7": 287,
+          "ratio7": 2.295,
+          "share7": 0.0671,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0426,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 107,
+          "baseline7": 28,
+          "ratio7": 3.394,
+          "share7": 0.0108,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0249,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 572,
+          "baseline7": 252,
+          "ratio7": 2.245,
+          "share7": 0.0577,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.032,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 158,
+          "baseline7": 70,
+          "ratio7": 2.173,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0284,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 597,
+        "R2": 70,
+        "R3": 497,
+        "R4": 130
+      },
+      "event_count": 8342,
+      "ratios": {
+        "R1": 2.062,
+        "R2": 2.273,
+        "R3": 1.953,
+        "R4": 1.8
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.062,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 597,
+          "baseline7": 287,
+          "ratio7": 2.062,
+          "share7": 0.0716,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0465,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 70,
+          "baseline7": 28,
+          "ratio7": 2.273,
+          "share7": 0.0084,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0271,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 497,
+          "baseline7": 252,
+          "ratio7": 1.953,
+          "share7": 0.0596,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0348,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 130,
+          "baseline7": 70,
+          "ratio7": 1.8,
+          "share7": 0.0156,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.031,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 661,
+        "R2": 60,
+        "R3": 546,
+        "R4": 104
+      },
+      "event_count": 9640,
+      "ratios": {
+        "R1": 2.281,
+        "R2": 1.97,
+        "R3": 2.144,
+        "R4": 1.453
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.281,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 661,
+          "baseline7": 287,
+          "ratio7": 2.281,
+          "share7": 0.0686,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0432,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 60,
+          "baseline7": 28,
+          "ratio7": 1.97,
+          "share7": 0.0062,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0252,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 546,
+          "baseline7": 252,
+          "ratio7": 2.144,
+          "share7": 0.0566,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0324,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 104,
+          "baseline7": 70,
+          "ratio7": 1.453,
+          "share7": 0.0108,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0288,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 996,
+        "R2": 71,
+        "R3": 724,
+        "R4": 107
+      },
+      "event_count": 10311,
+      "ratios": {
+        "R1": 3.428,
+        "R2": 2.303,
+        "R3": 2.837,
+        "R4": 1.493
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.428,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 996,
+          "baseline7": 287,
+          "ratio7": 3.428,
+          "share7": 0.0966,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0418,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 71,
+          "baseline7": 28,
+          "ratio7": 2.303,
+          "share7": 0.0069,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 724,
+          "baseline7": 252,
+          "ratio7": 2.837,
+          "share7": 0.0702,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 107,
+          "baseline7": 70,
+          "ratio7": 1.493,
+          "share7": 0.0104,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0279,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 611,
+        "R2": 94,
+        "R3": 545,
+        "R4": 139
+      },
+      "event_count": 10081,
+      "ratios": {
+        "R1": 2.11,
+        "R2": 3,
+        "R3": 2.14,
+        "R4": 1.92
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.14,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 611,
+          "baseline7": 287,
+          "ratio7": 2.11,
+          "share7": 0.0606,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0423,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 94,
+          "baseline7": 28,
+          "ratio7": 3,
+          "share7": 0.0093,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0246,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 545,
+          "baseline7": 252,
+          "ratio7": 2.14,
+          "share7": 0.0541,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 139,
+          "baseline7": 70,
+          "ratio7": 1.92,
+          "share7": 0.0138,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0282,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 689,
+        "R2": 77,
+        "R3": 740,
+        "R4": 147
+      },
+      "event_count": 10775,
+      "ratios": {
+        "R1": 2.377,
+        "R2": 2.485,
+        "R3": 2.899,
+        "R4": 2.027
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.899,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 689,
+          "baseline7": 287,
+          "ratio7": 2.377,
+          "share7": 0.0639,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0409,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 77,
+          "baseline7": 28,
+          "ratio7": 2.485,
+          "share7": 0.0071,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0238,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 740,
+          "baseline7": 252,
+          "ratio7": 2.899,
+          "share7": 0.0687,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0307,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 147,
+          "baseline7": 70,
+          "ratio7": 2.027,
+          "share7": 0.0136,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0272,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 723,
+        "R2": 94,
+        "R3": 612,
+        "R4": 166
+      },
+      "event_count": 10137,
+      "ratios": {
+        "R1": 2.493,
+        "R2": 3,
+        "R3": 2.401,
+        "R4": 2.28
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.493,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 723,
+          "baseline7": 287,
+          "ratio7": 2.493,
+          "share7": 0.0713,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0421,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 94,
+          "baseline7": 28,
+          "ratio7": 3,
+          "share7": 0.0093,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0246,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 612,
+          "baseline7": 252,
+          "ratio7": 2.401,
+          "share7": 0.0604,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0316,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 166,
+          "baseline7": 70,
+          "ratio7": 2.28,
+          "share7": 0.0164,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0281,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 650,
+        "R2": 91,
+        "R3": 629,
+        "R4": 168
+      },
+      "event_count": 10061,
+      "ratios": {
+        "R1": 2.243,
+        "R2": 2.909,
+        "R3": 2.467,
+        "R4": 2.307
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.467,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 650,
+          "baseline7": 287,
+          "ratio7": 2.243,
+          "share7": 0.0646,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0423,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 91,
+          "baseline7": 28,
+          "ratio7": 2.909,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0247,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 629,
+          "baseline7": 252,
+          "ratio7": 2.467,
+          "share7": 0.0625,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 168,
+          "baseline7": 70,
+          "ratio7": 2.307,
+          "share7": 0.0167,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0282,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 780,
+        "R2": 63,
+        "R3": 586,
+        "R4": 158
+      },
+      "event_count": 9808,
+      "ratios": {
+        "R1": 2.688,
+        "R2": 2.061,
+        "R3": 2.3,
+        "R4": 2.173
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.688,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 780,
+          "baseline7": 287,
+          "ratio7": 2.688,
+          "share7": 0.0795,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0428,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 63,
+          "baseline7": 28,
+          "ratio7": 2.061,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.025,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 586,
+          "baseline7": 252,
+          "ratio7": 2.3,
+          "share7": 0.0597,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0321,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 158,
+          "baseline7": 70,
+          "ratio7": 2.173,
+          "share7": 0.0161,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0286,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 792,
+        "R2": 80,
+        "R3": 747,
+        "R4": 110
+      },
+      "event_count": 11146,
+      "ratios": {
+        "R1": 2.729,
+        "R2": 2.576,
+        "R3": 2.926,
+        "R4": 1.533
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.926,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 792,
+          "baseline7": 287,
+          "ratio7": 2.729,
+          "share7": 0.0711,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0402,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 80,
+          "baseline7": 28,
+          "ratio7": 2.576,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0234,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 747,
+          "baseline7": 252,
+          "ratio7": 2.926,
+          "share7": 0.067,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 110,
+          "baseline7": 70,
+          "ratio7": 1.533,
+          "share7": 0.0099,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0268,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 0,
+        "R2": 1,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 8,
+      "ratios": {
+        "R1": 0.017,
+        "R2": 0.182,
+        "R3": 0.019,
+        "R4": 0.067
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 287,
+          "ratio7": 0.017,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 28,
+          "ratio7": 0.182,
+          "share7": 0.125,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 252,
+          "ratio7": 0.019,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 70,
+          "ratio7": 0.067,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 2,
+        "R4": 0
+      },
+      "event_count": 31,
+      "ratios": {
+        "R1": 0.017,
+        "R2": 0.152,
+        "R3": 0.027,
+        "R4": 0.067
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 287,
+          "ratio7": 0.017,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 28,
+          "ratio7": 0.152,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 2,
+          "baseline7": 252,
+          "ratio7": 0.027,
+          "share7": 0.0645,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 70,
+          "ratio7": 0.067,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 463,
+        "R2": 40,
+        "R3": 468,
+        "R4": 132
+      },
+      "event_count": 6552,
+      "ratios": {
+        "R1": 1.603,
+        "R2": 1.364,
+        "R3": 1.84,
+        "R4": 1.827
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.84,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 463,
+          "baseline7": 287,
+          "ratio7": 1.603,
+          "share7": 0.0707,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0524,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 40,
+          "baseline7": 28,
+          "ratio7": 1.364,
+          "share7": 0.0061,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0306,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 468,
+          "baseline7": 252,
+          "ratio7": 1.84,
+          "share7": 0.0714,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0393,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 132,
+          "baseline7": 70,
+          "ratio7": 1.827,
+          "share7": 0.0201,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0349,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 604,
+        "R2": 66,
+        "R3": 620,
+        "R4": 149
+      },
+      "event_count": 9078,
+      "ratios": {
+        "R1": 2.086,
+        "R2": 2.152,
+        "R3": 2.432,
+        "R4": 2.053
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.432,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 604,
+          "baseline7": 287,
+          "ratio7": 2.086,
+          "share7": 0.0665,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0445,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 66,
+          "baseline7": 28,
+          "ratio7": 2.152,
+          "share7": 0.0073,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.026,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 620,
+          "baseline7": 252,
+          "ratio7": 2.432,
+          "share7": 0.0683,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0334,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 149,
+          "baseline7": 70,
+          "ratio7": 2.053,
+          "share7": 0.0164,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0297,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 624,
+        "R2": 57,
+        "R3": 454,
+        "R4": 173
+      },
+      "event_count": 8854,
+      "ratios": {
+        "R1": 2.154,
+        "R2": 1.879,
+        "R3": 1.786,
+        "R4": 2.373
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.154,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 624,
+          "baseline7": 287,
+          "ratio7": 2.154,
+          "share7": 0.0705,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0451,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 57,
+          "baseline7": 28,
+          "ratio7": 1.879,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0263,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 454,
+          "baseline7": 252,
+          "ratio7": 1.786,
+          "share7": 0.0513,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0338,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 173,
+          "baseline7": 70,
+          "ratio7": 2.373,
+          "share7": 0.0195,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 580,
+        "R2": 55,
+        "R3": 500,
+        "R4": 114
+      },
+      "event_count": 8511,
+      "ratios": {
+        "R1": 2.003,
+        "R2": 1.818,
+        "R3": 1.965,
+        "R4": 1.587
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.003,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 580,
+          "baseline7": 287,
+          "ratio7": 2.003,
+          "share7": 0.0681,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.046,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 55,
+          "baseline7": 28,
+          "ratio7": 1.818,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0268,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 500,
+          "baseline7": 252,
+          "ratio7": 1.965,
+          "share7": 0.0587,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0345,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 114,
+          "baseline7": 70,
+          "ratio7": 1.587,
+          "share7": 0.0134,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0307,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 572,
+        "R2": 76,
+        "R3": 670,
+        "R4": 137
+      },
+      "event_count": 10272,
+      "ratios": {
+        "R1": 1.976,
+        "R2": 2.455,
+        "R3": 2.626,
+        "R4": 1.893
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.626,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 572,
+          "baseline7": 287,
+          "ratio7": 1.976,
+          "share7": 0.0557,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0419,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R2": {
+          "today7": 76,
+          "baseline7": 28,
+          "ratio7": 2.455,
+          "share7": 0.0074,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0244,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 670,
+          "baseline7": 252,
+          "ratio7": 2.626,
+          "share7": 0.0652,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0314,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 137,
+          "baseline7": 70,
+          "ratio7": 1.893,
+          "share7": 0.0133,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0279,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 547,
+        "R2": 69,
+        "R3": 510,
+        "R4": 209
+      },
+      "event_count": 8628,
+      "ratios": {
+        "R1": 1.89,
+        "R2": 2.242,
+        "R3": 2.004,
+        "R4": 2.853
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.004,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 547,
+          "baseline7": 287,
+          "ratio7": 1.89,
+          "share7": 0.0634,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0457,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 69,
+          "baseline7": 28,
+          "ratio7": 2.242,
+          "share7": 0.008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0266,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 510,
+          "baseline7": 252,
+          "ratio7": 2.004,
+          "share7": 0.0591,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0343,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 209,
+          "baseline7": 70,
+          "ratio7": 2.853,
+          "share7": 0.0242,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0305,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 740,
+        "R2": 81,
+        "R3": 510,
+        "R4": 112
+      },
+      "event_count": 8414,
+      "ratios": {
+        "R1": 2.551,
+        "R2": 2.606,
+        "R3": 2.004,
+        "R4": 1.56
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.551,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 740,
+          "baseline7": 287,
+          "ratio7": 2.551,
+          "share7": 0.0879,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0463,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 81,
+          "baseline7": 28,
+          "ratio7": 2.606,
+          "share7": 0.0096,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.027,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 510,
+          "baseline7": 252,
+          "ratio7": 2.004,
+          "share7": 0.0606,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0347,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 112,
+          "baseline7": 70,
+          "ratio7": 1.56,
+          "share7": 0.0133,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0308,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 652,
+        "R2": 72,
+        "R3": 543,
+        "R4": 108
+      },
+      "event_count": 8677,
+      "ratios": {
+        "R1": 2.25,
+        "R2": 2.333,
+        "R3": 2.132,
+        "R4": 1.507
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.25,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 652,
+          "baseline7": 287,
+          "ratio7": 2.25,
+          "share7": 0.0751,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0455,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 72,
+          "baseline7": 28,
+          "ratio7": 2.333,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0266,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 543,
+          "baseline7": 252,
+          "ratio7": 2.132,
+          "share7": 0.0626,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0342,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 108,
+          "baseline7": 70,
+          "ratio7": 1.507,
+          "share7": 0.0124,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0304,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 715,
+        "R2": 71,
+        "R3": 510,
+        "R4": 123
+      },
+      "event_count": 9212,
+      "ratios": {
+        "R1": 2.466,
+        "R2": 2.303,
+        "R3": 2.004,
+        "R4": 1.707
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.466,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 715,
+          "baseline7": 287,
+          "ratio7": 2.466,
+          "share7": 0.0776,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0442,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 71,
+          "baseline7": 28,
+          "ratio7": 2.303,
+          "share7": 0.0077,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0258,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 510,
+          "baseline7": 252,
+          "ratio7": 2.004,
+          "share7": 0.0554,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0332,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 123,
+          "baseline7": 70,
+          "ratio7": 1.707,
+          "share7": 0.0134,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0295,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 630,
+        "R2": 64,
+        "R3": 572,
+        "R4": 100
+      },
+      "event_count": 9003,
+      "ratios": {
+        "R1": 2.175,
+        "R2": 2.091,
+        "R3": 2.245,
+        "R4": 1.4
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.245,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 630,
+          "baseline7": 287,
+          "ratio7": 2.175,
+          "share7": 0.07,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0447,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 64,
+          "baseline7": 28,
+          "ratio7": 2.091,
+          "share7": 0.0071,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0261,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 572,
+          "baseline7": 252,
+          "ratio7": 2.245,
+          "share7": 0.0635,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0335,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 100,
+          "baseline7": 70,
+          "ratio7": 1.4,
+          "share7": 0.0111,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0298,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 685,
+        "R2": 65,
+        "R3": 523,
+        "R4": 137
+      },
+      "event_count": 9835,
+      "ratios": {
+        "R1": 2.363,
+        "R2": 2.121,
+        "R3": 2.054,
+        "R4": 1.893
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.363,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 685,
+          "baseline7": 287,
+          "ratio7": 2.363,
+          "share7": 0.0696,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0428,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 65,
+          "baseline7": 28,
+          "ratio7": 2.121,
+          "share7": 0.0066,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.025,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 523,
+          "baseline7": 252,
+          "ratio7": 2.054,
+          "share7": 0.0532,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0321,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 137,
+          "baseline7": 70,
+          "ratio7": 1.893,
+          "share7": 0.0139,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0285,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 677,
+        "R2": 64,
+        "R3": 558,
+        "R4": 149
+      },
+      "event_count": 9394,
+      "ratios": {
+        "R1": 2.336,
+        "R2": 2.091,
+        "R3": 2.191,
+        "R4": 2.053
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.336,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 677,
+          "baseline7": 287,
+          "ratio7": 2.336,
+          "share7": 0.0721,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0438,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 64,
+          "baseline7": 28,
+          "ratio7": 2.091,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0255,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 558,
+          "baseline7": 252,
+          "ratio7": 2.191,
+          "share7": 0.0594,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0328,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 149,
+          "baseline7": 70,
+          "ratio7": 2.053,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0292,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 694,
+        "R2": 81,
+        "R3": 509,
+        "R4": 153
+      },
+      "event_count": 10203,
+      "ratios": {
+        "R1": 2.394,
+        "R2": 2.606,
+        "R3": 2,
+        "R4": 2.107
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.394,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 694,
+          "baseline7": 287,
+          "ratio7": 2.394,
+          "share7": 0.068,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.042,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 81,
+          "baseline7": 28,
+          "ratio7": 2.606,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0245,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 509,
+          "baseline7": 252,
+          "ratio7": 2,
+          "share7": 0.0499,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0315,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 153,
+          "baseline7": 70,
+          "ratio7": 2.107,
+          "share7": 0.015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.028,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 777,
+        "R2": 88,
+        "R3": 703,
+        "R4": 205
+      },
+      "event_count": 10765,
+      "ratios": {
+        "R1": 2.678,
+        "R2": 2.818,
+        "R3": 2.755,
+        "R4": 2.8
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Orange",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.755,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 777,
+          "baseline7": 287,
+          "ratio7": 2.678,
+          "share7": 0.0722,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0409,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 88,
+          "baseline7": 28,
+          "ratio7": 2.818,
+          "share7": 0.0082,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0239,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 703,
+          "baseline7": 252,
+          "ratio7": 2.755,
+          "share7": 0.0653,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0307,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 205,
+          "baseline7": 70,
+          "ratio7": 2.8,
+          "share7": 0.019,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0273,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 802,
+        "R2": 89,
+        "R3": 697,
+        "R4": 193
+      },
+      "event_count": 11481,
+      "ratios": {
+        "R1": 2.764,
+        "R2": 2.848,
+        "R3": 2.732,
+        "R4": 2.64
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.764,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 802,
+          "baseline7": 287,
+          "ratio7": 2.764,
+          "share7": 0.0699,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0396,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 89,
+          "baseline7": 28,
+          "ratio7": 2.848,
+          "share7": 0.0078,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0231,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 697,
+          "baseline7": 252,
+          "ratio7": 2.732,
+          "share7": 0.0607,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0297,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 193,
+          "baseline7": 70,
+          "ratio7": 2.64,
+          "share7": 0.0168,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0264,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 772,
+        "R2": 94,
+        "R3": 666,
+        "R4": 190
+      },
+      "event_count": 11167,
+      "ratios": {
+        "R1": 2.661,
+        "R2": 3,
+        "R3": 2.611,
+        "R4": 2.6
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.661,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 772,
+          "baseline7": 287,
+          "ratio7": 2.661,
+          "share7": 0.0691,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0401,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 94,
+          "baseline7": 28,
+          "ratio7": 3,
+          "share7": 0.0084,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0234,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 666,
+          "baseline7": 252,
+          "ratio7": 2.611,
+          "share7": 0.0596,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 190,
+          "baseline7": 70,
+          "ratio7": 2.6,
+          "share7": 0.017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0268,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 737,
+        "R2": 83,
+        "R3": 614,
+        "R4": 193
+      },
+      "event_count": 11801,
+      "ratios": {
+        "R1": 2.541,
+        "R2": 2.667,
+        "R3": 2.409,
+        "R4": 2.64
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.541,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 737,
+          "baseline7": 287,
+          "ratio7": 2.541,
+          "share7": 0.0625,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0391,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 83,
+          "baseline7": 28,
+          "ratio7": 2.667,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0228,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 614,
+          "baseline7": 252,
+          "ratio7": 2.409,
+          "share7": 0.052,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0293,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 193,
+          "baseline7": 70,
+          "ratio7": 2.64,
+          "share7": 0.0164,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.026,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 654,
+        "R2": 81,
+        "R3": 592,
+        "R4": 162
+      },
+      "event_count": 9572,
+      "ratios": {
+        "R1": 2.257,
+        "R2": 2.606,
+        "R3": 2.323,
+        "R4": 2.227
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.323,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 654,
+          "baseline7": 287,
+          "ratio7": 2.257,
+          "share7": 0.0683,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0434,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 81,
+          "baseline7": 28,
+          "ratio7": 2.606,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0253,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 592,
+          "baseline7": 252,
+          "ratio7": 2.323,
+          "share7": 0.0618,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0325,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 162,
+          "baseline7": 70,
+          "ratio7": 2.227,
+          "share7": 0.0169,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0289,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 683,
+        "R2": 84,
+        "R3": 579,
+        "R4": 155
+      },
+      "event_count": 9877,
+      "ratios": {
+        "R1": 2.356,
+        "R2": 2.697,
+        "R3": 2.272,
+        "R4": 2.133
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.356,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 683,
+          "baseline7": 287,
+          "ratio7": 2.356,
+          "share7": 0.0692,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0427,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 84,
+          "baseline7": 28,
+          "ratio7": 2.697,
+          "share7": 0.0085,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0249,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 579,
+          "baseline7": 252,
+          "ratio7": 2.272,
+          "share7": 0.0586,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.032,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 155,
+          "baseline7": 70,
+          "ratio7": 2.133,
+          "share7": 0.0157,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0285,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 730,
+        "R2": 83,
+        "R3": 580,
+        "R4": 173
+      },
+      "event_count": 9951,
+      "ratios": {
+        "R1": 2.517,
+        "R2": 2.667,
+        "R3": 2.276,
+        "R4": 2.373
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.517,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 730,
+          "baseline7": 287,
+          "ratio7": 2.517,
+          "share7": 0.0734,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0425,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 83,
+          "baseline7": 28,
+          "ratio7": 2.667,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0248,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 580,
+          "baseline7": 252,
+          "ratio7": 2.276,
+          "share7": 0.0583,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0319,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 173,
+          "baseline7": 70,
+          "ratio7": 2.373,
+          "share7": 0.0174,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0284,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 666,
+        "R2": 79,
+        "R3": 571,
+        "R4": 167
+      },
+      "event_count": 9884,
+      "ratios": {
+        "R1": 2.298,
+        "R2": 2.545,
+        "R3": 2.241,
+        "R4": 2.293
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.298,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 666,
+          "baseline7": 287,
+          "ratio7": 2.298,
+          "share7": 0.0674,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0427,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 79,
+          "baseline7": 28,
+          "ratio7": 2.545,
+          "share7": 0.008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0249,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 571,
+          "baseline7": 252,
+          "ratio7": 2.241,
+          "share7": 0.0578,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.032,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 167,
+          "baseline7": 70,
+          "ratio7": 2.293,
+          "share7": 0.0169,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0284,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 678,
+        "R2": 50,
+        "R3": 633,
+        "R4": 149
+      },
+      "event_count": 9937,
+      "ratios": {
+        "R1": 2.339,
+        "R2": 1.667,
+        "R3": 2.482,
+        "R4": 2.053
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.482,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 678,
+          "baseline7": 287,
+          "ratio7": 2.339,
+          "share7": 0.0682,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0426,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 50,
+          "baseline7": 28,
+          "ratio7": 1.667,
+          "share7": 0.005,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0248,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 633,
+          "baseline7": 252,
+          "ratio7": 2.482,
+          "share7": 0.0637,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0319,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 149,
+          "baseline7": 70,
+          "ratio7": 2.053,
+          "share7": 0.015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0284,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 567,
+        "R2": 68,
+        "R3": 578,
+        "R4": 176
+      },
+      "event_count": 9506,
+      "ratios": {
+        "R1": 1.959,
+        "R2": 2.212,
+        "R3": 2.268,
+        "R4": 2.413
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.268,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 567,
+          "baseline7": 287,
+          "ratio7": 1.959,
+          "share7": 0.0596,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0435,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R2": {
+          "today7": 68,
+          "baseline7": 28,
+          "ratio7": 2.212,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0254,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 578,
+          "baseline7": 252,
+          "ratio7": 2.268,
+          "share7": 0.0608,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0326,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 176,
+          "baseline7": 70,
+          "ratio7": 2.413,
+          "share7": 0.0185,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.029,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 635,
+        "R2": 87,
+        "R3": 562,
+        "R4": 152
+      },
+      "event_count": 9825,
+      "ratios": {
+        "R1": 2.192,
+        "R2": 2.788,
+        "R3": 2.206,
+        "R4": 2.093
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.206,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 635,
+          "baseline7": 287,
+          "ratio7": 2.192,
+          "share7": 0.0646,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0428,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 87,
+          "baseline7": 28,
+          "ratio7": 2.788,
+          "share7": 0.0089,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.025,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 562,
+          "baseline7": 252,
+          "ratio7": 2.206,
+          "share7": 0.0572,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0321,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 152,
+          "baseline7": 70,
+          "ratio7": 2.093,
+          "share7": 0.0155,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0285,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 699,
+        "R2": 76,
+        "R3": 540,
+        "R4": 186
+      },
+      "event_count": 9718,
+      "ratios": {
+        "R1": 2.411,
+        "R2": 2.455,
+        "R3": 2.121,
+        "R4": 2.547
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.411,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 699,
+          "baseline7": 287,
+          "ratio7": 2.411,
+          "share7": 0.0719,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.043,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 76,
+          "baseline7": 28,
+          "ratio7": 2.455,
+          "share7": 0.0078,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0251,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 540,
+          "baseline7": 252,
+          "ratio7": 2.121,
+          "share7": 0.0556,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0323,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 186,
+          "baseline7": 70,
+          "ratio7": 2.547,
+          "share7": 0.0191,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 510,
+        "R2": 55,
+        "R3": 515,
+        "R4": 90
+      },
+      "event_count": 6751,
+      "ratios": {
+        "R1": 1.764,
+        "R2": 1.818,
+        "R3": 2.023,
+        "R4": 1.267
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.023,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 510,
+          "baseline7": 287,
+          "ratio7": 1.764,
+          "share7": 0.0755,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0516,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 55,
+          "baseline7": 28,
+          "ratio7": 1.818,
+          "share7": 0.0081,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 515,
+          "baseline7": 252,
+          "ratio7": 2.023,
+          "share7": 0.0763,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0387,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 90,
+          "baseline7": 70,
+          "ratio7": 1.267,
+          "share7": 0.0133,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0344,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 507,
+        "R2": 65,
+        "R3": 404,
+        "R4": 85
+      },
+      "event_count": 6593,
+      "ratios": {
+        "R1": 1.753,
+        "R2": 2.121,
+        "R3": 1.591,
+        "R4": 1.2
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.753,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 507,
+          "baseline7": 287,
+          "ratio7": 1.753,
+          "share7": 0.0769,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0523,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 65,
+          "baseline7": 28,
+          "ratio7": 2.121,
+          "share7": 0.0099,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0305,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 404,
+          "baseline7": 252,
+          "ratio7": 1.591,
+          "share7": 0.0613,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0392,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 85,
+          "baseline7": 70,
+          "ratio7": 1.2,
+          "share7": 0.0129,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0348,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 614,
+        "R2": 68,
+        "R3": 532,
+        "R4": 120
+      },
+      "event_count": 8605,
+      "ratios": {
+        "R1": 2.12,
+        "R2": 2.212,
+        "R3": 2.089,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.12,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 614,
+          "baseline7": 287,
+          "ratio7": 2.12,
+          "share7": 0.0714,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0457,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 68,
+          "baseline7": 28,
+          "ratio7": 2.212,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0267,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 532,
+          "baseline7": 252,
+          "ratio7": 2.089,
+          "share7": 0.0618,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0343,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 120,
+          "baseline7": 70,
+          "ratio7": 1.667,
+          "share7": 0.0139,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0305,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Sweden",
+      "counts": {
+        "R1": 608,
+        "R2": 71,
+        "R3": 655,
+        "R4": 164
+      },
+      "event_count": 11212,
+      "ratios": {
+        "R1": 2.099,
+        "R2": 2.303,
+        "R3": 2.568,
+        "R4": 2.253
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.568,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 608,
+          "baseline7": 287,
+          "ratio7": 2.099,
+          "share7": 0.0542,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0401,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R2": {
+          "today7": 71,
+          "baseline7": 28,
+          "ratio7": 2.303,
+          "share7": 0.0063,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0234,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 655,
+          "baseline7": 252,
+          "ratio7": 2.568,
+          "share7": 0.0584,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 164,
+          "baseline7": 70,
+          "ratio7": 2.253,
+          "share7": 0.0146,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0267,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    }
+  ]
+}
