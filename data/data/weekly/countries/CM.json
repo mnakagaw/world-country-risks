@@ -1,0 +1,6028 @@
+{
+  "iso2": "CM",
+  "generated_at": "2026-01-23T02:28:15.861Z",
+  "weeks_total": 52,
+  "weeks_available": 51,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 50,
+        "R2": 2,
+        "R3": 31,
+        "R4": 12
+      },
+      "event_count": 516,
+      "ratios": {
+        "R1": 1.17,
+        "R2": 0.583,
+        "R3": 1.385,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 50,
+          "baseline7": 42,
+          "ratio7": 1.17,
+          "share7": 0.0969,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0039,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 31,
+          "baseline7": 21,
+          "ratio7": 1.385,
+          "share7": 0.0601,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0233,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 54,
+        "R2": 3,
+        "R3": 43,
+        "R4": 13
+      },
+      "event_count": 739,
+      "ratios": {
+        "R1": 1.255,
+        "R2": 0.667,
+        "R3": 1.846,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.846,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 54,
+          "baseline7": 42,
+          "ratio7": 1.255,
+          "share7": 0.0731,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0041,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 43,
+          "baseline7": 21,
+          "ratio7": 1.846,
+          "share7": 0.0582,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0176,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 36,
+        "R2": 0,
+        "R3": 19,
+        "R4": 17
+      },
+      "event_count": 510,
+      "ratios": {
+        "R1": 0.872,
+        "R2": 0.417,
+        "R3": 0.923,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 42,
+          "ratio7": 0.872,
+          "share7": 0.0706,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 19,
+          "baseline7": 21,
+          "ratio7": 0.923,
+          "share7": 0.0373,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0333,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 28,
+        "R2": 1,
+        "R3": 23,
+        "R4": 14
+      },
+      "event_count": 424,
+      "ratios": {
+        "R1": 0.702,
+        "R2": 0.5,
+        "R3": 1.077,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 28,
+          "baseline7": 42,
+          "ratio7": 0.702,
+          "share7": 0.066,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 21,
+          "ratio7": 1.077,
+          "share7": 0.0542,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.033,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 51,
+        "R2": 3,
+        "R3": 24,
+        "R4": 11
+      },
+      "event_count": 568,
+      "ratios": {
+        "R1": 1.191,
+        "R2": 0.667,
+        "R3": 1.115,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 51,
+          "baseline7": 42,
+          "ratio7": 1.191,
+          "share7": 0.0898,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0053,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 24,
+          "baseline7": 21,
+          "ratio7": 1.115,
+          "share7": 0.0423,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0194,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 41,
+        "R2": 0,
+        "R3": 19,
+        "R4": 21
+      },
+      "event_count": 466,
+      "ratios": {
+        "R1": 0.979,
+        "R2": 0.417,
+        "R3": 0.923,
+        "R4": 2.167
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 41,
+          "baseline7": 42,
+          "ratio7": 0.979,
+          "share7": 0.088,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 19,
+          "baseline7": 21,
+          "ratio7": 0.923,
+          "share7": 0.0408,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0451,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 36,
+        "R2": 0,
+        "R3": 31,
+        "R4": 13
+      },
+      "event_count": 444,
+      "ratios": {
+        "R1": 0.872,
+        "R2": 0.417,
+        "R3": 1.385,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 42,
+          "ratio7": 0.872,
+          "share7": 0.0811,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 31,
+          "baseline7": 21,
+          "ratio7": 1.385,
+          "share7": 0.0698,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0293,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 27,
+        "R2": 1,
+        "R3": 22,
+        "R4": 12
+      },
+      "event_count": 532,
+      "ratios": {
+        "R1": 0.681,
+        "R2": 0.5,
+        "R3": 1.038,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 27,
+          "baseline7": 42,
+          "ratio7": 0.681,
+          "share7": 0.0508,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0019,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 22,
+          "baseline7": 21,
+          "ratio7": 1.038,
+          "share7": 0.0414,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0226,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 45,
+        "R2": 7,
+        "R3": 23,
+        "R4": 26
+      },
+      "event_count": 681,
+      "ratios": {
+        "R1": 1.064,
+        "R2": 1,
+        "R3": 1.077,
+        "R4": 2.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 45,
+          "baseline7": 42,
+          "ratio7": 1.064,
+          "share7": 0.0661,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0103,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 21,
+          "ratio7": 1.077,
+          "share7": 0.0338,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 26,
+          "baseline7": 7,
+          "ratio7": 2.583,
+          "share7": 0.0382,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 90,
+        "R2": 4,
+        "R3": 34,
+        "R4": 10
+      },
+      "event_count": 636,
+      "ratios": {
+        "R1": 2.021,
+        "R2": 0.75,
+        "R3": 1.5,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.021,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 90,
+          "baseline7": 42,
+          "ratio7": 2.021,
+          "share7": 0.1415,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0063,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 34,
+          "baseline7": 21,
+          "ratio7": 1.5,
+          "share7": 0.0535,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0157,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 49,
+        "R2": 5,
+        "R3": 22,
+        "R4": 19
+      },
+      "event_count": 462,
+      "ratios": {
+        "R1": 1.149,
+        "R2": 0.833,
+        "R3": 1.038,
+        "R4": 2
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 49,
+          "baseline7": 42,
+          "ratio7": 1.149,
+          "share7": 0.1061,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0108,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 22,
+          "baseline7": 21,
+          "ratio7": 1.038,
+          "share7": 0.0476,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 19,
+          "baseline7": 7,
+          "ratio7": 2,
+          "share7": 0.0411,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 50,
+        "R2": 4,
+        "R3": 25,
+        "R4": 15
+      },
+      "event_count": 541,
+      "ratios": {
+        "R1": 1.17,
+        "R2": 0.75,
+        "R3": 1.154,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 50,
+          "baseline7": 42,
+          "ratio7": 1.17,
+          "share7": 0.0924,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0074,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 25,
+          "baseline7": 21,
+          "ratio7": 1.154,
+          "share7": 0.0462,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0277,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 34,
+        "R2": 4,
+        "R3": 35,
+        "R4": 18
+      },
+      "event_count": 530,
+      "ratios": {
+        "R1": 0.83,
+        "R2": 0.75,
+        "R3": 1.538,
+        "R4": 1.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 34,
+          "baseline7": 42,
+          "ratio7": 0.83,
+          "share7": 0.0642,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0075,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 35,
+          "baseline7": 21,
+          "ratio7": 1.538,
+          "share7": 0.066,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.034,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 36,
+        "R2": 3,
+        "R3": 20,
+        "R4": 13
+      },
+      "event_count": 473,
+      "ratios": {
+        "R1": 0.872,
+        "R2": 0.667,
+        "R3": 0.962,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 42,
+          "ratio7": 0.872,
+          "share7": 0.0761,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0063,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.0423,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0275,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 39,
+        "R2": 3,
+        "R3": 27,
+        "R4": 10
+      },
+      "event_count": 543,
+      "ratios": {
+        "R1": 0.936,
+        "R2": 0.667,
+        "R3": 1.231,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 39,
+          "baseline7": 42,
+          "ratio7": 0.936,
+          "share7": 0.0718,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0055,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 27,
+          "baseline7": 21,
+          "ratio7": 1.231,
+          "share7": 0.0497,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0184,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 44,
+        "R2": 0,
+        "R3": 43,
+        "R4": 11
+      },
+      "event_count": 636,
+      "ratios": {
+        "R1": 1.043,
+        "R2": 0.417,
+        "R3": 1.846,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.846,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 44,
+          "baseline7": 42,
+          "ratio7": 1.043,
+          "share7": 0.0692,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 43,
+          "baseline7": 21,
+          "ratio7": 1.846,
+          "share7": 0.0676,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0173,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 53,
+        "R2": 6,
+        "R3": 27,
+        "R4": 4
+      },
+      "event_count": 569,
+      "ratios": {
+        "R1": 1.234,
+        "R2": 0.917,
+        "R3": 1.231,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 53,
+          "baseline7": 42,
+          "ratio7": 1.234,
+          "share7": 0.0931,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0105,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 27,
+          "baseline7": 21,
+          "ratio7": 1.231,
+          "share7": 0.0475,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 43,
+        "R2": 4,
+        "R3": 29,
+        "R4": 14
+      },
+      "event_count": 633,
+      "ratios": {
+        "R1": 1.021,
+        "R2": 0.75,
+        "R3": 1.308,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 43,
+          "baseline7": 42,
+          "ratio7": 1.021,
+          "share7": 0.0679,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0063,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 29,
+          "baseline7": 21,
+          "ratio7": 1.308,
+          "share7": 0.0458,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0221,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 74,
+        "R2": 1,
+        "R3": 30,
+        "R4": 17
+      },
+      "event_count": 684,
+      "ratios": {
+        "R1": 1.681,
+        "R2": 0.5,
+        "R3": 1.346,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 74,
+          "baseline7": 42,
+          "ratio7": 1.681,
+          "share7": 0.1082,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 30,
+          "baseline7": 21,
+          "ratio7": 1.346,
+          "share7": 0.0439,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0249,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 32,
+        "R2": 2,
+        "R3": 32,
+        "R4": 14
+      },
+      "event_count": 553,
+      "ratios": {
+        "R1": 0.787,
+        "R2": 0.583,
+        "R3": 1.423,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 32,
+          "baseline7": 42,
+          "ratio7": 0.787,
+          "share7": 0.0579,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0036,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 32,
+          "baseline7": 21,
+          "ratio7": 1.423,
+          "share7": 0.0579,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0253,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 33,
+        "R2": 1,
+        "R3": 48,
+        "R4": 15
+      },
+      "event_count": 693,
+      "ratios": {
+        "R1": 0.809,
+        "R2": 0.5,
+        "R3": 2.038,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.038,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 33,
+          "baseline7": 42,
+          "ratio7": 0.809,
+          "share7": 0.0476,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 48,
+          "baseline7": 21,
+          "ratio7": 2.038,
+          "share7": 0.0693,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0216,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 0,
+      "ratios": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "levels": {
+        "R1": "NoData",
+        "R2": "NoData",
+        "R3": "NoData",
+        "R4": "NoData"
+      },
+      "overall_level": "NoData",
+      "bundle": "NoData",
+      "weekly_surge_r": {
+        "level": "nodata",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        }
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "no-data"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "no-data"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "no-data"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "no-data"
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 4,
+      "ratios": {
+        "R1": 0.106,
+        "R2": 0.417,
+        "R3": 0.192,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 42,
+          "ratio7": 0.106,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 21,
+          "ratio7": 0.192,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 15,
+        "R2": 0,
+        "R3": 12,
+        "R4": 4
+      },
+      "event_count": 273,
+      "ratios": {
+        "R1": 0.426,
+        "R2": 0.417,
+        "R3": 0.654,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 15,
+          "baseline7": 42,
+          "ratio7": 0.426,
+          "share7": 0.0549,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 12,
+          "baseline7": 21,
+          "ratio7": 0.654,
+          "share7": 0.044,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0147,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 32,
+        "R2": 4,
+        "R3": 33,
+        "R4": 14
+      },
+      "event_count": 634,
+      "ratios": {
+        "R1": 0.787,
+        "R2": 0.75,
+        "R3": 1.462,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 32,
+          "baseline7": 42,
+          "ratio7": 0.787,
+          "share7": 0.0505,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0063,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 33,
+          "baseline7": 21,
+          "ratio7": 1.462,
+          "share7": 0.0521,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0221,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 39,
+        "R2": 0,
+        "R3": 34,
+        "R4": 21
+      },
+      "event_count": 844,
+      "ratios": {
+        "R1": 0.936,
+        "R2": 0.417,
+        "R3": 1.5,
+        "R4": 2.167
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 39,
+          "baseline7": 42,
+          "ratio7": 0.936,
+          "share7": 0.0462,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 34,
+          "baseline7": 21,
+          "ratio7": 1.5,
+          "share7": 0.0403,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0249,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 20,
+        "R2": 1,
+        "R3": 37,
+        "R4": 13
+      },
+      "event_count": 611,
+      "ratios": {
+        "R1": 0.532,
+        "R2": 0.5,
+        "R3": 1.615,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 20,
+          "baseline7": 42,
+          "ratio7": 0.532,
+          "share7": 0.0327,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0016,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 37,
+          "baseline7": 21,
+          "ratio7": 1.615,
+          "share7": 0.0606,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0213,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 24,
+        "R2": 4,
+        "R3": 47,
+        "R4": 12
+      },
+      "event_count": 686,
+      "ratios": {
+        "R1": 0.617,
+        "R2": 0.75,
+        "R3": 2,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 24,
+          "baseline7": 42,
+          "ratio7": 0.617,
+          "share7": 0.035,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 47,
+          "baseline7": 21,
+          "ratio7": 2,
+          "share7": 0.0685,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0175,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 59,
+        "R2": 2,
+        "R3": 52,
+        "R4": 8
+      },
+      "event_count": 844,
+      "ratios": {
+        "R1": 1.362,
+        "R2": 0.583,
+        "R3": 2.192,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.192,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 59,
+          "baseline7": 42,
+          "ratio7": 1.362,
+          "share7": 0.0699,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 52,
+          "baseline7": 21,
+          "ratio7": 2.192,
+          "share7": 0.0616,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0095,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 44,
+        "R2": 11,
+        "R3": 29,
+        "R4": 10
+      },
+      "event_count": 638,
+      "ratios": {
+        "R1": 1.043,
+        "R2": 1.333,
+        "R3": 1.308,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 44,
+          "baseline7": 42,
+          "ratio7": 1.043,
+          "share7": 0.069,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0172,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 29,
+          "baseline7": 21,
+          "ratio7": 1.308,
+          "share7": 0.0455,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0157,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 63,
+        "R2": 5,
+        "R3": 23,
+        "R4": 15
+      },
+      "event_count": 581,
+      "ratios": {
+        "R1": 1.447,
+        "R2": 0.833,
+        "R3": 1.077,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 63,
+          "baseline7": 42,
+          "ratio7": 1.447,
+          "share7": 0.1084,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0086,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 21,
+          "ratio7": 1.077,
+          "share7": 0.0396,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0258,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 40,
+        "R2": 4,
+        "R3": 20,
+        "R4": 12
+      },
+      "event_count": 505,
+      "ratios": {
+        "R1": 0.957,
+        "R2": 0.75,
+        "R3": 0.962,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 40,
+          "baseline7": 42,
+          "ratio7": 0.957,
+          "share7": 0.0792,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.0396,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0238,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 60,
+        "R2": 6,
+        "R3": 27,
+        "R4": 12
+      },
+      "event_count": 568,
+      "ratios": {
+        "R1": 1.383,
+        "R2": 0.917,
+        "R3": 1.231,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 60,
+          "baseline7": 42,
+          "ratio7": 1.383,
+          "share7": 0.1056,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0106,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 27,
+          "baseline7": 21,
+          "ratio7": 1.231,
+          "share7": 0.0475,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0211,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 34,
+        "R2": 3,
+        "R3": 25,
+        "R4": 14
+      },
+      "event_count": 551,
+      "ratios": {
+        "R1": 0.83,
+        "R2": 0.667,
+        "R3": 1.154,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 34,
+          "baseline7": 42,
+          "ratio7": 0.83,
+          "share7": 0.0617,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0054,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 25,
+          "baseline7": 21,
+          "ratio7": 1.154,
+          "share7": 0.0454,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0254,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 26,
+        "R2": 2,
+        "R3": 19,
+        "R4": 12
+      },
+      "event_count": 487,
+      "ratios": {
+        "R1": 0.66,
+        "R2": 0.583,
+        "R3": 0.923,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 26,
+          "baseline7": 42,
+          "ratio7": 0.66,
+          "share7": 0.0534,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0041,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 19,
+          "baseline7": 21,
+          "ratio7": 0.923,
+          "share7": 0.039,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0246,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 28,
+        "R2": 0,
+        "R3": 58,
+        "R4": 22
+      },
+      "event_count": 657,
+      "ratios": {
+        "R1": 0.702,
+        "R2": 0.417,
+        "R3": 2.423,
+        "R4": 2.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.423,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 28,
+          "baseline7": 42,
+          "ratio7": 0.702,
+          "share7": 0.0426,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 58,
+          "baseline7": 21,
+          "ratio7": 2.423,
+          "share7": 0.0883,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 22,
+          "baseline7": 7,
+          "ratio7": 2.25,
+          "share7": 0.0335,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 52,
+        "R2": 15,
+        "R3": 26,
+        "R4": 14
+      },
+      "event_count": 547,
+      "ratios": {
+        "R1": 1.213,
+        "R2": 1.667,
+        "R3": 1.192,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 52,
+          "baseline7": 42,
+          "ratio7": 1.213,
+          "share7": 0.0951,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0274,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 26,
+          "baseline7": 21,
+          "ratio7": 1.192,
+          "share7": 0.0475,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0256,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 57,
+        "R2": 7,
+        "R3": 90,
+        "R4": 10
+      },
+      "event_count": 1198,
+      "ratios": {
+        "R1": 1.319,
+        "R2": 1,
+        "R3": 3.654,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.654,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 57,
+          "baseline7": 42,
+          "ratio7": 1.319,
+          "share7": 0.0476,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 90,
+          "baseline7": 21,
+          "ratio7": 3.654,
+          "share7": 0.0751,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 55,
+        "R2": 9,
+        "R3": 70,
+        "R4": 15
+      },
+      "event_count": 1069,
+      "ratios": {
+        "R1": 1.277,
+        "R2": 1.167,
+        "R3": 2.885,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.885,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 55,
+          "baseline7": 42,
+          "ratio7": 1.277,
+          "share7": 0.0514,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0084,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 70,
+          "baseline7": 21,
+          "ratio7": 2.885,
+          "share7": 0.0655,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 117,
+        "R2": 1,
+        "R3": 160,
+        "R4": 12
+      },
+      "event_count": 1132,
+      "ratios": {
+        "R1": 2.596,
+        "R2": 0.5,
+        "R3": 6.346,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.346,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 117,
+          "baseline7": 42,
+          "ratio7": 2.596,
+          "share7": 0.1034,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 160,
+          "baseline7": 21,
+          "ratio7": 6.346,
+          "share7": 0.1413,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0106,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 279,
+        "R2": 1,
+        "R3": 345,
+        "R4": 9
+      },
+      "event_count": 2124,
+      "ratios": {
+        "R1": 6.043,
+        "R2": 0.5,
+        "R3": 13.462,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 13.462,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 279,
+          "baseline7": 42,
+          "ratio7": 6.043,
+          "share7": 0.1314,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0005,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 345,
+          "baseline7": 21,
+          "ratio7": 13.462,
+          "share7": 0.1624,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0042,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 53,
+        "R2": 4,
+        "R3": 80,
+        "R4": 15
+      },
+      "event_count": 815,
+      "ratios": {
+        "R1": 1.234,
+        "R2": 0.75,
+        "R3": 3.269,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.269,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 53,
+          "baseline7": 42,
+          "ratio7": 1.234,
+          "share7": 0.065,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0049,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 80,
+          "baseline7": 21,
+          "ratio7": 3.269,
+          "share7": 0.0982,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0184,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 55,
+        "R2": 3,
+        "R3": 51,
+        "R4": 10
+      },
+      "event_count": 543,
+      "ratios": {
+        "R1": 1.277,
+        "R2": 0.667,
+        "R3": 2.154,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.154,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 55,
+          "baseline7": 42,
+          "ratio7": 1.277,
+          "share7": 0.1013,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0055,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 51,
+          "baseline7": 21,
+          "ratio7": 2.154,
+          "share7": 0.0939,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0184,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 39,
+        "R2": 2,
+        "R3": 20,
+        "R4": 7
+      },
+      "event_count": 609,
+      "ratios": {
+        "R1": 0.936,
+        "R2": 0.583,
+        "R3": 0.962,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 39,
+          "baseline7": 42,
+          "ratio7": 0.936,
+          "share7": 0.064,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0033,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.0328,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0115,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 57,
+        "R2": 3,
+        "R3": 31,
+        "R4": 16
+      },
+      "event_count": 706,
+      "ratios": {
+        "R1": 1.319,
+        "R2": 0.667,
+        "R3": 1.385,
+        "R4": 1.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 57,
+          "baseline7": 42,
+          "ratio7": 1.319,
+          "share7": 0.0807,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0042,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 31,
+          "baseline7": 21,
+          "ratio7": 1.385,
+          "share7": 0.0439,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0227,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 63,
+        "R2": 7,
+        "R3": 80,
+        "R4": 14
+      },
+      "event_count": 991,
+      "ratios": {
+        "R1": 1.447,
+        "R2": 1,
+        "R3": 3.269,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.269,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 63,
+          "baseline7": 42,
+          "ratio7": 1.447,
+          "share7": 0.0636,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0071,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 80,
+          "baseline7": 21,
+          "ratio7": 3.269,
+          "share7": 0.0807,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0141,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 41,
+        "R2": 5,
+        "R3": 19,
+        "R4": 14
+      },
+      "event_count": 554,
+      "ratios": {
+        "R1": 0.979,
+        "R2": 0.833,
+        "R3": 0.923,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 41,
+          "baseline7": 42,
+          "ratio7": 0.979,
+          "share7": 0.074,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 19,
+          "baseline7": 21,
+          "ratio7": 0.923,
+          "share7": 0.0343,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0253,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 70,
+        "R2": 2,
+        "R3": 42,
+        "R4": 13
+      },
+      "event_count": 645,
+      "ratios": {
+        "R1": 1.596,
+        "R2": 0.583,
+        "R3": 1.808,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.808,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 70,
+          "baseline7": 42,
+          "ratio7": 1.596,
+          "share7": 0.1085,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0031,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 42,
+          "baseline7": 21,
+          "ratio7": 1.808,
+          "share7": 0.0651,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0202,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 27,
+        "R2": 4,
+        "R3": 10,
+        "R4": 1
+      },
+      "event_count": 284,
+      "ratios": {
+        "R1": 0.681,
+        "R2": 0.75,
+        "R3": 0.577,
+        "R4": 0.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 27,
+          "baseline7": 42,
+          "ratio7": 0.681,
+          "share7": 0.0951,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0141,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 10,
+          "baseline7": 21,
+          "ratio7": 0.577,
+          "share7": 0.0352,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0035,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 52,
+        "R2": 5,
+        "R3": 20,
+        "R4": 6
+      },
+      "event_count": 405,
+      "ratios": {
+        "R1": 1.213,
+        "R2": 0.833,
+        "R3": 0.962,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 52,
+          "baseline7": 42,
+          "ratio7": 1.213,
+          "share7": 0.1284,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0123,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.0494,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0148,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 34,
+        "R2": 0,
+        "R3": 16,
+        "R4": 6
+      },
+      "event_count": 381,
+      "ratios": {
+        "R1": 0.83,
+        "R2": 0.417,
+        "R3": 0.808,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 34,
+          "baseline7": 42,
+          "ratio7": 0.83,
+          "share7": 0.0892,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 16,
+          "baseline7": 21,
+          "ratio7": 0.808,
+          "share7": 0.042,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0157,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Cameroon",
+      "counts": {
+        "R1": 46,
+        "R2": 3,
+        "R3": 24,
+        "R4": 18
+      },
+      "event_count": 714,
+      "ratios": {
+        "R1": 1.085,
+        "R2": 0.667,
+        "R3": 1.115,
+        "R4": 1.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 46,
+          "baseline7": 42,
+          "ratio7": 1.085,
+          "share7": 0.0644,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0042,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 24,
+          "baseline7": 21,
+          "ratio7": 1.115,
+          "share7": 0.0336,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.0252,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    }
+  ]
+}

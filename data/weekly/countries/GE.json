@@ -1,0 +1,6319 @@
+{
+  "iso2": "GE",
+  "generated_at": "2026-02-06T07:03:37.079Z",
+  "weeks_total": 54,
+  "weeks_available": 53,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 26,
+        "R2": 1,
+        "R3": 80,
+        "R4": 17
+      },
+      "event_count": 681,
+      "ratios": {
+        "R1": 1.192,
+        "R2": 0.5,
+        "R3": 2.576,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.576,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 26,
+          "baseline7": 21,
+          "ratio7": 1.192,
+          "share7": 0.0382,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 80,
+          "baseline7": 28,
+          "ratio7": 2.576,
+          "share7": 0.1175,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.025,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 37,
+        "R2": 3,
+        "R3": 105,
+        "R4": 20
+      },
+      "event_count": 947,
+      "ratios": {
+        "R1": 1.615,
+        "R2": 0.667,
+        "R3": 3.333,
+        "R4": 2.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.333,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 37,
+          "baseline7": 21,
+          "ratio7": 1.615,
+          "share7": 0.0391,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0032,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 105,
+          "baseline7": 28,
+          "ratio7": 3.333,
+          "share7": 0.1109,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 20,
+          "baseline7": 7,
+          "ratio7": 2.083,
+          "share7": 0.0211,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 92,
+        "R2": 1,
+        "R3": 224,
+        "R4": 23
+      },
+      "event_count": 1018,
+      "ratios": {
+        "R1": 3.731,
+        "R2": 0.5,
+        "R3": 6.939,
+        "R4": 2.333
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.939,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 92,
+          "baseline7": 21,
+          "ratio7": 3.731,
+          "share7": 0.0904,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.001,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 224,
+          "baseline7": 28,
+          "ratio7": 6.939,
+          "share7": 0.22,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 23,
+          "baseline7": 7,
+          "ratio7": 2.333,
+          "share7": 0.0226,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 29,
+        "R2": 2,
+        "R3": 66,
+        "R4": 35
+      },
+      "event_count": 661,
+      "ratios": {
+        "R1": 1.308,
+        "R2": 0.583,
+        "R3": 2.152,
+        "R4": 3.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.152,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 29,
+          "baseline7": 21,
+          "ratio7": 1.308,
+          "share7": 0.0439,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.003,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 66,
+          "baseline7": 28,
+          "ratio7": 2.152,
+          "share7": 0.0998,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 35,
+          "baseline7": 7,
+          "ratio7": 3.333,
+          "share7": 0.053,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 50,
+        "R2": 5,
+        "R3": 39,
+        "R4": 15
+      },
+      "event_count": 562,
+      "ratios": {
+        "R1": 2.115,
+        "R2": 0.833,
+        "R3": 1.333,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.115,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 50,
+          "baseline7": 21,
+          "ratio7": 2.115,
+          "share7": 0.089,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0089,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 39,
+          "baseline7": 28,
+          "ratio7": 1.333,
+          "share7": 0.0694,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0267,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 19,
+        "R2": 11,
+        "R3": 31,
+        "R4": 16
+      },
+      "event_count": 547,
+      "ratios": {
+        "R1": 0.923,
+        "R2": 1.333,
+        "R3": 1.091,
+        "R4": 1.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 19,
+          "baseline7": 21,
+          "ratio7": 0.923,
+          "share7": 0.0347,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0201,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R3": {
+          "today7": 31,
+          "baseline7": 28,
+          "ratio7": 1.091,
+          "share7": 0.0567,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0293,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 36,
+        "R2": 0,
+        "R3": 44,
+        "R4": 14
+      },
+      "event_count": 465,
+      "ratios": {
+        "R1": 1.577,
+        "R2": 0.417,
+        "R3": 1.485,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 21,
+          "ratio7": 1.577,
+          "share7": 0.0774,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 44,
+          "baseline7": 28,
+          "ratio7": 1.485,
+          "share7": 0.0946,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0301,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 41,
+        "R2": 4,
+        "R3": 128,
+        "R4": 63
+      },
+      "event_count": 762,
+      "ratios": {
+        "R1": 1.769,
+        "R2": 0.75,
+        "R3": 4.03,
+        "R4": 5.667
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Red"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.03,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 41,
+          "baseline7": 21,
+          "ratio7": 1.769,
+          "share7": 0.0538,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0052,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 128,
+          "baseline7": 28,
+          "ratio7": 4.03,
+          "share7": 0.168,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 63,
+          "baseline7": 7,
+          "ratio7": 5.667,
+          "share7": 0.0827,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 37,
+        "R2": 2,
+        "R3": 68,
+        "R4": 25
+      },
+      "event_count": 541,
+      "ratios": {
+        "R1": 1.615,
+        "R2": 0.583,
+        "R3": 2.212,
+        "R4": 2.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.212,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 37,
+          "baseline7": 21,
+          "ratio7": 1.615,
+          "share7": 0.0684,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0037,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 68,
+          "baseline7": 28,
+          "ratio7": 2.212,
+          "share7": 0.1257,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 7,
+          "ratio7": 2.5,
+          "share7": 0.0462,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 37,
+        "R2": 1,
+        "R3": 65,
+        "R4": 13
+      },
+      "event_count": 474,
+      "ratios": {
+        "R1": 1.615,
+        "R2": 0.5,
+        "R3": 2.121,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.121,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 37,
+          "baseline7": 21,
+          "ratio7": 1.615,
+          "share7": 0.0781,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0021,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 65,
+          "baseline7": 28,
+          "ratio7": 2.121,
+          "share7": 0.1371,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0274,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 23,
+        "R2": 4,
+        "R3": 58,
+        "R4": 18
+      },
+      "event_count": 516,
+      "ratios": {
+        "R1": 1.077,
+        "R2": 0.75,
+        "R3": 1.909,
+        "R4": 1.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.909,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 23,
+          "baseline7": 21,
+          "ratio7": 1.077,
+          "share7": 0.0446,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0078,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 58,
+          "baseline7": 28,
+          "ratio7": 1.909,
+          "share7": 0.1124,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.0349,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 35,
+        "R2": 1,
+        "R3": 33,
+        "R4": 6
+      },
+      "event_count": 587,
+      "ratios": {
+        "R1": 1.538,
+        "R2": 0.5,
+        "R3": 1.152,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 35,
+          "baseline7": 21,
+          "ratio7": 1.538,
+          "share7": 0.0596,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 33,
+          "baseline7": 28,
+          "ratio7": 1.152,
+          "share7": 0.0562,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0102,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 17,
+        "R2": 0,
+        "R3": 33,
+        "R4": 14
+      },
+      "event_count": 581,
+      "ratios": {
+        "R1": 0.846,
+        "R2": 0.417,
+        "R3": 1.152,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 17,
+          "baseline7": 21,
+          "ratio7": 0.846,
+          "share7": 0.0293,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 33,
+          "baseline7": 28,
+          "ratio7": 1.152,
+          "share7": 0.0568,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0241,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 46,
+        "R2": 2,
+        "R3": 23,
+        "R4": 18
+      },
+      "event_count": 651,
+      "ratios": {
+        "R1": 1.962,
+        "R2": 0.583,
+        "R3": 0.848,
+        "R4": 1.917
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.962,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 46,
+          "baseline7": 21,
+          "ratio7": 1.962,
+          "share7": 0.0707,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0031,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 28,
+          "ratio7": 0.848,
+          "share7": 0.0353,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.0276,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 36,
+        "R2": 5,
+        "R3": 32,
+        "R4": 21
+      },
+      "event_count": 599,
+      "ratios": {
+        "R1": 1.577,
+        "R2": 0.833,
+        "R3": 1.121,
+        "R4": 2.167
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 21,
+          "ratio7": 1.577,
+          "share7": 0.0601,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0083,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 32,
+          "baseline7": 28,
+          "ratio7": 1.121,
+          "share7": 0.0534,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0351,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 20,
+        "R2": 0,
+        "R3": 36,
+        "R4": 11
+      },
+      "event_count": 517,
+      "ratios": {
+        "R1": 0.962,
+        "R2": 0.417,
+        "R3": 1.242,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.0387,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 36,
+          "baseline7": 28,
+          "ratio7": 1.242,
+          "share7": 0.0696,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0213,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 24,
+        "R2": 0,
+        "R3": 187,
+        "R4": 17
+      },
+      "event_count": 1017,
+      "ratios": {
+        "R1": 1.115,
+        "R2": 0.417,
+        "R3": 5.818,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 5.818,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 24,
+          "baseline7": 21,
+          "ratio7": 1.115,
+          "share7": 0.0236,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 187,
+          "baseline7": 28,
+          "ratio7": 5.818,
+          "share7": 0.1839,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0167,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 20,
+        "R2": 0,
+        "R3": 125,
+        "R4": 8
+      },
+      "event_count": 846,
+      "ratios": {
+        "R1": 0.962,
+        "R2": 0.417,
+        "R3": 3.939,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.939,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.0236,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 125,
+          "baseline7": 28,
+          "ratio7": 3.939,
+          "share7": 0.1478,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0095,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 20,
+        "R2": 0,
+        "R3": 129,
+        "R4": 18
+      },
+      "event_count": 869,
+      "ratios": {
+        "R1": 0.962,
+        "R2": 0.417,
+        "R3": 4.061,
+        "R4": 1.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.061,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.023,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 129,
+          "baseline7": 28,
+          "ratio7": 4.061,
+          "share7": 0.1484,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.0207,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 14,
+        "R2": 1,
+        "R3": 72,
+        "R4": 20
+      },
+      "event_count": 578,
+      "ratios": {
+        "R1": 0.731,
+        "R2": 0.5,
+        "R3": 2.333,
+        "R4": 2.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.333,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 14,
+          "baseline7": 21,
+          "ratio7": 0.731,
+          "share7": 0.0242,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 72,
+          "baseline7": 28,
+          "ratio7": 2.333,
+          "share7": 0.1246,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 20,
+          "baseline7": 7,
+          "ratio7": 2.083,
+          "share7": 0.0346,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 12,
+        "R2": 1,
+        "R3": 60,
+        "R4": 11
+      },
+      "event_count": 493,
+      "ratios": {
+        "R1": 0.654,
+        "R2": 0.5,
+        "R3": 1.97,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.97,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 12,
+          "baseline7": 21,
+          "ratio7": 0.654,
+          "share7": 0.0243,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 60,
+          "baseline7": 28,
+          "ratio7": 1.97,
+          "share7": 0.1217,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0223,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 0,
+      "ratios": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "levels": {
+        "R1": "NoData",
+        "R2": "NoData",
+        "R3": "NoData",
+        "R4": "NoData"
+      },
+      "overall_level": "NoData",
+      "bundle": "NoData",
+      "weekly_surge_r": {
+        "level": "nodata",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        }
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 2,
+        "R4": 0
+      },
+      "event_count": 2,
+      "ratios": {
+        "R1": 0.192,
+        "R2": 0.417,
+        "R3": 0.212,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 21,
+          "ratio7": 0.192,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 2,
+          "baseline7": 28,
+          "ratio7": 0.212,
+          "share7": 1,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 27,
+        "R2": 2,
+        "R3": 51,
+        "R4": 9
+      },
+      "event_count": 438,
+      "ratios": {
+        "R1": 1.231,
+        "R2": 0.583,
+        "R3": 1.697,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 27,
+          "baseline7": 21,
+          "ratio7": 1.231,
+          "share7": 0.0616,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0046,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 51,
+          "baseline7": 28,
+          "ratio7": 1.697,
+          "share7": 0.1164,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0205,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 22,
+        "R2": 5,
+        "R3": 91,
+        "R4": 9
+      },
+      "event_count": 718,
+      "ratios": {
+        "R1": 1.038,
+        "R2": 0.833,
+        "R3": 2.909,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.909,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 22,
+          "baseline7": 21,
+          "ratio7": 1.038,
+          "share7": 0.0306,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 91,
+          "baseline7": 28,
+          "ratio7": 2.909,
+          "share7": 0.1267,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0125,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 24,
+        "R2": 2,
+        "R3": 46,
+        "R4": 22
+      },
+      "event_count": 707,
+      "ratios": {
+        "R1": 1.115,
+        "R2": 0.583,
+        "R3": 1.545,
+        "R4": 2.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 24,
+          "baseline7": 21,
+          "ratio7": 1.115,
+          "share7": 0.0339,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 46,
+          "baseline7": 28,
+          "ratio7": 1.545,
+          "share7": 0.0651,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 22,
+          "baseline7": 7,
+          "ratio7": 2.25,
+          "share7": 0.0311,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 17,
+        "R2": 0,
+        "R3": 36,
+        "R4": 12
+      },
+      "event_count": 579,
+      "ratios": {
+        "R1": 0.846,
+        "R2": 0.417,
+        "R3": 1.242,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 17,
+          "baseline7": 21,
+          "ratio7": 0.846,
+          "share7": 0.0294,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 36,
+          "baseline7": 28,
+          "ratio7": 1.242,
+          "share7": 0.0622,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0207,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 11,
+        "R2": 4,
+        "R3": 40,
+        "R4": 11
+      },
+      "event_count": 432,
+      "ratios": {
+        "R1": 0.615,
+        "R2": 0.75,
+        "R3": 1.364,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 11,
+          "baseline7": 21,
+          "ratio7": 0.615,
+          "share7": 0.0255,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0093,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 40,
+          "baseline7": 28,
+          "ratio7": 1.364,
+          "share7": 0.0926,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0255,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 116,
+        "R2": 1,
+        "R3": 100,
+        "R4": 15
+      },
+      "event_count": 947,
+      "ratios": {
+        "R1": 4.654,
+        "R2": 0.5,
+        "R3": 3.182,
+        "R4": 1.667
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.654,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 116,
+          "baseline7": 21,
+          "ratio7": 4.654,
+          "share7": 0.1225,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0011,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 100,
+          "baseline7": 28,
+          "ratio7": 3.182,
+          "share7": 0.1056,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0158,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 44,
+        "R2": 0,
+        "R3": 37,
+        "R4": 13
+      },
+      "event_count": 512,
+      "ratios": {
+        "R1": 1.885,
+        "R2": 0.417,
+        "R3": 1.273,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.885,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 44,
+          "baseline7": 21,
+          "ratio7": 1.885,
+          "share7": 0.0859,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 37,
+          "baseline7": 28,
+          "ratio7": 1.273,
+          "share7": 0.0723,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0254,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 36,
+        "R2": 0,
+        "R3": 34,
+        "R4": 16
+      },
+      "event_count": 367,
+      "ratios": {
+        "R1": 1.577,
+        "R2": 0.417,
+        "R3": 1.182,
+        "R4": 1.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 1.75,
+        "active_types": [
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 21,
+          "ratio7": 1.577,
+          "share7": 0.0981,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 34,
+          "baseline7": 28,
+          "ratio7": 1.182,
+          "share7": 0.0926,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0436,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 26,
+        "R2": 3,
+        "R3": 16,
+        "R4": 10
+      },
+      "event_count": 388,
+      "ratios": {
+        "R1": 1.192,
+        "R2": 0.667,
+        "R3": 0.636,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 26,
+          "baseline7": 21,
+          "ratio7": 1.192,
+          "share7": 0.067,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0077,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 16,
+          "baseline7": 28,
+          "ratio7": 0.636,
+          "share7": 0.0412,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0258,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 39,
+        "R2": 1,
+        "R3": 113,
+        "R4": 8
+      },
+      "event_count": 712,
+      "ratios": {
+        "R1": 1.692,
+        "R2": 0.5,
+        "R3": 3.576,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.576,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 39,
+          "baseline7": 21,
+          "ratio7": 1.692,
+          "share7": 0.0548,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 113,
+          "baseline7": 28,
+          "ratio7": 3.576,
+          "share7": 0.1587,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0112,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 57,
+        "R2": 1,
+        "R3": 84,
+        "R4": 13
+      },
+      "event_count": 657,
+      "ratios": {
+        "R1": 2.385,
+        "R2": 0.5,
+        "R3": 2.697,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.697,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 57,
+          "baseline7": 21,
+          "ratio7": 2.385,
+          "share7": 0.0868,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 84,
+          "baseline7": 28,
+          "ratio7": 2.697,
+          "share7": 0.1279,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0198,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 52,
+        "R2": 2,
+        "R3": 111,
+        "R4": 27
+      },
+      "event_count": 717,
+      "ratios": {
+        "R1": 2.192,
+        "R2": 0.583,
+        "R3": 3.515,
+        "R4": 2.667
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.515,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 52,
+          "baseline7": 21,
+          "ratio7": 2.192,
+          "share7": 0.0725,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 111,
+          "baseline7": 28,
+          "ratio7": 3.515,
+          "share7": 0.1548,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 27,
+          "baseline7": 7,
+          "ratio7": 2.667,
+          "share7": 0.0377,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 22,
+        "R2": 1,
+        "R3": 45,
+        "R4": 17
+      },
+      "event_count": 721,
+      "ratios": {
+        "R1": 1.038,
+        "R2": 0.5,
+        "R3": 1.515,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 22,
+          "baseline7": 21,
+          "ratio7": 1.038,
+          "share7": 0.0305,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 45,
+          "baseline7": 28,
+          "ratio7": 1.515,
+          "share7": 0.0624,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0236,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 85,
+        "R2": 6,
+        "R3": 204,
+        "R4": 38
+      },
+      "event_count": 1159,
+      "ratios": {
+        "R1": 3.462,
+        "R2": 0.917,
+        "R3": 6.333,
+        "R4": 3.583
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.333,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 85,
+          "baseline7": 21,
+          "ratio7": 3.462,
+          "share7": 0.0733,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0052,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 204,
+          "baseline7": 28,
+          "ratio7": 6.333,
+          "share7": 0.176,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 38,
+          "baseline7": 7,
+          "ratio7": 3.583,
+          "share7": 0.0328,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 95,
+        "R2": 2,
+        "R3": 124,
+        "R4": 26
+      },
+      "event_count": 997,
+      "ratios": {
+        "R1": 3.846,
+        "R2": 0.583,
+        "R3": 3.909,
+        "R4": 2.583
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.909,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 95,
+          "baseline7": 21,
+          "ratio7": 3.846,
+          "share7": 0.0953,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 124,
+          "baseline7": 28,
+          "ratio7": 3.909,
+          "share7": 0.1244,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 26,
+          "baseline7": 7,
+          "ratio7": 2.583,
+          "share7": 0.0261,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 70,
+        "R2": 2,
+        "R3": 157,
+        "R4": 9
+      },
+      "event_count": 1136,
+      "ratios": {
+        "R1": 2.885,
+        "R2": 0.583,
+        "R3": 4.909,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.909,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 70,
+          "baseline7": 21,
+          "ratio7": 2.885,
+          "share7": 0.0616,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0018,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 157,
+          "baseline7": 28,
+          "ratio7": 4.909,
+          "share7": 0.1382,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 46,
+        "R2": 0,
+        "R3": 255,
+        "R4": 16
+      },
+      "event_count": 1267,
+      "ratios": {
+        "R1": 1.962,
+        "R2": 0.417,
+        "R3": 7.879,
+        "R4": 1.75
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 7.879,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 46,
+          "baseline7": 21,
+          "ratio7": 1.962,
+          "share7": 0.0363,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 255,
+          "baseline7": 28,
+          "ratio7": 7.879,
+          "share7": 0.2013,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0126,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 41,
+        "R2": 3,
+        "R3": 183,
+        "R4": 20
+      },
+      "event_count": 897,
+      "ratios": {
+        "R1": 1.769,
+        "R2": 0.667,
+        "R3": 5.697,
+        "R4": 2.083
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 5.697,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 41,
+          "baseline7": 21,
+          "ratio7": 1.769,
+          "share7": 0.0457,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0033,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 183,
+          "baseline7": 28,
+          "ratio7": 5.697,
+          "share7": 0.204,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 20,
+          "baseline7": 7,
+          "ratio7": 2.083,
+          "share7": 0.0223,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 58,
+        "R2": 1,
+        "R3": 202,
+        "R4": 28
+      },
+      "event_count": 1199,
+      "ratios": {
+        "R1": 2.423,
+        "R2": 0.5,
+        "R3": 6.273,
+        "R4": 2.75
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.273,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 58,
+          "baseline7": 21,
+          "ratio7": 2.423,
+          "share7": 0.0484,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 202,
+          "baseline7": 28,
+          "ratio7": 6.273,
+          "share7": 0.1685,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 28,
+          "baseline7": 7,
+          "ratio7": 2.75,
+          "share7": 0.0234,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 35,
+        "R2": 23,
+        "R3": 129,
+        "R4": 25
+      },
+      "event_count": 1232,
+      "ratios": {
+        "R1": 1.538,
+        "R2": 2.333,
+        "R3": 4.061,
+        "R4": 2.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.061,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 35,
+          "baseline7": 21,
+          "ratio7": 1.538,
+          "share7": 0.0284,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 23,
+          "baseline7": 7,
+          "ratio7": 2.333,
+          "share7": 0.0187,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 129,
+          "baseline7": 28,
+          "ratio7": 4.061,
+          "share7": 0.1047,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 7,
+          "ratio7": 2.5,
+          "share7": 0.0203,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 38,
+        "R2": 4,
+        "R3": 150,
+        "R4": 8
+      },
+      "event_count": 910,
+      "ratios": {
+        "R1": 1.654,
+        "R2": 0.75,
+        "R3": 4.697,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.697,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 38,
+          "baseline7": 21,
+          "ratio7": 1.654,
+          "share7": 0.0418,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0044,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 150,
+          "baseline7": 28,
+          "ratio7": 4.697,
+          "share7": 0.1648,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0088,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 18,
+        "R2": 3,
+        "R3": 150,
+        "R4": 12
+      },
+      "event_count": 671,
+      "ratios": {
+        "R1": 0.885,
+        "R2": 0.667,
+        "R3": 4.697,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.697,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 18,
+          "baseline7": 21,
+          "ratio7": 0.885,
+          "share7": 0.0268,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0045,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 150,
+          "baseline7": 28,
+          "ratio7": 4.697,
+          "share7": 0.2235,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0179,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 50,
+        "R2": 2,
+        "R3": 107,
+        "R4": 12
+      },
+      "event_count": 709,
+      "ratios": {
+        "R1": 2.115,
+        "R2": 0.583,
+        "R3": 3.394,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.394,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 50,
+          "baseline7": 21,
+          "ratio7": 2.115,
+          "share7": 0.0705,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 107,
+          "baseline7": 28,
+          "ratio7": 3.394,
+          "share7": 0.1509,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0169,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 27,
+        "R2": 0,
+        "R3": 51,
+        "R4": 8
+      },
+      "event_count": 541,
+      "ratios": {
+        "R1": 1.231,
+        "R2": 0.417,
+        "R3": 1.697,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 27,
+          "baseline7": 21,
+          "ratio7": 1.231,
+          "share7": 0.0499,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 51,
+          "baseline7": 28,
+          "ratio7": 1.697,
+          "share7": 0.0943,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0148,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 22,
+        "R2": 4,
+        "R3": 52,
+        "R4": 17
+      },
+      "event_count": 548,
+      "ratios": {
+        "R1": 1.038,
+        "R2": 0.75,
+        "R3": 1.727,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 22,
+          "baseline7": 21,
+          "ratio7": 1.038,
+          "share7": 0.0401,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0073,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 52,
+          "baseline7": 28,
+          "ratio7": 1.727,
+          "share7": 0.0949,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.031,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 13,
+        "R2": 0,
+        "R3": 74,
+        "R4": 10
+      },
+      "event_count": 493,
+      "ratios": {
+        "R1": 0.692,
+        "R2": 0.417,
+        "R3": 2.394,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.394,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 13,
+          "baseline7": 21,
+          "ratio7": 0.692,
+          "share7": 0.0264,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 74,
+          "baseline7": 28,
+          "ratio7": 2.394,
+          "share7": 0.1501,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0203,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 28,
+        "R2": 0,
+        "R3": 41,
+        "R4": 5
+      },
+      "event_count": 310,
+      "ratios": {
+        "R1": 1.269,
+        "R2": 0.417,
+        "R3": 1.394,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 28,
+          "baseline7": 21,
+          "ratio7": 1.269,
+          "share7": 0.0903,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 41,
+          "baseline7": 28,
+          "ratio7": 1.394,
+          "share7": 0.1323,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0161,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 31,
+        "R2": 0,
+        "R3": 88,
+        "R4": 11
+      },
+      "event_count": 450,
+      "ratios": {
+        "R1": 1.385,
+        "R2": 0.417,
+        "R3": 2.818,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.818,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 31,
+          "baseline7": 21,
+          "ratio7": 1.385,
+          "share7": 0.0689,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 88,
+          "baseline7": 28,
+          "ratio7": 2.818,
+          "share7": 0.1956,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0244,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 25,
+        "R2": 0,
+        "R3": 100,
+        "R4": 6
+      },
+      "event_count": 546,
+      "ratios": {
+        "R1": 1.154,
+        "R2": 0.417,
+        "R3": 3.182,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.182,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 25,
+          "baseline7": 21,
+          "ratio7": 1.154,
+          "share7": 0.0458,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 100,
+          "baseline7": 28,
+          "ratio7": 3.182,
+          "share7": 0.1832,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.011,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2026-W05",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 11,
+        "R2": 4,
+        "R3": 79,
+        "R4": 18
+      },
+      "event_count": 592,
+      "ratios": {
+        "R1": 0.615,
+        "R2": 0.75,
+        "R3": 2.545,
+        "R4": 1.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.545,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 11,
+          "baseline7": 21,
+          "ratio7": 0.615,
+          "share7": 0.0186,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 79,
+          "baseline7": 28,
+          "ratio7": 2.545,
+          "share7": 0.1334,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.0304,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2026-W06",
+      "name_en": "Georgia",
+      "counts": {
+        "R1": 4,
+        "R2": 0,
+        "R3": 6,
+        "R4": 3
+      },
+      "event_count": 48,
+      "ratios": {
+        "R1": 0.346,
+        "R2": 0.417,
+        "R3": 0.333,
+        "R4": 0.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 4,
+          "baseline7": 21,
+          "ratio7": 0.346,
+          "share7": 0.0833,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 6,
+          "baseline7": 28,
+          "ratio7": 0.333,
+          "share7": 0.125,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0625,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    }
+  ]
+}

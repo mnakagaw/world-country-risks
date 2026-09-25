@@ -1,0 +1,6090 @@
+{
+  "iso2": "CD",
+  "generated_at": "2026-01-23T02:28:15.710Z",
+  "weeks_total": 52,
+  "weeks_available": 52,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 287,
+        "R2": 7,
+        "R3": 15,
+        "R4": 11
+      },
+      "event_count": 997,
+      "ratios": {
+        "R1": 6.213,
+        "R2": 1,
+        "R3": 0.769,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.213,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 287,
+          "baseline7": 42,
+          "ratio7": 6.213,
+          "share7": 0.2879,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 15,
+          "baseline7": 21,
+          "ratio7": 0.769,
+          "share7": 0.015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.011,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 360,
+        "R2": 16,
+        "R3": 162,
+        "R4": 16
+      },
+      "event_count": 2404,
+      "ratios": {
+        "R1": 7.766,
+        "R2": 1.75,
+        "R3": 6.423,
+        "R4": 1.75
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Yellow",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 7.766,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 360,
+          "baseline7": 42,
+          "ratio7": 7.766,
+          "share7": 0.1498,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0067,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 162,
+          "baseline7": 21,
+          "ratio7": 6.423,
+          "share7": 0.0674,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0067,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 205,
+        "R2": 9,
+        "R3": 67,
+        "R4": 13
+      },
+      "event_count": 1540,
+      "ratios": {
+        "R1": 4.468,
+        "R2": 1.167,
+        "R3": 2.769,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.468,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 205,
+          "baseline7": 42,
+          "ratio7": 4.468,
+          "share7": 0.1331,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 67,
+          "baseline7": 21,
+          "ratio7": 2.769,
+          "share7": 0.0435,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0084,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 237,
+        "R2": 0,
+        "R3": 62,
+        "R4": 13
+      },
+      "event_count": 1325,
+      "ratios": {
+        "R1": 5.149,
+        "R2": 0.417,
+        "R3": 2.577,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 5.149,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 237,
+          "baseline7": 42,
+          "ratio7": 5.149,
+          "share7": 0.1789,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 62,
+          "baseline7": 21,
+          "ratio7": 2.577,
+          "share7": 0.0468,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0098,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 203,
+        "R2": 8,
+        "R3": 55,
+        "R4": 20
+      },
+      "event_count": 1145,
+      "ratios": {
+        "R1": 4.426,
+        "R2": 1.083,
+        "R3": 2.308,
+        "R4": 2.083
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.426,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 203,
+          "baseline7": 42,
+          "ratio7": 4.426,
+          "share7": 0.1773,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 55,
+          "baseline7": 21,
+          "ratio7": 2.308,
+          "share7": 0.048,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 20,
+          "baseline7": 7,
+          "ratio7": 2.083,
+          "share7": 0.0175,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 199,
+        "R2": 14,
+        "R3": 67,
+        "R4": 14
+      },
+      "event_count": 1218,
+      "ratios": {
+        "R1": 4.34,
+        "R2": 1.583,
+        "R3": 2.769,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.34,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 199,
+          "baseline7": 42,
+          "ratio7": 4.34,
+          "share7": 0.1634,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0115,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 67,
+          "baseline7": 21,
+          "ratio7": 2.769,
+          "share7": 0.055,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0115,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 76,
+        "R2": 5,
+        "R3": 24,
+        "R4": 8
+      },
+      "event_count": 528,
+      "ratios": {
+        "R1": 1.723,
+        "R2": 0.833,
+        "R3": 1.115,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 76,
+          "baseline7": 42,
+          "ratio7": 1.723,
+          "share7": 0.1439,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0095,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 24,
+          "baseline7": 21,
+          "ratio7": 1.115,
+          "share7": 0.0455,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0152,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 102,
+        "R2": 0,
+        "R3": 34,
+        "R4": 5
+      },
+      "event_count": 768,
+      "ratios": {
+        "R1": 2.277,
+        "R2": 0.417,
+        "R3": 1.5,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.277,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 102,
+          "baseline7": 42,
+          "ratio7": 2.277,
+          "share7": 0.1328,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 34,
+          "baseline7": 21,
+          "ratio7": 1.5,
+          "share7": 0.0443,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 141,
+        "R2": 2,
+        "R3": 27,
+        "R4": 7
+      },
+      "event_count": 923,
+      "ratios": {
+        "R1": 3.106,
+        "R2": 0.583,
+        "R3": 1.231,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.106,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 141,
+          "baseline7": 42,
+          "ratio7": 3.106,
+          "share7": 0.1528,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 27,
+          "baseline7": 21,
+          "ratio7": 1.231,
+          "share7": 0.0293,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0076,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 126,
+        "R2": 2,
+        "R3": 34,
+        "R4": 21
+      },
+      "event_count": 657,
+      "ratios": {
+        "R1": 2.787,
+        "R2": 0.583,
+        "R3": 1.5,
+        "R4": 2.167
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.787,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 126,
+          "baseline7": 42,
+          "ratio7": 2.787,
+          "share7": 0.1918,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.003,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 34,
+          "baseline7": 21,
+          "ratio7": 1.5,
+          "share7": 0.0518,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.032,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 152,
+        "R2": 4,
+        "R3": 36,
+        "R4": 5
+      },
+      "event_count": 791,
+      "ratios": {
+        "R1": 3.34,
+        "R2": 0.75,
+        "R3": 1.577,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.34,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 152,
+          "baseline7": 42,
+          "ratio7": 3.34,
+          "share7": 0.1922,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0051,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 36,
+          "baseline7": 21,
+          "ratio7": 1.577,
+          "share7": 0.0455,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0063,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 122,
+        "R2": 1,
+        "R3": 50,
+        "R4": 13
+      },
+      "event_count": 773,
+      "ratios": {
+        "R1": 2.702,
+        "R2": 0.5,
+        "R3": 2.115,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.702,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 122,
+          "baseline7": 42,
+          "ratio7": 2.702,
+          "share7": 0.1578,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0013,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 50,
+          "baseline7": 21,
+          "ratio7": 2.115,
+          "share7": 0.0647,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.0168,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 102,
+        "R2": 6,
+        "R3": 24,
+        "R4": 7
+      },
+      "event_count": 580,
+      "ratios": {
+        "R1": 2.277,
+        "R2": 0.917,
+        "R3": 1.115,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.277,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 102,
+          "baseline7": 42,
+          "ratio7": 2.277,
+          "share7": 0.1759,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0103,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 24,
+          "baseline7": 21,
+          "ratio7": 1.115,
+          "share7": 0.0414,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0121,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 52,
+        "R2": 3,
+        "R3": 29,
+        "R4": 2
+      },
+      "event_count": 693,
+      "ratios": {
+        "R1": 1.213,
+        "R2": 0.667,
+        "R3": 1.308,
+        "R4": 0.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 52,
+          "baseline7": 42,
+          "ratio7": 1.213,
+          "share7": 0.075,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0043,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 29,
+          "baseline7": 21,
+          "ratio7": 1.308,
+          "share7": 0.0418,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0029,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 91,
+        "R2": 3,
+        "R3": 16,
+        "R4": 5
+      },
+      "event_count": 661,
+      "ratios": {
+        "R1": 2.043,
+        "R2": 0.667,
+        "R3": 0.808,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.043,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 91,
+          "baseline7": 42,
+          "ratio7": 2.043,
+          "share7": 0.1377,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0045,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 16,
+          "baseline7": 21,
+          "ratio7": 0.808,
+          "share7": 0.0242,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0076,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 79,
+        "R2": 3,
+        "R3": 14,
+        "R4": 11
+      },
+      "event_count": 567,
+      "ratios": {
+        "R1": 1.787,
+        "R2": 0.667,
+        "R3": 0.731,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.787,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 79,
+          "baseline7": 42,
+          "ratio7": 1.787,
+          "share7": 0.1393,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0053,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 14,
+          "baseline7": 21,
+          "ratio7": 0.731,
+          "share7": 0.0247,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0194,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 65,
+        "R2": 7,
+        "R3": 47,
+        "R4": 7
+      },
+      "event_count": 525,
+      "ratios": {
+        "R1": 1.489,
+        "R2": 1,
+        "R3": 2,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 65,
+          "baseline7": 42,
+          "ratio7": 1.489,
+          "share7": 0.1238,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0133,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 47,
+          "baseline7": 21,
+          "ratio7": 2,
+          "share7": 0.0895,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0133,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 74,
+        "R2": 5,
+        "R3": 39,
+        "R4": 12
+      },
+      "event_count": 555,
+      "ratios": {
+        "R1": 1.681,
+        "R2": 0.833,
+        "R3": 1.692,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 74,
+          "baseline7": 42,
+          "ratio7": 1.681,
+          "share7": 0.1333,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 39,
+          "baseline7": 21,
+          "ratio7": 1.692,
+          "share7": 0.0703,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0216,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 57,
+        "R2": 6,
+        "R3": 22,
+        "R4": 6
+      },
+      "event_count": 556,
+      "ratios": {
+        "R1": 1.319,
+        "R2": 0.917,
+        "R3": 1.038,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 57,
+          "baseline7": 42,
+          "ratio7": 1.319,
+          "share7": 0.1025,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0108,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 22,
+          "baseline7": 21,
+          "ratio7": 1.038,
+          "share7": 0.0396,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0108,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 30,
+        "R2": 2,
+        "R3": 25,
+        "R4": 8
+      },
+      "event_count": 400,
+      "ratios": {
+        "R1": 0.745,
+        "R2": 0.583,
+        "R3": 1.154,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 30,
+          "baseline7": 42,
+          "ratio7": 0.745,
+          "share7": 0.075,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.005,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 25,
+          "baseline7": 21,
+          "ratio7": 1.154,
+          "share7": 0.0625,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.02,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 30,
+        "R2": 3,
+        "R3": 13,
+        "R4": 3
+      },
+      "event_count": 375,
+      "ratios": {
+        "R1": 0.745,
+        "R2": 0.667,
+        "R3": 0.692,
+        "R4": 0.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 30,
+          "baseline7": 42,
+          "ratio7": 0.745,
+          "share7": 0.08,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 13,
+          "baseline7": 21,
+          "ratio7": 0.692,
+          "share7": 0.0347,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.008,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 12,
+      "ratios": {
+        "R1": 0.106,
+        "R2": 0.417,
+        "R3": 0.192,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 42,
+          "ratio7": 0.106,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 21,
+          "ratio7": 0.192,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 8,
+      "ratios": {
+        "R1": 0.106,
+        "R2": 0.417,
+        "R3": 0.192,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 42,
+          "ratio7": 0.106,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 21,
+          "ratio7": 0.192,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 26,
+        "R2": 2,
+        "R3": 16,
+        "R4": 0
+      },
+      "event_count": 454,
+      "ratios": {
+        "R1": 0.66,
+        "R2": 0.583,
+        "R3": 0.808,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 26,
+          "baseline7": 42,
+          "ratio7": 0.66,
+          "share7": 0.0573,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0044,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 16,
+          "baseline7": 21,
+          "ratio7": 0.808,
+          "share7": 0.0352,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 57,
+        "R2": 3,
+        "R3": 23,
+        "R4": 37
+      },
+      "event_count": 466,
+      "ratios": {
+        "R1": 1.319,
+        "R2": 0.667,
+        "R3": 1.077,
+        "R4": 3.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 57,
+          "baseline7": 42,
+          "ratio7": 1.319,
+          "share7": 0.1223,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 21,
+          "ratio7": 1.077,
+          "share7": 0.0494,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 37,
+          "baseline7": 7,
+          "ratio7": 3.5,
+          "share7": 0.0794,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 65,
+        "R2": 4,
+        "R3": 20,
+        "R4": 10
+      },
+      "event_count": 504,
+      "ratios": {
+        "R1": 1.489,
+        "R2": 0.75,
+        "R3": 0.962,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 65,
+          "baseline7": 42,
+          "ratio7": 1.489,
+          "share7": 0.129,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 20,
+          "baseline7": 21,
+          "ratio7": 0.962,
+          "share7": 0.0397,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0198,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 64,
+        "R2": 4,
+        "R3": 11,
+        "R4": 4
+      },
+      "event_count": 585,
+      "ratios": {
+        "R1": 1.468,
+        "R2": 0.75,
+        "R3": 0.615,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 64,
+          "baseline7": 42,
+          "ratio7": 1.468,
+          "share7": 0.1094,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 11,
+          "baseline7": 21,
+          "ratio7": 0.615,
+          "share7": 0.0188,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 205,
+        "R2": 4,
+        "R3": 25,
+        "R4": 5
+      },
+      "event_count": 834,
+      "ratios": {
+        "R1": 4.468,
+        "R2": 0.75,
+        "R3": 1.154,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.468,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 205,
+          "baseline7": 42,
+          "ratio7": 4.468,
+          "share7": 0.2458,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0048,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 25,
+          "baseline7": 21,
+          "ratio7": 1.154,
+          "share7": 0.03,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.006,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 93,
+        "R2": 1,
+        "R3": 30,
+        "R4": 7
+      },
+      "event_count": 553,
+      "ratios": {
+        "R1": 2.085,
+        "R2": 0.5,
+        "R3": 1.346,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.085,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 93,
+          "baseline7": 42,
+          "ratio7": 2.085,
+          "share7": 0.1682,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0018,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 30,
+          "baseline7": 21,
+          "ratio7": 1.346,
+          "share7": 0.0542,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0127,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 88,
+        "R2": 1,
+        "R3": 18,
+        "R4": 8
+      },
+      "event_count": 511,
+      "ratios": {
+        "R1": 1.979,
+        "R2": 0.5,
+        "R3": 0.885,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.979,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 88,
+          "baseline7": 42,
+          "ratio7": 1.979,
+          "share7": 0.1722,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 18,
+          "baseline7": 21,
+          "ratio7": 0.885,
+          "share7": 0.0352,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0157,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 157,
+        "R2": 4,
+        "R3": 36,
+        "R4": 8
+      },
+      "event_count": 729,
+      "ratios": {
+        "R1": 3.447,
+        "R2": 0.75,
+        "R3": 1.577,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.447,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 157,
+          "baseline7": 42,
+          "ratio7": 3.447,
+          "share7": 0.2154,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0055,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 36,
+          "baseline7": 21,
+          "ratio7": 1.577,
+          "share7": 0.0494,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.011,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 70,
+        "R2": 3,
+        "R3": 15,
+        "R4": 11
+      },
+      "event_count": 497,
+      "ratios": {
+        "R1": 1.596,
+        "R2": 0.667,
+        "R3": 0.769,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 70,
+          "baseline7": 42,
+          "ratio7": 1.596,
+          "share7": 0.1408,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.006,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 15,
+          "baseline7": 21,
+          "ratio7": 0.769,
+          "share7": 0.0302,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0221,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 55,
+        "R2": 6,
+        "R3": 49,
+        "R4": 25
+      },
+      "event_count": 670,
+      "ratios": {
+        "R1": 1.277,
+        "R2": 0.917,
+        "R3": 2.077,
+        "R4": 2.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.077,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 55,
+          "baseline7": 42,
+          "ratio7": 1.277,
+          "share7": 0.0821,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 49,
+          "baseline7": 21,
+          "ratio7": 2.077,
+          "share7": 0.0731,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 7,
+          "ratio7": 2.5,
+          "share7": 0.0373,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 61,
+        "R2": 1,
+        "R3": 26,
+        "R4": 12
+      },
+      "event_count": 618,
+      "ratios": {
+        "R1": 1.404,
+        "R2": 0.5,
+        "R3": 1.192,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 61,
+          "baseline7": 42,
+          "ratio7": 1.404,
+          "share7": 0.0987,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0016,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 26,
+          "baseline7": 21,
+          "ratio7": 1.192,
+          "share7": 0.0421,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0194,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 44,
+        "R2": 4,
+        "R3": 9,
+        "R4": 3
+      },
+      "event_count": 453,
+      "ratios": {
+        "R1": 1.043,
+        "R2": 0.75,
+        "R3": 0.538,
+        "R4": 0.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 44,
+          "baseline7": 42,
+          "ratio7": 1.043,
+          "share7": 0.0971,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0088,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 9,
+          "baseline7": 21,
+          "ratio7": 0.538,
+          "share7": 0.0199,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0066,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 47,
+        "R2": 12,
+        "R3": 9,
+        "R4": 2
+      },
+      "event_count": 375,
+      "ratios": {
+        "R1": 1.106,
+        "R2": 1.417,
+        "R3": 0.538,
+        "R4": 0.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 47,
+          "baseline7": 42,
+          "ratio7": 1.106,
+          "share7": 0.1253,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.032,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 9,
+          "baseline7": 21,
+          "ratio7": 0.538,
+          "share7": 0.024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0053,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 141,
+        "R2": 1,
+        "R3": 108,
+        "R4": 16
+      },
+      "event_count": 747,
+      "ratios": {
+        "R1": 3.106,
+        "R2": 0.5,
+        "R3": 4.346,
+        "R4": 1.75
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.346,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 141,
+          "baseline7": 42,
+          "ratio7": 3.106,
+          "share7": 0.1888,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0013,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 108,
+          "baseline7": 21,
+          "ratio7": 4.346,
+          "share7": 0.1446,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0214,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 26,
+        "R2": 2,
+        "R3": 34,
+        "R4": 7
+      },
+      "event_count": 465,
+      "ratios": {
+        "R1": 0.66,
+        "R2": 0.583,
+        "R3": 1.5,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 26,
+          "baseline7": 42,
+          "ratio7": 0.66,
+          "share7": 0.0559,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0043,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 34,
+          "baseline7": 21,
+          "ratio7": 1.5,
+          "share7": 0.0731,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0151,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 42,
+        "R2": 0,
+        "R3": 23,
+        "R4": 5
+      },
+      "event_count": 387,
+      "ratios": {
+        "R1": 1,
+        "R2": 0.417,
+        "R3": 1.077,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 42,
+          "baseline7": 42,
+          "ratio7": 1,
+          "share7": 0.1085,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 21,
+          "ratio7": 1.077,
+          "share7": 0.0594,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0129,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 23,
+        "R2": 0,
+        "R3": 6,
+        "R4": 8
+      },
+      "event_count": 314,
+      "ratios": {
+        "R1": 0.596,
+        "R2": 0.417,
+        "R3": 0.423,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 23,
+          "baseline7": 42,
+          "ratio7": 0.596,
+          "share7": 0.0732,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 6,
+          "baseline7": 21,
+          "ratio7": 0.423,
+          "share7": 0.0191,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0255,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 40,
+        "R2": 0,
+        "R3": 27,
+        "R4": 4
+      },
+      "event_count": 378,
+      "ratios": {
+        "R1": 0.957,
+        "R2": 0.417,
+        "R3": 1.231,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 40,
+          "baseline7": 42,
+          "ratio7": 0.957,
+          "share7": 0.1058,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 27,
+          "baseline7": 21,
+          "ratio7": 1.231,
+          "share7": 0.0714,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0106,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 43,
+        "R2": 3,
+        "R3": 31,
+        "R4": 5
+      },
+      "event_count": 428,
+      "ratios": {
+        "R1": 1.021,
+        "R2": 0.667,
+        "R3": 1.385,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 43,
+          "baseline7": 42,
+          "ratio7": 1.021,
+          "share7": 0.1005,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 31,
+          "baseline7": 21,
+          "ratio7": 1.385,
+          "share7": 0.0724,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0117,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 37,
+        "R2": 2,
+        "R3": 6,
+        "R4": 8
+      },
+      "event_count": 485,
+      "ratios": {
+        "R1": 0.894,
+        "R2": 0.583,
+        "R3": 0.423,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 37,
+          "baseline7": 42,
+          "ratio7": 0.894,
+          "share7": 0.0763,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0041,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 6,
+          "baseline7": 21,
+          "ratio7": 0.423,
+          "share7": 0.0124,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0165,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 65,
+        "R2": 3,
+        "R3": 13,
+        "R4": 17
+      },
+      "event_count": 586,
+      "ratios": {
+        "R1": 1.489,
+        "R2": 0.667,
+        "R3": 0.692,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 65,
+          "baseline7": 42,
+          "ratio7": 1.489,
+          "share7": 0.1109,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0051,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 13,
+          "baseline7": 21,
+          "ratio7": 0.692,
+          "share7": 0.0222,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.029,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 49,
+        "R2": 2,
+        "R3": 12,
+        "R4": 11
+      },
+      "event_count": 402,
+      "ratios": {
+        "R1": 1.149,
+        "R2": 0.583,
+        "R3": 0.654,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 49,
+          "baseline7": 42,
+          "ratio7": 1.149,
+          "share7": 0.1219,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.005,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 12,
+          "baseline7": 21,
+          "ratio7": 0.654,
+          "share7": 0.0299,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0274,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 77,
+        "R2": 0,
+        "R3": 14,
+        "R4": 7
+      },
+      "event_count": 536,
+      "ratios": {
+        "R1": 1.745,
+        "R2": 0.417,
+        "R3": 0.731,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 77,
+          "baseline7": 42,
+          "ratio7": 1.745,
+          "share7": 0.1437,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 14,
+          "baseline7": 21,
+          "ratio7": 0.731,
+          "share7": 0.0261,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0131,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 176,
+        "R2": 5,
+        "R3": 9,
+        "R4": 14
+      },
+      "event_count": 988,
+      "ratios": {
+        "R1": 3.851,
+        "R2": 0.833,
+        "R3": 0.538,
+        "R4": 1.583
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.851,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 176,
+          "baseline7": 42,
+          "ratio7": 3.851,
+          "share7": 0.1781,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0051,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 9,
+          "baseline7": 21,
+          "ratio7": 0.538,
+          "share7": 0.0091,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0142,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 50,
+        "R2": 5,
+        "R3": 7,
+        "R4": 1
+      },
+      "event_count": 593,
+      "ratios": {
+        "R1": 1.17,
+        "R2": 0.833,
+        "R3": 0.462,
+        "R4": 0.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 50,
+          "baseline7": 42,
+          "ratio7": 1.17,
+          "share7": 0.0843,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0084,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 7,
+          "baseline7": 21,
+          "ratio7": 0.462,
+          "share7": 0.0118,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 50,
+        "R2": 2,
+        "R3": 7,
+        "R4": 1
+      },
+      "event_count": 347,
+      "ratios": {
+        "R1": 1.17,
+        "R2": 0.583,
+        "R3": 0.462,
+        "R4": 0.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 50,
+          "baseline7": 42,
+          "ratio7": 1.17,
+          "share7": 0.1441,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 7,
+          "baseline7": 21,
+          "ratio7": 0.462,
+          "share7": 0.0202,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0029,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 60,
+        "R2": 5,
+        "R3": 10,
+        "R4": 3
+      },
+      "event_count": 292,
+      "ratios": {
+        "R1": 1.383,
+        "R2": 0.833,
+        "R3": 0.577,
+        "R4": 0.667
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 60,
+          "baseline7": 42,
+          "ratio7": 1.383,
+          "share7": 0.2055,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0171,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 10,
+          "baseline7": 21,
+          "ratio7": 0.577,
+          "share7": 0.0342,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0103,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 38,
+        "R2": 2,
+        "R3": 6,
+        "R4": 6
+      },
+      "event_count": 332,
+      "ratios": {
+        "R1": 0.915,
+        "R2": 0.583,
+        "R3": 0.423,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 38,
+          "baseline7": 42,
+          "ratio7": 0.915,
+          "share7": 0.1145,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.006,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 6,
+          "baseline7": 21,
+          "ratio7": 0.423,
+          "share7": 0.0181,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0181,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Democratic Republic of the Congo",
+      "counts": {
+        "R1": 33,
+        "R2": 9,
+        "R3": 16,
+        "R4": 2
+      },
+      "event_count": 306,
+      "ratios": {
+        "R1": 0.809,
+        "R2": 1.167,
+        "R3": 0.808,
+        "R4": 0.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 33,
+          "baseline7": 42,
+          "ratio7": 0.809,
+          "share7": 0.1078,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0294,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 16,
+          "baseline7": 21,
+          "ratio7": 0.808,
+          "share7": 0.0523,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        }
+      }
+    }
+  ]
+}
