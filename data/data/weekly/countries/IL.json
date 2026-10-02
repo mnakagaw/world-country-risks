@@ -1,0 +1,6241 @@
+{
+  "iso2": "IL",
+  "generated_at": "2026-01-23T02:28:16.295Z",
+  "weeks_total": 52,
+  "weeks_available": 52,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 10465,
+        "R2": 476,
+        "R3": 3967,
+        "R4": 987
+      },
+      "event_count": 74415,
+      "ratios": {
+        "R1": 3.898,
+        "R2": 3.879,
+        "R3": 2.758,
+        "R4": 2.909
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.898,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 10465,
+          "baseline7": 2681,
+          "ratio7": 3.898,
+          "share7": 0.1406,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0156,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 476,
+          "baseline7": 119,
+          "ratio7": 3.879,
+          "share7": 0.0064,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3967,
+          "baseline7": 1435,
+          "ratio7": 2.758,
+          "share7": 0.0533,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0117,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 987,
+          "baseline7": 336,
+          "ratio7": 2.909,
+          "share7": 0.0133,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0104,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9038,
+        "R2": 404,
+        "R3": 3790,
+        "R4": 938
+      },
+      "event_count": 72724,
+      "ratios": {
+        "R1": 3.367,
+        "R2": 3.298,
+        "R3": 2.635,
+        "R4": 2.765
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.367,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9038,
+          "baseline7": 2681,
+          "ratio7": 3.367,
+          "share7": 0.1243,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0157,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 404,
+          "baseline7": 119,
+          "ratio7": 3.298,
+          "share7": 0.0056,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 3790,
+          "baseline7": 1435,
+          "ratio7": 2.635,
+          "share7": 0.0521,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0118,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 938,
+          "baseline7": 336,
+          "ratio7": 2.765,
+          "share7": 0.0129,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0105,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8789,
+        "R2": 545,
+        "R3": 3547,
+        "R4": 1188
+      },
+      "event_count": 77857,
+      "ratios": {
+        "R1": 3.274,
+        "R2": 4.435,
+        "R3": 2.467,
+        "R4": 3.499
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.435,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8789,
+          "baseline7": 2681,
+          "ratio7": 3.274,
+          "share7": 0.1129,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0152,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 545,
+          "baseline7": 119,
+          "ratio7": 4.435,
+          "share7": 0.007,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3547,
+          "baseline7": 1435,
+          "ratio7": 2.467,
+          "share7": 0.0456,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0114,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1188,
+          "baseline7": 336,
+          "ratio7": 3.499,
+          "share7": 0.0153,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0101,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7958,
+        "R2": 431,
+        "R3": 3028,
+        "R4": 933
+      },
+      "event_count": 70398,
+      "ratios": {
+        "R1": 2.965,
+        "R2": 3.516,
+        "R3": 2.106,
+        "R4": 2.751
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.965,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7958,
+          "baseline7": 2681,
+          "ratio7": 2.965,
+          "share7": 0.113,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.016,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 431,
+          "baseline7": 119,
+          "ratio7": 3.516,
+          "share7": 0.0061,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 3028,
+          "baseline7": 1435,
+          "ratio7": 2.106,
+          "share7": 0.043,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.012,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R4": {
+          "today7": 933,
+          "baseline7": 336,
+          "ratio7": 2.751,
+          "share7": 0.0133,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0107,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8875,
+        "R2": 239,
+        "R3": 2948,
+        "R4": 742
+      },
+      "event_count": 61282,
+      "ratios": {
+        "R1": 3.306,
+        "R2": 1.968,
+        "R3": 2.051,
+        "R4": 2.191
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.306,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8875,
+          "baseline7": 2681,
+          "ratio7": 3.306,
+          "share7": 0.1448,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0171,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 239,
+          "baseline7": 119,
+          "ratio7": 1.968,
+          "share7": 0.0039,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2948,
+          "baseline7": 1435,
+          "ratio7": 2.051,
+          "share7": 0.0481,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0129,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 742,
+          "baseline7": 336,
+          "ratio7": 2.191,
+          "share7": 0.0121,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0114,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7570,
+        "R2": 316,
+        "R3": 2894,
+        "R4": 817
+      },
+      "event_count": 54154,
+      "ratios": {
+        "R1": 2.82,
+        "R2": 2.589,
+        "R3": 2.013,
+        "R4": 2.411
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.82,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7570,
+          "baseline7": 2681,
+          "ratio7": 2.82,
+          "share7": 0.1398,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0182,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 316,
+          "baseline7": 119,
+          "ratio7": 2.589,
+          "share7": 0.0058,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0106,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2894,
+          "baseline7": 1435,
+          "ratio7": 2.013,
+          "share7": 0.0534,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0137,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 817,
+          "baseline7": 336,
+          "ratio7": 2.411,
+          "share7": 0.0151,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0122,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7063,
+        "R2": 426,
+        "R3": 2960,
+        "R4": 1155
+      },
+      "event_count": 56126,
+      "ratios": {
+        "R1": 2.631,
+        "R2": 3.476,
+        "R3": 2.059,
+        "R4": 3.402
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.402,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7063,
+          "baseline7": 2681,
+          "ratio7": 2.631,
+          "share7": 0.1258,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0179,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 426,
+          "baseline7": 119,
+          "ratio7": 3.476,
+          "share7": 0.0076,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0104,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2960,
+          "baseline7": 1435,
+          "ratio7": 2.059,
+          "share7": 0.0527,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0134,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1155,
+          "baseline7": 336,
+          "ratio7": 3.402,
+          "share7": 0.0206,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0119,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7176,
+        "R2": 317,
+        "R3": 5110,
+        "R4": 850
+      },
+      "event_count": 53812,
+      "ratios": {
+        "R1": 2.673,
+        "R2": 2.597,
+        "R3": 3.552,
+        "R4": 2.507
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.552,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7176,
+          "baseline7": 2681,
+          "ratio7": 2.673,
+          "share7": 0.1334,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0183,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 317,
+          "baseline7": 119,
+          "ratio7": 2.597,
+          "share7": 0.0059,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0107,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 5110,
+          "baseline7": 1435,
+          "ratio7": 3.552,
+          "share7": 0.095,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0137,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 850,
+          "baseline7": 336,
+          "ratio7": 2.507,
+          "share7": 0.0158,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0122,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 13042,
+        "R2": 326,
+        "R3": 4682,
+        "R4": 781
+      },
+      "event_count": 68179,
+      "ratios": {
+        "R1": 4.857,
+        "R2": 2.669,
+        "R3": 3.255,
+        "R4": 2.305
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.857,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 13042,
+          "baseline7": 2681,
+          "ratio7": 4.857,
+          "share7": 0.1913,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0162,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 326,
+          "baseline7": 119,
+          "ratio7": 2.669,
+          "share7": 0.0048,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 4682,
+          "baseline7": 1435,
+          "ratio7": 3.255,
+          "share7": 0.0687,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0122,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 781,
+          "baseline7": 336,
+          "ratio7": 2.305,
+          "share7": 0.0115,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0108,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 10948,
+        "R2": 260,
+        "R3": 4938,
+        "R4": 822
+      },
+      "event_count": 58347,
+      "ratios": {
+        "R1": 4.078,
+        "R2": 2.137,
+        "R3": 3.433,
+        "R4": 2.425
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Yellow",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.078,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 10948,
+          "baseline7": 2681,
+          "ratio7": 4.078,
+          "share7": 0.1876,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0176,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 260,
+          "baseline7": 119,
+          "ratio7": 2.137,
+          "share7": 0.0045,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0102,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 4938,
+          "baseline7": 1435,
+          "ratio7": 3.433,
+          "share7": 0.0846,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0132,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 822,
+          "baseline7": 336,
+          "ratio7": 2.425,
+          "share7": 0.0141,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0117,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9735,
+        "R2": 425,
+        "R3": 3796,
+        "R4": 755
+      },
+      "event_count": 54710,
+      "ratios": {
+        "R1": 3.626,
+        "R2": 3.468,
+        "R3": 2.64,
+        "R4": 2.229
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.626,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9735,
+          "baseline7": 2681,
+          "ratio7": 3.626,
+          "share7": 0.1779,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0181,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 425,
+          "baseline7": 119,
+          "ratio7": 3.468,
+          "share7": 0.0078,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0106,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 3796,
+          "baseline7": 1435,
+          "ratio7": 2.64,
+          "share7": 0.0694,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0136,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 755,
+          "baseline7": 336,
+          "ratio7": 2.229,
+          "share7": 0.0138,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0121,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8816,
+        "R2": 432,
+        "R3": 4049,
+        "R4": 838
+      },
+      "event_count": 59425,
+      "ratios": {
+        "R1": 3.284,
+        "R2": 3.524,
+        "R3": 2.815,
+        "R4": 2.472
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Orange",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.284,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8816,
+          "baseline7": 2681,
+          "ratio7": 3.284,
+          "share7": 0.1484,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0174,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 432,
+          "baseline7": 119,
+          "ratio7": 3.524,
+          "share7": 0.0073,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0102,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 4049,
+          "baseline7": 1435,
+          "ratio7": 2.815,
+          "share7": 0.0681,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0131,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 838,
+          "baseline7": 336,
+          "ratio7": 2.472,
+          "share7": 0.0141,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0116,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8378,
+        "R2": 394,
+        "R3": 3681,
+        "R4": 813
+      },
+      "event_count": 53153,
+      "ratios": {
+        "R1": 3.121,
+        "R2": 3.218,
+        "R3": 2.56,
+        "R4": 2.399
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.121,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8378,
+          "baseline7": 2681,
+          "ratio7": 3.121,
+          "share7": 0.1576,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0184,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 394,
+          "baseline7": 119,
+          "ratio7": 3.218,
+          "share7": 0.0074,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0107,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 3681,
+          "baseline7": 1435,
+          "ratio7": 2.56,
+          "share7": 0.0693,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0138,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 813,
+          "baseline7": 336,
+          "ratio7": 2.399,
+          "share7": 0.0153,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0123,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7286,
+        "R2": 424,
+        "R3": 3203,
+        "R4": 657
+      },
+      "event_count": 50336,
+      "ratios": {
+        "R1": 2.714,
+        "R2": 3.46,
+        "R3": 2.228,
+        "R4": 1.941
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.714,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7286,
+          "baseline7": 2681,
+          "ratio7": 2.714,
+          "share7": 0.1447,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0189,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 424,
+          "baseline7": 119,
+          "ratio7": 3.46,
+          "share7": 0.0084,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.011,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 3203,
+          "baseline7": 1435,
+          "ratio7": 2.228,
+          "share7": 0.0636,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0142,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 657,
+          "baseline7": 336,
+          "ratio7": 1.941,
+          "share7": 0.0131,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0126,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8825,
+        "R2": 483,
+        "R3": 3431,
+        "R4": 720
+      },
+      "event_count": 50509,
+      "ratios": {
+        "R1": 3.287,
+        "R2": 3.935,
+        "R3": 2.386,
+        "R4": 2.126
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.935,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8825,
+          "baseline7": 2681,
+          "ratio7": 3.287,
+          "share7": 0.1747,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0189,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 483,
+          "baseline7": 119,
+          "ratio7": 3.935,
+          "share7": 0.0096,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.011,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3431,
+          "baseline7": 1435,
+          "ratio7": 2.386,
+          "share7": 0.0679,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0142,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 720,
+          "baseline7": 336,
+          "ratio7": 2.126,
+          "share7": 0.0143,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0126,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9320,
+        "R2": 540,
+        "R3": 3503,
+        "R4": 849
+      },
+      "event_count": 56968,
+      "ratios": {
+        "R1": 3.472,
+        "R2": 4.395,
+        "R3": 2.436,
+        "R4": 2.504
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.395,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9320,
+          "baseline7": 2681,
+          "ratio7": 3.472,
+          "share7": 0.1636,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0178,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 540,
+          "baseline7": 119,
+          "ratio7": 4.395,
+          "share7": 0.0095,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0104,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3503,
+          "baseline7": 1435,
+          "ratio7": 2.436,
+          "share7": 0.0615,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0133,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 849,
+          "baseline7": 336,
+          "ratio7": 2.504,
+          "share7": 0.0149,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0119,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9814,
+        "R2": 519,
+        "R3": 3086,
+        "R4": 889
+      },
+      "event_count": 65956,
+      "ratios": {
+        "R1": 3.656,
+        "R2": 4.226,
+        "R3": 2.147,
+        "R4": 2.622
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.226,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9814,
+          "baseline7": 2681,
+          "ratio7": 3.656,
+          "share7": 0.1488,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0165,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 519,
+          "baseline7": 119,
+          "ratio7": 4.226,
+          "share7": 0.0079,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3086,
+          "baseline7": 1435,
+          "ratio7": 2.147,
+          "share7": 0.0468,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0124,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 889,
+          "baseline7": 336,
+          "ratio7": 2.622,
+          "share7": 0.0135,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.011,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 13253,
+        "R2": 896,
+        "R3": 4171,
+        "R4": 1133
+      },
+      "event_count": 75204,
+      "ratios": {
+        "R1": 4.936,
+        "R2": 7.266,
+        "R3": 2.9,
+        "R4": 3.337
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 7.266,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 13253,
+          "baseline7": 2681,
+          "ratio7": 4.936,
+          "share7": 0.1762,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0155,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 896,
+          "baseline7": 119,
+          "ratio7": 7.266,
+          "share7": 0.0119,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R3": {
+          "today7": 4171,
+          "baseline7": 1435,
+          "ratio7": 2.9,
+          "share7": 0.0555,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0116,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1133,
+          "baseline7": 336,
+          "ratio7": 3.337,
+          "share7": 0.0151,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0103,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 10496,
+        "R2": 827,
+        "R3": 3820,
+        "R4": 1036
+      },
+      "event_count": 65688,
+      "ratios": {
+        "R1": 3.91,
+        "R2": 6.71,
+        "R3": 2.656,
+        "R4": 3.053
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.71,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 10496,
+          "baseline7": 2681,
+          "ratio7": 3.91,
+          "share7": 0.1598,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0166,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 827,
+          "baseline7": 119,
+          "ratio7": 6.71,
+          "share7": 0.0126,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R3": {
+          "today7": 3820,
+          "baseline7": 1435,
+          "ratio7": 2.656,
+          "share7": 0.0582,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0124,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1036,
+          "baseline7": 336,
+          "ratio7": 3.053,
+          "share7": 0.0158,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.011,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9798,
+        "R2": 718,
+        "R3": 3731,
+        "R4": 923
+      },
+      "event_count": 55899,
+      "ratios": {
+        "R1": 3.65,
+        "R2": 5.831,
+        "R3": 2.594,
+        "R4": 2.721
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 5.831,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9798,
+          "baseline7": 2681,
+          "ratio7": 3.65,
+          "share7": 0.1753,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0179,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 718,
+          "baseline7": 119,
+          "ratio7": 5.831,
+          "share7": 0.0128,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0105,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R3": {
+          "today7": 3731,
+          "baseline7": 1435,
+          "ratio7": 2.594,
+          "share7": 0.0667,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0135,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 923,
+          "baseline7": 336,
+          "ratio7": 2.721,
+          "share7": 0.0165,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.012,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 13599,
+        "R2": 798,
+        "R3": 4581,
+        "R4": 1025
+      },
+      "event_count": 76681,
+      "ratios": {
+        "R1": 5.065,
+        "R2": 6.476,
+        "R3": 3.185,
+        "R4": 3.021
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.476,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 13599,
+          "baseline7": 2681,
+          "ratio7": 5.065,
+          "share7": 0.1773,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0153,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 798,
+          "baseline7": 119,
+          "ratio7": 6.476,
+          "share7": 0.0104,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R3": {
+          "today7": 4581,
+          "baseline7": 1435,
+          "ratio7": 3.185,
+          "share7": 0.0597,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0115,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1025,
+          "baseline7": 336,
+          "ratio7": 3.021,
+          "share7": 0.0134,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0102,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 74,
+        "R2": 0,
+        "R3": 36,
+        "R4": 8
+      },
+      "event_count": 370,
+      "ratios": {
+        "R1": 0.029,
+        "R2": 0.04,
+        "R3": 0.028,
+        "R4": 0.038
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 74,
+          "baseline7": 2681,
+          "ratio7": 0.029,
+          "share7": 0.2,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 119,
+          "ratio7": 0.04,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 36,
+          "baseline7": 1435,
+          "ratio7": 0.028,
+          "share7": 0.0973,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 336,
+          "ratio7": 0.038,
+          "share7": 0.0216,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 85,
+        "R2": 2,
+        "R3": 47,
+        "R4": 5
+      },
+      "event_count": 1110,
+      "ratios": {
+        "R1": 0.034,
+        "R2": 0.056,
+        "R3": 0.036,
+        "R4": 0.029
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 85,
+          "baseline7": 2681,
+          "ratio7": 0.034,
+          "share7": 0.0766,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 119,
+          "ratio7": 0.056,
+          "share7": 0.0018,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 47,
+          "baseline7": 1435,
+          "ratio7": 0.036,
+          "share7": 0.0423,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 336,
+          "ratio7": 0.029,
+          "share7": 0.0045,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7109,
+        "R2": 402,
+        "R3": 2449,
+        "R4": 531
+      },
+      "event_count": 45501,
+      "ratios": {
+        "R1": 2.649,
+        "R2": 3.282,
+        "R3": 1.704,
+        "R4": 1.572
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Orange",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.649,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7109,
+          "baseline7": 2681,
+          "ratio7": 2.649,
+          "share7": 0.1562,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0199,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 402,
+          "baseline7": 119,
+          "ratio7": 3.282,
+          "share7": 0.0088,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0116,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2449,
+          "baseline7": 1435,
+          "ratio7": 1.704,
+          "share7": 0.0538,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0149,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 531,
+          "baseline7": 336,
+          "ratio7": 1.572,
+          "share7": 0.0117,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0133,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 10707,
+        "R2": 449,
+        "R3": 3506,
+        "R4": 892
+      },
+      "event_count": 63735,
+      "ratios": {
+        "R1": 3.988,
+        "R2": 3.661,
+        "R3": 2.438,
+        "R4": 2.63
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.988,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 10707,
+          "baseline7": 2681,
+          "ratio7": 3.988,
+          "share7": 0.168,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0168,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 449,
+          "baseline7": 119,
+          "ratio7": 3.661,
+          "share7": 0.007,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 3506,
+          "baseline7": 1435,
+          "ratio7": 2.438,
+          "share7": 0.055,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0126,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 892,
+          "baseline7": 336,
+          "ratio7": 2.63,
+          "share7": 0.014,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0112,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 11811,
+        "R2": 543,
+        "R3": 3098,
+        "R4": 804
+      },
+      "event_count": 62768,
+      "ratios": {
+        "R1": 4.399,
+        "R2": 4.419,
+        "R3": 2.155,
+        "R4": 2.372
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.419,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 11811,
+          "baseline7": 2681,
+          "ratio7": 4.399,
+          "share7": 0.1882,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0169,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 543,
+          "baseline7": 119,
+          "ratio7": 4.419,
+          "share7": 0.0087,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3098,
+          "baseline7": 1435,
+          "ratio7": 2.155,
+          "share7": 0.0494,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0127,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 804,
+          "baseline7": 336,
+          "ratio7": 2.372,
+          "share7": 0.0128,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0113,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9128,
+        "R2": 983,
+        "R3": 3893,
+        "R4": 961
+      },
+      "event_count": 69193,
+      "ratios": {
+        "R1": 3.4,
+        "R2": 7.968,
+        "R3": 2.707,
+        "R4": 2.833
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 7.968,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9128,
+          "baseline7": 2681,
+          "ratio7": 3.4,
+          "share7": 0.1319,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0161,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 983,
+          "baseline7": 119,
+          "ratio7": 7.968,
+          "share7": 0.0142,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R3": {
+          "today7": 3893,
+          "baseline7": 1435,
+          "ratio7": 2.707,
+          "share7": 0.0563,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0121,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 961,
+          "baseline7": 336,
+          "ratio7": 2.833,
+          "share7": 0.0139,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0108,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9180,
+        "R2": 1156,
+        "R3": 4129,
+        "R4": 1431
+      },
+      "event_count": 78181,
+      "ratios": {
+        "R1": 3.42,
+        "R2": 9.363,
+        "R3": 2.871,
+        "R4": 4.211
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Red"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 9.363,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9180,
+          "baseline7": 2681,
+          "ratio7": 3.42,
+          "share7": 0.1174,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0152,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1156,
+          "baseline7": 119,
+          "ratio7": 9.363,
+          "share7": 0.0148,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R3": {
+          "today7": 4129,
+          "baseline7": 1435,
+          "ratio7": 2.871,
+          "share7": 0.0528,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0114,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1431,
+          "baseline7": 336,
+          "ratio7": 4.211,
+          "share7": 0.0183,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0101,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8603,
+        "R2": 775,
+        "R3": 4377,
+        "R4": 1117
+      },
+      "event_count": 70117,
+      "ratios": {
+        "R1": 3.205,
+        "R2": 6.29,
+        "R3": 3.043,
+        "R4": 3.29
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.29,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8603,
+          "baseline7": 2681,
+          "ratio7": 3.205,
+          "share7": 0.1227,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.016,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 775,
+          "baseline7": 119,
+          "ratio7": 6.29,
+          "share7": 0.0111,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        },
+        "R3": {
+          "today7": 4377,
+          "baseline7": 1435,
+          "ratio7": 3.043,
+          "share7": 0.0624,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.012,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1117,
+          "baseline7": 336,
+          "ratio7": 3.29,
+          "share7": 0.0159,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0107,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8971,
+        "R2": 602,
+        "R3": 3801,
+        "R4": 868
+      },
+      "event_count": 62928,
+      "ratios": {
+        "R1": 3.342,
+        "R2": 4.895,
+        "R3": 2.643,
+        "R4": 2.56
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.895,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8971,
+          "baseline7": 2681,
+          "ratio7": 3.342,
+          "share7": 0.1426,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0169,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 602,
+          "baseline7": 119,
+          "ratio7": 4.895,
+          "share7": 0.0096,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3801,
+          "baseline7": 1435,
+          "ratio7": 2.643,
+          "share7": 0.0604,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0127,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 868,
+          "baseline7": 336,
+          "ratio7": 2.56,
+          "share7": 0.0138,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0113,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8167,
+        "R2": 574,
+        "R3": 3816,
+        "R4": 888
+      },
+      "event_count": 63222,
+      "ratios": {
+        "R1": 3.042,
+        "R2": 4.669,
+        "R3": 2.653,
+        "R4": 2.619
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.669,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8167,
+          "baseline7": 2681,
+          "ratio7": 3.042,
+          "share7": 0.1292,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0169,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 574,
+          "baseline7": 119,
+          "ratio7": 4.669,
+          "share7": 0.0091,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3816,
+          "baseline7": 1435,
+          "ratio7": 2.653,
+          "share7": 0.0604,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0127,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 888,
+          "baseline7": 336,
+          "ratio7": 2.619,
+          "share7": 0.014,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0112,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 11863,
+        "R2": 610,
+        "R3": 3961,
+        "R4": 910
+      },
+      "event_count": 68483,
+      "ratios": {
+        "R1": 4.418,
+        "R2": 4.96,
+        "R3": 2.754,
+        "R4": 2.683
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.96,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 11863,
+          "baseline7": 2681,
+          "ratio7": 4.418,
+          "share7": 0.1732,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0162,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 610,
+          "baseline7": 119,
+          "ratio7": 4.96,
+          "share7": 0.0089,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3961,
+          "baseline7": 1435,
+          "ratio7": 2.754,
+          "share7": 0.0578,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0122,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 910,
+          "baseline7": 336,
+          "ratio7": 2.683,
+          "share7": 0.0133,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0108,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8396,
+        "R2": 503,
+        "R3": 4020,
+        "R4": 1070
+      },
+      "event_count": 60180,
+      "ratios": {
+        "R1": 3.128,
+        "R2": 4.097,
+        "R3": 2.795,
+        "R4": 3.152
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.097,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8396,
+          "baseline7": 2681,
+          "ratio7": 3.128,
+          "share7": 0.1395,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0173,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 503,
+          "baseline7": 119,
+          "ratio7": 4.097,
+          "share7": 0.0084,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0101,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 4020,
+          "baseline7": 1435,
+          "ratio7": 2.795,
+          "share7": 0.0668,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.013,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1070,
+          "baseline7": 336,
+          "ratio7": 3.152,
+          "share7": 0.0178,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0115,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 13362,
+        "R2": 461,
+        "R3": 4281,
+        "R4": 1250
+      },
+      "event_count": 79750,
+      "ratios": {
+        "R1": 4.977,
+        "R2": 3.758,
+        "R3": 2.976,
+        "R4": 3.68
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.977,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 13362,
+          "baseline7": 2681,
+          "ratio7": 4.977,
+          "share7": 0.1675,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.015,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 461,
+          "baseline7": 119,
+          "ratio7": 3.758,
+          "share7": 0.0058,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 4281,
+          "baseline7": 1435,
+          "ratio7": 2.976,
+          "share7": 0.0537,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0113,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1250,
+          "baseline7": 336,
+          "ratio7": 3.68,
+          "share7": 0.0157,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 11109,
+        "R2": 466,
+        "R3": 3984,
+        "R4": 1465
+      },
+      "event_count": 79372,
+      "ratios": {
+        "R1": 4.138,
+        "R2": 3.798,
+        "R3": 2.77,
+        "R4": 4.311
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Red"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.311,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 11109,
+          "baseline7": 2681,
+          "ratio7": 4.138,
+          "share7": 0.14,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0151,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 466,
+          "baseline7": 119,
+          "ratio7": 3.798,
+          "share7": 0.0059,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3984,
+          "baseline7": 1435,
+          "ratio7": 2.77,
+          "share7": 0.0502,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0113,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1465,
+          "baseline7": 336,
+          "ratio7": 4.311,
+          "share7": 0.0185,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9864,
+        "R2": 613,
+        "R3": 3709,
+        "R4": 1159
+      },
+      "event_count": 81896,
+      "ratios": {
+        "R1": 3.674,
+        "R2": 4.984,
+        "R3": 2.579,
+        "R4": 3.413
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 4.984,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9864,
+          "baseline7": 2681,
+          "ratio7": 3.674,
+          "share7": 0.1204,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0148,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 613,
+          "baseline7": 119,
+          "ratio7": 4.984,
+          "share7": 0.0075,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 3709,
+          "baseline7": 1435,
+          "ratio7": 2.579,
+          "share7": 0.0453,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0111,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1159,
+          "baseline7": 336,
+          "ratio7": 3.413,
+          "share7": 0.0142,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 9639,
+        "R2": 813,
+        "R3": 6794,
+        "R4": 976
+      },
+      "event_count": 92577,
+      "ratios": {
+        "R1": 3.59,
+        "R2": 6.597,
+        "R3": 4.722,
+        "R4": 2.877
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Red",
+        "R3": "Red",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.597,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 9639,
+          "baseline7": 2681,
+          "ratio7": 3.59,
+          "share7": 0.1041,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0139,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 813,
+          "baseline7": 119,
+          "ratio7": 6.597,
+          "share7": 0.0088,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 6794,
+          "baseline7": 1435,
+          "ratio7": 4.722,
+          "share7": 0.0734,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0105,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 976,
+          "baseline7": 336,
+          "ratio7": 2.877,
+          "share7": 0.0105,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 11350,
+        "R2": 853,
+        "R3": 5916,
+        "R4": 950
+      },
+      "event_count": 103273,
+      "ratios": {
+        "R1": 4.227,
+        "R2": 6.919,
+        "R3": 4.112,
+        "R4": 2.801
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Red",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 6.919,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 11350,
+          "baseline7": 2681,
+          "ratio7": 4.227,
+          "share7": 0.1099,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0132,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 853,
+          "baseline7": 119,
+          "ratio7": 6.919,
+          "share7": 0.0083,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 5916,
+          "baseline7": 1435,
+          "ratio7": 4.112,
+          "share7": 0.0573,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 950,
+          "baseline7": 336,
+          "ratio7": 2.801,
+          "share7": 0.0092,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 10993,
+        "R2": 616,
+        "R3": 4351,
+        "R4": 912
+      },
+      "event_count": 92967,
+      "ratios": {
+        "R1": 4.095,
+        "R2": 5.008,
+        "R3": 3.025,
+        "R4": 2.689
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "Red",
+        "R3": "Orange",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 5.008,
+        "active_types": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 10993,
+          "baseline7": 2681,
+          "ratio7": 4.095,
+          "share7": 0.1182,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0139,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 616,
+          "baseline7": 119,
+          "ratio7": 5.008,
+          "share7": 0.0066,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R3": {
+          "today7": 4351,
+          "baseline7": 1435,
+          "ratio7": 3.025,
+          "share7": 0.0468,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0104,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 912,
+          "baseline7": 336,
+          "ratio7": 2.689,
+          "share7": 0.0098,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.01,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7835,
+        "R2": 430,
+        "R3": 2807,
+        "R4": 803
+      },
+      "event_count": 59517,
+      "ratios": {
+        "R1": 2.919,
+        "R2": 3.508,
+        "R3": 1.953,
+        "R4": 2.37
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Orange",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.919,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7835,
+          "baseline7": 2681,
+          "ratio7": 2.919,
+          "share7": 0.1316,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0174,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 430,
+          "baseline7": 119,
+          "ratio7": 3.508,
+          "share7": 0.0072,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0101,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2807,
+          "baseline7": 1435,
+          "ratio7": 1.953,
+          "share7": 0.0472,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.013,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 803,
+          "baseline7": 336,
+          "ratio7": 2.37,
+          "share7": 0.0135,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0116,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 8172,
+        "R2": 274,
+        "R3": 2578,
+        "R4": 651
+      },
+      "event_count": 50888,
+      "ratios": {
+        "R1": 3.044,
+        "R2": 2.25,
+        "R3": 1.794,
+        "R4": 1.924
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 3.044,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 8172,
+          "baseline7": 2681,
+          "ratio7": 3.044,
+          "share7": 0.1606,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0188,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 274,
+          "baseline7": 119,
+          "ratio7": 2.25,
+          "share7": 0.0054,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.011,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2578,
+          "baseline7": 1435,
+          "ratio7": 1.794,
+          "share7": 0.0507,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0141,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 651,
+          "baseline7": 336,
+          "ratio7": 1.924,
+          "share7": 0.0128,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0125,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7783,
+        "R2": 279,
+        "R3": 2756,
+        "R4": 609
+      },
+      "event_count": 49011,
+      "ratios": {
+        "R1": 2.899,
+        "R2": 2.29,
+        "R3": 1.917,
+        "R4": 1.801
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.899,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7783,
+          "baseline7": 2681,
+          "ratio7": 2.899,
+          "share7": 0.1588,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0192,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 279,
+          "baseline7": 119,
+          "ratio7": 2.29,
+          "share7": 0.0057,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0112,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2756,
+          "baseline7": 1435,
+          "ratio7": 1.917,
+          "share7": 0.0562,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0144,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 609,
+          "baseline7": 336,
+          "ratio7": 1.801,
+          "share7": 0.0124,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0128,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 6462,
+        "R2": 211,
+        "R3": 2384,
+        "R4": 560
+      },
+      "event_count": 44841,
+      "ratios": {
+        "R1": 2.408,
+        "R2": 1.742,
+        "R3": 1.659,
+        "R4": 1.657
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.408,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 6462,
+          "baseline7": 2681,
+          "ratio7": 2.408,
+          "share7": 0.1441,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.02,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 211,
+          "baseline7": 119,
+          "ratio7": 1.742,
+          "share7": 0.0047,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0117,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2384,
+          "baseline7": 1435,
+          "ratio7": 1.659,
+          "share7": 0.0532,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.015,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 560,
+          "baseline7": 336,
+          "ratio7": 1.657,
+          "share7": 0.0125,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0134,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7750,
+        "R2": 212,
+        "R3": 2532,
+        "R4": 561
+      },
+      "event_count": 46625,
+      "ratios": {
+        "R1": 2.887,
+        "R2": 1.75,
+        "R3": 1.762,
+        "R4": 1.66
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.887,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7750,
+          "baseline7": 2681,
+          "ratio7": 2.887,
+          "share7": 0.1662,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0196,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 212,
+          "baseline7": 119,
+          "ratio7": 1.75,
+          "share7": 0.0045,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0115,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2532,
+          "baseline7": 1435,
+          "ratio7": 1.762,
+          "share7": 0.0543,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0147,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 561,
+          "baseline7": 336,
+          "ratio7": 1.66,
+          "share7": 0.012,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0131,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 7215,
+        "R2": 289,
+        "R3": 2478,
+        "R4": 443
+      },
+      "event_count": 40433,
+      "ratios": {
+        "R1": 2.688,
+        "R2": 2.371,
+        "R3": 1.724,
+        "R4": 1.314
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.688,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 7215,
+          "baseline7": 2681,
+          "ratio7": 2.688,
+          "share7": 0.1784,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0211,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 289,
+          "baseline7": 119,
+          "ratio7": 2.371,
+          "share7": 0.0071,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0123,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2478,
+          "baseline7": 1435,
+          "ratio7": 1.724,
+          "share7": 0.0613,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0158,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 443,
+          "baseline7": 336,
+          "ratio7": 1.314,
+          "share7": 0.011,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0141,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 6491,
+        "R2": 323,
+        "R3": 2260,
+        "R4": 715
+      },
+      "event_count": 43693,
+      "ratios": {
+        "R1": 2.418,
+        "R2": 2.645,
+        "R3": 1.573,
+        "R4": 2.111
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.418,
+        "active_types": [
+          "R1",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 6491,
+          "baseline7": 2681,
+          "ratio7": 2.418,
+          "share7": 0.1486,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0203,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 323,
+          "baseline7": 119,
+          "ratio7": 2.645,
+          "share7": 0.0074,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0118,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2260,
+          "baseline7": 1435,
+          "ratio7": 1.573,
+          "share7": 0.0517,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0152,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 715,
+          "baseline7": 336,
+          "ratio7": 2.111,
+          "share7": 0.0164,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0135,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 5742,
+        "R2": 242,
+        "R3": 2190,
+        "R4": 611
+      },
+      "event_count": 37790,
+      "ratios": {
+        "R1": 2.14,
+        "R2": 1.992,
+        "R3": 1.524,
+        "R4": 1.806
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.14,
+        "active_types": [
+          "R1",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 5742,
+          "baseline7": 2681,
+          "ratio7": 2.14,
+          "share7": 0.1519,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0218,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 242,
+          "baseline7": 119,
+          "ratio7": 1.992,
+          "share7": 0.0064,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0127,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2190,
+          "baseline7": 1435,
+          "ratio7": 1.524,
+          "share7": 0.058,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0164,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 611,
+          "baseline7": 336,
+          "ratio7": 1.806,
+          "share7": 0.0162,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0145,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "dynamic_share_pass"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 5563,
+        "R2": 198,
+        "R3": 2552,
+        "R4": 478
+      },
+      "event_count": 37515,
+      "ratios": {
+        "R1": 2.073,
+        "R2": 1.637,
+        "R3": 1.776,
+        "R4": 1.416
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.073,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 5563,
+          "baseline7": 2681,
+          "ratio7": 2.073,
+          "share7": 0.1483,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0219,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 198,
+          "baseline7": 119,
+          "ratio7": 1.637,
+          "share7": 0.0053,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0128,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2552,
+          "baseline7": 1435,
+          "ratio7": 1.776,
+          "share7": 0.068,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0164,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 478,
+          "baseline7": 336,
+          "ratio7": 1.416,
+          "share7": 0.0127,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0146,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 5726,
+        "R2": 169,
+        "R3": 2824,
+        "R4": 402
+      },
+      "event_count": 37025,
+      "ratios": {
+        "R1": 2.134,
+        "R2": 1.403,
+        "R3": 1.965,
+        "R4": 1.194
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.134,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 5726,
+          "baseline7": 2681,
+          "ratio7": 2.134,
+          "share7": 0.1547,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.022,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 169,
+          "baseline7": 119,
+          "ratio7": 1.403,
+          "share7": 0.0046,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0129,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 2824,
+          "baseline7": 1435,
+          "ratio7": 1.965,
+          "share7": 0.0763,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0165,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 402,
+          "baseline7": 336,
+          "ratio7": 1.194,
+          "share7": 0.0109,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0147,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 4653,
+        "R2": 215,
+        "R3": 1886,
+        "R4": 544
+      },
+      "event_count": 35091,
+      "ratios": {
+        "R1": 1.734,
+        "R2": 1.774,
+        "R3": 1.313,
+        "R4": 1.61
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 4653,
+          "baseline7": 2681,
+          "ratio7": 1.734,
+          "share7": 0.1326,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0226,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 215,
+          "baseline7": 119,
+          "ratio7": 1.774,
+          "share7": 0.0061,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0132,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 1886,
+          "baseline7": 1435,
+          "ratio7": 1.313,
+          "share7": 0.0537,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.017,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 544,
+          "baseline7": 336,
+          "ratio7": 1.61,
+          "share7": 0.0155,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0151,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 4848,
+        "R2": 176,
+        "R3": 2123,
+        "R4": 422
+      },
+      "event_count": 32881,
+      "ratios": {
+        "R1": 1.807,
+        "R2": 1.46,
+        "R3": 1.478,
+        "R4": 1.252
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.807,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 4848,
+          "baseline7": 2681,
+          "ratio7": 1.807,
+          "share7": 0.1474,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0234,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 176,
+          "baseline7": 119,
+          "ratio7": 1.46,
+          "share7": 0.0054,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0136,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 2123,
+          "baseline7": 1435,
+          "ratio7": 1.478,
+          "share7": 0.0646,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0175,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 422,
+          "baseline7": 336,
+          "ratio7": 1.252,
+          "share7": 0.0128,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0156,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Israel",
+      "counts": {
+        "R1": 4994,
+        "R2": 182,
+        "R3": 2432,
+        "R4": 569
+      },
+      "event_count": 36950,
+      "ratios": {
+        "R1": 1.861,
+        "R2": 1.508,
+        "R3": 1.692,
+        "R4": 1.683
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.861,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 4994,
+          "baseline7": 2681,
+          "ratio7": 1.861,
+          "share7": 0.1352,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0221,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 182,
+          "baseline7": 119,
+          "ratio7": 1.508,
+          "share7": 0.0049,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0129,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R3": {
+          "today7": 2432,
+          "baseline7": 1435,
+          "ratio7": 1.692,
+          "share7": 0.0658,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0166,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 569,
+          "baseline7": 336,
+          "ratio7": 1.683,
+          "share7": 0.0154,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0147,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6339 @@
+{
+  "iso2": "BZ",
+  "generated_at": "2026-02-06T07:03:36.241Z",
+  "weeks_total": 54,
+  "weeks_available": 53,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 41,
+        "R2": 4,
+        "R3": 22,
+        "R4": 2
+      },
+      "event_count": 568,
+      "ratios": {
+        "R1": 2.421,
+        "R2": 0.75,
+        "R3": 2.25,
+        "R4": 0.583
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.421,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 41,
+          "baseline7": 14,
+          "ratio7": 2.421,
+          "share7": 0.0722,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 22,
+          "baseline7": 7,
+          "ratio7": 2.25,
+          "share7": 0.0387,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0035,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 74,
+        "R2": 4,
+        "R3": 21,
+        "R4": 17
+      },
+      "event_count": 626,
+      "ratios": {
+        "R1": 4.158,
+        "R2": 0.75,
+        "R3": 2.167,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.158,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 74,
+          "baseline7": 14,
+          "ratio7": 4.158,
+          "share7": 0.1182,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0335,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0272,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 16,
+        "R2": 3,
+        "R3": 21,
+        "R4": 29
+      },
+      "event_count": 518,
+      "ratios": {
+        "R1": 1.105,
+        "R2": 0.667,
+        "R3": 2.167,
+        "R4": 2.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 16,
+          "baseline7": 14,
+          "ratio7": 1.105,
+          "share7": 0.0309,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0405,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 29,
+          "baseline7": 7,
+          "ratio7": 2.833,
+          "share7": 0.056,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 17,
+        "R2": 9,
+        "R3": 8,
+        "R4": 17
+      },
+      "event_count": 546,
+      "ratios": {
+        "R1": 1.158,
+        "R2": 1.167,
+        "R3": 1.083,
+        "R4": 1.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 17,
+          "baseline7": 14,
+          "ratio7": 1.158,
+          "share7": 0.0311,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0165,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0147,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R4": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0311,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 49,
+        "R2": 1,
+        "R3": 26,
+        "R4": 12
+      },
+      "event_count": 469,
+      "ratios": {
+        "R1": 2.842,
+        "R2": 0.5,
+        "R3": 2.583,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.842,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 49,
+          "baseline7": 14,
+          "ratio7": 2.842,
+          "share7": 0.1045,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0021,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 26,
+          "baseline7": 7,
+          "ratio7": 2.583,
+          "share7": 0.0554,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0256,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 116,
+        "R2": 6,
+        "R3": 40,
+        "R4": 5
+      },
+      "event_count": 736,
+      "ratios": {
+        "R1": 6.368,
+        "R2": 0.917,
+        "R3": 3.75,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 6.368,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 116,
+          "baseline7": 14,
+          "ratio7": 6.368,
+          "share7": 0.1576,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0082,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 40,
+          "baseline7": 7,
+          "ratio7": 3.75,
+          "share7": 0.0543,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0068,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 43,
+        "R2": 3,
+        "R3": 16,
+        "R4": 3
+      },
+      "event_count": 454,
+      "ratios": {
+        "R1": 2.526,
+        "R2": 0.667,
+        "R3": 1.75,
+        "R4": 0.667
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.526,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 43,
+          "baseline7": 14,
+          "ratio7": 2.526,
+          "share7": 0.0947,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0066,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0352,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0066,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 44,
+        "R2": 2,
+        "R3": 21,
+        "R4": 5
+      },
+      "event_count": 549,
+      "ratios": {
+        "R1": 2.579,
+        "R2": 0.583,
+        "R3": 2.167,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.579,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 44,
+          "baseline7": 14,
+          "ratio7": 2.579,
+          "share7": 0.0801,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0036,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0383,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0091,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 13,
+        "R2": 1,
+        "R3": 21,
+        "R4": 4
+      },
+      "event_count": 520,
+      "ratios": {
+        "R1": 0.947,
+        "R2": 0.5,
+        "R3": 2.167,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 13,
+          "baseline7": 14,
+          "ratio7": 0.947,
+          "share7": 0.025,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0019,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0404,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0077,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 42,
+        "R2": 7,
+        "R3": 57,
+        "R4": 9
+      },
+      "event_count": 692,
+      "ratios": {
+        "R1": 2.474,
+        "R2": 1,
+        "R3": 5.167,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.474,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 42,
+          "baseline7": 14,
+          "ratio7": 2.474,
+          "share7": 0.0607,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0101,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 57,
+          "baseline7": 7,
+          "ratio7": 5.167,
+          "share7": 0.0824,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.013,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 24,
+        "R2": 2,
+        "R3": 22,
+        "R4": 2
+      },
+      "event_count": 446,
+      "ratios": {
+        "R1": 1.526,
+        "R2": 0.583,
+        "R3": 2.25,
+        "R4": 0.583
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.25,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 24,
+          "baseline7": 14,
+          "ratio7": 1.526,
+          "share7": 0.0538,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0045,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 22,
+          "baseline7": 7,
+          "ratio7": 2.25,
+          "share7": 0.0493,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0045,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 50,
+        "R2": 0,
+        "R3": 33,
+        "R4": 8
+      },
+      "event_count": 527,
+      "ratios": {
+        "R1": 2.895,
+        "R2": 0.417,
+        "R3": 3.167,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.895,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 50,
+          "baseline7": 14,
+          "ratio7": 2.895,
+          "share7": 0.0949,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 33,
+          "baseline7": 7,
+          "ratio7": 3.167,
+          "share7": 0.0626,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0152,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 130,
+        "R2": 3,
+        "R3": 30,
+        "R4": 8
+      },
+      "event_count": 745,
+      "ratios": {
+        "R1": 7.105,
+        "R2": 0.667,
+        "R3": 2.917,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 7.105,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 130,
+          "baseline7": 14,
+          "ratio7": 7.105,
+          "share7": 0.1745,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.004,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 30,
+          "baseline7": 7,
+          "ratio7": 2.917,
+          "share7": 0.0403,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0107,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 33,
+        "R2": 7,
+        "R3": 8,
+        "R4": 1
+      },
+      "event_count": 464,
+      "ratios": {
+        "R1": 2,
+        "R2": 1,
+        "R3": 1.083,
+        "R4": 0.5
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 33,
+          "baseline7": 14,
+          "ratio7": 2,
+          "share7": 0.0711,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0151,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0172,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R4": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 18,
+        "R2": 1,
+        "R3": 8,
+        "R4": 6
+      },
+      "event_count": 367,
+      "ratios": {
+        "R1": 1.211,
+        "R2": 0.5,
+        "R3": 1.083,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 18,
+          "baseline7": 14,
+          "ratio7": 1.211,
+          "share7": 0.049,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0027,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0218,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0163,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 52,
+        "R2": 3,
+        "R3": 18,
+        "R4": 5
+      },
+      "event_count": 468,
+      "ratios": {
+        "R1": 3,
+        "R2": 0.667,
+        "R3": 1.917,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 3,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 52,
+          "baseline7": 14,
+          "ratio7": 3,
+          "share7": 0.1111,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.0385,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0107,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 29,
+        "R2": 3,
+        "R3": 23,
+        "R4": 6
+      },
+      "event_count": 462,
+      "ratios": {
+        "R1": 1.789,
+        "R2": 0.667,
+        "R3": 2.333,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.333,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 29,
+          "baseline7": 14,
+          "ratio7": 1.789,
+          "share7": 0.0628,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 7,
+          "ratio7": 2.333,
+          "share7": 0.0498,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.013,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 20,
+        "R2": 4,
+        "R3": 39,
+        "R4": 9
+      },
+      "event_count": 457,
+      "ratios": {
+        "R1": 1.316,
+        "R2": 0.75,
+        "R3": 3.667,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 3.667,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 20,
+          "baseline7": 14,
+          "ratio7": 1.316,
+          "share7": 0.0438,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0088,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 39,
+          "baseline7": 7,
+          "ratio7": 3.667,
+          "share7": 0.0853,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0197,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 39,
+        "R2": 3,
+        "R3": 21,
+        "R4": 19
+      },
+      "event_count": 488,
+      "ratios": {
+        "R1": 2.316,
+        "R2": 0.667,
+        "R3": 2.167,
+        "R4": 2
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.316,
+        "active_types": [
+          "R1",
+          "R3",
+          "R4"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 39,
+          "baseline7": 14,
+          "ratio7": 2.316,
+          "share7": 0.0799,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0061,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.043,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 19,
+          "baseline7": 7,
+          "ratio7": 2,
+          "share7": 0.0389,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 52,
+        "R2": 0,
+        "R3": 32,
+        "R4": 12
+      },
+      "event_count": 439,
+      "ratios": {
+        "R1": 3,
+        "R2": 0.417,
+        "R3": 3.083,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 3.083,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 52,
+          "baseline7": 14,
+          "ratio7": 3,
+          "share7": 0.1185,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 32,
+          "baseline7": 7,
+          "ratio7": 3.083,
+          "share7": 0.0729,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0273,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 33,
+        "R2": 0,
+        "R3": 17,
+        "R4": 3
+      },
+      "event_count": 346,
+      "ratios": {
+        "R1": 2,
+        "R2": 0.417,
+        "R3": 1.833,
+        "R4": 0.667
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 33,
+          "baseline7": 14,
+          "ratio7": 2,
+          "share7": 0.0954,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0491,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0087,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 0,
+      "ratios": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "levels": {
+        "R1": "NoData",
+        "R2": "NoData",
+        "R3": "NoData",
+        "R4": "NoData"
+      },
+      "overall_level": "NoData",
+      "bundle": "NoData",
+      "weekly_surge_r": {
+        "level": "nodata",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        }
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 0,
+          "ratio7": 0,
+          "share7": 0,
+          "triggered": false,
+          "is_active": false,
+          "reason": "low-abs",
+          "abs_hit": false,
+          "is_stable": false
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 10,
+      "ratios": {
+        "R1": 0.263,
+        "R2": 0.417,
+        "R3": 0.417,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 14,
+          "ratio7": 0.263,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 23,
+        "R2": 1,
+        "R3": 15,
+        "R4": 5
+      },
+      "event_count": 321,
+      "ratios": {
+        "R1": 1.474,
+        "R2": 0.5,
+        "R3": 1.667,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 23,
+          "baseline7": 14,
+          "ratio7": 1.474,
+          "share7": 0.0717,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0031,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0467,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0156,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 43,
+        "R2": 1,
+        "R3": 17,
+        "R4": 5
+      },
+      "event_count": 430,
+      "ratios": {
+        "R1": 2.526,
+        "R2": 0.5,
+        "R3": 1.833,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.526,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 43,
+          "baseline7": 14,
+          "ratio7": 2.526,
+          "share7": 0.1,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0023,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0395,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0116,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 35,
+        "R2": 5,
+        "R3": 28,
+        "R4": 9
+      },
+      "event_count": 549,
+      "ratios": {
+        "R1": 2.105,
+        "R2": 0.833,
+        "R3": 2.75,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.105,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 35,
+          "baseline7": 14,
+          "ratio7": 2.105,
+          "share7": 0.0638,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0091,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 28,
+          "baseline7": 7,
+          "ratio7": 2.75,
+          "share7": 0.051,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0164,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 31,
+        "R2": 6,
+        "R3": 30,
+        "R4": 3
+      },
+      "event_count": 512,
+      "ratios": {
+        "R1": 1.895,
+        "R2": 0.917,
+        "R3": 2.917,
+        "R4": 0.667
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 1.895,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 31,
+          "baseline7": 14,
+          "ratio7": 1.895,
+          "share7": 0.0605,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0117,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 30,
+          "baseline7": 7,
+          "ratio7": 2.917,
+          "share7": 0.0586,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0059,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 20,
+        "R2": 0,
+        "R3": 21,
+        "R4": 1
+      },
+      "event_count": 365,
+      "ratios": {
+        "R1": 1.316,
+        "R2": 0.417,
+        "R3": 2.167,
+        "R4": 0.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.167,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 20,
+          "baseline7": 14,
+          "ratio7": 1.316,
+          "share7": 0.0548,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0575,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0027,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 36,
+        "R2": 1,
+        "R3": 22,
+        "R4": 5
+      },
+      "event_count": 425,
+      "ratios": {
+        "R1": 2.158,
+        "R2": 0.5,
+        "R3": 2.25,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.25,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 14,
+          "ratio7": 2.158,
+          "share7": 0.0847,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 22,
+          "baseline7": 7,
+          "ratio7": 2.25,
+          "share7": 0.0518,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0118,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 36,
+        "R2": 1,
+        "R3": 18,
+        "R4": 6
+      },
+      "event_count": 644,
+      "ratios": {
+        "R1": 2.158,
+        "R2": 0.5,
+        "R3": 1.917,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.158,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 36,
+          "baseline7": 14,
+          "ratio7": 2.158,
+          "share7": 0.0559,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0016,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 18,
+          "baseline7": 7,
+          "ratio7": 1.917,
+          "share7": 0.028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0093,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 26,
+        "R2": 0,
+        "R3": 21,
+        "R4": 5
+      },
+      "event_count": 615,
+      "ratios": {
+        "R1": 1.632,
+        "R2": 0.417,
+        "R3": 2.167,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 26,
+          "baseline7": 14,
+          "ratio7": 1.632,
+          "share7": 0.0423,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 21,
+          "baseline7": 7,
+          "ratio7": 2.167,
+          "share7": 0.0341,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0081,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 42,
+        "R2": 3,
+        "R3": 27,
+        "R4": 9
+      },
+      "event_count": 455,
+      "ratios": {
+        "R1": 2.474,
+        "R2": 0.667,
+        "R3": 2.667,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.667,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 42,
+          "baseline7": 14,
+          "ratio7": 2.474,
+          "share7": 0.0923,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0066,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 27,
+          "baseline7": 7,
+          "ratio7": 2.667,
+          "share7": 0.0593,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0198,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 59,
+        "R2": 2,
+        "R3": 24,
+        "R4": 7
+      },
+      "event_count": 782,
+      "ratios": {
+        "R1": 3.368,
+        "R2": 0.583,
+        "R3": 2.417,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 3.368,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 59,
+          "baseline7": 14,
+          "ratio7": 3.368,
+          "share7": 0.0754,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0026,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 24,
+          "baseline7": 7,
+          "ratio7": 2.417,
+          "share7": 0.0307,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 42,
+        "R2": 7,
+        "R3": 14,
+        "R4": 11
+      },
+      "event_count": 575,
+      "ratios": {
+        "R1": 2.474,
+        "R2": 1,
+        "R3": 1.583,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.474,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 42,
+          "baseline7": 14,
+          "ratio7": 2.474,
+          "share7": 0.073,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0122,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 14,
+          "baseline7": 7,
+          "ratio7": 1.583,
+          "share7": 0.0243,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0191,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 72,
+        "R2": 2,
+        "R3": 23,
+        "R4": 5
+      },
+      "event_count": 674,
+      "ratios": {
+        "R1": 4.053,
+        "R2": 0.583,
+        "R3": 2.333,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.053,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 72,
+          "baseline7": 14,
+          "ratio7": 4.053,
+          "share7": 0.1068,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.003,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 23,
+          "baseline7": 7,
+          "ratio7": 2.333,
+          "share7": 0.0341,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0074,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 52,
+        "R2": 0,
+        "R3": 42,
+        "R4": 2
+      },
+      "event_count": 539,
+      "ratios": {
+        "R1": 3,
+        "R2": 0.417,
+        "R3": 3.917,
+        "R4": 0.583
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 3,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 52,
+          "baseline7": 14,
+          "ratio7": 3,
+          "share7": 0.0965,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 42,
+          "baseline7": 7,
+          "ratio7": 3.917,
+          "share7": 0.0779,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0037,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 82,
+        "R2": 6,
+        "R3": 42,
+        "R4": 0
+      },
+      "event_count": 833,
+      "ratios": {
+        "R1": 4.579,
+        "R2": 0.917,
+        "R3": 3.917,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.579,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 82,
+          "baseline7": 14,
+          "ratio7": 4.579,
+          "share7": 0.0984,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 42,
+          "baseline7": 7,
+          "ratio7": 3.917,
+          "share7": 0.0504,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 73,
+        "R2": 0,
+        "R3": 39,
+        "R4": 4
+      },
+      "event_count": 607,
+      "ratios": {
+        "R1": 4.105,
+        "R2": 0.417,
+        "R3": 3.667,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.105,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 73,
+          "baseline7": 14,
+          "ratio7": 4.105,
+          "share7": 0.1203,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 39,
+          "baseline7": 7,
+          "ratio7": 3.667,
+          "share7": 0.0643,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0066,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 117,
+        "R2": 9,
+        "R3": 42,
+        "R4": 7
+      },
+      "event_count": 785,
+      "ratios": {
+        "R1": 6.421,
+        "R2": 1.167,
+        "R3": 3.917,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 6.421,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 117,
+          "baseline7": 14,
+          "ratio7": 6.421,
+          "share7": 0.149,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0115,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 42,
+          "baseline7": 7,
+          "ratio7": 3.917,
+          "share7": 0.0535,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0089,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 222,
+        "R2": 8,
+        "R3": 40,
+        "R4": 5
+      },
+      "event_count": 1232,
+      "ratios": {
+        "R1": 11.947,
+        "R2": 1.083,
+        "R3": 3.75,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 11.947,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 222,
+          "baseline7": 14,
+          "ratio7": 11.947,
+          "share7": 0.1802,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 40,
+          "baseline7": 7,
+          "ratio7": 3.75,
+          "share7": 0.0325,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0041,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 130,
+        "R2": 4,
+        "R3": 32,
+        "R4": 8
+      },
+      "event_count": 860,
+      "ratios": {
+        "R1": 7.105,
+        "R2": 0.75,
+        "R3": 3.083,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 7.105,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 130,
+          "baseline7": 14,
+          "ratio7": 7.105,
+          "share7": 0.1512,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0047,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 32,
+          "baseline7": 7,
+          "ratio7": 3.083,
+          "share7": 0.0372,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0093,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 77,
+        "R2": 4,
+        "R3": 16,
+        "R4": 7
+      },
+      "event_count": 683,
+      "ratios": {
+        "R1": 4.316,
+        "R2": 0.75,
+        "R3": 1.75,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.316,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 77,
+          "baseline7": 14,
+          "ratio7": 4.316,
+          "share7": 0.1127,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0059,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0234,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R4": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0102,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 154,
+        "R2": 2,
+        "R3": 32,
+        "R4": 6
+      },
+      "event_count": 938,
+      "ratios": {
+        "R1": 8.368,
+        "R2": 0.583,
+        "R3": 3.083,
+        "R4": 0.917
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 8.368,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 154,
+          "baseline7": 14,
+          "ratio7": 8.368,
+          "share7": 0.1642,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0021,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 32,
+          "baseline7": 7,
+          "ratio7": 3.083,
+          "share7": 0.0341,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 90,
+        "R2": 6,
+        "R3": 43,
+        "R4": 11
+      },
+      "event_count": 895,
+      "ratios": {
+        "R1": 5,
+        "R2": 0.917,
+        "R3": 4,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 5,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 90,
+          "baseline7": 14,
+          "ratio7": 5,
+          "share7": 0.1006,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0067,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 43,
+          "baseline7": 7,
+          "ratio7": 4,
+          "share7": 0.048,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0123,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 73,
+        "R2": 2,
+        "R3": 41,
+        "R4": 8
+      },
+      "event_count": 893,
+      "ratios": {
+        "R1": 4.105,
+        "R2": 0.583,
+        "R3": 3.833,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.105,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 73,
+          "baseline7": 14,
+          "ratio7": 4.105,
+          "share7": 0.0817,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 41,
+          "baseline7": 7,
+          "ratio7": 3.833,
+          "share7": 0.0459,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 138,
+        "R2": 3,
+        "R3": 43,
+        "R4": 9
+      },
+      "event_count": 1422,
+      "ratios": {
+        "R1": 7.526,
+        "R2": 0.667,
+        "R3": 4,
+        "R4": 1.167
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 7.526,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 138,
+          "baseline7": 14,
+          "ratio7": 7.526,
+          "share7": 0.097,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0021,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 43,
+          "baseline7": 7,
+          "ratio7": 4,
+          "share7": 0.0302,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0063,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 56,
+        "R2": 1,
+        "R3": 35,
+        "R4": 13
+      },
+      "event_count": 763,
+      "ratios": {
+        "R1": 3.211,
+        "R2": 0.5,
+        "R3": 3.333,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 3.211,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 56,
+          "baseline7": 14,
+          "ratio7": 3.211,
+          "share7": 0.0734,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0013,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 35,
+          "baseline7": 7,
+          "ratio7": 3.333,
+          "share7": 0.0459,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 7,
+          "ratio7": 1.5,
+          "share7": 0.017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 85,
+        "R2": 1,
+        "R3": 44,
+        "R4": 11
+      },
+      "event_count": 691,
+      "ratios": {
+        "R1": 4.737,
+        "R2": 0.5,
+        "R3": 4.083,
+        "R4": 1.333
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.737,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 85,
+          "baseline7": 14,
+          "ratio7": 4.737,
+          "share7": 0.123,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 44,
+          "baseline7": 7,
+          "ratio7": 4.083,
+          "share7": 0.0637,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 29,
+        "R2": 0,
+        "R3": 24,
+        "R4": 5
+      },
+      "event_count": 384,
+      "ratios": {
+        "R1": 1.789,
+        "R2": 0.417,
+        "R3": 2.417,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.417,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 29,
+          "baseline7": 14,
+          "ratio7": 1.789,
+          "share7": 0.0755,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 24,
+          "baseline7": 7,
+          "ratio7": 2.417,
+          "share7": 0.0625,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.013,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 94,
+        "R2": 5,
+        "R3": 50,
+        "R4": 8
+      },
+      "event_count": 662,
+      "ratios": {
+        "R1": 5.211,
+        "R2": 0.833,
+        "R3": 4.583,
+        "R4": 1.083
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 5.211,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 94,
+          "baseline7": 14,
+          "ratio7": 5.211,
+          "share7": 0.142,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0076,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 50,
+          "baseline7": 7,
+          "ratio7": 4.583,
+          "share7": 0.0755,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0121,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 80,
+        "R2": 4,
+        "R3": 74,
+        "R4": 12
+      },
+      "event_count": 756,
+      "ratios": {
+        "R1": 4.474,
+        "R2": 0.75,
+        "R3": 6.583,
+        "R4": 1.417
+      },
+      "levels": {
+        "R1": "Red",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 4.474,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 80,
+          "baseline7": 14,
+          "ratio7": 4.474,
+          "share7": 0.1058,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0053,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 74,
+          "baseline7": 7,
+          "ratio7": 6.583,
+          "share7": 0.0979,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 57,
+        "R2": 3,
+        "R3": 32,
+        "R4": 10
+      },
+      "event_count": 513,
+      "ratios": {
+        "R1": 3.263,
+        "R2": 0.667,
+        "R3": 3.083,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 3.263,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 57,
+          "baseline7": 14,
+          "ratio7": 3.263,
+          "share7": 0.1111,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0058,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 32,
+          "baseline7": 7,
+          "ratio7": 3.083,
+          "share7": 0.0624,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-baseline"
+        },
+        "R4": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0195,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2026-W05",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 4,
+        "R4": 0
+      },
+      "event_count": 53,
+      "ratios": {
+        "R1": 0.263,
+        "R2": 0.417,
+        "R3": 0.75,
+        "R4": 0.417
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 14,
+          "ratio7": 0.263,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0755,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below-threshold"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    },
+    {
+      "week": "2026-W06",
+      "name_en": "Belize",
+      "counts": {
+        "R1": 34,
+        "R2": 0,
+        "R3": 29,
+        "R4": 5
+      },
+      "event_count": 495,
+      "ratios": {
+        "R1": 2.053,
+        "R2": 0.417,
+        "R3": 2.833,
+        "R4": 0.833
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "fallback_5y",
+        "R3": "calmest3y",
+        "R4": "fallback_5y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 2.833,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 34,
+          "baseline7": 14,
+          "ratio7": 2.053,
+          "share7": 0.0687,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        },
+        "R3": {
+          "today7": 29,
+          "baseline7": 7,
+          "ratio7": 2.833,
+          "share7": 0.0586,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0101,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "low-abs"
+        }
+      }
+    }
+  ]
+}

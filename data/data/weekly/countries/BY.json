@@ -1,0 +1,6053 @@
+{
+  "iso2": "BY",
+  "generated_at": "2026-01-23T02:28:15.685Z",
+  "weeks_total": 52,
+  "weeks_available": 52,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 189,
+        "R2": 26,
+        "R3": 365,
+        "R4": 49
+      },
+      "event_count": 4268,
+      "ratios": {
+        "R1": 1.078,
+        "R2": 2.583,
+        "R3": 2.327,
+        "R4": 1.35
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.327,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 189,
+          "baseline7": 175,
+          "ratio7": 1.078,
+          "share7": 0.0443,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 26,
+          "baseline7": 7,
+          "ratio7": 2.583,
+          "share7": 0.0061,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 365,
+          "baseline7": 154,
+          "ratio7": 2.327,
+          "share7": 0.0855,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 49,
+          "baseline7": 35,
+          "ratio7": 1.35,
+          "share7": 0.0115,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 111,
+        "R2": 7,
+        "R3": 175,
+        "R4": 91
+      },
+      "event_count": 3433,
+      "ratios": {
+        "R1": 0.644,
+        "R2": 1,
+        "R3": 1.132,
+        "R4": 2.4
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 111,
+          "baseline7": 175,
+          "ratio7": 0.644,
+          "share7": 0.0323,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 175,
+          "baseline7": 154,
+          "ratio7": 1.132,
+          "share7": 0.051,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 91,
+          "baseline7": 35,
+          "ratio7": 2.4,
+          "share7": 0.0265,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 117,
+        "R2": 16,
+        "R3": 135,
+        "R4": 43
+      },
+      "event_count": 2051,
+      "ratios": {
+        "R1": 0.678,
+        "R2": 1.75,
+        "R3": 0.881,
+        "R4": 1.2
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 117,
+          "baseline7": 175,
+          "ratio7": 0.678,
+          "share7": 0.057,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0078,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 135,
+          "baseline7": 154,
+          "ratio7": 0.881,
+          "share7": 0.0658,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 43,
+          "baseline7": 35,
+          "ratio7": 1.2,
+          "share7": 0.021,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 153,
+        "R2": 11,
+        "R3": 198,
+        "R4": 81
+      },
+      "event_count": 3200,
+      "ratios": {
+        "R1": 0.878,
+        "R2": 1.333,
+        "R3": 1.277,
+        "R4": 2.15
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 153,
+          "baseline7": 175,
+          "ratio7": 0.878,
+          "share7": 0.0478,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0034,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 198,
+          "baseline7": 154,
+          "ratio7": 1.277,
+          "share7": 0.0619,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 81,
+          "baseline7": 35,
+          "ratio7": 2.15,
+          "share7": 0.0253,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 102,
+        "R2": 9,
+        "R3": 57,
+        "R4": 40
+      },
+      "event_count": 2521,
+      "ratios": {
+        "R1": 0.594,
+        "R2": 1.167,
+        "R3": 0.39,
+        "R4": 1.125
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 102,
+          "baseline7": 175,
+          "ratio7": 0.594,
+          "share7": 0.0405,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0036,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 57,
+          "baseline7": 154,
+          "ratio7": 0.39,
+          "share7": 0.0226,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 40,
+          "baseline7": 35,
+          "ratio7": 1.125,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 89,
+        "R2": 4,
+        "R3": 69,
+        "R4": 36
+      },
+      "event_count": 2379,
+      "ratios": {
+        "R1": 0.522,
+        "R2": 0.75,
+        "R3": 0.465,
+        "R4": 1.025
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 89,
+          "baseline7": 175,
+          "ratio7": 0.522,
+          "share7": 0.0374,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 69,
+          "baseline7": 154,
+          "ratio7": 0.465,
+          "share7": 0.029,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 36,
+          "baseline7": 35,
+          "ratio7": 1.025,
+          "share7": 0.0151,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 108,
+        "R2": 4,
+        "R3": 101,
+        "R4": 49
+      },
+      "event_count": 3098,
+      "ratios": {
+        "R1": 0.628,
+        "R2": 0.75,
+        "R3": 0.667,
+        "R4": 1.35
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 108,
+          "baseline7": 175,
+          "ratio7": 0.628,
+          "share7": 0.0349,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0013,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 101,
+          "baseline7": 154,
+          "ratio7": 0.667,
+          "share7": 0.0326,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 49,
+          "baseline7": 35,
+          "ratio7": 1.35,
+          "share7": 0.0158,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 149,
+        "R2": 19,
+        "R3": 79,
+        "R4": 56
+      },
+      "event_count": 3499,
+      "ratios": {
+        "R1": 0.856,
+        "R2": 2,
+        "R3": 0.528,
+        "R4": 1.525
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 149,
+          "baseline7": 175,
+          "ratio7": 0.856,
+          "share7": 0.0426,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 19,
+          "baseline7": 7,
+          "ratio7": 2,
+          "share7": 0.0054,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 79,
+          "baseline7": 154,
+          "ratio7": 0.528,
+          "share7": 0.0226,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 56,
+          "baseline7": 35,
+          "ratio7": 1.525,
+          "share7": 0.016,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 111,
+        "R2": 7,
+        "R3": 196,
+        "R4": 38
+      },
+      "event_count": 2501,
+      "ratios": {
+        "R1": 0.644,
+        "R2": 1,
+        "R3": 1.264,
+        "R4": 1.075
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 111,
+          "baseline7": 175,
+          "ratio7": 0.644,
+          "share7": 0.0444,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 196,
+          "baseline7": 154,
+          "ratio7": 1.264,
+          "share7": 0.0784,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 38,
+          "baseline7": 35,
+          "ratio7": 1.075,
+          "share7": 0.0152,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 207,
+        "R2": 46,
+        "R3": 140,
+        "R4": 57
+      },
+      "event_count": 2652,
+      "ratios": {
+        "R1": 1.178,
+        "R2": 4.25,
+        "R3": 0.912,
+        "R4": 1.55
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Red",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 207,
+          "baseline7": 175,
+          "ratio7": 1.178,
+          "share7": 0.0781,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 46,
+          "baseline7": 7,
+          "ratio7": 4.25,
+          "share7": 0.0173,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": true,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 140,
+          "baseline7": 154,
+          "ratio7": 0.912,
+          "share7": 0.0528,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 57,
+          "baseline7": 35,
+          "ratio7": 1.55,
+          "share7": 0.0215,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 113,
+        "R2": 16,
+        "R3": 107,
+        "R4": 30
+      },
+      "event_count": 2194,
+      "ratios": {
+        "R1": 0.656,
+        "R2": 1.75,
+        "R3": 0.704,
+        "R4": 0.875
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 113,
+          "baseline7": 175,
+          "ratio7": 0.656,
+          "share7": 0.0515,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0073,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 107,
+          "baseline7": 154,
+          "ratio7": 0.704,
+          "share7": 0.0488,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 30,
+          "baseline7": 35,
+          "ratio7": 0.875,
+          "share7": 0.0137,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 100,
+        "R2": 4,
+        "R3": 105,
+        "R4": 36
+      },
+      "event_count": 2809,
+      "ratios": {
+        "R1": 0.583,
+        "R2": 0.75,
+        "R3": 0.692,
+        "R4": 1.025
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 100,
+          "baseline7": 175,
+          "ratio7": 0.583,
+          "share7": 0.0356,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.0014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 105,
+          "baseline7": 154,
+          "ratio7": 0.692,
+          "share7": 0.0374,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 36,
+          "baseline7": 35,
+          "ratio7": 1.025,
+          "share7": 0.0128,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 144,
+        "R2": 7,
+        "R3": 157,
+        "R4": 40
+      },
+      "event_count": 2433,
+      "ratios": {
+        "R1": 0.828,
+        "R2": 1,
+        "R3": 1.019,
+        "R4": 1.125
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 144,
+          "baseline7": 175,
+          "ratio7": 0.828,
+          "share7": 0.0592,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0029,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 157,
+          "baseline7": 154,
+          "ratio7": 1.019,
+          "share7": 0.0645,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 40,
+          "baseline7": 35,
+          "ratio7": 1.125,
+          "share7": 0.0164,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 136,
+        "R2": 2,
+        "R3": 110,
+        "R4": 35
+      },
+      "event_count": 2196,
+      "ratios": {
+        "R1": 0.783,
+        "R2": 0.583,
+        "R3": 0.723,
+        "R4": 1
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 136,
+          "baseline7": 175,
+          "ratio7": 0.783,
+          "share7": 0.0619,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0009,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 110,
+          "baseline7": 154,
+          "ratio7": 0.723,
+          "share7": 0.0501,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 35,
+          "baseline7": 35,
+          "ratio7": 1,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 125,
+        "R2": 3,
+        "R3": 125,
+        "R4": 13
+      },
+      "event_count": 2092,
+      "ratios": {
+        "R1": 0.722,
+        "R2": 0.667,
+        "R3": 0.818,
+        "R4": 0.45
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 125,
+          "baseline7": 175,
+          "ratio7": 0.722,
+          "share7": 0.0598,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 3,
+          "baseline7": 7,
+          "ratio7": 0.667,
+          "share7": 0.0014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 125,
+          "baseline7": 154,
+          "ratio7": 0.818,
+          "share7": 0.0598,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 13,
+          "baseline7": 35,
+          "ratio7": 0.45,
+          "share7": 0.0062,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 134,
+        "R2": 5,
+        "R3": 158,
+        "R4": 26
+      },
+      "event_count": 3005,
+      "ratios": {
+        "R1": 0.772,
+        "R2": 0.833,
+        "R3": 1.025,
+        "R4": 0.775
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 134,
+          "baseline7": 175,
+          "ratio7": 0.772,
+          "share7": 0.0446,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 158,
+          "baseline7": 154,
+          "ratio7": 1.025,
+          "share7": 0.0526,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 26,
+          "baseline7": 35,
+          "ratio7": 0.775,
+          "share7": 0.0087,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 149,
+        "R2": 11,
+        "R3": 75,
+        "R4": 36
+      },
+      "event_count": 2863,
+      "ratios": {
+        "R1": 0.856,
+        "R2": 1.333,
+        "R3": 0.503,
+        "R4": 1.025
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 149,
+          "baseline7": 175,
+          "ratio7": 0.856,
+          "share7": 0.052,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0038,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 75,
+          "baseline7": 154,
+          "ratio7": 0.503,
+          "share7": 0.0262,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 36,
+          "baseline7": 35,
+          "ratio7": 1.025,
+          "share7": 0.0126,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 121,
+        "R2": 9,
+        "R3": 140,
+        "R4": 28
+      },
+      "event_count": 2849,
+      "ratios": {
+        "R1": 0.7,
+        "R2": 1.167,
+        "R3": 0.912,
+        "R4": 0.825
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 121,
+          "baseline7": 175,
+          "ratio7": 0.7,
+          "share7": 0.0425,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0032,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 140,
+          "baseline7": 154,
+          "ratio7": 0.912,
+          "share7": 0.0491,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 28,
+          "baseline7": 35,
+          "ratio7": 0.825,
+          "share7": 0.0098,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 155,
+        "R2": 5,
+        "R3": 82,
+        "R4": 25
+      },
+      "event_count": 2364,
+      "ratios": {
+        "R1": 0.889,
+        "R2": 0.833,
+        "R3": 0.547,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 155,
+          "baseline7": 175,
+          "ratio7": 0.889,
+          "share7": 0.0656,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0021,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 82,
+          "baseline7": 154,
+          "ratio7": 0.547,
+          "share7": 0.0347,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 35,
+          "ratio7": 0.75,
+          "share7": 0.0106,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 137,
+        "R2": 4,
+        "R3": 96,
+        "R4": 20
+      },
+      "event_count": 1996,
+      "ratios": {
+        "R1": 0.789,
+        "R2": 0.75,
+        "R3": 0.635,
+        "R4": 0.625
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 137,
+          "baseline7": 175,
+          "ratio7": 0.789,
+          "share7": 0.0686,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 4,
+          "baseline7": 7,
+          "ratio7": 0.75,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 96,
+          "baseline7": 154,
+          "ratio7": 0.635,
+          "share7": 0.0481,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 20,
+          "baseline7": 35,
+          "ratio7": 0.625,
+          "share7": 0.01,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 78,
+        "R2": 6,
+        "R3": 73,
+        "R4": 22
+      },
+      "event_count": 1651,
+      "ratios": {
+        "R1": 0.461,
+        "R2": 0.917,
+        "R3": 0.491,
+        "R4": 0.675
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 78,
+          "baseline7": 175,
+          "ratio7": 0.461,
+          "share7": 0.0472,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0036,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 73,
+          "baseline7": 154,
+          "ratio7": 0.491,
+          "share7": 0.0442,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 22,
+          "baseline7": 35,
+          "ratio7": 0.675,
+          "share7": 0.0133,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 2
+      },
+      "event_count": 11,
+      "ratios": {
+        "R1": 0.028,
+        "R2": 0.417,
+        "R3": 0.031,
+        "R4": 0.175
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 175,
+          "ratio7": 0.028,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 154,
+          "ratio7": 0.031,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 2,
+          "baseline7": 35,
+          "ratio7": 0.175,
+          "share7": 0.1818,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 0,
+        "R4": 0
+      },
+      "event_count": 2,
+      "ratios": {
+        "R1": 0.028,
+        "R2": 0.417,
+        "R3": 0.031,
+        "R4": 0.125
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 175,
+          "ratio7": 0.028,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 7,
+          "ratio7": 0.417,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 0,
+          "baseline7": 154,
+          "ratio7": 0.031,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 35,
+          "ratio7": 0.125,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 108,
+        "R2": 1,
+        "R3": 91,
+        "R4": 25
+      },
+      "event_count": 1766,
+      "ratios": {
+        "R1": 0.628,
+        "R2": 0.5,
+        "R3": 0.604,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 108,
+          "baseline7": 175,
+          "ratio7": 0.628,
+          "share7": 0.0612,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 1,
+          "baseline7": 7,
+          "ratio7": 0.5,
+          "share7": 0.0006,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 91,
+          "baseline7": 154,
+          "ratio7": 0.604,
+          "share7": 0.0515,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 35,
+          "ratio7": 0.75,
+          "share7": 0.0142,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 92,
+        "R2": 6,
+        "R3": 86,
+        "R4": 24
+      },
+      "event_count": 2111,
+      "ratios": {
+        "R1": 0.539,
+        "R2": 0.917,
+        "R3": 0.572,
+        "R4": 0.725
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 92,
+          "baseline7": 175,
+          "ratio7": 0.539,
+          "share7": 0.0436,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 86,
+          "baseline7": 154,
+          "ratio7": 0.572,
+          "share7": 0.0407,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 24,
+          "baseline7": 35,
+          "ratio7": 0.725,
+          "share7": 0.0114,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 139,
+        "R2": 12,
+        "R3": 95,
+        "R4": 78
+      },
+      "event_count": 2450,
+      "ratios": {
+        "R1": 0.8,
+        "R2": 1.417,
+        "R3": 0.629,
+        "R4": 2.075
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 139,
+          "baseline7": 175,
+          "ratio7": 0.8,
+          "share7": 0.0567,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0049,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 95,
+          "baseline7": 154,
+          "ratio7": 0.629,
+          "share7": 0.0388,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 78,
+          "baseline7": 35,
+          "ratio7": 2.075,
+          "share7": 0.0318,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 67,
+        "R2": 15,
+        "R3": 101,
+        "R4": 29
+      },
+      "event_count": 2085,
+      "ratios": {
+        "R1": 0.4,
+        "R2": 1.667,
+        "R3": 0.667,
+        "R4": 0.85
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 67,
+          "baseline7": 175,
+          "ratio7": 0.4,
+          "share7": 0.0321,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0072,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 101,
+          "baseline7": 154,
+          "ratio7": 0.667,
+          "share7": 0.0484,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 29,
+          "baseline7": 35,
+          "ratio7": 0.85,
+          "share7": 0.0139,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 173,
+        "R2": 10,
+        "R3": 100,
+        "R4": 42
+      },
+      "event_count": 3062,
+      "ratios": {
+        "R1": 0.989,
+        "R2": 1.25,
+        "R3": 0.66,
+        "R4": 1.175
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 173,
+          "baseline7": 175,
+          "ratio7": 0.989,
+          "share7": 0.0565,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 10,
+          "baseline7": 7,
+          "ratio7": 1.25,
+          "share7": 0.0033,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 100,
+          "baseline7": 154,
+          "ratio7": 0.66,
+          "share7": 0.0327,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 42,
+          "baseline7": 35,
+          "ratio7": 1.175,
+          "share7": 0.0137,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 140,
+        "R2": 9,
+        "R3": 157,
+        "R4": 25
+      },
+      "event_count": 3541,
+      "ratios": {
+        "R1": 0.806,
+        "R2": 1.167,
+        "R3": 1.019,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 140,
+          "baseline7": 175,
+          "ratio7": 0.806,
+          "share7": 0.0395,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0025,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 157,
+          "baseline7": 154,
+          "ratio7": 1.019,
+          "share7": 0.0443,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 35,
+          "ratio7": 0.75,
+          "share7": 0.0071,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 144,
+        "R2": 12,
+        "R3": 115,
+        "R4": 49
+      },
+      "event_count": 3856,
+      "ratios": {
+        "R1": 0.828,
+        "R2": 1.417,
+        "R3": 0.755,
+        "R4": 1.35
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 144,
+          "baseline7": 175,
+          "ratio7": 0.828,
+          "share7": 0.0373,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0031,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 115,
+          "baseline7": 154,
+          "ratio7": 0.755,
+          "share7": 0.0298,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 49,
+          "baseline7": 35,
+          "ratio7": 1.35,
+          "share7": 0.0127,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 170,
+        "R2": 6,
+        "R3": 102,
+        "R4": 31
+      },
+      "event_count": 4023,
+      "ratios": {
+        "R1": 0.972,
+        "R2": 0.917,
+        "R3": 0.673,
+        "R4": 0.9
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 170,
+          "baseline7": 175,
+          "ratio7": 0.972,
+          "share7": 0.0423,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 102,
+          "baseline7": 154,
+          "ratio7": 0.673,
+          "share7": 0.0254,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 31,
+          "baseline7": 35,
+          "ratio7": 0.9,
+          "share7": 0.0077,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 146,
+        "R2": 7,
+        "R3": 126,
+        "R4": 55
+      },
+      "event_count": 3053,
+      "ratios": {
+        "R1": 0.839,
+        "R2": 1,
+        "R3": 0.824,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 146,
+          "baseline7": 175,
+          "ratio7": 0.839,
+          "share7": 0.0478,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0023,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 126,
+          "baseline7": 154,
+          "ratio7": 0.824,
+          "share7": 0.0413,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 55,
+          "baseline7": 35,
+          "ratio7": 1.5,
+          "share7": 0.018,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 99,
+        "R2": 7,
+        "R3": 118,
+        "R4": 55
+      },
+      "event_count": 3157,
+      "ratios": {
+        "R1": 0.578,
+        "R2": 1,
+        "R3": 0.774,
+        "R4": 1.5
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 99,
+          "baseline7": 175,
+          "ratio7": 0.578,
+          "share7": 0.0314,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 118,
+          "baseline7": 154,
+          "ratio7": 0.774,
+          "share7": 0.0374,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 55,
+          "baseline7": 35,
+          "ratio7": 1.5,
+          "share7": 0.0174,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 521,
+        "R2": 9,
+        "R3": 619,
+        "R4": 72
+      },
+      "event_count": 8089,
+      "ratios": {
+        "R1": 2.922,
+        "R2": 1.167,
+        "R3": 3.925,
+        "R4": 1.925
+      },
+      "levels": {
+        "R1": "Orange",
+        "R2": "None",
+        "R3": "Red",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3+R4",
+      "overall_level": "Red",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "red",
+        "max_ratio_active": 3.925,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 521,
+          "baseline7": 175,
+          "ratio7": 2.922,
+          "share7": 0.0644,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0472,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0011,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0275,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 619,
+          "baseline7": 154,
+          "ratio7": 3.925,
+          "share7": 0.0765,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0354,
+          "share_gate_mode": "dynamic",
+          "red_override_used": true,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 72,
+          "baseline7": 35,
+          "ratio7": 1.925,
+          "share7": 0.0089,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0314,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 265,
+        "R2": 16,
+        "R3": 314,
+        "R4": 34
+      },
+      "event_count": 5683,
+      "ratios": {
+        "R1": 1.5,
+        "R2": 1.75,
+        "R3": 2.006,
+        "R4": 0.975
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.006,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 265,
+          "baseline7": 175,
+          "ratio7": 1.5,
+          "share7": 0.0466,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0563,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 16,
+          "baseline7": 7,
+          "ratio7": 1.75,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0328,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 314,
+          "baseline7": 154,
+          "ratio7": 2.006,
+          "share7": 0.0553,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0422,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 34,
+          "baseline7": 35,
+          "ratio7": 0.975,
+          "share7": 0.006,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0375,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 148,
+        "R2": 8,
+        "R3": 123,
+        "R4": 33
+      },
+      "event_count": 3776,
+      "ratios": {
+        "R1": 0.85,
+        "R2": 1.083,
+        "R3": 0.805,
+        "R4": 0.95
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 148,
+          "baseline7": 175,
+          "ratio7": 0.85,
+          "share7": 0.0392,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 8,
+          "baseline7": 7,
+          "ratio7": 1.083,
+          "share7": 0.0021,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 123,
+          "baseline7": 154,
+          "ratio7": 0.805,
+          "share7": 0.0326,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 33,
+          "baseline7": 35,
+          "ratio7": 0.95,
+          "share7": 0.0087,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 135,
+        "R2": 7,
+        "R3": 113,
+        "R4": 26
+      },
+      "event_count": 3018,
+      "ratios": {
+        "R1": 0.778,
+        "R2": 1,
+        "R3": 0.742,
+        "R4": 0.775
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 135,
+          "baseline7": 175,
+          "ratio7": 0.778,
+          "share7": 0.0447,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0023,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 113,
+          "baseline7": 154,
+          "ratio7": 0.742,
+          "share7": 0.0374,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 26,
+          "baseline7": 35,
+          "ratio7": 0.775,
+          "share7": 0.0086,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 175,
+        "R2": 2,
+        "R3": 94,
+        "R4": 21
+      },
+      "event_count": 2783,
+      "ratios": {
+        "R1": 1,
+        "R2": 0.583,
+        "R3": 0.623,
+        "R4": 0.65
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 175,
+          "baseline7": 175,
+          "ratio7": 1,
+          "share7": 0.0629,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 2,
+          "baseline7": 7,
+          "ratio7": 0.583,
+          "share7": 0.0007,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 94,
+          "baseline7": 154,
+          "ratio7": 0.623,
+          "share7": 0.0338,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 21,
+          "baseline7": 35,
+          "ratio7": 0.65,
+          "share7": 0.0075,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 157,
+        "R2": 17,
+        "R3": 97,
+        "R4": 38
+      },
+      "event_count": 2649,
+      "ratios": {
+        "R1": 0.9,
+        "R2": 1.833,
+        "R3": 0.642,
+        "R4": 1.075
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 157,
+          "baseline7": 175,
+          "ratio7": 0.9,
+          "share7": 0.0593,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 17,
+          "baseline7": 7,
+          "ratio7": 1.833,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 97,
+          "baseline7": 154,
+          "ratio7": 0.642,
+          "share7": 0.0366,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 38,
+          "baseline7": 35,
+          "ratio7": 1.075,
+          "share7": 0.0143,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 126,
+        "R2": 6,
+        "R3": 237,
+        "R4": 37
+      },
+      "event_count": 3031,
+      "ratios": {
+        "R1": 0.728,
+        "R2": 0.917,
+        "R3": 1.522,
+        "R4": 1.05
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 126,
+          "baseline7": 175,
+          "ratio7": 0.728,
+          "share7": 0.0416,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 237,
+          "baseline7": 154,
+          "ratio7": 1.522,
+          "share7": 0.0782,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 37,
+          "baseline7": 35,
+          "ratio7": 1.05,
+          "share7": 0.0122,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 225,
+        "R2": 6,
+        "R3": 337,
+        "R4": 86
+      },
+      "event_count": 4200,
+      "ratios": {
+        "R1": 1.278,
+        "R2": 0.917,
+        "R3": 2.151,
+        "R4": 2.275
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Yellow"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.151,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 225,
+          "baseline7": 175,
+          "ratio7": 1.278,
+          "share7": 0.0536,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 6,
+          "baseline7": 7,
+          "ratio7": 0.917,
+          "share7": 0.0014,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 337,
+          "baseline7": 154,
+          "ratio7": 2.151,
+          "share7": 0.0802,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 86,
+          "baseline7": 35,
+          "ratio7": 2.275,
+          "share7": 0.0205,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 120,
+        "R2": 7,
+        "R3": 224,
+        "R4": 49
+      },
+      "event_count": 3138,
+      "ratios": {
+        "R1": 0.694,
+        "R2": 1,
+        "R3": 1.44,
+        "R4": 1.35
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 120,
+          "baseline7": 175,
+          "ratio7": 0.694,
+          "share7": 0.0382,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 7,
+          "baseline7": 7,
+          "ratio7": 1,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 224,
+          "baseline7": 154,
+          "ratio7": 1.44,
+          "share7": 0.0714,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 49,
+          "baseline7": 35,
+          "ratio7": 1.35,
+          "share7": 0.0156,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 107,
+        "R2": 11,
+        "R3": 184,
+        "R4": 31
+      },
+      "event_count": 3125,
+      "ratios": {
+        "R1": 0.622,
+        "R2": 1.333,
+        "R3": 1.189,
+        "R4": 0.9
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 107,
+          "baseline7": 175,
+          "ratio7": 0.622,
+          "share7": 0.0342,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0035,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 184,
+          "baseline7": 154,
+          "ratio7": 1.189,
+          "share7": 0.0589,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 31,
+          "baseline7": 35,
+          "ratio7": 0.9,
+          "share7": 0.0099,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 152,
+        "R2": 15,
+        "R3": 323,
+        "R4": 25
+      },
+      "event_count": 3906,
+      "ratios": {
+        "R1": 0.872,
+        "R2": 1.667,
+        "R3": 2.063,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.063,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 152,
+          "baseline7": 175,
+          "ratio7": 0.872,
+          "share7": 0.0389,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 15,
+          "baseline7": 7,
+          "ratio7": 1.667,
+          "share7": 0.0038,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 323,
+          "baseline7": 154,
+          "ratio7": 2.063,
+          "share7": 0.0827,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 35,
+          "ratio7": 0.75,
+          "share7": 0.0064,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 120,
+        "R2": 12,
+        "R3": 182,
+        "R4": 23
+      },
+      "event_count": 3562,
+      "ratios": {
+        "R1": 0.694,
+        "R2": 1.417,
+        "R3": 1.176,
+        "R4": 0.7
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 120,
+          "baseline7": 175,
+          "ratio7": 0.694,
+          "share7": 0.0337,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 12,
+          "baseline7": 7,
+          "ratio7": 1.417,
+          "share7": 0.0034,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 182,
+          "baseline7": 154,
+          "ratio7": 1.176,
+          "share7": 0.0511,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 23,
+          "baseline7": 35,
+          "ratio7": 0.7,
+          "share7": 0.0065,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 125,
+        "R2": 9,
+        "R3": 160,
+        "R4": 46
+      },
+      "event_count": 2772,
+      "ratios": {
+        "R1": 0.722,
+        "R2": 1.167,
+        "R3": 1.038,
+        "R4": 1.275
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 125,
+          "baseline7": 175,
+          "ratio7": 0.722,
+          "share7": 0.0451,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0032,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 160,
+          "baseline7": 154,
+          "ratio7": 1.038,
+          "share7": 0.0577,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 46,
+          "baseline7": 35,
+          "ratio7": 1.275,
+          "share7": 0.0166,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 154,
+        "R2": 9,
+        "R3": 334,
+        "R4": 125
+      },
+      "event_count": 5274,
+      "ratios": {
+        "R1": 0.883,
+        "R2": 1.167,
+        "R3": 2.132,
+        "R4": 3.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3+R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.132,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 154,
+          "baseline7": 175,
+          "ratio7": 0.883,
+          "share7": 0.0292,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0584,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0341,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 334,
+          "baseline7": 154,
+          "ratio7": 2.132,
+          "share7": 0.0633,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0438,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 125,
+          "baseline7": 35,
+          "ratio7": 3.25,
+          "share7": 0.0237,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0389,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 188,
+        "R2": 9,
+        "R3": 232,
+        "R4": 125
+      },
+      "event_count": 4087,
+      "ratios": {
+        "R1": 1.072,
+        "R2": 1.167,
+        "R3": 1.491,
+        "R4": 3.25
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "Orange"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R4",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 188,
+          "baseline7": 175,
+          "ratio7": 1.072,
+          "share7": 0.046,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 232,
+          "baseline7": 154,
+          "ratio7": 1.491,
+          "share7": 0.0568,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 125,
+          "baseline7": 35,
+          "ratio7": 3.25,
+          "share7": 0.0306,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 159,
+        "R2": 11,
+        "R3": 93,
+        "R4": 32
+      },
+      "event_count": 2121,
+      "ratios": {
+        "R1": 0.911,
+        "R2": 1.333,
+        "R3": 0.616,
+        "R4": 0.925
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 159,
+          "baseline7": 175,
+          "ratio7": 0.911,
+          "share7": 0.075,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 11,
+          "baseline7": 7,
+          "ratio7": 1.333,
+          "share7": 0.0052,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 93,
+          "baseline7": 154,
+          "ratio7": 0.616,
+          "share7": 0.0438,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 32,
+          "baseline7": 35,
+          "ratio7": 0.925,
+          "share7": 0.0151,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 286,
+        "R2": 5,
+        "R3": 109,
+        "R4": 25
+      },
+      "event_count": 2301,
+      "ratios": {
+        "R1": 1.617,
+        "R2": 0.833,
+        "R3": 0.717,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 286,
+          "baseline7": 175,
+          "ratio7": 1.617,
+          "share7": 0.1243,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 109,
+          "baseline7": 154,
+          "ratio7": 0.717,
+          "share7": 0.0474,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 25,
+          "baseline7": 35,
+          "ratio7": 0.75,
+          "share7": 0.0109,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 94,
+        "R2": 5,
+        "R3": 70,
+        "R4": 16
+      },
+      "event_count": 1170,
+      "ratios": {
+        "R1": 0.55,
+        "R2": 0.833,
+        "R3": 0.472,
+        "R4": 0.525
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 94,
+          "baseline7": 175,
+          "ratio7": 0.55,
+          "share7": 0.0803,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 7,
+          "ratio7": 0.833,
+          "share7": 0.0043,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 70,
+          "baseline7": 154,
+          "ratio7": 0.472,
+          "share7": 0.0598,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 16,
+          "baseline7": 35,
+          "ratio7": 0.525,
+          "share7": 0.0137,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "Belarus",
+      "counts": {
+        "R1": 113,
+        "R2": 9,
+        "R3": 79,
+        "R4": 26
+      },
+      "event_count": 1678,
+      "ratios": {
+        "R1": 0.656,
+        "R2": 1.167,
+        "R3": 0.528,
+        "R4": 0.775
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 113,
+          "baseline7": 175,
+          "ratio7": 0.656,
+          "share7": 0.0673,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 9,
+          "baseline7": 7,
+          "ratio7": 1.167,
+          "share7": 0.0054,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": false,
+          "is_active": false,
+          "reason": "unstable_baseline"
+        },
+        "R3": {
+          "today7": 79,
+          "baseline7": 154,
+          "ratio7": 0.528,
+          "share7": 0.0471,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 26,
+          "baseline7": 35,
+          "ratio7": 0.775,
+          "share7": 0.0155,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    }
+  ]
+}
