@@ -1,0 +1,6061 @@
+{
+  "iso2": "KR",
+  "generated_at": "2026-01-23T02:28:16.438Z",
+  "weeks_total": 52,
+  "weeks_available": 52,
+  "history": [
+    {
+      "week": "2025-W04",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 517,
+        "R2": 26,
+        "R3": 784,
+        "R4": 96
+      },
+      "event_count": 9691,
+      "ratios": {
+        "R1": 1.27,
+        "R2": 0.939,
+        "R3": 2.768,
+        "R4": 0.815
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.768,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 517,
+          "baseline7": 406,
+          "ratio7": 1.27,
+          "share7": 0.0533,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0431,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 26,
+          "baseline7": 28,
+          "ratio7": 0.939,
+          "share7": 0.0027,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0251,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 784,
+          "baseline7": 280,
+          "ratio7": 2.768,
+          "share7": 0.0809,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0323,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 96,
+          "baseline7": 119,
+          "ratio7": 0.815,
+          "share7": 0.0099,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W05",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 327,
+        "R2": 17,
+        "R3": 374,
+        "R4": 49
+      },
+      "event_count": 5478,
+      "ratios": {
+        "R1": 0.808,
+        "R2": 0.667,
+        "R3": 1.33,
+        "R4": 0.435
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 327,
+          "baseline7": 406,
+          "ratio7": 0.808,
+          "share7": 0.0597,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0573,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 17,
+          "baseline7": 28,
+          "ratio7": 0.667,
+          "share7": 0.0031,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0334,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 374,
+          "baseline7": 280,
+          "ratio7": 1.33,
+          "share7": 0.0683,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.043,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 49,
+          "baseline7": 119,
+          "ratio7": 0.435,
+          "share7": 0.0089,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0382,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W06",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 382,
+        "R2": 19,
+        "R3": 510,
+        "R4": 89
+      },
+      "event_count": 7963,
+      "ratios": {
+        "R1": 0.942,
+        "R2": 0.727,
+        "R3": 1.807,
+        "R4": 0.758
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.807,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 382,
+          "baseline7": 406,
+          "ratio7": 0.942,
+          "share7": 0.048,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0475,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 19,
+          "baseline7": 28,
+          "ratio7": 0.727,
+          "share7": 0.0024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0277,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 510,
+          "baseline7": 280,
+          "ratio7": 1.807,
+          "share7": 0.064,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0357,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 89,
+          "baseline7": 119,
+          "ratio7": 0.758,
+          "share7": 0.0112,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W07",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 500,
+        "R2": 24,
+        "R3": 420,
+        "R4": 114
+      },
+      "event_count": 8440,
+      "ratios": {
+        "R1": 1.229,
+        "R2": 0.879,
+        "R3": 1.491,
+        "R4": 0.96
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 500,
+          "baseline7": 406,
+          "ratio7": 1.229,
+          "share7": 0.0592,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0462,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 24,
+          "baseline7": 28,
+          "ratio7": 0.879,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0269,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 420,
+          "baseline7": 280,
+          "ratio7": 1.491,
+          "share7": 0.0498,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0346,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 114,
+          "baseline7": 119,
+          "ratio7": 0.96,
+          "share7": 0.0135,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0308,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W08",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 407,
+        "R2": 22,
+        "R3": 483,
+        "R4": 106
+      },
+      "event_count": 8760,
+      "ratios": {
+        "R1": 1.002,
+        "R2": 0.818,
+        "R3": 1.712,
+        "R4": 0.895
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 407,
+          "baseline7": 406,
+          "ratio7": 1.002,
+          "share7": 0.0465,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0453,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 22,
+          "baseline7": 28,
+          "ratio7": 0.818,
+          "share7": 0.0025,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0264,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 483,
+          "baseline7": 280,
+          "ratio7": 1.712,
+          "share7": 0.0551,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.034,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 106,
+          "baseline7": 119,
+          "ratio7": 0.895,
+          "share7": 0.0121,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0302,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W09",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 442,
+        "R2": 27,
+        "R3": 365,
+        "R4": 120
+      },
+      "event_count": 8160,
+      "ratios": {
+        "R1": 1.088,
+        "R2": 0.97,
+        "R3": 1.298,
+        "R4": 1.008
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 442,
+          "baseline7": 406,
+          "ratio7": 1.088,
+          "share7": 0.0542,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.047,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 27,
+          "baseline7": 28,
+          "ratio7": 0.97,
+          "share7": 0.0033,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0274,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 365,
+          "baseline7": 280,
+          "ratio7": 1.298,
+          "share7": 0.0447,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0352,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 120,
+          "baseline7": 119,
+          "ratio7": 1.008,
+          "share7": 0.0147,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W10",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 752,
+        "R2": 28,
+        "R3": 478,
+        "R4": 117
+      },
+      "event_count": 9815,
+      "ratios": {
+        "R1": 1.842,
+        "R2": 1,
+        "R3": 1.695,
+        "R4": 0.984
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.842,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 752,
+          "baseline7": 406,
+          "ratio7": 1.842,
+          "share7": 0.0766,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0428,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 28,
+          "baseline7": 28,
+          "ratio7": 1,
+          "share7": 0.0029,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.025,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 478,
+          "baseline7": 280,
+          "ratio7": 1.695,
+          "share7": 0.0487,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0321,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 117,
+          "baseline7": 119,
+          "ratio7": 0.984,
+          "share7": 0.0119,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0285,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W11",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 646,
+        "R2": 21,
+        "R3": 450,
+        "R4": 124
+      },
+      "event_count": 9106,
+      "ratios": {
+        "R1": 1.584,
+        "R2": 0.788,
+        "R3": 1.596,
+        "R4": 1.04
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 646,
+          "baseline7": 406,
+          "ratio7": 1.584,
+          "share7": 0.0709,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0445,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 21,
+          "baseline7": 28,
+          "ratio7": 0.788,
+          "share7": 0.0023,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0259,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 450,
+          "baseline7": 280,
+          "ratio7": 1.596,
+          "share7": 0.0494,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0333,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 124,
+          "baseline7": 119,
+          "ratio7": 1.04,
+          "share7": 0.0136,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0296,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W12",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 494,
+        "R2": 26,
+        "R3": 426,
+        "R4": 121
+      },
+      "event_count": 9602,
+      "ratios": {
+        "R1": 1.214,
+        "R2": 0.939,
+        "R3": 1.512,
+        "R4": 1.016
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 494,
+          "baseline7": 406,
+          "ratio7": 1.214,
+          "share7": 0.0514,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0433,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 26,
+          "baseline7": 28,
+          "ratio7": 0.939,
+          "share7": 0.0027,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0253,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 426,
+          "baseline7": 280,
+          "ratio7": 1.512,
+          "share7": 0.0444,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0325,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 121,
+          "baseline7": 119,
+          "ratio7": 1.016,
+          "share7": 0.0126,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0289,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W13",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 857,
+        "R2": 80,
+        "R3": 583,
+        "R4": 118
+      },
+      "event_count": 11201,
+      "ratios": {
+        "R1": 2.097,
+        "R2": 2.576,
+        "R3": 2.063,
+        "R4": 0.992
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "Yellow",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R2+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.097,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 857,
+          "baseline7": 406,
+          "ratio7": 2.097,
+          "share7": 0.0765,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0401,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 80,
+          "baseline7": 28,
+          "ratio7": 2.576,
+          "share7": 0.0071,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0234,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 583,
+          "baseline7": 280,
+          "ratio7": 2.063,
+          "share7": 0.052,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 118,
+          "baseline7": 119,
+          "ratio7": 0.992,
+          "share7": 0.0105,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0267,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W14",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 553,
+        "R2": 25,
+        "R3": 578,
+        "R4": 102
+      },
+      "event_count": 10970,
+      "ratios": {
+        "R1": 1.358,
+        "R2": 0.909,
+        "R3": 2.046,
+        "R4": 0.863
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.046,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 553,
+          "baseline7": 406,
+          "ratio7": 1.358,
+          "share7": 0.0504,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0405,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 25,
+          "baseline7": 28,
+          "ratio7": 0.909,
+          "share7": 0.0023,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0236,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 578,
+          "baseline7": 280,
+          "ratio7": 2.046,
+          "share7": 0.0527,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0304,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 102,
+          "baseline7": 119,
+          "ratio7": 0.863,
+          "share7": 0.0093,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.027,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W15",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 453,
+        "R2": 38,
+        "R3": 344,
+        "R4": 117
+      },
+      "event_count": 9221,
+      "ratios": {
+        "R1": 1.114,
+        "R2": 1.303,
+        "R3": 1.225,
+        "R4": 0.984
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 453,
+          "baseline7": 406,
+          "ratio7": 1.114,
+          "share7": 0.0491,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0442,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 38,
+          "baseline7": 28,
+          "ratio7": 1.303,
+          "share7": 0.0041,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0258,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 344,
+          "baseline7": 280,
+          "ratio7": 1.225,
+          "share7": 0.0373,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0331,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 117,
+          "baseline7": 119,
+          "ratio7": 0.984,
+          "share7": 0.0127,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0295,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W16",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 480,
+        "R2": 20,
+        "R3": 340,
+        "R4": 104
+      },
+      "event_count": 8325,
+      "ratios": {
+        "R1": 1.18,
+        "R2": 0.758,
+        "R3": 1.211,
+        "R4": 0.879
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 480,
+          "baseline7": 406,
+          "ratio7": 1.18,
+          "share7": 0.0577,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0465,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 20,
+          "baseline7": 28,
+          "ratio7": 0.758,
+          "share7": 0.0024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0271,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 340,
+          "baseline7": 280,
+          "ratio7": 1.211,
+          "share7": 0.0408,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0349,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 104,
+          "baseline7": 119,
+          "ratio7": 0.879,
+          "share7": 0.0125,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.031,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W17",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 481,
+        "R2": 18,
+        "R3": 391,
+        "R4": 114
+      },
+      "event_count": 8882,
+      "ratios": {
+        "R1": 1.182,
+        "R2": 0.697,
+        "R3": 1.389,
+        "R4": 0.96
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 481,
+          "baseline7": 406,
+          "ratio7": 1.182,
+          "share7": 0.0542,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 18,
+          "baseline7": 28,
+          "ratio7": 0.697,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0263,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 391,
+          "baseline7": 280,
+          "ratio7": 1.389,
+          "share7": 0.044,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0338,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 114,
+          "baseline7": 119,
+          "ratio7": 0.96,
+          "share7": 0.0128,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.03,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W18",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 733,
+        "R2": 22,
+        "R3": 342,
+        "R4": 77
+      },
+      "event_count": 9748,
+      "ratios": {
+        "R1": 1.796,
+        "R2": 0.818,
+        "R3": 1.218,
+        "R4": 0.661
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 1.796,
+        "active_types": [
+          "R1"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 733,
+          "baseline7": 406,
+          "ratio7": 1.796,
+          "share7": 0.0752,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.043,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 22,
+          "baseline7": 28,
+          "ratio7": 0.818,
+          "share7": 0.0023,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0251,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 342,
+          "baseline7": 280,
+          "ratio7": 1.218,
+          "share7": 0.0351,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0322,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 77,
+          "baseline7": 119,
+          "ratio7": 0.661,
+          "share7": 0.0079,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0286,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W19",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 464,
+        "R2": 22,
+        "R3": 227,
+        "R4": 83
+      },
+      "event_count": 7774,
+      "ratios": {
+        "R1": 1.141,
+        "R2": 0.818,
+        "R3": 0.814,
+        "R4": 0.71
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 464,
+          "baseline7": 406,
+          "ratio7": 1.141,
+          "share7": 0.0597,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0481,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 22,
+          "baseline7": 28,
+          "ratio7": 0.818,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0281,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 227,
+          "baseline7": 280,
+          "ratio7": 0.814,
+          "share7": 0.0292,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0361,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 83,
+          "baseline7": 119,
+          "ratio7": 0.71,
+          "share7": 0.0107,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0321,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W20",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 318,
+        "R2": 38,
+        "R3": 268,
+        "R4": 108
+      },
+      "event_count": 8063,
+      "ratios": {
+        "R1": 0.786,
+        "R2": 1.303,
+        "R3": 0.958,
+        "R4": 0.911
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 318,
+          "baseline7": 406,
+          "ratio7": 0.786,
+          "share7": 0.0394,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0472,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 38,
+          "baseline7": 28,
+          "ratio7": 1.303,
+          "share7": 0.0047,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0276,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 268,
+          "baseline7": 280,
+          "ratio7": 0.958,
+          "share7": 0.0332,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0354,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 108,
+          "baseline7": 119,
+          "ratio7": 0.911,
+          "share7": 0.0134,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0315,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W21",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 417,
+        "R2": 5,
+        "R3": 275,
+        "R4": 88
+      },
+      "event_count": 8234,
+      "ratios": {
+        "R1": 1.027,
+        "R2": 0.303,
+        "R3": 0.982,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 417,
+          "baseline7": 406,
+          "ratio7": 1.027,
+          "share7": 0.0506,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0468,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 5,
+          "baseline7": 28,
+          "ratio7": 0.303,
+          "share7": 0.0006,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0273,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 275,
+          "baseline7": 280,
+          "ratio7": 0.982,
+          "share7": 0.0334,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0351,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 88,
+          "baseline7": 119,
+          "ratio7": 0.75,
+          "share7": 0.0107,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0312,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W22",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 453,
+        "R2": 20,
+        "R3": 361,
+        "R4": 120
+      },
+      "event_count": 8458,
+      "ratios": {
+        "R1": 1.114,
+        "R2": 0.758,
+        "R3": 1.284,
+        "R4": 1.008
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 453,
+          "baseline7": 406,
+          "ratio7": 1.114,
+          "share7": 0.0536,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0461,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 20,
+          "baseline7": 28,
+          "ratio7": 0.758,
+          "share7": 0.0024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0269,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 361,
+          "baseline7": 280,
+          "ratio7": 1.284,
+          "share7": 0.0427,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0346,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 120,
+          "baseline7": 119,
+          "ratio7": 1.008,
+          "share7": 0.0142,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0308,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W23",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 369,
+        "R2": 18,
+        "R3": 383,
+        "R4": 89
+      },
+      "event_count": 9222,
+      "ratios": {
+        "R1": 0.91,
+        "R2": 0.697,
+        "R3": 1.361,
+        "R4": 0.758
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 369,
+          "baseline7": 406,
+          "ratio7": 0.91,
+          "share7": 0.04,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0442,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 18,
+          "baseline7": 28,
+          "ratio7": 0.697,
+          "share7": 0.002,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0258,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 383,
+          "baseline7": 280,
+          "ratio7": 1.361,
+          "share7": 0.0415,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0331,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 89,
+          "baseline7": 119,
+          "ratio7": 0.758,
+          "share7": 0.0097,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0295,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W24",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 278,
+        "R2": 30,
+        "R3": 246,
+        "R4": 84
+      },
+      "event_count": 7123,
+      "ratios": {
+        "R1": 0.689,
+        "R2": 1.061,
+        "R3": 0.881,
+        "R4": 0.718
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 278,
+          "baseline7": 406,
+          "ratio7": 0.689,
+          "share7": 0.039,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0503,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 30,
+          "baseline7": 28,
+          "ratio7": 1.061,
+          "share7": 0.0042,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0293,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 246,
+          "baseline7": 280,
+          "ratio7": 0.881,
+          "share7": 0.0345,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0377,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 84,
+          "baseline7": 119,
+          "ratio7": 0.718,
+          "share7": 0.0118,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0335,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W25",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 2,
+        "R2": 0,
+        "R3": 5,
+        "R4": 0
+      },
+      "event_count": 126,
+      "ratios": {
+        "R1": 0.017,
+        "R2": 0.152,
+        "R3": 0.035,
+        "R4": 0.04
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 2,
+          "baseline7": 406,
+          "ratio7": 0.017,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 28,
+          "ratio7": 0.152,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 5,
+          "baseline7": 280,
+          "ratio7": 0.035,
+          "share7": 0.0397,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 119,
+          "ratio7": 0.04,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W26",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 0,
+        "R2": 0,
+        "R3": 9,
+        "R4": 0
+      },
+      "event_count": 174,
+      "ratios": {
+        "R1": 0.012,
+        "R2": 0.152,
+        "R3": 0.049,
+        "R4": 0.04
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 0,
+          "baseline7": 406,
+          "ratio7": 0.012,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.06,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 0,
+          "baseline7": 28,
+          "ratio7": 0.152,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.035,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 9,
+          "baseline7": 280,
+          "ratio7": 0.049,
+          "share7": 0.0517,
+          "abs_hit": false,
+          "share_hit": true,
+          "share_thr_used": 0.045,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 0,
+          "baseline7": 119,
+          "ratio7": 0.04,
+          "share7": 0,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.04,
+          "share_gate_mode": "fixed",
+          "red_override_used": false,
+          "high_vol": false,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W27",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 236,
+        "R2": 13,
+        "R3": 198,
+        "R4": 86
+      },
+      "event_count": 5355,
+      "ratios": {
+        "R1": 0.586,
+        "R2": 0.545,
+        "R3": 0.712,
+        "R4": 0.734
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 236,
+          "baseline7": 406,
+          "ratio7": 0.586,
+          "share7": 0.0441,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.058,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 13,
+          "baseline7": 28,
+          "ratio7": 0.545,
+          "share7": 0.0024,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0338,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 198,
+          "baseline7": 280,
+          "ratio7": 0.712,
+          "share7": 0.037,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0435,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 86,
+          "baseline7": 119,
+          "ratio7": 0.734,
+          "share7": 0.0161,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0387,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W28",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 409,
+        "R2": 19,
+        "R3": 385,
+        "R4": 115
+      },
+      "event_count": 10097,
+      "ratios": {
+        "R1": 1.007,
+        "R2": 0.727,
+        "R3": 1.368,
+        "R4": 0.968
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 409,
+          "baseline7": 406,
+          "ratio7": 1.007,
+          "share7": 0.0405,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0422,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 19,
+          "baseline7": 28,
+          "ratio7": 0.727,
+          "share7": 0.0019,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0246,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 385,
+          "baseline7": 280,
+          "ratio7": 1.368,
+          "share7": 0.0381,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 115,
+          "baseline7": 119,
+          "ratio7": 0.968,
+          "share7": 0.0114,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0281,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W29",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 463,
+        "R2": 45,
+        "R3": 387,
+        "R4": 125
+      },
+      "event_count": 8307,
+      "ratios": {
+        "R1": 1.139,
+        "R2": 1.515,
+        "R3": 1.375,
+        "R4": 1.048
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 463,
+          "baseline7": 406,
+          "ratio7": 1.139,
+          "share7": 0.0557,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0465,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 45,
+          "baseline7": 28,
+          "ratio7": 1.515,
+          "share7": 0.0054,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0272,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 387,
+          "baseline7": 280,
+          "ratio7": 1.375,
+          "share7": 0.0466,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0349,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 125,
+          "baseline7": 119,
+          "ratio7": 1.048,
+          "share7": 0.015,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.031,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W30",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 623,
+        "R2": 32,
+        "R3": 273,
+        "R4": 142
+      },
+      "event_count": 8304,
+      "ratios": {
+        "R1": 1.528,
+        "R2": 1.121,
+        "R3": 0.975,
+        "R4": 1.185
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 623,
+          "baseline7": 406,
+          "ratio7": 1.528,
+          "share7": 0.075,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0466,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 32,
+          "baseline7": 28,
+          "ratio7": 1.121,
+          "share7": 0.0039,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0272,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 273,
+          "baseline7": 280,
+          "ratio7": 0.975,
+          "share7": 0.0329,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0349,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 142,
+          "baseline7": 119,
+          "ratio7": 1.185,
+          "share7": 0.0171,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.031,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W31",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 361,
+        "R2": 21,
+        "R3": 289,
+        "R4": 157
+      },
+      "event_count": 9498,
+      "ratios": {
+        "R1": 0.891,
+        "R2": 0.788,
+        "R3": 1.032,
+        "R4": 1.306
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 361,
+          "baseline7": 406,
+          "ratio7": 0.891,
+          "share7": 0.038,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0435,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 21,
+          "baseline7": 28,
+          "ratio7": 0.788,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0254,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 289,
+          "baseline7": 280,
+          "ratio7": 1.032,
+          "share7": 0.0304,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0326,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 157,
+          "baseline7": 119,
+          "ratio7": 1.306,
+          "share7": 0.0165,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.029,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W32",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 335,
+        "R2": 38,
+        "R3": 338,
+        "R4": 126
+      },
+      "event_count": 7942,
+      "ratios": {
+        "R1": 0.827,
+        "R2": 1.303,
+        "R3": 1.204,
+        "R4": 1.056
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 335,
+          "baseline7": 406,
+          "ratio7": 0.827,
+          "share7": 0.0422,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0476,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 38,
+          "baseline7": 28,
+          "ratio7": 1.303,
+          "share7": 0.0048,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0278,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 338,
+          "baseline7": 280,
+          "ratio7": 1.204,
+          "share7": 0.0426,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0357,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 126,
+          "baseline7": 119,
+          "ratio7": 1.056,
+          "share7": 0.0159,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W33",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 437,
+        "R2": 27,
+        "R3": 444,
+        "R4": 141
+      },
+      "event_count": 9779,
+      "ratios": {
+        "R1": 1.075,
+        "R2": 0.97,
+        "R3": 1.575,
+        "R4": 1.177
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 437,
+          "baseline7": 406,
+          "ratio7": 1.075,
+          "share7": 0.0447,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0429,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 27,
+          "baseline7": 28,
+          "ratio7": 0.97,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.025,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 444,
+          "baseline7": 280,
+          "ratio7": 1.575,
+          "share7": 0.0454,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0322,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 141,
+          "baseline7": 119,
+          "ratio7": 1.177,
+          "share7": 0.0144,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0286,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W34",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 591,
+        "R2": 33,
+        "R3": 356,
+        "R4": 139
+      },
+      "event_count": 10506,
+      "ratios": {
+        "R1": 1.45,
+        "R2": 1.152,
+        "R3": 1.267,
+        "R4": 1.161
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 591,
+          "baseline7": 406,
+          "ratio7": 1.45,
+          "share7": 0.0563,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0414,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 33,
+          "baseline7": 28,
+          "ratio7": 1.152,
+          "share7": 0.0031,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0241,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 356,
+          "baseline7": 280,
+          "ratio7": 1.267,
+          "share7": 0.0339,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.031,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 139,
+          "baseline7": 119,
+          "ratio7": 1.161,
+          "share7": 0.0132,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0276,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W35",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 408,
+        "R2": 34,
+        "R3": 481,
+        "R4": 151
+      },
+      "event_count": 11211,
+      "ratios": {
+        "R1": 1.005,
+        "R2": 1.182,
+        "R3": 1.705,
+        "R4": 1.258
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 408,
+          "baseline7": 406,
+          "ratio7": 1.005,
+          "share7": 0.0364,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0401,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 34,
+          "baseline7": 28,
+          "ratio7": 1.182,
+          "share7": 0.003,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0234,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 481,
+          "baseline7": 280,
+          "ratio7": 1.705,
+          "share7": 0.0429,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0301,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 151,
+          "baseline7": 119,
+          "ratio7": 1.258,
+          "share7": 0.0135,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0267,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W36",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 728,
+        "R2": 40,
+        "R3": 732,
+        "R4": 139
+      },
+      "event_count": 11566,
+      "ratios": {
+        "R1": 1.783,
+        "R2": 1.364,
+        "R3": 2.586,
+        "R4": 1.161
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.586,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 728,
+          "baseline7": 406,
+          "ratio7": 1.783,
+          "share7": 0.0629,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0394,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 40,
+          "baseline7": 28,
+          "ratio7": 1.364,
+          "share7": 0.0035,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.023,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 732,
+          "baseline7": 280,
+          "ratio7": 2.586,
+          "share7": 0.0633,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0296,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 139,
+          "baseline7": 119,
+          "ratio7": 1.161,
+          "share7": 0.012,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0263,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W37",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 952,
+        "R2": 21,
+        "R3": 837,
+        "R4": 150
+      },
+      "event_count": 12397,
+      "ratios": {
+        "R1": 2.328,
+        "R2": 0.788,
+        "R3": 2.954,
+        "R4": 1.25
+      },
+      "levels": {
+        "R1": "Yellow",
+        "R2": "None",
+        "R3": "Orange",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R1+R3",
+      "overall_level": "Orange",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "orange",
+        "max_ratio_active": 2.954,
+        "active_types": [
+          "R1",
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 952,
+          "baseline7": 406,
+          "ratio7": 2.328,
+          "share7": 0.0768,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0381,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R2": {
+          "today7": 21,
+          "baseline7": 28,
+          "ratio7": 0.788,
+          "share7": 0.0017,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0222,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 837,
+          "baseline7": 280,
+          "ratio7": 2.954,
+          "share7": 0.0675,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0286,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 150,
+          "baseline7": 119,
+          "ratio7": 1.25,
+          "share7": 0.0121,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0254,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W38",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 464,
+        "R2": 25,
+        "R3": 431,
+        "R4": 146
+      },
+      "event_count": 9487,
+      "ratios": {
+        "R1": 1.141,
+        "R2": 0.909,
+        "R3": 1.53,
+        "R4": 1.218
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 464,
+          "baseline7": 406,
+          "ratio7": 1.141,
+          "share7": 0.0489,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0436,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 25,
+          "baseline7": 28,
+          "ratio7": 0.909,
+          "share7": 0.0026,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0254,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 431,
+          "baseline7": 280,
+          "ratio7": 1.53,
+          "share7": 0.0454,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0327,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 146,
+          "baseline7": 119,
+          "ratio7": 1.218,
+          "share7": 0.0154,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.029,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W39",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 415,
+        "R2": 25,
+        "R3": 326,
+        "R4": 164
+      },
+      "event_count": 9469,
+      "ratios": {
+        "R1": 1.022,
+        "R2": 0.909,
+        "R3": 1.161,
+        "R4": 1.363
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 415,
+          "baseline7": 406,
+          "ratio7": 1.022,
+          "share7": 0.0438,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0436,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 25,
+          "baseline7": 28,
+          "ratio7": 0.909,
+          "share7": 0.0026,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0254,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 326,
+          "baseline7": 280,
+          "ratio7": 1.161,
+          "share7": 0.0344,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0327,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 164,
+          "baseline7": 119,
+          "ratio7": 1.363,
+          "share7": 0.0173,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0291,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W40",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 386,
+        "R2": 28,
+        "R3": 283,
+        "R4": 134
+      },
+      "event_count": 7782,
+      "ratios": {
+        "R1": 0.951,
+        "R2": 1,
+        "R3": 1.011,
+        "R4": 1.121
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 386,
+          "baseline7": 406,
+          "ratio7": 0.951,
+          "share7": 0.0496,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0481,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 28,
+          "baseline7": 28,
+          "ratio7": 1,
+          "share7": 0.0036,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0281,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 283,
+          "baseline7": 280,
+          "ratio7": 1.011,
+          "share7": 0.0364,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0361,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 134,
+          "baseline7": 119,
+          "ratio7": 1.121,
+          "share7": 0.0172,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0321,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W41",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 302,
+        "R2": 35,
+        "R3": 229,
+        "R4": 71
+      },
+      "event_count": 6240,
+      "ratios": {
+        "R1": 0.747,
+        "R2": 1.212,
+        "R3": 0.821,
+        "R4": 0.613
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 302,
+          "baseline7": 406,
+          "ratio7": 0.747,
+          "share7": 0.0484,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0537,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 35,
+          "baseline7": 28,
+          "ratio7": 1.212,
+          "share7": 0.0056,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0313,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 229,
+          "baseline7": 280,
+          "ratio7": 0.821,
+          "share7": 0.0367,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0403,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 71,
+          "baseline7": 119,
+          "ratio7": 0.613,
+          "share7": 0.0114,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0358,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W42",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 450,
+        "R2": 46,
+        "R3": 373,
+        "R4": 143
+      },
+      "event_count": 9596,
+      "ratios": {
+        "R1": 1.107,
+        "R2": 1.545,
+        "R3": 1.326,
+        "R4": 1.194
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 450,
+          "baseline7": 406,
+          "ratio7": 1.107,
+          "share7": 0.0469,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0433,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 46,
+          "baseline7": 28,
+          "ratio7": 1.545,
+          "share7": 0.0048,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0253,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 373,
+          "baseline7": 280,
+          "ratio7": 1.326,
+          "share7": 0.0389,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0325,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 143,
+          "baseline7": 119,
+          "ratio7": 1.194,
+          "share7": 0.0149,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0289,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W43",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 577,
+        "R2": 50,
+        "R3": 382,
+        "R4": 170
+      },
+      "event_count": 12494,
+      "ratios": {
+        "R1": 1.416,
+        "R2": 1.667,
+        "R3": 1.358,
+        "R4": 1.411
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 577,
+          "baseline7": 406,
+          "ratio7": 1.416,
+          "share7": 0.0462,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.038,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 50,
+          "baseline7": 28,
+          "ratio7": 1.667,
+          "share7": 0.004,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0221,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 382,
+          "baseline7": 280,
+          "ratio7": 1.358,
+          "share7": 0.0306,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0285,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 170,
+          "baseline7": 119,
+          "ratio7": 1.411,
+          "share7": 0.0136,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0253,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W44",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 548,
+        "R2": 45,
+        "R3": 382,
+        "R4": 158
+      },
+      "event_count": 20653,
+      "ratios": {
+        "R1": 1.345,
+        "R2": 1.515,
+        "R3": 1.358,
+        "R4": 1.315
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 548,
+          "baseline7": 406,
+          "ratio7": 1.345,
+          "share7": 0.0265,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0295,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 45,
+          "baseline7": 28,
+          "ratio7": 1.515,
+          "share7": 0.0022,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0172,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 382,
+          "baseline7": 280,
+          "ratio7": 1.358,
+          "share7": 0.0185,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0221,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 158,
+          "baseline7": 119,
+          "ratio7": 1.315,
+          "share7": 0.0077,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0197,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W45",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 494,
+        "R2": 55,
+        "R3": 227,
+        "R4": 164
+      },
+      "event_count": 9688,
+      "ratios": {
+        "R1": 1.214,
+        "R2": 1.818,
+        "R3": 0.814,
+        "R4": 1.363
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 494,
+          "baseline7": 406,
+          "ratio7": 1.214,
+          "share7": 0.051,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0431,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 55,
+          "baseline7": 28,
+          "ratio7": 1.818,
+          "share7": 0.0057,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0251,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 227,
+          "baseline7": 280,
+          "ratio7": 0.814,
+          "share7": 0.0234,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0323,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 164,
+          "baseline7": 119,
+          "ratio7": 1.363,
+          "share7": 0.0169,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W46",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 387,
+        "R2": 28,
+        "R3": 318,
+        "R4": 129
+      },
+      "event_count": 8355,
+      "ratios": {
+        "R1": 0.954,
+        "R2": 1,
+        "R3": 1.133,
+        "R4": 1.081
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 387,
+          "baseline7": 406,
+          "ratio7": 0.954,
+          "share7": 0.0463,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0464,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 28,
+          "baseline7": 28,
+          "ratio7": 1,
+          "share7": 0.0034,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0271,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 318,
+          "baseline7": 280,
+          "ratio7": 1.133,
+          "share7": 0.0381,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0348,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 129,
+          "baseline7": 119,
+          "ratio7": 1.081,
+          "share7": 0.0154,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0309,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W47",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 353,
+        "R2": 64,
+        "R3": 265,
+        "R4": 113
+      },
+      "event_count": 8382,
+      "ratios": {
+        "R1": 0.871,
+        "R2": 2.091,
+        "R3": 0.947,
+        "R4": 0.952
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "Yellow",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R2",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 353,
+          "baseline7": 406,
+          "ratio7": 0.871,
+          "share7": 0.0421,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0463,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 64,
+          "baseline7": 28,
+          "ratio7": 2.091,
+          "share7": 0.0076,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.027,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 265,
+          "baseline7": 280,
+          "ratio7": 0.947,
+          "share7": 0.0316,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0348,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 113,
+          "baseline7": 119,
+          "ratio7": 0.952,
+          "share7": 0.0135,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0309,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W48",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 395,
+        "R2": 21,
+        "R3": 309,
+        "R4": 125
+      },
+      "event_count": 7433,
+      "ratios": {
+        "R1": 0.973,
+        "R2": 0.788,
+        "R3": 1.102,
+        "R4": 1.048
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 395,
+          "baseline7": 406,
+          "ratio7": 0.973,
+          "share7": 0.0531,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0492,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 21,
+          "baseline7": 28,
+          "ratio7": 0.788,
+          "share7": 0.0028,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 309,
+          "baseline7": 280,
+          "ratio7": 1.102,
+          "share7": 0.0416,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0369,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 125,
+          "baseline7": 119,
+          "ratio7": 1.048,
+          "share7": 0.0168,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0328,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W49",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 345,
+        "R2": 29,
+        "R3": 372,
+        "R4": 173
+      },
+      "event_count": 7505,
+      "ratios": {
+        "R1": 0.852,
+        "R2": 1.03,
+        "R3": 1.323,
+        "R4": 1.435
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 345,
+          "baseline7": 406,
+          "ratio7": 0.852,
+          "share7": 0.046,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.049,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 29,
+          "baseline7": 28,
+          "ratio7": 1.03,
+          "share7": 0.0039,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0286,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 372,
+          "baseline7": 280,
+          "ratio7": 1.323,
+          "share7": 0.0496,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0367,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 173,
+          "baseline7": 119,
+          "ratio7": 1.435,
+          "share7": 0.0231,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0326,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W50",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 344,
+        "R2": 32,
+        "R3": 339,
+        "R4": 151
+      },
+      "event_count": 7453,
+      "ratios": {
+        "R1": 0.849,
+        "R2": 1.121,
+        "R3": 1.207,
+        "R4": 1.258
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 344,
+          "baseline7": 406,
+          "ratio7": 0.849,
+          "share7": 0.0462,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0491,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 32,
+          "baseline7": 28,
+          "ratio7": 1.121,
+          "share7": 0.0043,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0287,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 339,
+          "baseline7": 280,
+          "ratio7": 1.207,
+          "share7": 0.0455,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0369,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 151,
+          "baseline7": 119,
+          "ratio7": 1.258,
+          "share7": 0.0203,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0328,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W51",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 392,
+        "R2": 30,
+        "R3": 323,
+        "R4": 154
+      },
+      "event_count": 7109,
+      "ratios": {
+        "R1": 0.966,
+        "R2": 1.061,
+        "R3": 1.151,
+        "R4": 1.282
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 392,
+          "baseline7": 406,
+          "ratio7": 0.966,
+          "share7": 0.0551,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0503,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 30,
+          "baseline7": 28,
+          "ratio7": 1.061,
+          "share7": 0.0042,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0294,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 323,
+          "baseline7": 280,
+          "ratio7": 1.151,
+          "share7": 0.0454,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0377,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 154,
+          "baseline7": 119,
+          "ratio7": 1.282,
+          "share7": 0.0217,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0335,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2025-W52",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 284,
+        "R2": 25,
+        "R3": 256,
+        "R4": 148
+      },
+      "event_count": 6207,
+      "ratios": {
+        "R1": 0.703,
+        "R2": 0.909,
+        "R3": 0.916,
+        "R4": 1.234
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 284,
+          "baseline7": 406,
+          "ratio7": 0.703,
+          "share7": 0.0458,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0539,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R2": {
+          "today7": 25,
+          "baseline7": 28,
+          "ratio7": 0.909,
+          "share7": 0.004,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0314,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 256,
+          "baseline7": 280,
+          "ratio7": 0.916,
+          "share7": 0.0412,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0404,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R4": {
+          "today7": 148,
+          "baseline7": 119,
+          "ratio7": 1.234,
+          "share7": 0.0238,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0359,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W01",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 373,
+        "R2": 28,
+        "R3": 215,
+        "R4": 102
+      },
+      "event_count": 6901,
+      "ratios": {
+        "R1": 0.92,
+        "R2": 1,
+        "R3": 0.772,
+        "R4": 0.863
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 373,
+          "baseline7": 406,
+          "ratio7": 0.92,
+          "share7": 0.0541,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0511,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 28,
+          "baseline7": 28,
+          "ratio7": 1,
+          "share7": 0.0041,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0298,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 215,
+          "baseline7": 280,
+          "ratio7": 0.772,
+          "share7": 0.0312,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0383,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 102,
+          "baseline7": 119,
+          "ratio7": 0.863,
+          "share7": 0.0148,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.034,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W02",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 392,
+        "R2": 24,
+        "R3": 250,
+        "R4": 88
+      },
+      "event_count": 7952,
+      "ratios": {
+        "R1": 0.966,
+        "R2": 0.879,
+        "R3": 0.895,
+        "R4": 0.75
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "None",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "",
+      "overall_level": "None",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "green",
+        "max_ratio_active": 0,
+        "active_types": [],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 392,
+          "baseline7": 406,
+          "ratio7": 0.966,
+          "share7": 0.0493,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0476,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "below_threshold"
+        },
+        "R2": {
+          "today7": 24,
+          "baseline7": 28,
+          "ratio7": 0.879,
+          "share7": 0.003,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0278,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 250,
+          "baseline7": 280,
+          "ratio7": 0.895,
+          "share7": 0.0314,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0357,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R4": {
+          "today7": 88,
+          "baseline7": 119,
+          "ratio7": 0.75,
+          "share7": 0.0111,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0317,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    },
+    {
+      "week": "2026-W03",
+      "name_en": "South Korea",
+      "counts": {
+        "R1": 304,
+        "R2": 21,
+        "R3": 627,
+        "R4": 117
+      },
+      "event_count": 8311,
+      "ratios": {
+        "R1": 0.752,
+        "R2": 0.788,
+        "R3": 2.218,
+        "R4": 0.984
+      },
+      "levels": {
+        "R1": "None",
+        "R2": "None",
+        "R3": "Yellow",
+        "R4": "None"
+      },
+      "thresholds": {
+        "yellow": 1.75,
+        "orange": 2.75,
+        "red": 3.75
+      },
+      "bundle": "R3",
+      "overall_level": "Yellow",
+      "baseline_modes": {
+        "R1": "calmest3y",
+        "R2": "calmest3y",
+        "R3": "calmest3y",
+        "R4": "calmest3y"
+      },
+      "smoothing_k": 5,
+      "weekly_surge_r": {
+        "level": "yellow",
+        "max_ratio_active": 2.218,
+        "active_types": [
+          "R3"
+        ],
+        "thresholds": {
+          "yellow": 1.75,
+          "orange": 2.75,
+          "red": 3.75
+        },
+        "smoothing_k": 5,
+        "high_volume_floor": 5000,
+        "min_baseline_median_for_surge": 3
+      },
+      "weekly_surge_r_by_type": {
+        "R1": {
+          "today7": 304,
+          "baseline7": 406,
+          "ratio7": 0.752,
+          "share7": 0.0366,
+          "abs_hit": true,
+          "share_hit": false,
+          "share_thr_used": 0.0465,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "highvol_abs_suppressed"
+        },
+        "R2": {
+          "today7": 21,
+          "baseline7": 28,
+          "ratio7": 0.788,
+          "share7": 0.0025,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.0271,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        },
+        "R3": {
+          "today7": 627,
+          "baseline7": 280,
+          "ratio7": 2.218,
+          "share7": 0.0754,
+          "abs_hit": true,
+          "share_hit": true,
+          "share_thr_used": 0.0349,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": true,
+          "is_stable": true,
+          "is_active": true,
+          "reason": "active"
+        },
+        "R4": {
+          "today7": 117,
+          "baseline7": 119,
+          "ratio7": 0.984,
+          "share7": 0.0141,
+          "abs_hit": false,
+          "share_hit": false,
+          "share_thr_used": 0.031,
+          "share_gate_mode": "dynamic",
+          "red_override_used": false,
+          "high_vol": true,
+          "triggered": false,
+          "is_stable": true,
+          "is_active": false,
+          "reason": "not_triggered"
+        }
+      }
+    }
+  ]
+}
