@@ -32,10 +32,18 @@ def read(ftp,name):
 def deploy(credentials,weekly=False):
     dist=ROOT/'dist'
     files=[]
-    for base in ['assets','country-interest','data/v2']+(['data/history/weekly_5y/releases'] if weekly else []):
+    for base in ['assets','country-interest','data/v2']:
         if (dist/base).is_dir():files.extend(p for p in (dist/base).rglob('*') if p.is_file())
     files+=[dist/'country-interest.js',dist/'country-interest.css',dist/'index.html']
-    if weekly:files.append(dist/'data/history/weekly_5y/index.json')
+    if weekly:
+        index_file=dist/'data/history/weekly_5y/index.json'
+        index=json.loads(index_file.read_bytes())
+        for record in index['countries']:
+            relative=PurePosixPath(record['path'])
+            if relative.is_absolute() or '..' in relative.parts or relative.parts[:2]!=('releases',index['epoch']):
+                raise ValueError('Weekly payload outside selected immutable epoch')
+            files.append(dist/'data/history/weekly_5y'/relative)
+        files.append(index_file)
     if not files or not (dist/'data/v2/latest.json').is_file():raise ValueError('Validated v2 build required')
     names={p.relative_to(dist).as_posix():p for p in files}
     # Freeze validated bytes before any transfer. A parallel build must not
