@@ -3,6 +3,8 @@ from datetime import datetime,timedelta,timezone
 from pathlib import Path
 import json,subprocess,sys
 from local_cycle import ROOT,dispose_read_cache
+from cycle_lock import publication_lock
+from contextlib import ExitStack
 
 
 def cycle(config,now=None):
@@ -14,9 +16,9 @@ def cycle(config,now=None):
     if receipt.is_file():
         old=json.loads(receipt.read_bytes())
         if old.get('status')=='verified':return {**old,'reused':True}
-    lock=ROOT/'.local/cycle.lock'
-    try:lock.open('x').close()
-    except FileExistsError:return {'status':'busy','pending_retained':True}
+    locks=ExitStack()
+    if not locks.enter_context(publication_lock(ROOT/'.local/publication.lock')):
+        locks.close();return {'status':'busy','pending_retained':True}
     try:
         source=folder/'source.json';report={'status':'running','week':week,'owner':'countryrisks-weekly','stages':[]}
         commands=[
@@ -37,4 +39,4 @@ def cycle(config,now=None):
         report={'status':'failed','error_type':type(error).__name__,'pending_retained':True};receipt.write_text(json.dumps(report)+'\n');return report
     finally:
         try:dispose_read_cache()
-        finally:lock.unlink(missing_ok=True)
+        finally:locks.close()

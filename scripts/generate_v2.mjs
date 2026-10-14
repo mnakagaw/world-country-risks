@@ -21,10 +21,12 @@ const contextPath=path.join(path.dirname(verifiedPath || inputPath),'article-cla
 const contextRaw=fs.existsSync(contextPath)?fs.readFileSync(contextPath):Buffer.from('{}'),contextHash=bytesHash(contextRaw),articleContext=JSON.parse(contextRaw);
 if(input.schema!=='country-risk-observations-v2'||input.code_system!=='FIPS 10-4'||!input.cutoff_utc||!['complete','partial'].includes(input.source_status))throw new Error('Invalid source contract');
 if(Date.parse(input.window?.end_utc)-Date.parse(input.window?.start_utc)!==48*3600000||input.window?.semantics!=='[start,end)'||input.window?.time_field!=='DATEADDED')throw new Error('Source population/window must be the fixed48h DATEADDED contract');
-const date=input.edition_date,dir=path.join(root,'public/data/v2'),historyPath=path.join(root,'.local/v2-history.json');
+const date=input.edition_date,dir=path.resolve(arg('--output-dir')||path.join(root,'public/data/v2')),historyPath=path.resolve(arg('--history')||path.join(root,'.local/v2-history.json'));
+if(input.cutoff_series==='execbrief-03-v1' && (!input.cutoff_utc.endsWith('18:00:00Z') || !input.upstream_sync || input.upstream_sync.date!==date || input.upstream_sync.cutoff_utc!==input.cutoff_utc))throw Error('ExecBrief synchronization binding mismatch');
 fs.mkdirSync(dir,{recursive:true});fs.mkdirSync(path.dirname(historyPath),{recursive:true});
 const history=fs.existsSync(historyPath)?JSON.parse(fs.readFileSync(historyPath)):{};
 const priorHistory=Object.fromEntries(Object.entries(history).filter(([day])=>day>=new Date(Date.parse(date)-14*86400000).toISOString().slice(0,10)&&day<date));
+if(input.cutoff_series==='execbrief-03-v1' && Object.values(priorHistory).some(h=>!h.cutoff_utc?.endsWith('18:00:00Z')))throw Error('Old05:00 baselines cannot enter the03:00 series');
 const baselineHash=hash(priorHistory);
 if(history[date]?.input_sha256===bytesHash(raw)&&history[date]?.computation_sha256===computationHash&&history[date]?.verified_input_sha256===verifiedHash&&history[date]?.annotation_input_sha256===contextHash&&history[date]?.baseline_input_sha256===baselineHash){
     console.log(JSON.stringify({status:'reused',snapshot_id:history[date].snapshot_id,history_days:Object.keys(history).length}));process.exit(0);
@@ -39,15 +41,16 @@ const urls={};for(const [code,items] of Object.entries(input.source_urls||{})){
     const iso=fipsToIso2(code).iso2;if(iso)urls[iso]=[...(urls[iso]||[]),...items];
 }
 const output={schema:'country-risk-snapshot-v2',engine_version:VERSION,method:METHOD,date,
-    cutoff_utc:input.cutoff_utc,generated_at:new Date().toISOString(),window:input.window,
+    cutoff_utc:input.cutoff_utc,generated_at:new Date().toISOString(),window:input.window,cutoff_series:input.cutoff_series||'legacy-05-v1',upstream_sync:input.upstream_sync||null,
     source_status:input.source_status,coverage:input.coverage,support_evidence:input.support_evidence,
     input_sha256:bytesHash(raw),verified_input_sha256:verifiedHash,annotation_input_sha256:contextHash,baseline_input_sha256:baselineHash,computation_sha256:computationHash,source_manifest_sha256:input.source_manifest_sha256,
-    method_change:'v2 separate series; no day-to-day comparison to legacy or mismatched baselines',
+    method_change:input.cutoff_series==='execbrief-03-v1'?'ExecBrief03:00 synchronization revision; old05:00 source/history preserved in a separate series, not day-to-day deterioration':'v2 separate series; no day-to-day comparison to legacy or mismatched baselines',
     metric:'GDELT Event table monitoring signals; not verified incident totals or measured state capacity',
     google_trends:[],polymarket:[],countries:{},confirmed_impacts:[],
     daily_briefing_ops:{en:'News-derived monitoring signals. Search interest and verified impact are separate.',ja:'報道由来の監視信号です。検索関心と確認済みの実影響は別に表示します。',es:'Señales de seguimiento derivadas de noticias. El interés de búsqueda y los impactos verificados se muestran por separado.'}};
 const comparisonAudit={};
 output.source_ledger=articleContext?.source_ledger || [];
+output.search_interest_daily=articleContext?.search_interest_daily || null;
 if(verifiedPath){const events=JSON.parse(verifiedRaw);const seen=new Set();
   for(const event of events){const valid=verifyImpact(event,input.window,arg('--verification-root'));if(seen.has(valid.event_id))continue;seen.add(valid.event_id);output.confirmed_impacts.push(valid);}}
 for(const [iso,name] of Object.entries(names)){
@@ -79,7 +82,7 @@ for(const [iso,name] of Object.entries(names)){
       mode_summaries:{surge_r:{en:`R-INDEX: ${rindex.level}; active R: ${active.join(', ')||'none'}; comparable R: ${availableTypes.join(', ')||'none'}. Active maximum: ${ratio??'unavailable'}.`,ja:`R-INDEX：${rindex.level}。発火した指標：${active.join(', ')||'なし'}。比較可能：${availableTypes.join(', ')||'なし'}。発火指標の最大倍率：${ratio??'比較不能'}。`,es:`R-INDEX: ${rindex.level}; activos: ${active.join(', ')||'ninguno'}; comparables: ${availableTypes.join(', ')||'ninguno'}. Máximo activo: ${ratio??'no disponible'}.`}},
       brief:{headline:text.en,what_happened:text.en,confidence:evaluation.confidence,sources:sources.map(s=>s.url)},
       explanation:explain,sources,gdelt:{...counts,domain_support:undefined,event_count:counts.event_count??0,observed_count_status:(counts.event_count??0)===0?'observed_zero':'observed',total_window_estimate:null,avg_tone:counts.avg_tone??null},
-      article_interpretations:(articleContext?.articles || []).filter(a=>a.country_locator===iso).map(a=>({article_id:a.stable_article_id,url:a.canonical_url,event_id:a.event_id,verification:a.body_verification,claims:a.r_claims.map(({original_excerpt_anchor,...claim})=>claim),body_sha256:a.body_sha256,policy_sha256:a.policy_sha256,source_publication_day:a.source_publication_day,scope_role:a.counts_role,public_reaction:'not_established'})),
+      article_interpretations:(articleContext?.articles || []).filter(a=>a.country_locator===iso).map(a=>({article_id:a.stable_article_id,url:a.canonical_url,event_id:a.event_id,title_localized:a.title_localized,summary_localized:a.translations,verification:a.body_verification,claims:a.r_claims.map(({original_excerpt_anchor,...claim})=>claim),body_sha256:a.body_sha256,policy_sha256:a.policy_sha256,source_publication_day:a.source_publication_day,scope_role:a.counts_role,public_reaction:'not_established'})),
       v4_scoring:signal||{level:'unknown',reason:'no_data',bundles:0},
       r_scores:signal?.r_scores_adj||{},r_scores_raw:signal?.r_scores_raw||{},
       index:{level:level,score:evaluation.display_score,method:evaluation.method,unit:evaluation.score_unit},

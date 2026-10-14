@@ -10,9 +10,10 @@ import argparse,json,os,subprocess,sys
 
 ROOT=Path(__file__).resolve().parents[1]
 
-def dispose_read_cache():
-    cache=(ROOT/'work/archive-objects').resolve()
-    if not cache.is_relative_to((ROOT/'work').resolve()):raise ValueError('Unsafe cache cleanup')
+def dispose_read_cache(root=None):
+    target_root=Path(root or ROOT)
+    cache=(target_root/'work/archive-objects').resolve()
+    if not cache.is_relative_to((target_root/'work').resolve()):raise ValueError('Unsafe cache cleanup')
     if not cache.exists():return
     if cache.is_junction() or cache.is_symlink():raise ValueError('Cache is a link')
     for file in cache.iterdir():

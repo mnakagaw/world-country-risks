@@ -1,7 +1,7 @@
 """Adapter for the existing shared Windows tick; no independent scheduler."""
 from pathlib import Path
 import argparse,json
-from local_cycle import cycle,ROOT
+from synced_cycle import cycle,ROOT
 
 
 def main():

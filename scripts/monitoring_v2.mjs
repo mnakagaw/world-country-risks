@@ -37,7 +37,7 @@ export function aggregateObservation(input) {
     const start=Date.parse(input.window.start_utc);
     const offsets=(input.input_artifacts || []).filter(row=>row.status==='available' && row.rows_rejected===0)
         .map(row=>Math.round((Date.parse(row.slot)-start)/900000));
-    return {data,stats,quarters,offsets};
+    return {data,stats,quarters,offsets,cutoff_utc:input.cutoff_utc,window:input.window};
 }
 
 export function temporalQuality(input) {
@@ -62,6 +62,7 @@ export function matchedReferences(current,history,date,country,policy={}) {
     for(const day of dates) {
         const past=history[day];if(!past?.quarters || !past.offsets)continue;
         if(past.method && past.method!==METHOD)continue;
+        if(current.cutoff_utc && (!past.cutoff_utc || new Date(past.cutoff_utc).toISOString().slice(11)!==new Date(current.cutoff_utc).toISOString().slice(11)))continue;
         const shared=past.offsets.filter(offset=>currentOffsets.has(offset));
         if(shared.length<expected/2)continue;
         const totals={current:{event_count:0},baseline:{event_count:0}};

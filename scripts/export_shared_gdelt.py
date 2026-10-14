@@ -23,7 +23,7 @@ def sha(path):
     return h.hexdigest()
 
 
-def artifacts(archive,start,end,columns=None,candidates=None,verified=None):
+def artifacts(archive,start,end,columns=None,candidates=None,verified=None,strict_candidates=False):
     candidates = candidates if candidates is not None else catalog(archive,start,end)[0]
     verified = verified if verified is not None else {}
     tasks=[];clock=start
@@ -46,6 +46,7 @@ def artifacts(archive,start,end,columns=None,candidates=None,verified=None):
                     verified[signature]=str(copy)
                 return {**option,'status':'available','read_path':verified[signature]}
             except (OSError,ValueError):pass
+        if strict_candidates:return {'slot':clock.isoformat(),'status':'missing','reason':'not_in_upstream_selected_raw_SHA_or_normalized_unavailable','rows_rejected':0}
         # Exact-quarter diagnosis is retained when the historical catalog has
         # no verified candidate. No failure is converted into an observed zero.
         folder=archive/'manifests'/clock.strftime('%Y-%m-%d')/(clock.strftime('%Y%m%dT%H%M%SZ')+'_'+(clock+timedelta(minutes=15)).strftime('%Y%m%dT%H%M%SZ'))
@@ -85,13 +86,13 @@ def condition(definition):
     return '('+' OR '.join(clauses)+')' if clauses else 'FALSE'
 
 
-def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,verified=None,quiet=False):
+def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,verified=None,quiet=False,strict_candidates=False):
     cutoff=cutoff.astimezone(timezone.utc)
     if cutoff.minute%15 or cutoff.second or cutoff.microsecond:raise ValueError('Cutoff must close a 15-minute boundary')
     if cutoff>datetime.now(timezone.utc):raise ValueError('Future cutoff')
     if hours not in (24,48,168):raise ValueError('Explicit 24h,48h or7d unit required')
     start=cutoff-timedelta(hours=hours)
-    rows=artifacts(archive,start,cutoff,candidates=candidates,verified=verified);available=[r for r in rows if r['status']=='available']
+    rows=artifacts(archive,start,cutoff,candidates=candidates,verified=verified,strict_candidates=strict_candidates);available=[r for r in rows if r['status']=='available']
     if not available:raise ValueError('No verified source artifacts; preserve previous snapshot')
     definitions=json.loads((ROOT/'config/r_definitions.json').read_text())
     db=duckdb.connect(':memory:');db.execute("SET memory_limit='512MB'");db.execute('SET threads=2')

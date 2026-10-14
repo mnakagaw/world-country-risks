@@ -1,14 +1,14 @@
 {
   "name": "world-country-risks",
   "private": true,
-  "version": "2.0.3",
+  "version": "2.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "generate": "node scripts/generate_v2.mjs",
     "generate:legacy": "node scripts/generate_daily.js",
-    "test:v2": "node --test tests/engine_v2.test.mjs tests/display.test.mjs tests/monitoring_v2.test.mjs tests/rindex_v2.test.mjs tests/r_bundles.test.mjs",
+    "test:v2": "node --test tests/engine_v2.test.mjs tests/display.test.mjs tests/monitoring_v2.test.mjs tests/rindex_v2.test.mjs tests/r_bundles.test.mjs tests/cutoff_sync.test.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "cost:baseline5y": "node scripts/bigquery/dryrun_5y_baseline_cost.mjs --years 5",

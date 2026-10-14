@@ -1,3 +1,5 @@
+Current daily synchronization: [ExecBrief03:00 gate and stage resume](EXECBRIEF_DAILY_SYNC.md).
+
 # CountryRisks v2.0.3: source, release and restoration
 
 Current assessment and acceptance contract: [RINDEX_V203.md](RINDEX_V203.md).

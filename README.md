@@ -1,3 +1,5 @@
+Current daily synchronization: [ExecBrief03:00 gate and stage resume](docs/EXECBRIEF_DAILY_SYNC.md). October15 onward; prior05:00 payloads retained.
+
 # Engine v2.0.3
 
 Current method: [R-INDEX purpose, modes, restored guards and design review](docs/RINDEX_V203.md).

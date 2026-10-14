@@ -9,8 +9,12 @@ cycle. CountryRisks and ExecBrief consume that selected version; never add anoth
 RSS collector or scheduler. Search geography is not event location and search
 traffic never changes a risk color directly.
 
-The daily v2 owner is the existing shared Windows Python tick at05:07 JST,
-with a fixed05:00 JST cutoff and the preceding48h half-open DATEADDED window.
+From October15,2026 the same countryrisks-daily owner checks at03:20 JST,
+then uses its existing native pending/retry mechanism every15 minutes until
+23:55 JST/max84 checks. Require the verified same-day ExecBrief publication,
+final acceptance/source SHA and03:00 JST seal before generation. Use the fixed
+48h DATEADDED window ending03:00 JST in a separate sync03 history namespace;
+never reuse the old05:00 receipt by date alone. Read docs/EXECBRIEF_DAILY_SYNC.md.
 The weekly owner uses the same tick on Monday11:00 JST for the completed UTC ISO
 week. Publish its immutable SHA-bound country epoch before replacing its index.
 It reads existing NAS normalized English Event artifacts by source/index/SHA;

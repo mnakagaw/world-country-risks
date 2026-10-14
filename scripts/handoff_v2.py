@@ -6,15 +6,18 @@ import json,os
 ROOT=Path(__file__).resolve().parents[1]
 
 
-def save(policy,source,publication):
+def save(policy,source,publication,upstream_bundle=None):
     nas=Path(policy['handoff_root']);nas.mkdir(parents=True,exist_ok=True)
     latest=json.loads((ROOT/'public/data/v2/latest.json').read_bytes())
     folder=nas/'daily'/latest['date']/latest['snapshot_id'];folder.mkdir(parents=True,exist_ok=True)
     files={
       'source.private.json':Path(source).read_bytes(),
       'snapshot.json':(ROOT/'public/data/v2/latest.json').read_bytes(),
-      'history.private.json':(ROOT/'.local/v2-history.json').read_bytes(),
+      'history.private.json':(Path(policy.get('series_root',ROOT/'.local'))/'v2-history.json').read_bytes(),
       'publication.json':(json.dumps(publication,indent=2)+'\n').encode()}
+    if upstream_bundle:
+        for file in Path(upstream_bundle).iterdir():
+            if file.is_file():files['upstream-'+file.name]=file.read_bytes()
     audit=ROOT/'.local/comparison-audits'/(latest['snapshot_id']+'.json')
     if audit.exists():files['comparison-audit.private.json']=audit.read_bytes()
     for name in ['baseline-reconstruction.json','baseline-sources/rebuild-receipt.json']:
