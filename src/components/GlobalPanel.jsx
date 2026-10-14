@@ -5,6 +5,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
     const scrollRef = useRef(null);
     const [levelFilter,setLevelFilter]=useState('all');
     const [countryQuery,setCountryQuery]=useState('');
+    const unfilteredEmpty=levelFilter==='all' && !countryQuery.trim();
 
     // 1) BRIEFING Logic
     const getBriefingContent = () => {
@@ -205,7 +206,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
             <div className="heat-list-section">
                 <div className="section-header">
                     <h3><span className="icon">📈</span> {t?.global?.heatList || 'Global Heat List'}</h3>
-                    <span className="badge">{sortedCountries.length ? `Top ${sortedCountries.length}` : viewMode === 'surge_r' ? t.global.noComparable : t.global.none}</span>
+                    <span className="badge">{sortedCountries.length ? `Top ${sortedCountries.length}` : viewMode === 'surge_r' && unfilteredEmpty ? t.global.noComparable : t.global.none}</span>
                 </div>
 
                 {riskData?.engine_version && <label className="level-filter">{t.global.levelFilter} <select value={levelFilter} onChange={event=>setLevelFilter(event.target.value)}>
@@ -214,8 +215,8 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
                 </select></label>}
                 {riskData?.engine_version && <label className="country-search"><input aria-label={t.global.countrySearch} placeholder={t.global.countrySearch} value={countryQuery} onChange={event=>setCountryQuery(event.target.value)} /></label>}
                 {sortedCountries.length === 0 && <div className="heat-list-empty" role="status">
-                    <p>{viewMode === 'surge_r' ? t.global.rIndexUnavailable : t.global.noHeat}</p>
-                    {viewMode === 'surge_r' && onViewModeChange && <button type="button" onClick={() => onViewModeChange('raw')}>{t.global.showRaw}</button>}
+                    <p>{!unfilteredEmpty ? t.global.noFilteredEntries : viewMode === 'surge_r' ? t.global.rIndexUnavailable : t.global.noHeat}</p>
+                    {viewMode === 'surge_r' && unfilteredEmpty && onViewModeChange && <button type="button" onClick={() => onViewModeChange('raw')}>{t.global.showRaw}</button>}
                 </div>}
                 {sortedCountries.length > 0 && <div className="heat-list-header">
                     <span className="col-rank">#</span>

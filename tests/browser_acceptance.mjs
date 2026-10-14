@@ -27,6 +27,7 @@ try{
     for(const value of ['red','orange','yellow','green','unknown']){
      await page.locator('.level-filter select').selectOption(value);const rows=await page.locator('.heat-list-item').evaluateAll(nodes=>nodes.map(n=>({iso:n.dataset.country,level:n.dataset.monitoringLevel})));
      assert.ok(snapshot.mode_counts[mode][value]===0?rows.length===0:rows.length>0);for(const r of rows)assert.equal(r.level,value);
+     if(snapshot.mode_counts[mode][value]===0){assert.match(await page.locator('.heat-list-empty').innerText(),/選択した|No countries match|Ningún país coincide/);assert.equal(await page.locator('.heat-list-empty button').count(),0);}
      if(rows.length){const p=await popup(rows[0].iso,mode);await p.locator('.modal-close').click();}checks.push({size,lang,mode,level:value,mapCountsListPopup:true});
     }
     await page.locator('.level-filter select').selectOption('all');
