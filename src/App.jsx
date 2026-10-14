@@ -6,6 +6,7 @@ import CountryModal from './components/CountryModal';
 import Header from './components/Header';
 import CountryDetailView from './components/CountryDetailView';
 import { translations, languages } from './i18n';
+import { alertCounts as countAlerts } from './display';
 import './Styles.css';
 
 // Reusable Dashboard Component
@@ -176,42 +177,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
         fetchData(newDate);
     }, []);
 
-    const getAlertCounts = () => {
-        if (!enrichedRiskData?.countries) return { red: 0, orange: 0, yellow: 0 };
-        const countries = Object.values(enrichedRiskData.countries);
-
-        if (viewMode === 'surge') {
-            return {
-                red: countries.filter(c => c.surge?.rank >= 1 && c.surge?.rank <= 10).length,
-                orange: countries.filter(c => c.surge?.rank >= 11 && c.surge?.rank <= 20).length,
-                yellow: countries.filter(c => c.surge?.rank >= 21 && c.surge?.rank <= 40).length
-            };
-        }
-
-        if (viewMode === 'surge_r') {
-            return {
-                red: countries.filter(c => c.surge_r?.level?.toLowerCase() === 'red').length,
-                orange: countries.filter(c => c.surge_r?.level?.toLowerCase() === 'orange').length,
-                yellow: countries.filter(c => c.surge_r?.level?.toLowerCase() === 'yellow').length
-            };
-        }
-
-        if (viewMode === 'index') {
-            return {
-                red: countries.filter(c => c.index?.level?.toLowerCase() === 'red').length,
-                orange: countries.filter(c => c.index?.level?.toLowerCase() === 'orange').length,
-                yellow: countries.filter(c => c.index?.level?.toLowerCase() === 'yellow').length
-            };
-        }
-
-        return {
-            red: countries.filter(c => c.alert_level === 'red').length,
-            orange: countries.filter(c => c.alert_level === 'orange').length,
-            yellow: countries.filter(c => c.alert_level === 'yellow').length
-        };
-    };
-
-    const alertCounts = getAlertCounts();
+    const alertCounts = countAlerts(enrichedRiskData?.countries, viewMode);
 
     /* Logic for Modal Data selection */
     const selectedData = useMemo(() => {
@@ -267,11 +233,12 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                         viewMode={viewMode}
                         theme={theme}
                     />
-                    <div className="legend">
-                        <div className="legend-item"><span className="legend-color legend-color--red"></span><span>Critical</span></div>
-                        <div className="legend-item"><span className="legend-color legend-color--orange"></span><span>Warning</span></div>
-                        <div className="legend-item"><span className="legend-color legend-color--yellow"></span><span>Watch</span></div>
-                        <div className="legend-item"><span className="legend-color legend-color--green"></span><span>Stable</span></div>
+                    <div className="legend" data-title={t.legend.title}>
+                        <div className="legend-item"><span className="legend-color legend-color--red"></span><span>{t.legend.critical}</span></div>
+                        <div className="legend-item"><span className="legend-color legend-color--orange"></span><span>{t.legend.warning}</span></div>
+                        <div className="legend-item"><span className="legend-color legend-color--yellow"></span><span>{t.legend.watch}</span></div>
+                        <div className="legend-item"><span className="legend-color legend-color--green"></span><span>{t.legend.stable}</span></div>
+                        <div className="legend-item"><span className="legend-color legend-color--unknown"></span><span>{t.legend.unknown}</span></div>
                     </div>
                 </div>
 
@@ -287,6 +254,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                         t={t}
                         lang={lang}
                         viewMode={viewMode}
+                        onViewModeChange={setViewMode}
                     />
                 </aside>
             </div>

@@ -409,7 +409,7 @@ body {
 }
 
 .legend::before {
-  content: 'THREAT LEVEL';
+  content: attr(data-title);
   display: block;
   font-family: 'Inter', sans-serif;
   font-size: 0.625rem;
@@ -454,7 +454,7 @@ body {
 }
 
 .legend-color--green {
-  background: #3d4654;
+  background: var(--color-green);
 }
 
 @keyframes alert-glow {
@@ -1783,5 +1783,18 @@ body {
 }
 
 .legend-color--green {
-  background: #3d4654;
+  background: var(--color-green);
+}
+
+.legend-color--unknown { background: #3d4654; border: 1px solid #94a3b8; }
+.light-mode .legend-color--unknown { background: #c7cdd4; }
+.alert-count--unknown { color: var(--color-text-dim, #a1a1aa); }
+.heat-list-empty { padding: 0.75rem; color: var(--color-text-dim, #a1a1aa); font-size: 0.85rem; line-height: 1.6; }
+.heat-list-empty button { margin-top: 0.6rem; padding: 0.4rem 0.7rem; border: 1px solid var(--color-accent); color: var(--color-accent); background: var(--color-surface); cursor: pointer; }
+
+@media (max-width: 768px) {
+  .legend { left: 0.5rem; bottom: 1.5rem; right: 0.5rem; padding: 0.5rem 0.75rem; flex-direction: row; flex-wrap: wrap; gap: 0.4rem 0.75rem; }
+  .legend-item { margin-bottom: 0; font-size: 0.65rem; }
+  .legend-color { width: 9px; height: 9px; }
+  .alert-counts { flex-wrap: wrap; }
 }

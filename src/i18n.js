@@ -13,7 +13,8 @@ export const translations = {
             critical: 'Critical',
             warning: 'Warning',
             watch: 'Watch',
-            stable: 'Stable'
+            stable: 'No elevated signal',
+            unknown: 'Unknown'
         },
         panel: {
             placeholder: 'SELECT A COUNTRY',
@@ -40,6 +41,12 @@ export const translations = {
             green: 'STABLE'
         },
         global: {
+            monitoringSummary: 'MONITORING DATA',
+            noComparable: 'Unavailable',
+            none: 'No entries',
+            rIndexUnavailable: 'R-INDEX is unavailable: the current data and comparable baseline are insufficient. At least 10 complete days within the previous 14 calendar days and a sufficient baseline are required. Gray means unknown, not safe.',
+            noHeat: 'No elevated signals can be listed in this view. Countries with missing or insufficient observations remain unknown.',
+            showRaw: 'View RAW monitoring signals',
             briefing: 'AI DAILY BRIEFING',
             noBriefing: 'No briefing generated for this date.',
             heatList: 'Global Heat List',
@@ -82,7 +89,8 @@ export const translations = {
             critical: '警戒',
             warning: '注意',
             watch: '監視',
-            stable: '安定'
+            stable: '警戒信号なし',
+            unknown: '判定不能'
         },
         panel: {
             placeholder: '国を選択してください',
@@ -109,6 +117,12 @@ export const translations = {
             green: '安定'
         },
         global: {
+            monitoringSummary: '監視データの状況',
+            noComparable: '比較不可',
+            none: '該当なし',
+            rIndexUnavailable: 'R-INDEXは、現在の観測・比較基準が不足しているため表示できません。直前14暦日のうち10日以上の完全な同一方式のデータと、十分な基準値が必要です。灰色は判定不能で、安全を意味しません。',
+            noHeat: 'この表示で一覧にできる警戒信号はありません。欠測・観測不足の国は判定不能です。',
+            showRaw: 'RAWの監視信号を見る',
             briefing: 'AIデイリーブリーフィング',
             noBriefing: '本日のブリーフィングは生成されていません。',
             heatList: 'グローバルヒートリスト',
@@ -151,7 +165,8 @@ export const translations = {
             critical: 'Crítico',
             warning: 'Alerta',
             watch: 'Vigilancia',
-            stable: 'Estable'
+            stable: 'Sin señal elevada',
+            unknown: 'Sin evaluación'
         },
         panel: {
             placeholder: 'SELECCIONE UN PAÍS',
@@ -178,6 +193,12 @@ export const translations = {
             green: 'ESTABLE'
         },
         global: {
+            monitoringSummary: 'DATOS DE SEGUIMIENTO',
+            noComparable: 'No disponible',
+            none: 'Sin registros',
+            rIndexUnavailable: 'R-INDEX no está disponible: faltan observaciones actuales o una base comparable suficiente. Se requieren al menos 10 días completos de los 14 días anteriores y una base suficiente. El gris significa sin evaluación, no seguridad.',
+            noHeat: 'No se pueden listar señales elevadas en esta vista. Los países con observaciones ausentes o insuficientes quedan sin evaluación.',
+            showRaw: 'Ver señales RAW',
             briefing: 'INFORME DIARIO DE IA',
             noBriefing: 'No se generó informe para esta fecha.',
             heatList: 'Lista de Calor Global',

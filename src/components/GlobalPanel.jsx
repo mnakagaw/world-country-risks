@@ -1,23 +1,15 @@
 import { useRef, useEffect, useMemo } from 'react';
+import { briefingLines, countryLevel } from '../display';
 
-export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry, onSignalSelect, selectedSignal, hoveredSignal, hoveredCountry, t, lang, viewMode }) {
+export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry, onSignalSelect, selectedSignal, hoveredSignal, hoveredCountry, t, lang, viewMode, onViewModeChange }) {
     const scrollRef = useRef(null);
 
     // 1) BRIEFING Logic
     const getBriefingContent = () => {
         if (!riskData) return null;
 
-        // Determine source based on ViewMode
-        let source = riskData.daily_briefing; // Default (legacy/fallback)
-        if (viewMode === 'surge') {
-            source = riskData.daily_briefing_trending || source;
-        } else if (viewMode === 'raw' || viewMode === 'surge_r') {
-            source = riskData.daily_briefing_ops || source;
-        }
-
-        // New Object Support
-        if (source && Array.isArray(source[lang])) {
-            const lines = source[lang];
+        const lines = briefingLines(riskData, viewMode, lang);
+        if (lines.length) {
             const filteredLines = lines.filter(line => {
                 const l = line.trim();
                 return !(
@@ -55,19 +47,14 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
             });
         }
 
-        // Legacy string Support
-        let text = "";
-        if (lang === 'ja' && riskData.daily_briefing_ja) text = riskData.daily_briefing_ja;
-        else if (lang === 'es' && riskData.daily_briefing_es) text = riskData.daily_briefing_es;
-        else text = riskData.daily_briefing_en || "...";
-
-        return <div>{text}</div>;
+        return <div>{t.global.noBriefing}</div>;
     };
 
     // 2) HEAT LIST Logic
     const sortedCountries = useMemo(() => {
         if (!riskData?.countries) return [];
-        const all = Object.entries(riskData.countries).map(([iso2, data]) => ({ iso2, ...data }));
+        const all = Object.entries(riskData.countries).map(([iso2, data]) => ({ iso2, ...data }))
+            .filter(country => countryLevel(country, viewMode) !== 'unknown');
 
         if (viewMode === 'index') {
             return all
@@ -191,7 +178,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
         <div className="global-panel" ref={scrollRef}>
             {/* 1) AI DAILY BRIEFING */}
             <div className="briefing-section">
-                <h3><span className="icon">◎</span> {t?.global?.briefing || 'AI DAILY BRIEFING'}</h3>
+                <h3><span className="icon">◎</span> {riskData?.engine_version ? t.global.monitoringSummary : t.global.briefing}</h3>
                 <div className="briefing-text">{getBriefingContent()}</div>
             </div>
 
@@ -199,15 +186,19 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
             <div className="heat-list-section">
                 <div className="section-header">
                     <h3><span className="icon">📈</span> {t?.global?.heatList || 'Global Heat List'}</h3>
-                    <span className="badge">Top {sortedCountries.length}</span>
+                    <span className="badge">{sortedCountries.length ? `Top ${sortedCountries.length}` : viewMode === 'surge_r' ? t.global.noComparable : t.global.none}</span>
                 </div>
 
-                <div className="heat-list-header">
+                {sortedCountries.length === 0 && <div className="heat-list-empty" role="status">
+                    <p>{viewMode === 'surge_r' ? t.global.rIndexUnavailable : t.global.noHeat}</p>
+                    {viewMode === 'surge_r' && onViewModeChange && <button type="button" onClick={() => onViewModeChange('raw')}>{t.global.showRaw}</button>}
+                </div>}
+                {sortedCountries.length > 0 && <div className="heat-list-header">
                     <span className="col-rank">#</span>
                     <span className="col-country">{t?.global?.country || 'Country'}</span>
                     <span className="col-risk">{t?.global?.risk || 'Risk'}</span>
                     <span className="col-summary">{t?.global?.summary || 'Summary'}</span>
-                </div>
+                </div>}
 
                 <ul className="heat-list">
                     {sortedCountries.map((country, idx) => (
@@ -220,10 +211,10 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
                             <div className="col-country">
                                 <span className="country-name">{lang === 'ja' ? (country.name_ja || country.name_en) : (lang === 'es' ? (country.name_es || country.name_en) : country.name_en)}</span>
                                 <span className="country-driver">
-                                    {viewMode === 'index' ? `Index: ${country.index?.score.toFixed(1)}` :
+                                    {viewMode === 'index' ? `Index: ${country.index?.score?.toFixed(1) ?? t.legend.unknown}` :
                                         viewMode === 'surge' ? `Surge: ${country.surge?.score.toFixed(1)}` :
                                             viewMode === 'surge_r' ? `SurgeR: ${country.surge_r?.max_ratio_active?.toFixed(1)}` :
-                                                `Rank Score: ${country.composite_score?.toFixed(1)}`}
+                                                `Rank Score: ${country.composite_score?.toFixed(1) ?? t.legend.unknown}`}
                                 </span>
                             </div>
                             <span className="col-risk" style={getAlertStyle(country)}>{getAlertLabel(country)}</span>

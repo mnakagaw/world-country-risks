@@ -80,6 +80,7 @@ export default function Header({
                     <span className="alert-count alert-count--red">{alertCounts.red} {t.red}</span>
                     <span className="alert-count alert-count--orange">{alertCounts.orange} {t.orange}</span>
                     <span className="alert-count alert-count--yellow">{alertCounts.yellow} {t.yellow}</span>
+                    {alertCounts.unknown > 0 && <span className="alert-count alert-count--unknown">{alertCounts.unknown} {t.legend.unknown}</span>}
                 </div>
 
                 <div className="date-navigator">

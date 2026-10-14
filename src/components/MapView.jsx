@@ -2,25 +2,12 @@ import React, { useEffect, useState, useMemo, useRef, useCallback } from 'react'
 import L from 'leaflet';
 import { MapContainer, TileLayer, GeoJSON, CircleMarker, Popup, Tooltip, Pane, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { countryLevel, mapColors } from '../display';
 
 const SIGNAL_TYPE_CONFIG = {
     gt: { color: '#2dd4bf', selectedColor: '#5eead4', prefix: 'GT', title: 'GOOGLE TRENDS' },
     pm: { color: '#4ade80', selectedColor: '#86efac', prefix: 'PM', title: 'POLYMARKET' },
     xt: { color: '#ff7ee2', selectedColor: '#ff9ee9', prefix: 'SNS', title: 'POLITICAL SURGE' }
-};
-
-const ALERT_COLORS = {
-    red: '#ee2c2c',
-    orange: '#f57c00',
-    yellow: '#dca01d',
-    green: '#000000'
-};
-
-const ALERT_COLORS_LIGHT = {
-    red: '#ee2c2c',
-    orange: '#f57c00',
-    yellow: '#fbc02d', // Slightly darker yellow for readability on white
-    green: '#e5e7eb'   // Light Grey (Gray-200) for stable countries in light mode
 };
 
 // Component to handle map movement
@@ -266,33 +253,9 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
         const countryRisk = riskData?.countries?.[iso2];
         const isSelected = selectedCountry === iso2;
 
-        const colors = theme === 'light' ? ALERT_COLORS_LIGHT : ALERT_COLORS;
+        const colors = theme === 'light' ? mapColors.light : mapColors.dark;
 
-        let color = theme === 'light' ? '#c7cdd4' : '#3d4654';
-        if (viewMode === 'surge') {
-            const rank = countryRisk?.surge?.rank;
-            if (rank) {
-                if (rank <= 10) color = colors.red;
-                else if (rank <= 20) color = colors.orange;
-                else if (rank <= 40) color = colors.yellow;
-                else color = theme === 'light' ? '#e0e0e0' : '#3d4654'; // Grey for 41+
-            }
-        } else if (viewMode === 'surge_r') {
-            const surgeRLevel = countryRisk?.surge_r?.level?.toLowerCase() || 'green';
-            color = colors[surgeRLevel] || colors.green;
-        } else if (viewMode === 'index') {
-            const indexLevel = countryRisk?.index?.level?.toLowerCase() || 'green';
-            color = colors[indexLevel] || colors.green;
-        } else {
-            const alertLevel = countryRisk?.alert_level || 'green';
-            color = colors[alertLevel];
-        }
-
-        if (!countryRisk || (countryRisk.data_status && !['observed','partial'].includes(countryRisk.data_status)) ||
-            (viewMode === 'surge_r' && countryRisk.baseline_status === 'baseline_insufficient')) {
-            color = theme === 'light' ? '#c7cdd4' : '#3d4654';
-        }
-        if (!color || countryRisk?.alert_level === 'unknown' && viewMode === 'raw') color = theme === 'light' ? '#c7cdd4' : '#3d4654';
+        const color = colors[countryLevel(countryRisk, viewMode)];
         return {
             fillColor: isSelected ? '#06b6d4' : color, // Cyan-500 for selection
             weight: isSelected ? 1.5 : 0.5,

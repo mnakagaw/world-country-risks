@@ -81,3 +81,19 @@ non-additive buckets, exact cutoff, failed/stale/truncated feeds, immutable seal
 shared producer/consumer identity and full publication hashes. Additional verified
 events, lead time, false hints and reviewer time require a longitudinal live audit;
 they are not established by these implementation tests.
+
+## Display correction, 2026-10-14
+
+The v2 briefing accepts multilingual strings as well as the legacy arrays/strings.
+It is labelled monitoring data rather than AI-generated analysis. The map and header
+share one display-state resolver: absent data, insufficient baselines and zero-score
+ranking placeholders remain Unknown. Gray Unknown and green no-elevated-signal have
+different colors and localized legend labels. Empty R-INDEX lists explain baseline
+requirements and offer a user-controlled RAW switch instead of showing only Top0.
+Missing scores are labelled unavailable, never rendered as undefined.
+
+Acceptance uses the actual fixed publication in a separate headless Edge profile:
+390px mobile, all240 R-INDEX countries unknown, distinct legend colors, no horizontal
+overflow, readable briefing, RAW selection and country popup, EN/JA/ES and desktop.
+The ordinary in-app browser bridge was unavailable; no user browser profile was used.
+These are display checks and do not establish prediction accuracy or fill data gaps.
