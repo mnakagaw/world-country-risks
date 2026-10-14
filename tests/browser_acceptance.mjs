@@ -12,6 +12,8 @@ try{
   await page.setViewportSize(viewport);
   for(const lang of ['ja','en','es']){
    await page.locator('.lang-btn').filter({hasText:lang==='ja'?'日本語':lang.toUpperCase()}).click();
+   const controls=await page.locator('.lang-btn,.view-mode-btn,.theme-btn').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {label:n.innerText,left:r.left,right:r.right,limit:innerWidth};}));
+   for(const control of controls)assert.ok(control.left>=0 && control.right<=control.limit,`${size} ${lang}: ${control.label} clipped`);
    for(const [index,mode] of ['surge_r','raw','surge'].entries()){
     await page.locator('.view-mode-btn').nth(index).click();
     for(const [level,count] of Object.entries(snapshot.monitoring_counts))assert.match(await page.locator(`.alert-count--${level}`).innerText(),new RegExp(`^${count}\\b`));
