@@ -10,7 +10,7 @@
   const stamp=value=>value?new Date(value).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})+' JST':'未観測';
   const jstDay=value=>new Date(Date.parse(value)+32400000).toISOString().slice(0,10);
   const source={ok:'取得成功',empty:'空の応答',failed:'取得失敗',unsupported:'取得非対応',not_observed:'未観測',stale:'再確認待ち'};
-  const initial=new URLSearchParams(location.search);country.dataset.requested=initial.get('country')||'';date.value=initial.get('day')||'';
+  const initial=new URLSearchParams(location.search);country.dataset.requested=(initial.get('country')||'').toUpperCase();date.value=initial.get('day')||'';
   if(daily){$('interest-cadence').textContent='24時間集計 · 毎日03:00 JST締め';time.closest('label').hidden=true;}
   let cards=[],meta=null,version=0,loading=false,catalog=null,lastLoad=0,attentionRequest=0,detailRequest=0;
   async function get(query){const response=await fetch(api+'?'+new URLSearchParams(query),{cache:'no-store'});const value=await response.json();if(!response.ok)throw Error(value.source_status||'HTTP '+response.status);return value;}
@@ -49,7 +49,7 @@
     const dates=Object.keys(catalog.days);$('interest-history-status').textContent=dates.length?`この月の保存日：${dates.join('、')}。蓄積開始前の値はありません。`:'この月は保存済みの観測がありません。';
   }
   async function load(){
-    const token=++version;loading=true;meta=null;cards=[];grid.replaceChildren();detailRequest++;detail.hidden=true;$('interest-history-results').replaceChildren();status.textContent='各国の関心を確認しています…';
+    const token=++version;loading=true;meta=null;cards=[];grid.replaceChildren();attentionRequest++;const a=$('interest-attention');if(a){a.querySelector('[data-attention-items]')?.replaceChildren();a.querySelector('[data-attention-primary]')?.replaceChildren();a.querySelector('[data-attention-status]').textContent='この日の候補を確認しています…';}detailRequest++;detail.hidden=true;$('interest-history-results').replaceChildren();status.textContent='各国の関心を確認しています…';
     try{
       await loadCatalog();const q=query();const first=await get({...q,offset:'0'});if(token!==version)return;
       const collected=[...first.cards];
