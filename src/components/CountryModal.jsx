@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {countryLevel,monitoringMethod} from '../display';
 
 function ScoreBar({ label, score, max = 10 }) {
     const percentage = (score / max) * 100;
@@ -69,28 +70,8 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
         }
     }, [iso2, hasHistory]);
 
-    // Dynamic Alert Level based on viewMode
-    const getActiveAlertLevel = () => {
-        if (country.data_status && !['observed','partial'].includes(country.data_status)) return 'unknown';
-        if (viewMode === 'surge_r' && country.baseline_status === 'baseline_insufficient') return 'unknown';
-        if (viewMode === 'surge' && country.surge) {
-            const rank = country.surge.rank;
-            if (rank <= 10) return 'red';
-            if (rank <= 20) return 'orange';
-            if (rank <= 40) return 'yellow';
-            return 'green';
-        }
-        if (viewMode === 'surge_r' && country.surge_r) {
-            return country.surge_r.level?.toLowerCase() || 'green';
-        }
-        if (viewMode === 'index' && country.index) {
-            return country.index.level?.toLowerCase() || 'green';
-        }
-        return country.alert_level || 'green';
-    };
-
-    const alertLevel = getActiveAlertLevel();
-    const alertLabel = t?.alertLabels?.[alertLevel] || alertLevel.toUpperCase();
+    const alertLevel = countryLevel(country,viewMode);
+    const alertLabel = alertLevel==='green' ? t.legend.stable : alertLevel==='unknown' ? t.legend.unknown : t?.alertLabels?.[alertLevel] || alertLevel.toUpperCase();
 
     const getName = () => {
         if (lang === 'ja') return country.name_ja || country.name_en;
@@ -126,7 +107,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
     const displayScores = getDisplayScores();
 
     return (
-        <div className={`country-popup ${isPinned ? 'country-popup--pinned' : ''}`} style={popupStyle}>
+        <div className={`country-popup ${isPinned ? 'country-popup--pinned' : ''}`} style={popupStyle} data-country={iso2} data-monitoring-level={alertLevel} data-snapshot-id={country.snapshot_id}>
             {isPinned && <button className="modal-close" onClick={onClose} style={{ position: 'absolute', top: 5, right: 10, cursor: 'pointer', background: 'none', border: 'none', color: '#fff', fontSize: '1.2rem', padding: 0, lineHeight: 1 }}>×</button>}
             <div className="popup-header">
                 <span className={`modal-badge modal-badge--${alertLevel}`}>
@@ -150,7 +131,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                 </div>
             )}
 
-            {country.brief ? (
+            {country.brief && !country.evaluation ? (
                 <div className="modal-brief" style={{ marginBottom: '1rem' }}>
                     <div style={{ fontWeight: 'bold', fontSize: '1rem', marginBottom: '0.4rem', color: '#fff' }}>
                         {country.brief.headline}
@@ -182,7 +163,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                 <div className="modal-scores-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                     <span style={{ fontSize: '0.7rem', color: '#666', fontWeight: 'bold' }}>
                         {viewMode === 'surge_r'
-                            ? `R-INDEX: Max Ratio ${country.surge_r?.max_ratio_active?.toFixed(1) ?? 'Unavailable'}`
+                            ? `R-INDEX · ${t.comparisonMax}: ${country.surge_r?.max_ratio_active?.toFixed(2) ?? '—'}`
                             : `${t.panel.riskScores} (${viewMode === 'surge' ? t.viewMode.surge : (viewMode === 'index' ? t.viewMode.index : (viewMode === 'adj' ? t.viewMode.adj : t.viewMode.raw))})`
                         }
                     </span>
@@ -241,15 +222,24 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                     </div>
                 )}
 
+                {country.evaluation && <div className="country-evaluation">
+                    <p><strong>{monitoringMethod(country,t)}</strong> · {country.evaluation.partial_observation ? t.global.partial : t.global.observed}</p>
+                    <p>{t.global.observedRecords}: {country.evaluation.country_input.records} · {t.global.domains}: {country.evaluation.country_input.source_domains || 0} · {t.global.observedHours}: {country.evaluation.country_input.observed_hours || 0}</p>
+                    <p>{t.global.availableComparisons}: {country.evaluation.available_comparisons.join(', ') || t.global.none}</p>
+                    {alertLevel==='unknown' && <p>{country.evaluation.reasons.map(reason=>t.reasons[reason] || reason).join(' / ')}</p>}
+                    {alertLevel==='green' && <p>{t.global.greenScope}</p>}
+                    <small>{t.global.partialScope}</small>
+                </div>}
+                {viewMode === 'surge_r' && country.evaluation && <p className="comparison-note">{t.global.matchedNote}</p>}
                 {viewMode === 'surge_r' && country.surge_r_by_type && (
                     <div style={{ marginTop: '1rem', padding: '10px', background: theme === 'light' ? 'rgba(0,0,0,0.03)' : 'rgba(0,0,0,0.2)', borderRadius: '4px', border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(255,255,255,0.1)' }}>
-                        <div style={{ fontSize: '0.7rem', fontWeight: 'bold', color: '#6fa5b5', marginBottom: '8px' }}>SURGE R BREAKDOWN</div>
+                        <div style={{ fontSize: '0.7rem', fontWeight: 'bold', color: '#6fa5b5', marginBottom: '8px' }}>{t.comparisonTitle}</div>
                         <table style={{ width: '100%', fontSize: '0.65rem', borderCollapse: 'collapse' }}>
                             <thead>
                                 <tr style={{ borderBottom: theme === 'light' ? '1px solid #ddd' : '1px solid #333', color: theme === 'light' ? '#666' : '#888' }}>
                                     <th style={{ textAlign: 'left', padding: '4px' }}>Type</th>
-                                    <th style={{ textAlign: 'center', padding: '4px' }}>Today</th>
-                                    <th style={{ textAlign: 'center', padding: '4px' }}>Baseline</th>
+                                    <th style={{ textAlign: 'center', padding: '4px' }}>{country.evaluation ? t.pairedToday : "Today"}</th>
+                                    <th style={{ textAlign: 'center', padding: '4px' }}>{t.pairedBaseline}</th>
                                     <th style={{ textAlign: 'right', padding: '4px' }}>Ratio</th>
                                 </tr>
                             </thead>
@@ -261,46 +251,9 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                     const th = country.surge_r?.thresholds || { yellow: 1.75, orange: 2.75, red: 3.75 };
                                     const ratio = Number(data.ratio || 0);
 
-                                    // Gate-aware level: Only show color if is_active is true
-                                    let displayLevel = 'none';
-                                    let gateReason = '';
-
-                                    if (data.is_active) {
-                                        // Active: calculate level from ratio
-                                        displayLevel =
-                                            ratio >= th.red ? 'red' :
-                                                ratio >= th.orange ? 'orange' :
-                                                    ratio >= th.yellow ? 'yellow' : 'none';
-                                    } else {
-                                        // Gated: determine the reason
-                                        displayLevel = 'gated';
-                                        if (!data.is_stable_input) {
-                                            gateReason = 'low-baseline';
-                                        } else if (!data.triggered) {
-                                            if (data.high_vol && !data.share_hit) {
-                                                gateReason = 'high-vol';
-                                            } else if (!data.share_hit && !data.abs_hit) {
-                                                gateReason = 'low-share';
-                                            } else if (!data.abs_hit) {
-                                                gateReason = 'low-abs';
-                                            } else {
-                                                gateReason = 'no-trigger';
-                                            }
-                                        } else if (ratio < th.yellow) {
-                                            gateReason = 'below-threshold';
-                                        }
-                                    }
-
-                                    const levelColor =
-                                        displayLevel === 'red' ? 'var(--color-red)' :
-                                            displayLevel === 'orange' ? 'var(--color-orange)' :
-                                                displayLevel === 'yellow' ? 'var(--color-yellow)' :
-                                                    displayLevel === 'gated' ? '#666' : '#ccc';
-
-                                    const levelLabel =
-                                        displayLevel === 'gated'
-                                            ? `(GATED${gateReason ? ': ' + gateReason : ''})`
-                                            : displayLevel !== 'none' ? `(${displayLevel.toUpperCase()})` : '';
+                                    const displayLevel = data.ratio == null ? 'unknown' : ratio >= th.red ? 'red' : ratio >= th.orange ? 'orange' : ratio >= th.yellow ? 'yellow' : 'green';
+                                    const levelColor = {red:'var(--color-red)',orange:'var(--color-orange)',yellow:'var(--color-yellow)',green:'var(--color-green)',unknown:'#aaa'}[displayLevel];
+                                    const levelLabel = data.ratio == null ? t.comparisonStatus[data.data_status] || t.legend.unknown : `${data.reference?.valid_days || 0} / ${data.reference?.required_days || 10} ${t.comparisonDays}`;
 
                                     return (
                                         <tr key={key} style={{ borderBottom: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(255,255,255,0.05)', color: levelColor }}>
@@ -312,14 +265,14 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                             </td>
                                             <td style={{ textAlign: 'center', padding: '4px' }}>{data.today}</td>
                                             <td style={{ textAlign: 'center', padding: '4px' }}>{data.baseline_median ?? '—'}</td>
-                                            <td style={{ textAlign: 'right', padding: '4px', fontWeight: 'bold' }}>{data.ratio?.toFixed(1)}x</td>
+                                            <td style={{ textAlign: 'right', padding: '4px', fontWeight: 'bold' }}>{data.ratio == null ? '—' : data.ratio.toFixed(2)+'x'}</td>
                                         </tr>
                                     );
                                 })}
                             </tbody>
                         </table>
                         <div style={{ fontSize: '0.55rem', color: theme === 'light' ? '#888' : '#666', marginTop: '8px', fontStyle: 'italic', wordBreak: 'break-all' }}>
-                            * Colors follow is_active (Gate applied). High ratio alone does not trigger alert.
+                            {country.evaluation ? t.global.matchedNote : "Colors follow is_active."}
                         </div>
                     </div>
                 )}
@@ -332,6 +285,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                     // Helper: Get Signal (Discrete) display state
                     const getSignalState = (sr, thresholds) => {
                         if (!sr) return { state: 'nodata', color: '#333', text: '', reason: 'No data' };
+                        if(sr.method==='same-offset-observed-7d-pairs-v2')return {state:sr.level,color:{red:'var(--color-red)',orange:'var(--color-orange)',yellow:'var(--color-yellow)',green:'var(--color-green)',unknown:'#666'}[sr.level],text:sr.ratio7==null?'—':sr.ratio7.toFixed(1),reason:sr.reason};
                         const ratio7 = sr.ratio7 || 0;
                         const isActive = sr.is_active || false;
                         const yellowThr = thresholds?.yellow || 1.75;
@@ -367,7 +321,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                         return !sr?.is_active && (sr?.ratio7 || 0) >= thresholds.yellow;
                                     });
 
-                                    const bundleLabel = activeTypes.length > 0 ? activeTypes.join('+') : (hasGated ? 'G' : '');
+                                    let bundleLabel = activeTypes.length > 0 ? activeTypes.join('+') : (hasGated ? 'G' : '');
                                     let bundleColor = theme === 'light' ? '#e0e0e0' : '#444';
                                     let textColor = theme === 'light' ? '#666' : '#888';
 
@@ -377,6 +331,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                         else if (maxRatio >= thresholds.orange) { bundleColor = 'var(--color-orange)'; textColor = '#000'; }
                                         else { bundleColor = 'var(--color-yellow)'; textColor = '#000'; }
                                     }
+                                    if(w.evaluation){bundleColor={red:'var(--color-red)',orange:'var(--color-orange)',yellow:'var(--color-yellow)',green:'var(--color-green)',unknown:'#666'}[w.overall_level];bundleLabel=w.overall_level==='unknown'?t.legend.unknown:t.alertLabels[w.overall_level];textColor='#fff';}
 
                                     return (
                                         <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', background: theme === 'light' ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)', padding: '4px 2px', borderRadius: '3px' }}>
@@ -451,6 +406,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
                             {/* Pattern Analysis */}
                             {(() => {
+                                if(last4Weeks.some(w=>w.evaluation) && !last4Weeks.some(w=>Object.values(w.ratios||{}).some(r=>r!==null)))return <p>{t.comparisonStatus.baseline_days_insufficient}</p>;
                                 const getLevelScore = (lvl) => lvl === 'red' ? 3 : lvl === 'orange' ? 2 : lvl === 'yellow' ? 1 : 0;
                                 const weekStats = last4Weeks.map(w => {
                                     const activeR = ['R1', 'R2', 'R3', 'R4'].filter(r => w.weekly_surge_r_by_type?.[r]?.is_active);
@@ -525,13 +481,13 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
                 <div style={{ fontSize: '0.6rem', color: '#666', marginTop: '0.5rem', fontStyle: 'italic', textAlign: 'center', lineHeight: '1.2' }}>
                     {lang === 'ja'
-                        ? "平時ボリューム補正後の0〜10スコア（暫定）"
-                        : "* Normalized 0-10 score after baseline adjustment."}
+                        ? "報道記録の指標（独立事件数ではありません）"
+                        : "News-record indicators, not independent incident counts."}
                 </div>
             </div>
 
             {/* KEY SOURCES (Moved above Signals) */}
-            {country.confirmed_impacts?.length > 0 && <section className="confirmed-impacts"><h4>確認済みの実影響 / Verified functional impacts</h4>{country.confirmed_impacts.map(impact => <article key={impact.event_id}><p>{impact.impact} · {impact.scope}</p><small>{impact.verification.verified_at} · {impact.confidence}</small><p>{impact.evidence.map(e => <a key={e.url} href={e.url} target="_blank" rel="noopener noreferrer">{e.original_source_id} ↗ </a>)}</p></article>)}</section>}
+            {country.confirmed_impacts?.length > 0 && <section className="confirmed-impacts"><h4>{t.methods.verified}</h4>{country.confirmed_impacts.map(impact => <article key={impact.event_id}><p>{impact.impact_localized?.[lang] || impact.impact} · {impact.scope}</p><small>{impact.period?.publication_date} · {impact.assessment?.current_at_cutoff ? t.impactCurrent : t.impactHistorical} · {impact.verification.verified_at} · {impact.confidence}</small><p>{impact.evidence.map(e => <a key={e.url} href={e.url} target="_blank" rel="noopener noreferrer">{e.original_source_id} ↗ </a>)}</p></article>)}</section>}
             {country.sources && country.sources.length > 0 && (
                 <div className="modal-sources" style={{ marginBottom: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '0.5rem' }}>
                     <h4>{t?.panel?.sources || 'KEY SOURCES'}</h4>

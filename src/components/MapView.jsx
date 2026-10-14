@@ -3,6 +3,7 @@ import L from 'leaflet';
 import { MapContainer, TileLayer, GeoJSON, CircleMarker, Popup, Tooltip, Pane, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { countryLevel, mapColors } from '../display';
+import { geoCountryCode } from '../country-codes';
 
 const SIGNAL_TYPE_CONFIG = {
     gt: { color: '#2dd4bf', selectedColor: '#5eead4', prefix: 'GT', title: 'GOOGLE TRENDS' },
@@ -143,7 +144,7 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
         const maxAreas = {};
 
         geoData.features.forEach(feature => {
-            const iso2 = feature.properties['ISO3166-1-Alpha-2'];
+            const iso2 = geoCountryCode(feature.properties);
             if (iso2) {
                 const area = getApproxArea(feature.geometry);
 
@@ -249,7 +250,7 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
     }, [signals]);
 
     const getCountryStyle = (feature) => {
-        const iso2 = feature.properties['ISO3166-1-Alpha-2'];
+        const iso2 = geoCountryCode(feature.properties);
         const countryRisk = riskData?.countries?.[iso2];
         const isSelected = selectedCountry === iso2;
 
@@ -257,7 +258,7 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
 
         const color = colors[countryLevel(countryRisk, viewMode)];
         return {
-            fillColor: isSelected ? '#06b6d4' : color, // Cyan-500 for selection
+            fillColor: color,
             weight: isSelected ? 1.5 : 0.5,
             opacity: 1,
             color: isSelected ? '#ffffff' : (theme === 'light' ? '#94a3b8' : '#555555'), // Lighter border in light mode
@@ -277,8 +278,12 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
     }, [selectedCountry, riskData, viewMode, theme]);
 
     const onEachCountry = (feature, layer) => {
-        const iso2 = feature.properties['ISO3166-1-Alpha-2'];
-        const countryName = feature.properties.name;
+        const iso2 = geoCountryCode(feature.properties);
+        const countryName = riskData?.countries?.[iso2]?.name_en || feature.properties.name;
+        layer.on('add',()=>{
+            const element=layer.getElement();if(!element)return;
+            element.setAttribute('data-country',iso2 || 'unassigned');
+        });
 
         // Calculate side based on longitude (Americas vs Rest)
         const center = getCentroid(feature.geometry);

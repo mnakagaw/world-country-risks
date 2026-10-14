@@ -1,4 +1,6 @@
-# CountryRisks v2.0: source, release and restoration
+# CountryRisks v2.0.1: source, release and restoration
+
+Current assessment and acceptance contract: [MONITORING_V2.md](MONITORING_V2.md).
 
 The v2 engine separates reporting-derived monitoring signals, data availability,
 search interest and verified functional impact. It does not turn a method change
@@ -14,10 +16,11 @@ time remain separate. Missing files/rows stay missing; no zero or old date subst
 
 `generate_v2.mjs` preserves count-weighted Tone totals and known actor-geography
 denominators in FIPS-to-ISO merges, plus raw codes and mapping version. Previous14
-calendar edition dates supply a same-method48h reference only when their coverage
-is complete. At least10 valid days and a stable baseline are required for ratios;
-until then R-INDEX is unavailable. RAW is a reporting sensor, not verified state
-capacity. R4 retains the existing aid/sanctions/economic-pressure CAMEO population.
+calendar edition dates are reconstructed from retained same-method48h source
+windows. The primary assessment uses guarded absolute/composition monitoring;
+qualified matched-source-time R comparisons are separate and need10 valid pairs.
+Low or unavailable component baselines do not erase the whole-country assessment.
+R4 retains the existing aid/sanctions/economic-pressure CAMEO population.
 
 `generate_weekly_v2.mjs` binds generation, index, country readers and publication
 to `data/history/weekly_5y` and the last completed ISO-week window. Its7d totals
@@ -82,7 +85,7 @@ shared producer/consumer identity and full publication hashes. Additional verifi
 events, lead time, false hints and reviewer time require a longitudinal live audit;
 they are not established by these implementation tests.
 
-## Display correction, 2026-10-14
+## Earlier display-only correction, 2026-10-14 (superseded acceptance)
 
 The v2 briefing accepts multilingual strings as well as the legacy arrays/strings.
 It is labelled monitoring data rather than AI-generated analysis. The map and header

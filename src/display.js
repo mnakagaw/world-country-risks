@@ -2,6 +2,9 @@ const levels = new Set(['red', 'orange', 'yellow', 'green']);
 
 // One display state for the map, counts and country list. Missing is never green.
 export function countryLevel(country, mode) {
+    if (country?.evaluation && typeof country.monitoring_level === 'string') {
+        return levels.has(country.monitoring_level) ? country.monitoring_level : 'unknown';
+    }
     if (!country || country.data_status && !['observed', 'partial'].includes(country.data_status)) return 'unknown';
     if (mode === 'surge_r') {
         if (country.baseline_status === 'baseline_insufficient') return 'unknown';
@@ -16,6 +19,12 @@ export function countryLevel(country, mode) {
     }
     const level = (mode === 'index' ? country.index?.level : country.alert_level)?.toLowerCase();
     return levels.has(level) ? level : 'unknown';
+}
+
+export function monitoringMethod(country,t) {
+    const method=country?.evaluation?.method;
+    return method==='accepted-functional-impact-v2' ? t.methods.verified :
+        method==='initial-plus-matched-comparison-v2' ? t.methods.paired : t.methods.initial;
 }
 
 export function alertCounts(countries, mode) {

@@ -15,6 +15,11 @@ def save(policy,source,publication):
       'snapshot.json':(ROOT/'public/data/v2/latest.json').read_bytes(),
       'history.private.json':(ROOT/'.local/v2-history.json').read_bytes(),
       'publication.json':(json.dumps(publication,indent=2)+'\n').encode()}
+    audit=ROOT/'.local/comparison-audits'/(latest['snapshot_id']+'.json')
+    if audit.exists():files['comparison-audit.private.json']=audit.read_bytes()
+    for name in ['baseline-reconstruction.json','baseline-sources/rebuild-receipt.json']:
+        file=ROOT/'.local'/name
+        if file.exists():files[Path(name).name]=file.read_bytes()
     entries={}
     for name,raw in files.items():
         file=folder/name;digest=sha256(raw).hexdigest()

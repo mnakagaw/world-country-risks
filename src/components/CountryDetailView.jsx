@@ -15,7 +15,7 @@ const getLevels = (paperMode) => ({
 /* ================= COMPONENTS ================= */
 
 // 1. HEADER & CONTROLS
-function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode, warnings }) {
+function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode, warnings, t }) {
     if (!meta) return <div className="detail-header">Loading...</div>;
 
     const t0Week = getIsoWeek(config.anchorDate || new Date());
@@ -41,7 +41,7 @@ function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode, 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>
                     <h2 style={{ margin: 0, fontSize: '1.5rem', fontWeight: '800' }}>
-                        {iso2} - Rotberg INDEX <span style={{ fontWeight: '300', opacity: 0.7 }}>(Historical Analysis)</span>
+                        {iso2} · {t.global.weeklyHistory}
                     </h2>
                     <div style={{ fontSize: '0.85rem', color: paperMode ? '#666' : '#aaa', marginTop: '4px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                         <span>Updated: {new Date(meta.generated_at).toLocaleDateString()} | Data coverage: <span style={{ fontWeight: 'bold', color: paperMode ? '#000' : '#fff' }}>{meta.weeks_available || meta.weeks_total || 0}</span>/{meta.weeks_total || 52} weeks</span>
@@ -154,7 +154,7 @@ function SignalView({ history, range, paperMode, t }) {
         const sr = h.weekly_surge_r || {};
         const level = sr.level || h.overall_level?.toLowerCase() || 'green';
         const levelColors = {
-            'red': '#ff3b3b', 'orange': '#ff8c00', 'yellow': '#ffd700', 'green': LEVELS['None'].color, 'nodata': LEVELS['NoData'].color
+            'red': '#ff3b3b', 'orange': '#ff8c00', 'yellow': '#ffd700', 'green': '#388e3c', 'unknown':LEVELS['NoData'].color, 'nodata': LEVELS['NoData'].color
         };
 
         let maxRatio = sr.max_ratio_active;
@@ -212,9 +212,9 @@ function SignalView({ history, range, paperMode, t }) {
                                 const isActive = sr?.is_active;
                                 const ratio7 = sr?.ratio7 || h.ratios?.[rKey] || 0;
                                 const level = h.levels?.[rKey] || 'NoData';
-                                const bg = getGateColor(isActive, ratio7, level, h.weekly_surge_r?.thresholds);
+                                const bg = h.evaluation ? ({red:'#ff3b3b',orange:'#ff8c00',yellow:'#ffd700',green:'#388e3c',unknown:'#444'}[level] || '#444') : getGateColor(isActive, ratio7, level, h.weekly_surge_r?.thresholds);
                                 const reason = sr?.reason;
-                                const tooltipText = `${rKey} @ ${labels[i]}\nRatio: ${ratio7.toFixed(2)}x\nLevel: ${level}${!isActive && reason && reason !== 'active' ? `\nGate: ${reason}` : ''}`;
+                                const tooltipText = h.evaluation ? `${rKey} @ ${labels[i]}\nObserved7d: ${h.counts?.[rKey]}\nComparison: ${sr?.ratio7==null?'Unavailable':sr.ratio7.toFixed(2)+'x'}\n${h.evaluation.method}\nLevel: ${level}` : `${rKey} @ ${labels[i]}\nRatio: ${ratio7.toFixed(2)}x\nLevel: ${level}${!isActive && reason && reason !== 'active' ? `\nGate: ${reason}` : ''}`;
 
                                 return (
                                     <td key={i} style={{ padding: 2 }}>
@@ -481,6 +481,7 @@ export default function CountryDetailView({ lang, t, theme }) {
         }}>
             <DetailHeader
                 iso2={iso2}
+                t={t}
                 meta={data}
                 config={config}
                 setConfig={setConfig}
@@ -489,6 +490,20 @@ export default function CountryDetailView({ lang, t, theme }) {
                 warnings={warnings}
             />
             <div className="view-container">
+                {displayItems.some(h=>h.evaluation) && <section style={{padding:'1rem',overflowX:'auto'}} data-weekly-epoch={data.epoch}>
+                    <h3>{t.global.heatList} · 7d · v2</h3>
+                    <p>{t.global.greenScope} {t.comparisonStatus.baseline_days_insufficient}: 4 / 8 · 7d</p>
+                    <table style={{width:'100%',minWidth:650,fontSize:'0.85rem',borderCollapse:'collapse'}}>
+                        <thead><tr><th>UTC week</th><th>{t.global.levelFilter}</th><th>{t.global.observedRecords}</th><th>Coverage</th>{['R1','R2','R3','R4'].map(r=><th key={r}>{r} · 7d / ratio</th>)}</tr></thead>
+                        <tbody>{displayItems.filter(h=>h.evaluation).map(h=><tr key={h.week}>
+                            <td>{h.week}<br/><small>{h.window.start_utc} — {h.window.end_utc}</small></td>
+                            <td style={{color:({red:'#ff3b3b',orange:'#ff8c00',yellow:'#ffd700',green:'#388e3c',unknown:'#aaa'})[h.overall_level]}}>{h.overall_level==='unknown'?t.legend.unknown:t.alertLabels[h.overall_level]}<br/><small>{h.evaluation.method.includes('matched')?t.methods.paired:t.methods.initial}</small></td>
+                            <td>{h.event_count}</td><td>{h.coverage.available_slots}/{h.coverage.expected_slots}<br/>{h.source_status}</td>
+                            {['R1','R2','R3','R4'].map(r=><td key={r}>{h.counts[r]} / {h.ratios[r]==null?'—':h.ratios[r].toFixed(2)+'x'}<br/><small>{h.weekly_surge_r_by_type[r].reference.valid_days} / 4</small></td>)}
+                        </tr>)}</tbody>
+                    </table>
+                    <p>{t.global.partialScope}</p>
+                </section>}
                 {config.view === 'signal' ? (
                     <SignalView history={displayItems} range={config.range} paperMode={paperMode} t={t} />
                 ) : config.view === 'state' ? (
@@ -498,7 +513,7 @@ export default function CountryDetailView({ lang, t, theme }) {
                 )}
             </div>
             <div style={{ padding: '1rem', borderTop: `1px solid ${paperMode ? '#eee' : '#333'}`, textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
-                CONFIDENTIAL - INTERNAL USE ONLY | Generated: {new Date(data.generated_at).toLocaleString()}
+                {t.global.retrospective} · {new Date(data.generated_at).toLocaleString()}
             </div>
         </div>
     );

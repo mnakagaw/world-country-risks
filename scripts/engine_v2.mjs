@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const VERSION = '2.0.0';
+export const VERSION = '2.0.1';
 export const METHOD = 'gdelt-events-calendar-v2';
 export const hash = value => crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
@@ -63,10 +63,19 @@ export function verifyImpact(record, window, verificationRoot) {
         if(actual!==capture.body_sha256||actual!==evidence.body_sha256||capture.url!==evidence.url||
            Date.parse(capture.retrieved_at)>=cutoff||Date.parse(evidence.checked_at)<Date.parse(capture.retrieved_at)||
            !evidence.excerpt_original||!body.toString('utf8').includes(evidence.excerpt_original))throw new Error('Original body/provenance/cutoff verification failed');
+        if(record.assessment?.method==='accepted-functional-impact-v2' &&
+           (capture.accepted_artifact_sha256!==record.verification.accepted_artifact_sha256 ||
+            capture.native_manifest_sha256!==record.verification.native_manifest_sha256 ||
+            !['orange','yellow','red'].includes(record.assessment.level) ||
+            Date.parse(record.assessment.valid_until_utc)<=cutoff))throw new Error('Accepted assessment provenance or validity failed');
     }
     const sourceIds=new Set(record.evidence.map(e=>e.original_source_id));
     return {schema:record.schema,status:record.status,event_id:record.event_id,country:record.country,
         impact:record.impact,scope:record.scope,period:record.period||null,recovery:record.recovery||null,
+        impact_localized:record.impact_localized||null,
+        assessment:record.assessment && record.assessment.method==='accepted-functional-impact-v2' &&
+            /^[a-f0-9]{64}$/.test(record.verification.accepted_artifact_sha256||'') &&
+            /^[a-f0-9]{64}$/.test(record.verification.native_manifest_sha256||'') ? record.assessment : null,
         verification:{verified_at:record.verification.verified_at,body_sha256:record.verification.body_sha256},
         evidence:record.evidence.map(e=>({url:e.url,original_source_id:e.original_source_id,checked_at:e.checked_at,body_sha256:e.body_sha256})),
         independent_source_count:sourceIds.size,

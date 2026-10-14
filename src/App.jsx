@@ -185,14 +185,14 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
         if (!targetIso || !enrichedRiskData?.countries) return null;
         const countryData = enrichedRiskData.countries[targetIso];
         if (!countryData) return null;
-        return { iso2: targetIso, ...countryData };
+        return { iso2: targetIso, ...countryData, snapshot_id:enrichedRiskData.snapshot_id };
     }, [selectedCountry, hoveredCountry, enrichedRiskData]);
 
     if (loading) return <div className="app app--loading"><div className="loading-spinner">{t.loading}</div></div>;
     if (error) return <div className="app app--error"><div className="error-message">{t.error}: {error}</div></div>;
 
     return (
-        <div className="app">
+        <div className="app" data-snapshot-id={riskData?.snapshot_id}>
             <Header
                 t={t}
                 alertCounts={alertCounts}
@@ -215,7 +215,8 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                 {riskData?.coverage && ` · ${riskData.coverage.available_slots}/${riskData.coverage.expected_slots} slots`}
                 {' · '}{Date.now() - Date.parse(riskData?.cutoff_utc || riskData?.date) > 36 * 3600000 ? 'Stale / 更新期限超過' : '固定版 / Fixed snapshot'}
                 {' · '}<a href="./country-interest/">各国の検索関心 / Search interest</a>
-                <span>報道由来の監視信号。Unknown・Low coverage・Partialと確認済み実影響は別扱い。v2と旧版の差は日々の悪化ではありません。</span>
+                <span>{t.global.scopeNote}</span>
+                {riskData?.countries && Object.values(riskData.countries).some(country=>country.evaluation) && <span>{t.global.primaryColorNote}</span>}
             </div>
             <div className="app-main">
                 <div className="map-container">

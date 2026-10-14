@@ -7,6 +7,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { geoCountryCode, countryName } from '../src/country-codes.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -431,11 +432,11 @@ export function loadCountryNameMap() {
     const nameMap = {};
 
     geoData.features.forEach(f => {
-        const code = f.properties['ISO3166-1-Alpha-2'];
+        const code = geoCountryCode(f.properties);
         const name = f.properties['name'] || f.properties['ADMIN'];
         if (code && name) {
             // Fill if empty, but we'll apply overrides after
-            if (!nameMap[code]) nameMap[code] = name;
+            if (!nameMap[code]) nameMap[code] = countryName(code, 'en', name);
         }
     });
 

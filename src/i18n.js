@@ -1,3 +1,4 @@
+import {monitoringText} from './monitoring-text.js';
 // Translations for the dashboard
 export const translations = {
     en: {
@@ -229,6 +230,26 @@ export const translations = {
         }
     }
 };
+
+for(const [lang,text] of Object.entries(monitoringText)) {
+    const extra={
+      ja:{comparisonTitle:'指標別の比較',pairedToday:'当日・一致枠中央値',pairedBaseline:'基準・一致枠中央値',comparisonDays:'比較日',comparisonStatus:{baseline_days_insufficient:'比較日数不足',low_or_zero_baseline:'基準が小さい／ゼロ'},impactCurrent:'締切時点の有効な確認',impactHistorical:'過去の確認（現在の継続は未確認）'},
+      en:{comparisonTitle:'Component comparisons',pairedToday:'Today: matched median',pairedBaseline:'Baseline: matched median',comparisonDays:'paired dates',comparisonStatus:{baseline_days_insufficient:'Insufficient paired dates',low_or_zero_baseline:'Low or zero baseline'},impactCurrent:'Valid at cutoff',impactHistorical:'Historical; continuity unconfirmed'},
+      es:{comparisonTitle:'Comparación por indicador',pairedToday:'Actual: mediana coincidente',pairedBaseline:'Base: mediana coincidente',comparisonDays:'fechas comparadas',comparisonStatus:{baseline_days_insufficient:'Fechas insuficientes',low_or_zero_baseline:'Base pequeña o cero'},impactCurrent:'Confirmación válida al cierre',impactHistorical:'Histórico; continuidad no confirmada'}
+    };
+    Object.assign(translations[lang],extra[lang]);
+    translations[lang].comparisonMax={ja:'最大比較倍率',en:'Maximum comparison ratio',es:'Razón comparativa máxima'}[lang];
+    for(const [key,value] of Object.entries(text))if(!["global","stable"].includes(key))translations[lang][key]=value;
+    translations[lang].methods=text.methods;translations[lang].reasons=text.reasons;
+    Object.assign(translations[lang].global,text.global);
+    translations[lang].green=text.green;translations[lang].legend.stable=text.stable;
+    translations[lang].alertLabels.green=text.green;
+    translations[lang].alertLabels.unknown=translations[lang].legend.unknown;
+    translations[lang].global.rIndexUnavailable=text.global.matchedNote;
+    translations[lang].global.scopeNote={ja:'報道由来の監視信号。部分観測・判定不能・確認済みの実影響を区別します。旧版との差は日々の悪化ではありません。',en:'News monitoring: partial observations, Unknown and verified impacts are distinct. Changes from the legacy method do not show daily deterioration.',es:'Seguimiento de noticias: se distinguen observaciones parciales, falta de evaluación e impactos confirmados. El cambio de método no implica deterioro diario.'}[lang];
+    translations[lang].global.weeklyHistory={ja:'週次の観測履歴',en:'Weekly observation history',es:'Historial semanal observado'}[lang];
+    translations[lang].global.retrospective={ja:'過去の履歴は原本からの再構成です。その当時に発表した予測ではありません。旧方式とv2の値は直接比較できません。',en:'Past observations are reconstructed from retained originals, not predictions published at that time. Legacy andv2 values are not directly comparable.',es:'El pasado se reconstruye de originales conservados; no son predicciones publicadas entonces. Los métodos anterior yv2 no son directamente comparables.'}[lang];
+}
 
 export const languages = [
     { code: 'en', label: 'EN' },
