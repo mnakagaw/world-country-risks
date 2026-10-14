@@ -126,3 +126,7 @@ supplement pointers. Never restore shared live databases, queues or collector
 state. Keep controllers, Windows jobs and old Codex reservations stopped on a
 different PC until separately activated. Task-owned test/build/cache copies are
 removed after validation; unique inputs, published history and recovery remain.
+
+## First verified synchronized production edition
+
+October15,2026 completed via the existing countryrisks-daily native retry/check19. The accepted/published upstream is `20261014T223037Z-f8e526f4`, editorial SHA `b0d32d02af1d1b0574137b3a7d3422ed373676b49f4cc17de6d2422eba610ea6` and Google03:00 seal `2127df899093abc2898776e0e0b845c040fb5190c2036e8eea19e0ea122eedd9`. The WCR48h window ends `2026-10-14T18:00:00Z`; snapshot `3c55e7efba11526cd5cd00c9cd48ce8b591850bd90e54a9d38c63956acfd3eb7` was TLS/public-SHA verified. The old October14 05:00 snapshot and completed-week index retained their exact SHA. Availability remains `partial`; this is source coverage, not a claim of zero risk or verified national impact. Native profile/jobs were unchanged.
