@@ -29,12 +29,12 @@ def read(ftp,name):
         raise
 
 
-def deploy(credentials,weekly=False):
+def deploy(credentials,weekly=False,ui_only=False):
     dist=ROOT/'dist'
     files=[]
     for base in ['assets','country-interest','data/v2']:
         if (dist/base).is_dir():files.extend(p for p in (dist/base).rglob('*') if p.is_file())
-    files+=[dist/'country-interest.js',dist/'country-interest.css',dist/'index.html']
+    files+=[dist/name for name in ['country-interest.js','country-interest.css','country-interest-cards.js','country-interest-cards.css','country-interest-alerts.js','country-interest-alerts.css','index.html'] if (dist/name).is_file()]
     if weekly:
         index_file=dist/'data/history/weekly_5y/index.json'
         index=json.loads(index_file.read_bytes())
@@ -64,10 +64,14 @@ def deploy(credentials,weekly=False):
             value=json.loads(payloads[name])
             if sha256(payloads[name]).hexdigest()!=record['sha256'] or value['epoch']!=index['epoch'] or value['latest_completed_week']!=index['latest_completed_week']:
                 raise ValueError('Weekly epoch/payload mismatch')
+    if ui_only:
+        if weekly:raise ValueError('UI-only cannot replace the weekly index')
+        payloads={name:raw for name,raw in payloads.items() if not name.startswith('data/')}
+        names={name:file for name,file in names.items() if name in payloads}
     deferred=['data/history/weekly_5y/index.json','data/v2/status.json','data/v2/latest.json','data/v2/manifest.json','index.html']
     ordered=sorted(n for n in names if n not in deferred)+[n for n in deferred if n in names]
     folder=ROOT/'.local/releases'/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ');folder.mkdir(parents=True,exist_ok=False)
-    receipt={'schema':'country-risk-publication-v2','files':{},'status':'running','latest_last':True}
+    receipt={'schema':'country-risk-publication-v2','files':{},'status':'running','latest_last':True,'ui_only':ui_only}
     ftp=connect(credentials);known=set()
     try:
         for i,name in enumerate(ordered):
@@ -102,4 +106,4 @@ def deploy(credentials,weekly=False):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--credentials',type=Path,required=True);p.add_argument('--weekly',action='store_true');a=p.parse_args();deploy(a.credentials,weekly=a.weekly)
+    p=argparse.ArgumentParser();p.add_argument('--credentials',type=Path,required=True);p.add_argument('--weekly',action='store_true');p.add_argument('--ui-only',action='store_true');a=p.parse_args();deploy(a.credentials,weekly=a.weekly,ui_only=a.ui_only)

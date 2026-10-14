@@ -152,7 +152,6 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
 
     // 3) AIR SIGNALS Logic
     const googleTrends = riskData?.google_trends || [];
-    const snsSurge = riskData?.air?.sns_top10 || [];
     const polymarket = riskData?.polymarket || [];
 
     // Scroll into view effector
@@ -297,34 +296,6 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
                                     </span>
                                     <span className="signal-geo">{iso}</span>
                                     <span className="signal-value">{item.ps_today > 0 ? `P:${item.ps_today.toFixed(1)}` : `#${item.rank}`}</span>
-                                </li>
-                            );
-                        })}
-
-                        {/* SNS Political Surge */}
-                        {snsSurge.length > 0 && (
-                            <div className="air-caption-item" style={{ fontSize: '0.85em', color: 'var(--color-text-dim, #a1a1aa)', opacity: 0.8, padding: '16px 4px 4px' }}>
-                                📡 {t?.global?.airCaptions?.xt}
-                            </div>
-                        )}
-                        {snsSurge.map((item, idx) => {
-                            const isHovered = hoveredSignal?.type === 'xt' && hoveredSignal?.index === idx;
-                            const isSelected = selectedSignal?.type === 'xt' && selectedSignal?.index === idx;
-                            return (
-                                <li
-                                    key={`sns-${idx}`}
-                                    className={`signal-item ${isSelected ? 'signal-item--selected' : ''} ${isHovered ? 'signal-item--hovered' : ''}`}
-                                    onClick={() => {
-                                        if (item.iso2) onCountrySelect(item.iso2);
-                                        onSignalSelect({ type: 'xt', index: idx, ...item });
-                                    }}
-                                >
-                                    <span className="signal-id" style={{ backgroundColor: 'rgba(255, 126, 226, 0.2)', color: '#ff7ee2' }}>
-                                        SNS{(idx + 1).toString().padStart(2, '0')}
-                                    </span>
-                                    <span className="signal-text">{Array.isArray(item.political_terms) ? item.political_terms.join(', ') : item.term}</span>
-                                    <span className="signal-geo">{item.iso2}</span>
-                                    <span className="signal-value">{item.volume_text || `PS:${item.ps_today?.toFixed(1)}`}</span>
                                 </li>
                             );
                         })}

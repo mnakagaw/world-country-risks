@@ -212,27 +212,6 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
             });
         });
 
-        // Process SNS (GetDayTrends Political Surge)
-        (riskData.air?.sns_top10 || []).forEach((item, idx) => {
-            if (!item.iso2 || !countryCentroids[item.iso2]) return;
-            const count = isoCounts[item.iso2] || 0;
-            isoCounts[item.iso2] = count + 1;
-
-            allSignals.push({
-                type: 'xt',
-                id: `sns-${idx}`,
-                label: item.id || `SNS${(idx + 1).toString().padStart(2, '0')}`,
-                data: { ...item, title: item.political_terms?.[0] || 'Top Term Unknown' },
-                index: idx,
-                position: countryCentroids[item.iso2],
-                offsetIndex: count,
-                color: '#ec4899', // Pink 500 (High Saturation Label Match)
-                selectedColor: '#f472b6',
-                popupTitle: 'POLITICAL SURGE',
-                popupValue: `PS: ${item.ps_today?.toFixed(1) || '0.0'} (Surge: ${item.surge > 0 ? '+' : ''}${item.surge || 0})`
-            });
-        });
-
         return allSignals;
     }, [riskData, countryCentroids]);
 

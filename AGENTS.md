@@ -34,3 +34,8 @@ Restore NAS controllers/profiles with enabled=false and all jobs stopped. Do not
 overwrite live shared databases/queues or stop unrelated workers. Preserve other
 tasks' dirty/unpushed work, stage only intended changes and clean task-owned scratch
 after verification. Never use host Word COM.
+
+Both WCR repositories have Actions enabled=false. Keep all4 canonical workflows
+disabled and Pages in workflow mode; never restore old Actions or branch auto-build.
+Read docs/PEOPLE_INTEREST_AND_ACTIONS.md for the125-country daily reader, popup
+edition validation and legacy SNS provider retirement.

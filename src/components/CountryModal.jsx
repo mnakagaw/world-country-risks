@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {countryLevel,monitoringMethod,greenLabel} from '../display';
 import {alertCard} from '../alert-contract';
+import CountryGoogleInterest from './CountryGoogleInterest';
 
 function ScoreBar({ label, score, max = 10 }) {
     const percentage = (score / max) * 100;
@@ -51,7 +52,7 @@ function ExpandButton({ iso2, isAvailable }) {
     );
 }
 
-export default function CountryModal({ country, onClose, t, lang, isPinned, hasHistory, side, signals, viewMode, theme }) {
+export default function CountryModal({ country, onClose, t, lang, isPinned, hasHistory, side, signals, viewMode, theme, editionDate }) {
     if (!country) return null;
 
     const popupStyle = side === 'right' ? { left: 'auto', right: '420px' } : { left: '20px', right: 'auto' };
@@ -511,60 +512,10 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                 </div>
             )}
 
-            {(signals?.gt?.length > 0 || signals?.pm?.length > 0 || signals?.xt) && (
-                <div className="modal-signals" style={{ marginTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '0.5rem' }}>
+            <CountryGoogleInterest key={country.iso2+editionDate} country={country.iso2} day={editionDate} lang={lang} />
 
-                    {/* SNS Political Surge (Phase E4) - Moved to TOP */}
-                    {signals.xt && (
-                        <div className="signal-group-modal" style={{ marginBottom: '0.5rem' }}>
-                            <h4 style={{ fontSize: '0.6rem', color: '#6fa5b5', marginBottom: '0.25rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                                <span style={{ color: '#ff7ee2' }}>●</span> SNS POLITICAL SURGE
-                            </h4>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                                <span style={{ fontSize: '0.6rem', color: '#ccc' }}>
-                                    {lang === 'ja' ? '政治関心スコア' : 'Political Score'}
-                                </span>
-                                <span style={{ fontSize: '0.7rem', color: '#fff', fontWeight: 'bold' }}>
-                                    {signals.xt.ps_today?.toFixed(2) || '0.00'}
-                                </span>
-                            </div>
-                            {signals.xt.political_terms?.length > 0 ? (
-                                <ul className="signal-list" style={{ padding: 0 }}>
-                                    {signals.xt.political_terms.map((term, i) => (
-                                        <li key={i} className="signal-item" style={{ padding: '0.25rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                                            <span className="signal-id signal-id--xt" style={{ fontSize: '0.4rem', padding: '0 2px', backgroundColor: '#ff7ee2', color: '#000' }}>SNS</span>
-                                            <span className="signal-text" style={{ fontSize: '0.6rem', color: '#ccc' }}>{term}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            ) : (
-                                <div style={{ fontSize: '0.55rem', color: '#666', fontStyle: 'italic' }}>
-                                    {lang === 'ja' ? '目立った政治的シグナルなし' : 'No significant political signals'}
-                                </div>
-                            )}
-                        </div>
-                    )}
-
-                    {/* GT */}
-                    {signals.gt?.length > 0 && (
-                        <div className="signal-group-modal" style={{ marginBottom: '0.5rem' }}>
-                            <h4 style={{ fontSize: '0.6rem', color: '#6fa5b5', marginBottom: '0.25rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                                <span style={{ color: '#2dd4bf' }}>●</span> GOOGLE TRENDS
-                            </h4>
-                            <ul className="signal-list" style={{ padding: 0 }}>
-                                {signals.gt.map((item, i) => (
-                                    <li key={i} className="signal-item" style={{ padding: '0.25rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)', opacity: item.is_political ? 1 : 0.6 }}>
-                                        <span className="signal-id" style={{ fontSize: '0.4rem', padding: '0 2px', backgroundColor: item.is_political ? '#2dd4bf' : '#444', color: item.is_political ? '#000' : '#888' }}>GT</span>
-                                        <span className="signal-text" style={{ fontSize: '0.6rem', color: item.is_political ? '#ccc' : '#888' }}>{item.term}</span>
-                                        <span className="signal-value" style={{ fontSize: '0.5rem', color: item.is_political ? '#2dd4bf' : '#666' }}>
-                                            {item.is_political ? (item.labels?.[0] || 'Political') : 'Non-political'}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-
+            {signals?.pm?.length > 0 && (
+                <div className="modal-signals" style={{marginTop:"1rem"}}>
                     {/* PM */}
                     {signals.pm?.length > 0 && (
                         <div className="signal-group-modal">

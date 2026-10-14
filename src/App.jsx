@@ -272,11 +272,8 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                     side={popupSide}
                     viewMode={viewMode}
                     theme={theme}
-                    signals={{
-                        gt: enrichedRiskData?.air?.countries?.[selectedData.iso2]?.top20_terms || [],
-                        pm: (enrichedRiskData?.polymarket || []).filter(s => s.iso2 === selectedData.iso2),
-                        xt: enrichedRiskData?.air?.countries?.[selectedData.iso2] || null
-                    }}
+                    editionDate={riskData?.upstream_sync?.date || riskData?.date}
+                    signals={{pm: (enrichedRiskData?.polymarket || []).filter(s => s.iso2 === selectedData.iso2)}}
                 />
             )}
         </div>

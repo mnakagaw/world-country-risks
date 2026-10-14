@@ -57,7 +57,6 @@ export const translations = {
             airSignals: 'AIR SIGNALS',
             airCaptions: {
                 gt: 'Google Trends: Rising search queries (by country)',
-                xt: 'GetDayTrends: Trending topics on X (by country)',
                 pm: 'Polymarket: Key topics in prediction markets'
             }
         },
@@ -133,7 +132,6 @@ export const translations = {
             airSignals: 'AIR SIGNALS (社会的関心)',
             airCaptions: {
                 gt: 'Google Trends：検索トレンド上昇語（国別）',
-                xt: 'GetDayTrends：X上の急上昇トピック（国別）',
                 pm: 'Polymarket：予測市場の主要テーマ'
             }
         },
@@ -209,7 +207,6 @@ export const translations = {
             airSignals: 'SEÑALES AÉREAS',
             airCaptions: {
                 gt: 'Google Trends: Consultas de búsqueda en alza (por país)',
-                xt: 'GetDayTrends: Temas en tendencia en X (por país)',
                 pm: 'Polymarket: Temas clave en mercados de predicción'
             }
         },
@@ -272,7 +269,7 @@ for(const [lang,text] of Object.entries(monitoringText)) {
     translations[lang].reasons.distinct_domain_or_article_support_insufficient={ja:'R固有の記録または別記事群の裏づけが不足',en:'Insufficient distinct R records/article groups',es:'Respaldo insuficiente por R o grupos de artículos distintos'}[lang];
     translations[lang].global.articleContextScope={ja:'原文を確認した少数記事のR要素・方向の補助説明です。全GKGの分類・記事数や国民全体の感情として扱わず、CAMEOの分母へ加算しません。',en:'Reviewed article R/direction context for a small accepted subset. Not all-GKG classification, article volume or population sentiment; never added to CAMEO denominators.',es:'Contexto R/dirección de pocos artículos revisados. No clasifica todo GKG ni mide volumen o sentimiento poblacional; no se suma al denominador CAMEO.'}[lang];
     translations[lang].global.sourceLedger={ja:'利用中の観測ソース・未接続項目',en:'Observation sources and unconnected inputs',es:'Fuentes e insumos no conectados'}[lang];
-    translations[lang].global.snsScope={ja:'GetDayTrendsは旧版のSNSトピック量で、住民投稿の文脈は本版に未接続です。Google Trendsは検索関心で、恐怖・不信の方向や全国感情を示しません。',en:'GetDayTrends is a legacy topic-volume source; resident post context is not connected here. Google Trends is search interest, not fear/distrust or nationwide sentiment.',es:'GetDayTrends es volumen de temas del método anterior; el contexto de publicaciones residentes no está conectado. Google Trends es interés de búsqueda, no miedo/desconfianza ni sentimiento nacional.'}[lang];
+    translations[lang].global.snsScope={ja:'住民投稿の文脈は本版に未接続です。Google Trendsは検索関心で、恐怖・不信の方向や全国感情を示しません。',en:'Resident post context is not connected here. Google Trends is search interest, not fear/distrust or nationwide sentiment.',es:'El contexto de publicaciones residentes no está conectado. Google Trends es interés de búsqueda, no miedo/desconfianza ni sentimiento nacional.'}[lang];
 }
 
 export const languages = [

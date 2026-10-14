@@ -39,7 +39,7 @@ unreviewed GDELT and Trends items remain discovery metadata. Corrections should
 supersede a stable Event revision while preserving old accepted snapshots.
 
 The one Google producer is SecurityWatch `scripts/country_interest.py`, called
-inside the existing general15 owner.35 individually tested feeds retain original
+inside the existing general15 owner.125 individually tested feeds retain original
 query, provider date, fetch completion, hash/revision, approximate traffic string,
 related URLs and missingness. Repeated polls add appearance history, not topic
 counts or traffic totals. Daily seals use03:00 JST and exclude observations completed
@@ -53,8 +53,10 @@ New disaster/security query revisions are private search hints for GKG, local-la
 web and official-source review, with no severity/location/score promotion.
 
 The daily local adapter is `scripts/periodic_adapter.py`; its schedule is the existing
-shared Windows tick at05:07 JST. The legacy daily/weekly Actions are retired when
-the local owner is activated. No account billing settings or purchases are changed.
+shared Windows tick at03:20 JST from2026-10-15, pending verified same-day
+ExecBrief acceptance/publication and03:00 seal. Actions are disabled in both WCR
+repositories; restore them disabled. Read docs/EXECBRIEF_DAILY_SYNC.md and
+docs/PEOPLE_INTEREST_AND_ACTIONS.md. No account billing settings or purchases are changed.
 The weekly adapter uses that same tick on Monday11:00 JST and reads the last
 completed UTC ISO week. All country files are SHA-bound to one immutable release
 epoch; the index selects it only after every file has been verified. The daily and
