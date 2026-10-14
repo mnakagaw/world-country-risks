@@ -130,8 +130,8 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
     }, []);
 
     useEffect(() => {
-        fetch('./geo/countries.geojson')
-            .then(res => res.json())
+        fetch('./geo/countries.overview.geojson')
+            .then(res => res.ok ? res.json() : fetch('./geo/countries.geojson').then(original => original.json()))
             .then(data => setGeoData(data))
             .catch(err => console.error('Failed to load GeoJSON:', err));
     }, []);

@@ -37,3 +37,14 @@ schedule or API AI run. Restore GitHub Actions disabled, all controllers/profile
 stopped, and authorize only one restored native owner. The first synchronized
 edition remains2026-10-15 after same-day accepted/published ExecBrief, earliest
 gate check03:20 JST. Read docs/EXECBRIEF_DAILY_SYNC.md.
+
+The display map now uses `geo/countries.overview.geojson` (2.39MB) instead of
+the47.28MB original public geometry. `scripts/build_map_overview.py` uses
+Shapely's topology-preserving simplification at0.025 degrees, retaining all258
+feature properties, geometry types and component counts. The original file and
+country-code/risk calculation remain unchanged. This is a monitoring overview,
+not survey geometry. Regenerate explicitly after a source geometry update;
+keep its source SHA/overview SHA metadata. The private canonical source and NAS
+contain both geometry versions; the public source mirror excludes `public/geo`.
+The normal publisher includes the overview before root HTML. The original route
+remains a fallback. Python Shapely is needed only to regenerate the overview.

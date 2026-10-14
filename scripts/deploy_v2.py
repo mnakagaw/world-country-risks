@@ -35,6 +35,8 @@ def deploy(credentials,weekly=False,ui_only=False):
     for base in ['assets','country-interest','data/v2']:
         if (dist/base).is_dir():files.extend(p for p in (dist/base).rglob('*') if p.is_file())
     files+=[dist/name for name in ['country-interest.js','country-interest.css','country-interest-cards.js','country-interest-cards.css','country-interest-alerts.js','country-interest-alerts.css','index.html'] if (dist/name).is_file()]
+    for name in ['geo/countries.overview.geojson','geo/countries.overview.metadata.json']:
+        if (dist/name).is_file():files.append(dist/name)
     if weekly:
         index_file=dist/'data/history/weekly_5y/index.json'
         index=json.loads(index_file.read_bytes())
