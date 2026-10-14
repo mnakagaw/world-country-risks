@@ -39,7 +39,7 @@
       if(!c.top5.length)text('p','この時点の検索語は未観測です。データの蓄積を開始しています。',card).className='interest-empty';
       text('small','最終成功 '+stamp(c.last_success),card);
     }
-    if(!selected.length)text('p','表示語の該当なし。保存語の履歴は下の検索から確認できます。',grid);
+    if(!selected.length)text('p',code&&!cards.some(c=>c.country===code)?'この国・地域は取得非対応です。登録されている国・地域を選んでください。':'表示語の該当なし。保存語の履歴は下の検索から確認できます。',grid);
   }
   async function loadCatalog(){
     const day=date.value,query={view:'catalog'};if(day){query.day=day;query.month=day.slice(0,7);}catalog=await get(query);
@@ -63,7 +63,7 @@
       }
       cards=collected;meta=first;lastLoad=Date.now();
       const requested=country.value||country.dataset.requested;country.replaceChildren();text('option','すべての国・地域',country).value='';
-      for(const code of first.available_countries){const option=text('option',label(code)+' ('+code+')',country);option.value=code;}country.value=requested;
+      for(const code of first.available_countries){const option=text('option',label(code)+' ('+code+')',country);option.value=code;}if(requested&&!first.available_countries.includes(requested)){const option=text('option',label(requested)+' ('+requested+') · 取得非対応',country);option.value=requested;option.disabled=true;}country.value=requested;
       country.dataset.requested='';render();
       if(token===version)await loadAttention();
     }catch(error){if(token!==version)return;status.textContent='取得を確認できません：'+error.message+'。再確認待ちです。';if(meta){meta.delivery_state='stale';render();status.textContent+=' · 新しい取得に失敗しました。';}}
