@@ -17,7 +17,9 @@ def export(policy,records,output,verification_root=None,cutoff=None):
     for event in records:
         for e in event['evidence']:
             url=canonical(e['url']);article_id='article-'+sha256(url.encode()).hexdigest()[:20];body=e['body_sha256']
-            metadata_sha=sha256(json.dumps({k:event.get(k) for k in ['event_id','country','scope','impact_localized','period']},sort_keys=True).encode()).hexdigest();key=sha256((article_id+body+policy_sha+metadata_sha).encode()).hexdigest()
+            metadata={k:event.get(k) for k in ['event_id','country','scope','impact_localized','period']}
+            metadata['accepted_artifact_sha256']=event['verification'].get('accepted_artifact_sha256')
+            metadata_sha=sha256(json.dumps(metadata,sort_keys=True).encode()).hexdigest();key=sha256((article_id+body+policy_sha+metadata_sha).encode()).hexdigest()
             namespace=Path(verification_root) if verification_root else ROOT/'.local/accepted-impacts/verification';capture=json.loads((namespace/'captures'/(e['capture_id']+'.json')).read_bytes());raw=(namespace/'verified-bodies'/capture['body_file']).read_bytes();assert sha256(raw).hexdigest()==body
             accepted_example=event['verification'].get('accepted_artifact_sha256')=='7ae3e13a77089a0ff2212235c682e3723cf8f4695b5b3c996f175ce3b948c65e'
             selected=claims.get(event['event_id'],[]) if accepted_example else []
