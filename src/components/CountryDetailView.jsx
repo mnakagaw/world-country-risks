@@ -45,6 +45,7 @@ function DetailHeader({ iso2, meta, config, setConfig, paperMode, setPaperMode, 
                     </h2>
                     <div style={{ fontSize: '0.85rem', color: paperMode ? '#666' : '#aaa', marginTop: '4px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                         <span>Updated: {new Date(meta.generated_at).toLocaleDateString()} | Data coverage: <span style={{ fontWeight: 'bold', color: paperMode ? '#000' : '#fff' }}>{meta.weeks_available || meta.weeks_total || 0}</span>/{meta.weeks_total || 52} weeks</span>
+                        {meta.source_status && <span>{meta.latest_completed_week}: {meta.source_status} · {meta.coverage?.available_slots}/{meta.coverage?.expected_slots} slots · Legacy / v2 are not comparable</span>}
                         {meta.anomalies?.includes('LOW_COVERAGE') && (
                             <span style={{ background: '#444', color: '#aaa', fontSize: '0.65rem', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontWeight: 'bold' }}>Low coverage</span>
                         )}
@@ -418,11 +419,14 @@ export default function CountryDetailView({ lang, t, theme }) {
         // Improvement: If logic requires deep history, we should fetch 5y.
         // Let's stick to range-based fetch for now to match verified fix.
 
-        const fetchPaths = config.range > 52
-            ? [`./data/history/weekly_5y/${iso2}.json`, `./data/weekly/countries/${iso2}.json`]
-            : [`./data/weekly/countries/${iso2}.json`, `./data/history/weekly_5y/${iso2}.json`]; // Fallback to 5y if 52w missing?
+        const fetchPaths = [`./data/history/weekly_5y/${iso2}.json`];
 
         const tryFetch = async (paths) => {
+            const indexResponse = await fetch('./data/history/weekly_5y/index.json', { cache: 'no-store' });
+            if (!indexResponse.ok) throw new Error('Weekly completion index unavailable');
+            const index = await indexResponse.json();
+            const record = index.countries.find(c => c.iso2 === iso2);
+            if (record?.path) paths = [`./data/history/weekly_5y/${record.path}`];
             for (const path of paths) {
                 try {
                     const res = await fetch(path);
@@ -440,7 +444,7 @@ export default function CountryDetailView({ lang, t, theme }) {
             setFetchError("Data not found for this country/range.");
         };
 
-        tryFetch(fetchPaths);
+        tryFetch(fetchPaths).catch(error => setFetchError(error.message));
     }, [iso2, config.range]); // Re-fetch only if range bracket changes (e.g. 52 -> 260)
 
     if (fetchError) return <div style={{ color: 'red', padding: '2rem' }}>Error: {fetchError}</div>;

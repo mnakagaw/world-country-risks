@@ -8,7 +8,7 @@ import scoring, { scoreAllCountries, logScoringResult, addDailySnapshot, getHist
 import { aggregateToIso2, logConversionStats, loadCountryNameMap } from './fips_to_iso2.js';
 import { fetchHotCountries, fetchGkgThemeCounts, fetchEventUrls } from './gdelt_bigquery.js';
 import { fetchGkgTitles } from './gkg_titles.js';
-import { fetchGoogleTrends, classifyTrendsGemini } from './googletrends.mjs';
+import { fetchGoogleTrends, classifyTrendsGemini } from './googletrends_shared.mjs';
 import { fetchPolymarketTop10 as fetchPolymarketEvents, mapPolymarketToCountry } from './polymarket.mjs';
 import Parser from 'rss-parser';
 

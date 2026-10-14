@@ -60,7 +60,9 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
     useEffect(() => {
         if (hasHistory && iso2) {
-            fetch(`./data/weekly/countries/${iso2}.json`)
+            fetch('./data/history/weekly_5y/index.json', { cache: 'no-store' })
+                .then(res => res.json())
+                .then(index => fetch(`./data/history/weekly_5y/${index.countries.find(c => c.iso2 === iso2)?.path || iso2 + '.json'}`))
                 .then(res => res.ok ? res.json() : null)
                 .then(data => setWeeklyCache(data))
                 .catch(() => setWeeklyCache(null));
@@ -69,6 +71,8 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
     // Dynamic Alert Level based on viewMode
     const getActiveAlertLevel = () => {
+        if (country.data_status && !['observed','partial'].includes(country.data_status)) return 'unknown';
+        if (viewMode === 'surge_r' && country.baseline_status === 'baseline_insufficient') return 'unknown';
         if (viewMode === 'surge' && country.surge) {
             const rank = country.surge.rank;
             if (rank <= 10) return 'red';
@@ -178,7 +182,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                 <div className="modal-scores-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                     <span style={{ fontSize: '0.7rem', color: '#666', fontWeight: 'bold' }}>
                         {viewMode === 'surge_r'
-                            ? `RISK SCORE (R-INDEX): Max Ratio ${country.surge_r?.max_ratio_active?.toFixed(1) || '0.0'}`
+                            ? `R-INDEX: Max Ratio ${country.surge_r?.max_ratio_active?.toFixed(1) ?? 'Unavailable'}`
                             : `${t.panel.riskScores} (${viewMode === 'surge' ? t.viewMode.surge : (viewMode === 'index' ? t.viewMode.index : (viewMode === 'adj' ? t.viewMode.adj : t.viewMode.raw))})`
                         }
                     </span>
@@ -187,7 +191,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                             {(viewMode === 'surge' && country.surge) || (viewMode === 'index' && country.index) ? (
                                 <span style={{ fontSize: '0.6rem', color: '#ff3b3b', fontWeight: 'bold', padding: '1px 4px', background: 'rgba(255,59,59,0.1)', borderRadius: '2px' }}>
                                     {viewMode === 'surge' ? `Rank: #${country.surge.rank} (S: ${country.surge.score.toFixed(1)})` :
-                                        `Index: ${country.index.score.toFixed(1)}`}
+                                        `Index: ${country.index.score?.toFixed(1) ?? 'Unknown'}`}
                                 </span>
                             ) : null}
                             {country.baseline?.gdelt?.GDELTweight && (
@@ -223,7 +227,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                             <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#aaa' }}>INDEX SCORE</span>
                             <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: (country.index?.level || '').toLowerCase() === 'red' ? 'var(--color-red)' : (country.index?.level || '').toLowerCase() === 'orange' ? 'var(--color-orange)' : 'var(--color-yellow)' }}>
-                                {country.index.score.toFixed(1)} ({country.index.level})
+                                {country.index.score?.toFixed(1) ?? 'Unknown'} ({country.index.level})
                             </span>
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', fontSize: '0.75rem', color: '#888' }}>
@@ -307,7 +311,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                                 <div style={{ fontSize: '0.55rem', opacity: 0.6 }}>{t.panel.rLabels[key.toLowerCase()]}</div>
                                             </td>
                                             <td style={{ textAlign: 'center', padding: '4px' }}>{data.today}</td>
-                                            <td style={{ textAlign: 'center', padding: '4px' }}>{data.baseline_median}</td>
+                                            <td style={{ textAlign: 'center', padding: '4px' }}>{data.baseline_median ?? '—'}</td>
                                             <td style={{ textAlign: 'right', padding: '4px', fontWeight: 'bold' }}>{data.ratio?.toFixed(1)}x</td>
                                         </tr>
                                     );
@@ -527,6 +531,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
             </div>
 
             {/* KEY SOURCES (Moved above Signals) */}
+            {country.confirmed_impacts?.length > 0 && <section className="confirmed-impacts"><h4>確認済みの実影響 / Verified functional impacts</h4>{country.confirmed_impacts.map(impact => <article key={impact.event_id}><p>{impact.impact} · {impact.scope}</p><small>{impact.verification.verified_at} · {impact.confidence}</small><p>{impact.evidence.map(e => <a key={e.url} href={e.url} target="_blank" rel="noopener noreferrer">{e.original_source_id} ↗ </a>)}</p></article>)}</section>}
             {country.sources && country.sources.length > 0 && (
                 <div className="modal-sources" style={{ marginBottom: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '0.5rem' }}>
                     <h4>{t?.panel?.sources || 'KEY SOURCES'}</h4>

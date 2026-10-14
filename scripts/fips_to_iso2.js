@@ -369,12 +369,15 @@ export function aggregateToIso2(fipsData) {
             merged.domestic_event_count = (existing.domestic_event_count || 0) + (data.domestic_event_count || 0);
 
             // Average for ratios and tone
-            merged.avg_tone = ((existing.avg_tone || 0) + (data.avg_tone || 0)) / 2;
+            merged.tone_count = (existing.tone_count ?? existing.event_count ?? 0) + (data.tone_count ?? data.event_count ?? 0);
+            merged.tone_sum = (existing.tone_sum ?? (existing.avg_tone ?? 0) * (existing.tone_count ?? existing.event_count ?? 0)) +
+                (data.tone_sum ?? (data.avg_tone ?? 0) * (data.tone_count ?? data.event_count ?? 0));
+            merged.avg_tone = merged.tone_count > 0 ? merged.tone_sum / merged.tone_count : null;
+            merged.denom_actor_geo = (existing.denom_actor_geo ?? 0) + (data.denom_actor_geo ?? 0);
 
             // Recalculate domestic_ratio from merged counts
-            merged.domestic_ratio = merged.event_count > 0
-                ? merged.domestic_event_count / merged.event_count
-                : (existing.domestic_ratio ?? data.domestic_ratio ?? 1.0);
+            merged.domestic_ratio = merged.denom_actor_geo >= 50
+                ? merged.domestic_event_count / merged.denom_actor_geo : null;
 
             // Merge baseline fields (prefixed with _)
             Object.keys(data).filter(k => k.startsWith('_')).forEach(k => {
@@ -384,9 +387,11 @@ export function aggregateToIso2(fipsData) {
             });
 
             merged._merged_from = [...(existing._merged_from || [existing._fips || fips]), fips];
+            merged.raw_country_codes = [...new Set([...(existing.raw_country_codes || []), fips])];
             iso2Data[iso2] = merged;
         } else {
-            iso2Data[iso2] = { ...data, _fips: fips };
+            iso2Data[iso2] = { ...data, _fips: fips, raw_country_codes: [fips],
+                raw_code_system: 'FIPS 10-4', mapping_version: 'fips-iso2-v2-20261014' };
         }
     }
 

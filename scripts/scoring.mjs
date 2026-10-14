@@ -12,6 +12,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { calendarDates } from './engine_v2.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -65,6 +66,7 @@ function median(arr) {
 // ============ HISTORICAL DATA ============
 // In-memory cache for rolling calculations
 let historicalData = {};
+let scoringDate = new Date().toISOString().slice(0, 10);
 
 export function loadHistoricalData(data) {
     historicalData = data || {};
@@ -81,7 +83,7 @@ export function addDailySnapshot(date, countryData) {
 }
 
 function getRollingP95(windowDays = 7) {
-    const dates = Object.keys(historicalData).sort().slice(-windowDays);
+    const dates = calendarDates(scoringDate, windowDays).filter(d => historicalData[d]);
     if (dates.length === 0) return config.high_volume_suppression?.fallback_threshold || 50000;
 
     const allCounts = [];
@@ -95,7 +97,7 @@ function getRollingP95(windowDays = 7) {
 }
 
 function getCountryRollingMedian(code, windowDays = 14, metric = 'event_count') {
-    const dates = Object.keys(historicalData).sort().slice(-windowDays);
+    const dates = calendarDates(scoringDate, windowDays);
     const counts = [];
 
     for (const date of dates) {
@@ -174,7 +176,9 @@ export function scoreCountry(countryData, context = {}) {
 
     // Event floor
     if (event_count < config.event_count_floor) {
-        return { level: 'green', bundles: 0, score: 0, reason: 'low_volume', signals: [] };
+        return { level: 'unknown', data_status: event_count > 0 ? 'low_coverage' : 'unknown',
+            bundles: 0, score: null, reason: 'low_volume', signals: [],
+            r1_security, r2_living_count: r2_raw, r3_governance, r4_fiscal_count: r4_raw };
     }
 
     let bundles = 0;
@@ -593,6 +597,7 @@ export function scoreCountry(countryData, context = {}) {
 
 // ============ BATCH SCORING ============
 export function scoreAllCountries(countryDataMap, options = {}) {
+    scoringDate = options.date || new Date().toISOString().slice(0, 10);
     const results = {};
     const distribution = { red: [], orange: [], yellow: [], green: 0, skipped: 0 };
     const volJumpCountries = [];

@@ -1,15 +1,15 @@
 // Translations for the dashboard
 export const translations = {
     en: {
-        title: 'State Capacity Risk Early-Warning Dashboard',
-        subtitle: 'Visualizing daily signs of instability across Security, Living, Governance, and Fiscal signals',
+        title: 'Country Risk Monitoring · Engine v2.0',
+        subtitle: 'News-derived signals; confirmed functional impacts are assessed separately',
         dataDate: 'DATA',
         active: 'ACTIVE',
         red: 'RED',
         orange: 'ORANGE',
         yellow: 'YELLOW',
         legend: {
-            title: 'THREAT LEVEL',
+            title: 'MONITORING SIGNAL',
             critical: 'Critical',
             warning: 'Warning',
             watch: 'Watch',
@@ -21,12 +21,12 @@ export const translations = {
             r1: 'R1 Security',
             r2: 'R2 Basic Living Conditions',
             r3: 'R3 Governance',
-            r4: 'R4 Fiscal Sustainability',
+            r4: 'R4 Aid, Sanctions & Economic Pressure',
             rLabels: {
                 r1: 'Security',
                 r2: 'Living',
                 r3: 'Governance',
-                r4: 'Fiscal'
+                r4: 'Aid / Sanctions'
             },
             composite: 'Composite Score',
             summary: 'SITUATION SUMMARY',
@@ -70,15 +70,15 @@ export const translations = {
         }
     },
     ja: {
-        title: '国家機能リスク早期警戒ダッシュボード',
-        subtitle: '各国の不安定化を、治安・生活・統治・財政の兆候から日次で可視化',
+        title: '国別リスク監視 · エンジンv2.0',
+        subtitle: '報道由来の監視信号。確認済みの実影響・国家機能は別途評価',
         dataDate: 'データ',
         active: '稼働中',
         red: 'RED',
         orange: 'ORANGE',
         yellow: 'YELLOW',
         legend: {
-            title: '脅威レベル',
+            title: '監視信号',
             critical: '警戒',
             warning: '注意',
             watch: '監視',
@@ -90,12 +90,12 @@ export const translations = {
             r1: 'R1 安全',
             r2: 'R2 生活の床',
             r3: 'R3 統治の安定',
-            r4: 'R4 財政の持続性',
+            r4: 'R4 援助・制裁・経済圧力',
             rLabels: {
                 r1: '治安',
                 r2: '生活',
                 r3: '統治',
-                r4: '財政'
+                r4: '援助・制裁'
             },
             composite: '総合スコア',
             summary: '状況要約',
@@ -139,15 +139,15 @@ export const translations = {
         }
     },
     es: {
-        title: 'Tablero de Alerta Temprana de Riesgo de Capacidad Estatal',
-        subtitle: 'Visualización diaria de señales de inestabilidad a partir de indicadores de Seguridad, Vida, Gobernanza y Fiscalidad',
+        title: 'Seguimiento del Riesgo País · Motor v2.0',
+        subtitle: 'Señales derivadas de noticias; los impactos funcionales confirmados se evalúan por separado',
         dataDate: 'DATOS',
         active: 'ACTIVO',
         red: 'ROJO',
         orange: 'NARANJA',
         yellow: 'AMARILLO',
         legend: {
-            title: 'NIVEL DE AMENAZA',
+            title: 'SEÑAL DE SEGUIMIENTO',
             critical: 'Crítico',
             warning: 'Alerta',
             watch: 'Vigilancia',
@@ -159,12 +159,12 @@ export const translations = {
             r1: 'R1 Seguridad',
             r2: 'R2 Condiciones Básicas de Vida',
             r3: 'R3 Gobernanza',
-            r4: 'R4 Sostenibilidad Fiscal',
+            r4: 'R4 Ayuda, Sanciones y Presión Económica',
             rLabels: {
                 r1: 'Seguridad',
                 r2: 'Vida diaria',
                 r3: 'Gobernanza',
-                r4: 'Fiscal'
+                r4: 'Ayuda / Sanciones'
             },
             composite: 'Puntuación Compuesta',
             summary: 'RESUMEN DE SITUACIÓN',

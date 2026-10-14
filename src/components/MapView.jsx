@@ -268,7 +268,7 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
 
         const colors = theme === 'light' ? ALERT_COLORS_LIGHT : ALERT_COLORS;
 
-        let color = colors.green;
+        let color = theme === 'light' ? '#c7cdd4' : '#3d4654';
         if (viewMode === 'surge') {
             const rank = countryRisk?.surge?.rank;
             if (rank) {
@@ -288,6 +288,11 @@ export default function MapView({ riskData, onCountrySelect, onCountryHover, onC
             color = colors[alertLevel];
         }
 
+        if (!countryRisk || (countryRisk.data_status && !['observed','partial'].includes(countryRisk.data_status)) ||
+            (viewMode === 'surge_r' && countryRisk.baseline_status === 'baseline_insufficient')) {
+            color = theme === 'light' ? '#c7cdd4' : '#3d4654';
+        }
+        if (!color || countryRisk?.alert_level === 'unknown' && viewMode === 'raw') color = theme === 'light' ? '#c7cdd4' : '#3d4654';
         return {
             fillColor: isSelected ? '#06b6d4' : color, // Cyan-500 for selection
             weight: isSelected ? 1.5 : 0.5,

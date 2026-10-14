@@ -1,12 +1,14 @@
 {
   "name": "world-country-risks",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "generate": "node scripts/generate_daily.js",
+    "generate": "node scripts/generate_v2.mjs",
+    "generate:legacy": "node scripts/generate_daily.js",
+    "test:v2": "node --test tests/engine_v2.test.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "cost:baseline5y": "node scripts/bigquery/dryrun_5y_baseline_cost.mjs --years 5",

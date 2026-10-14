@@ -1,0 +1,17 @@
+{
+  "version": "countryrisks-local-v2",
+  "jobs": [{
+    "id": "countryrisks-daily",
+    "hours": [5], "minutes": [7],
+    "argv": ["{python}", "-X", "utf8", "-B", "scripts/periodic_adapter.py", "--result", "{result}"],
+    "ownership": "Existing shared Windows tick; legacy CountryRisks daily Actions disabled before cutover",
+    "raw_collection_added": false,
+    "google_rss_collection": false,
+    "restore_enabled": false
+  },{
+    "id": "countryrisks-weekly", "weekdays": [0], "hours": [11], "minutes": [0],
+    "argv": ["{python}", "-X", "utf8", "-B", "scripts/periodic_adapter.py", "--weekly", "--result", "{result}"],
+    "ownership": "Existing shared Windows tick; legacy Monday02:00 UTC weekly Actions disabled before cutover",
+    "raw_collection_added": false, "google_rss_collection": false, "restore_enabled": false
+  }]
+}

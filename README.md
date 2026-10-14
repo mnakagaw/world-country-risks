@@ -1,3 +1,27 @@
+# Engine v2.0
+
+Current production uses **v2.0**, with a separate namespace and fixed observation
+cutoff. It shows reporting-derived monitoring signals, coverage and unknown/stale
+states separately; it does not measure state capacity or count verified independent
+incidents from GDELT rows. R4 means aid, sanctions and economic pressure records.
+Legacy daily/weekly series below describe the former implementation and are not
+comparable v2 baselines or verified impact.
+
+The single Google Trending Now producer is SecurityWatch's existing general15
+cycle. All three sites share selected country views and cutoff-bound daily seals,
+without summing repeated traffic buckets or inferring public opinion. Raw XML,
+SQLite and original-document reviews are private. Search hints go through GKG,
+local-language web and official-original checks before any verified-event record.
+
+Daily05:07 JST and Monday11:00 JST updates use the existing shared Windows tick
+and saved NAS GDELT artifacts. No account billing settings are changed. Publication
+uses FTPS/public HTTP SHA256 checks and switches latest references after payloads.
+Restore controllers and schedules stopped; see [source/release/restoration](docs/ENGINE_V2_HANDOFF.md).
+
+**Comparative ratios require sufficient same-method calendar history.** Missing
+days and incompatible48h/7d baselines remain unavailable. Implementation and replay
+checks do not establish improved prediction accuracy or comprehensive country coverage.
+
 <details>
 <summary><strong>English</strong></summary>
 

@@ -93,12 +93,14 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
         // RAW (Default)
         const levels = { red: 3, orange: 2, yellow: 1, green: 0 };
         return all
-            .filter(c => c.alert_level !== 'green')
+            .filter(c => ['red', 'orange', 'yellow'].includes(c.alert_level))
             .sort((a, b) => (levels[b.alert_level] || 0) - (levels[a.alert_level] || 0) || b.composite_score - a.composite_score || a.iso2.localeCompare(b.iso2))
             .slice(0, 15);
     }, [riskData, viewMode]);
 
     const getAlertStyle = (country) => {
+        if (country.data_status && !['observed','partial'].includes(country.data_status)) return { backgroundColor: '#3d4654', color: '#fff' };
+        if (viewMode === 'surge_r' && country.baseline_status === 'baseline_insufficient') return { backgroundColor: '#3d4654', color: '#fff' };
         if (viewMode === 'index') {
             const level = country.index?.level?.toLowerCase() || 'green';
             return { backgroundColor: `var(--color-${level})`, color: (level || '').toLowerCase() === 'yellow' ? '#000' : '#fff' };
@@ -122,6 +124,9 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
     };
 
     const getAlertLabel = (country) => {
+        if (country.data_status === 'partial' && viewMode !== 'surge_r') return `${country.alert_level?.toUpperCase() || 'UNKNOWN'} · PARTIAL`;
+        if (country.data_status && !['observed','partial'].includes(country.data_status)) return country.data_status.toUpperCase();
+        if (viewMode === 'surge_r' && country.baseline_status === 'baseline_insufficient') return 'BASELINE INSUFFICIENT';
         if (viewMode === 'index') return country.index?.level?.toUpperCase() || 'STABLE';
         if (viewMode === 'surge') {
             const rank = country.surge?.rank;

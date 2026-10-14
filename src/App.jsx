@@ -19,9 +19,10 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
     const [error, setError] = useState(null);
     const [popupSide, setPopupSide] = useState('left');
     const [availableDates, setAvailableDates] = useState([]);
-    const [viewMode, setViewMode] = useState(() => localStorage.getItem('rw_view_mode') || 'surge_r');
+    const [viewMode, setViewMode] = useState(() => localStorage.getItem('rw_view_mode') || 'raw');
     const [historyIndex, setHistoryIndex] = useState({});
     const [regressionReport, setRegressionReport] = useState(null);
+    const v2Manifest = useRef({});
 
     useEffect(() => {
         localStorage.setItem('rw_view_mode', viewMode);
@@ -90,21 +91,25 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
 
 
     useEffect(() => {
-        fetch(`./data/available_dates.json?t=${new Date().getTime()}`)
-            .then(res => res.json())
-            .then(dates => {
+        Promise.all([
+            fetch('./data/v2/manifest.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}),
+            fetch('./data/available_dates.json', { cache: 'no-store' }).then(r => r.json())
+        ]).then(([v2, legacy]) => {
+                v2Manifest.current = v2;
+                const dates = [...new Set([...Object.keys(v2), ...legacy])].sort().reverse();
                 setAvailableDates(dates);
-                if (dates.length > 0) fetchData(dates[0]);
+                if (Object.keys(v2).length) fetchData(Object.keys(v2).sort().reverse()[0]);
+                else if (dates.length > 0) fetchData(dates[0]);
                 else fetchData('latest_v4');
             })
             .catch(() => fetchData('latest_v4'));
 
         // Load history index once for visibility checks (Tier B country series)
-        fetch('./data/weekly/countries/index.json')
+        fetch('./data/history/weekly_5y/index.json')
             .then(res => res.json())
             .then(idx => {
                 console.log("Loaded Weekly History Index:", idx);
-                setHistoryIndex(idx?.countries || {});
+                setHistoryIndex(Object.fromEntries((idx?.countries || []).map(c => [c.iso2, c])));
             })
             .catch(err => console.error("Weekly History Index Load Error:", err));
 
@@ -120,13 +125,14 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
 
     const fetchData = (dateKey) => {
         setLoading(true);
-        const fileName = dateKey.includes('-') ? `${dateKey}.json` : `${dateKey}.json`;
+        const fileName = v2Manifest.current[dateKey]?.path ? `v2/${v2Manifest.current[dateKey].path}` : `${dateKey}.json`;
         fetch(`./data/${fileName}`)
             .then(res => {
                 if (!res.ok) throw new Error("Data load failed");
                 return res.json();
             })
             .then(data => {
+                setError(null);
                 setRiskData(data);
                 setLoading(false);
             })
@@ -236,6 +242,15 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                 toggleTheme={toggleTheme}
             />
 
+            <div className="engine-data-status" role="status">
+                <strong>{riskData?.engine_version ? `Engine v${riskData.engine_version}` : 'Legacy engine'}</strong>
+                {' · '}締切 / Cutoff: {riskData?.cutoff_utc || riskData?.date || 'Unknown'}
+                {' · '}データ / Data: {riskData?.source_status || 'legacy; coverage unverified'}
+                {riskData?.coverage && ` · ${riskData.coverage.available_slots}/${riskData.coverage.expected_slots} slots`}
+                {' · '}{Date.now() - Date.parse(riskData?.cutoff_utc || riskData?.date) > 36 * 3600000 ? 'Stale / 更新期限超過' : '固定版 / Fixed snapshot'}
+                {' · '}<a href="./country-interest/">各国の検索関心 / Search interest</a>
+                <span>報道由来の監視信号。Unknown・Low coverage・Partialと確認済み実影響は別扱い。v2と旧版の差は日々の悪化ではありません。</span>
+            </div>
             <div className="app-main">
                 <div className="map-container">
                     <MapView
