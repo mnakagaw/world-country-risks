@@ -28,6 +28,11 @@ def export(execbrief_root,cutoff,output,verification_root):
     native_raw=manifest.read_bytes();native=json.loads(native_raw)
     candidates={item['url']:item for item in native.get('candidates',[])}
     namespace=Path(verification_root);(namespace/'captures').mkdir(parents=True,exist_ok=True);(namespace/'verified-bodies').mkdir(exist_ok=True)
+    provenance=namespace/'provenance';provenance.mkdir(exist_ok=True)
+    for raw in [accepted_raw,native_raw]:
+        target=provenance/(sha256(raw).hexdigest()+'.json')
+        if target.exists() and target.read_bytes()!=raw:raise ValueError('Immutable accepted provenance conflict')
+        if not target.exists():target.write_bytes(raw)
     records=[];skipped=[]
     for item in theme.get('incidents',[]):
         if item.get('confirmation') not in ('operator_statement','authority_statement') or item.get('service_disruption') is not True:
