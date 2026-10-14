@@ -21,7 +21,7 @@
     const q=search.value.trim().toLocaleLowerCase('ja'),code=country.value;
     const selected=cards.filter(c=>(!code||c.country===code)&&(!q||label(c.country).toLocaleLowerCase('ja').includes(q)||c.country.toLowerCase().includes(q)||c.top5.some(t=>t.raw_query.toLocaleLowerCase('ja').includes(q))));
     const stale=meta.delivery_state==='stale';
-    status.textContent=`${selected.length}/${cards.length}国・地域 · ${meta.mode==='daily'?'24時間集計':'15分更新'} · ${meta.delivery_state==='historical'?'保存した過去時点':meta.delivery_state==='sealed'?'日次固定版':stale?'取得が古いため再確認待ち':'最新観測'}${meta.provider_status?.status==='rate_limited'?' · Google取得頻度制限・再確認待ち':''} · ${stamp(meta.window.start_utc)} → ${stamp(meta.window.end_utc)}`;
+    status.textContent=`${selected.length}/${cards.length}国・地域 · ${meta.mode==='daily'?'24時間集計':'15分更新'} · ${meta.delivery_state==='historical'?(meta.projection_mode==='historical_backfill'?'保存観測から再構成した過去時点':'保存した過去時点'):meta.delivery_state==='sealed'?'日次固定版':stale?'取得が古いため再確認待ち':'最新観測'}${meta.provider_status?.status==='rate_limited'?' · Google取得頻度制限・再確認待ち':''} · ${stamp(meta.window.start_utc)} → ${stamp(meta.window.end_utc)}`;
     for(const c of selected){
       const card=text('article','',grid);card.className='interest-country-card';card.dataset.country=c.country;
       const head=text('header','',card);text('h2',label(c.country),head);text('span',c.country,head);
