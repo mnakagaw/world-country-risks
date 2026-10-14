@@ -20,7 +20,22 @@ The canonical starting receipt is:
 
 It must be verified with exit0 and point to a SHA-matched, verified deployment
 manifest and a passed release-checks receipt. The checks must bind a completed
-final editorial acceptance to the same editorial SHA. Then WCR verifies:
+final editorial acceptance to the same editorial SHA.
+
+Two producer receipt contracts are explicit. The earlier final receipt has
+`content_check_complete=true` and `accepted_final_editorial_snapshot.sha256`.
+The October15 exact-source receipt instead has
+`status=accepted_exact_source_awaiting_root_release_checks`, the accepted
+`projection.edition_sha256`/stress SHA, `exact_read_boundary` canonical source
+paths and matching SHA, passed content checks, and `summary_review.pending_apply=0`.
+Its only remaining item must be the recorded root checks/commit/FTPS/HTTPS stages.
+The later SHA-bound successful release-checks receipt and verified publication
+close those root stages. The prepublication final receipt is not rewritten or
+given fabricated completion flags. Unknown remaining work, pending/missing content
+review fields, failed checks, wrong source paths/SHA or an unverified publication
+remain blocked. Both formats retain the same date/cutoff/public/private SHA gates.
+
+Then WCR verifies:
 
 - Public `/data/latest-edition.json` date, edition,03:00 cutoff, deployment SHA,
   and equality with the local latest edition.

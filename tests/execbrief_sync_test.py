@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime,timedelta,timezone
 from hashlib import sha256
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
-from execbrief_sync import freeze_inputs,Waiting,closed_edition,canonical
+from execbrief_sync import freeze_inputs,Waiting,closed_edition,canonical,ROOT_RELEASE_REMAINING
 from cycle_lock import publication_lock
 from sync_article_context import export as context_export
 
@@ -29,6 +29,28 @@ class Gate(unittest.TestCase):
         self.seal=self.root/'interest/sealed/20261014T180000Z.json';put(self.seal,{'snapshot_id':'seal-03','window':{'start_utc':'2026-10-13T18:00:00Z','end_utc':'2026-10-14T18:00:00Z','semantics':'[start,end)'}})
     def tearDown(self):self.temp.cleanup()
     def gate(self,fetch=None):return freeze_inputs(self.policy,self.day,self.cutoff,self.root/'frozen',fetch or self.remote.__getitem__)
+    def modern(self,change=None):
+        checks=json.loads((self.work/'checks.json').read_bytes());ed=checks['editorial_acceptance']['edition_sha256'];stress=sha(self.remote['/data/world-stress/'+self.day+'.json'])
+        final={'run_date':self.day,'status':'accepted_exact_source_awaiting_root_release_checks','recorded_at_utc':'2026-10-14T20:00:00Z',
+          'projection':{'edition_sha256':ed,'world_stress_sha256':stress},'summary_review':{'pending_apply':0},'remaining':[ROOT_RELEASE_REMAINING],
+          'checks':{**{k:'passed' for k in ['edition_schema','stress_schema_and_recalculation','world_and_16_overviews_exact_adoption','JP_DO_accepted_items_and_priority_exact']},'country_author_world_independence_preserved':True},
+          'exact_read_boundary':{'rows':[{'canonical_path':str(self.producer/'content/daily-editorial'/(self.day+'.json')),'sha256':ed},{'canonical_path':str(self.producer/'content/world-stress'/(self.day+'.json')),'sha256':stress}]}}
+        if change:change(final)
+        f=self.put(self.work/'final.json',final);checks['editorial_acceptance']['final_receipt_sha256']=sha(f)
+        checks.update(schema_version='release-checks-v1',scope='daily-excluding-live-search',checks={k:{'returncode':0} for k in ['validate','python_tests','syntax']})
+        c=self.put(self.work/'checks.json',checks);self.receipt['local_gate']['checks_receipt_sha256']=sha(c);self.put(self.work/'publication-receipt.json',self.receipt)
+        return final
+    def test_exact_source_acceptance_is_closed_by_bound_root_checks_and_publication(self):
+        final=self.modern();folder,binding=self.gate();self.assertNotIn('content_check_complete',final);self.assertEqual(binding['information_confirmed_at_utc'],final['recorded_at_utc']);self.assertEqual((folder/'acceptance.json').read_bytes(),raw(final))
+    def test_modern_missing_content_proofs_or_unapplied_findings_stay_blocked(self):
+        changes=[lambda f:f['summary_review'].pop('pending_apply'),lambda f:f['summary_review'].update(pending_apply=1),lambda f:f.update(remaining=['Review unaccepted content']),lambda f:f['projection'].update(edition_sha256='0'*64),lambda f:f['exact_read_boundary']['rows'].pop(),lambda f:f['exact_read_boundary']['rows'][0].update(sha256='0'*64),lambda f:f['checks'].update(edition_schema='failed'),lambda f:f.update(content_check_complete=False)]
+        for change in changes:
+            with self.subTest(change=changes.index(change)):
+                self.modern(change)
+                with self.assertRaises(Waiting):self.gate()
+    def test_exact_source_receipt_never_substitutes_for_successful_root_checks(self):
+        self.modern();c=json.loads((self.work/'checks.json').read_bytes());c['checks']['validate']['returncode']=1;b=self.put(self.work/'checks.json',c);self.receipt['local_gate']['checks_receipt_sha256']=sha(b);self.put(self.work/'publication-receipt.json',self.receipt)
+        with self.assertRaises(Waiting):self.gate()
     def test_after_cutoff_acceptance_is_not_new_information_and_same_bundle_reuses(self):
         a,b=self.gate();c,d=self.gate();self.assertEqual(a,c);self.assertEqual(b,d);self.assertEqual(b['information_confirmed_at_utc'],'2026-10-14T20:00:00Z');self.assertEqual(b['cutoff_utc'],'2026-10-14T18:00:00Z')
     def test_unfinished_or_failed_receipt_cannot_publish(self):
