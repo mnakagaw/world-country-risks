@@ -49,6 +49,10 @@ web and official-source review, with no severity/location/score promotion.
 The daily local adapter is `scripts/periodic_adapter.py`; its schedule is the existing
 shared Windows tick at05:07 JST. The legacy daily/weekly Actions are retired when
 the local owner is activated. No account billing settings or purchases are changed.
+The weekly adapter uses that same tick on Monday11:00 JST and reads the last
+completed UTC ISO week. All country files are SHA-bound to one immutable release
+epoch; the index selects it only after every file has been verified. The daily and
+weekly adapters share one publication lock. The existing six jobs retain their owners.
 The private controller `.local/controller.json` names the existing archive, Node,
 ExecBrief source root, credential-file locator and NAS handoff root. Use a validated
 bundled Node executable on this Windows machine. Required packages: project npm
@@ -60,6 +64,8 @@ immutable payloads first, then status/latest/manifest/root HTML. The actual v200
 webroot is `/domains/countryrisks.org/public_html/world`, verified against live HTML.
 `handoff_v2.py` persists verified daily source DTO/snapshot/history/publication deltas
 to NAS after publication and reads every SHA back before moving the latest pointer.
+`handoff_weekly.py` saves the completed-week source DTO, bound index and all country
+payloads under the same private NAS packet after the weekly release is verified.
 
 Restore from private NAS `Codex/CountryRisks-Handoff/20261014-v2/`: initial source
 bundles and private packet, then its immutable daily delta chain. Shared SecurityWatch

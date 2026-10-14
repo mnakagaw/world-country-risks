@@ -8,3 +8,7 @@
 *.html text eol=lf
 *.md text eol=lf
 *.yml text eol=lf
+# Preserve the exact historical data bytes; new v2 publications use LF.
+public/data/** -text
+public/data/v2/** text eol=lf
+public/data/history/weekly_5y/releases/** text eol=lf

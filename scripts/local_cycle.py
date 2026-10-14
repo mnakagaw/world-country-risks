@@ -1,4 +1,4 @@
-"""One daily adapter called by the existing SecurityWatch general15 owner.
+"""One daily adapter called by the existing shared Windows tick.
 
 No scheduler here. Private controller paths and credentials are restored disabled.
 Failed stages retain the fixed input/history and cannot certify publication.

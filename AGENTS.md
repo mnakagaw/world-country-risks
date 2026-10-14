@@ -11,6 +11,8 @@ traffic never changes a risk color directly.
 
 The daily v2 owner is the existing shared Windows Python tick at05:07 JST,
 with a fixed05:00 JST cutoff and the preceding48h half-open DATEADDED window.
+The weekly owner uses the same tick on Monday11:00 JST for the completed UTC ISO
+week. Publish its immutable SHA-bound country epoch before replacing its index.
 It reads existing NAS normalized English Event artifacts by source/index/SHA;
 never start a second GDELT collector or use BigQuery to fill missing slots silently.
 Preserve Unknown, Low coverage, Partial, Stale and missing calendar days separately.
