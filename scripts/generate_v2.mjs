@@ -7,10 +7,11 @@ import scoring,{scoreAllCountries} from './scoring.mjs';
 import {VERSION,METHOD,reference,assessCoverage,ratioRecord,bindExplanation,hash,latestCompletedWeek,verifyImpact} from './engine_v2.mjs';
 import {aggregateObservation,matchedReferences,evaluateMonitoring} from './monitoring_v2.mjs';
 import {countryName} from '../src/country-codes.js';
+import {assessRIndex,validateRIndexConfig} from './rindex_v2.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const bytesHash=value=>crypto.createHash('sha256').update(value).digest('hex');
-const computationHash=bytesHash(['scripts/generate_v2.mjs','scripts/engine_v2.mjs','scripts/monitoring_v2.mjs','scripts/scoring.mjs','scripts/fips_to_iso2.js','src/country-codes.js','config/scoring.json','config/r_definitions.json'].map(p=>bytesHash(fs.readFileSync(path.join(root,p)))).join('|'));
+const computationHash=bytesHash(['scripts/generate_v2.mjs','scripts/engine_v2.mjs','scripts/monitoring_v2.mjs','scripts/rindex_v2.mjs','scripts/scoring.mjs','scripts/fips_to_iso2.js','src/country-codes.js','config/scoring.json','config/r_definitions.json'].map(p=>bytesHash(fs.readFileSync(path.join(root,p)))).join('|'));
 const arg=key=>{const i=process.argv.indexOf(key);return i>=0?process.argv[i+1]:null;};
 const inputPath=arg('--input');if(!inputPath)throw new Error('--input private shared-source DTO required');
 const raw=fs.readFileSync(inputPath),input=JSON.parse(raw);
@@ -28,6 +29,7 @@ if(history[date]?.input_sha256===bytesHash(raw)&&history[date]?.computation_sha2
 }
 const observed=aggregateObservation(input),data=observed.data,names=loadCountryNameMap();
 const scoringConfig=JSON.parse(fs.readFileSync(path.join(root,'config/scoring.json')));
+validateRIndexConfig(scoringConfig);
 const oldHistory={};for(const [day,item] of Object.entries(history))if(item.method===METHOD&&item.coverage==='complete')oldHistory[day]=item.countries;
 scoring.loadHistoricalData(oldHistory);
 const scored=scoreAllCountries(data,{date}).results;
@@ -47,19 +49,18 @@ if(verifiedPath){const events=JSON.parse(verifiedRaw);const seen=new Set();
   for(const event of events){const valid=verifyImpact(event,input.window,arg('--verification-root'));if(seen.has(valid.event_id))continue;seen.add(valid.event_id);output.confirmed_impacts.push(valid);}}
 for(const [iso,name] of Object.entries(names)){
     const row=data[iso],sourceState=assessCoverage(row,input),signal=scored[iso];
-    const byType=matchedReferences(observed,priorHistory,date,iso);
+    const comparisons=matchedReferences(observed,priorHistory,date,iso,{config:scoringConfig});
+    const rindex=assessRIndex(row,input,comparisons,scoringConfig),byType=rindex.by_type;
     comparisonAudit[iso]=structuredClone(byType);
     for(const record of Object.values(byType))delete record.reference.pairs;
-    const active=Object.entries(byType).filter(([,v])=>v.is_active).map(([k])=>k);
-    const availableTypes=Object.entries(byType).filter(([,v])=>v.is_stable_input).map(([type])=>type);
+    const active=rindex.active_types,availableTypes=rindex.available_types;
     const comparable=availableTypes.length>0;
-    const ratio=comparable?Math.max(...Object.values(byType).filter(v=>v.is_stable_input).map(v=>v.ratio)):null;
+    const ratio=rindex.max_ratio_active;
     const valid=sourceState==='observed';
     const detected=['red','orange','yellow'].includes(signal?.level) && (row?.event_count??0)>=200;
     const impacts=output.confirmed_impacts.filter(event=>event.country===iso);
     const evaluation=evaluateMonitoring(row,input,signal,byType,impacts,scoringConfig);
     const level=evaluation.level;
-    const ratioLevel=comparable?(ratio>=3.75?'Red':ratio>=2.75?'Orange':ratio>=1.75?'Yellow':'Green'):'Unknown';
     const rnames={R1:'Violence / coercion records',R2:'Living / humanitarian records',R3:'Governance / political confrontation records',R4:'Aid / sanctions / economic pressure records'};
     const sources=[...new Map((urls[iso]||[]).map(s=>[s.url,s])).values()].slice(0,5).map(s=>({...s,title:'GDELT discovery: '+new URL(s.url).hostname,sourceorg:new URL(s.url).hostname}));
     const counts=row||{};
@@ -69,15 +70,16 @@ for(const [iso,name] of Object.entries(names)){
       ja:`固定48時間：観測記録${counts.event_count??0}件。上昇信号の指標：${drivers}。比較可能な指標${availableTypes.length}/4。${impacts.some(e=>e.assessment?.current_at_cutoff)?'明記されたサービス範囲の障害を確認。':''}`,
       es:`48h: ${counts.event_count??0} registros observados; indicadores elevados: ${drivers}. ${availableTypes.length}/4 comparaciones disponibles. ${impacts.some(e=>e.assessment?.current_at_cutoff)?'Interrupción confirmada en el servicio indicado.':''}`};
     output.countries[iso]={code:iso,iso2:iso,name_en:name,name_ja:countryName(iso,'ja',name),name_es:countryName(iso,'es',name),
-      alert_level:level,monitoring_level:level,evaluation,data_status:sourceState,confidence:evaluation.confidence,composite_score:evaluation.display_score,
+      alert_level:level,monitoring_level:level,evaluation,rindex_evaluation:{...rindex,by_type:undefined},data_status:sourceState,confidence:evaluation.confidence,composite_score:evaluation.display_score,
       baseline_status:availableTypes.length===4?'observed':comparable?'partial_comparison':'baseline_insufficient',comparison_to_previous:null,
       summary_en:text.en,summary_ja:text.ja,summary_es:text.es,
+      mode_summaries:{surge_r:{en:`R-INDEX: ${rindex.level}; active R: ${active.join(', ')||'none'}; comparable R: ${availableTypes.join(', ')||'none'}. Active maximum: ${ratio??'unavailable'}.`,ja:`R-INDEX：${rindex.level}。発火した指標：${active.join(', ')||'なし'}。比較可能：${availableTypes.join(', ')||'なし'}。発火指標の最大倍率：${ratio??'比較不能'}。`,es:`R-INDEX: ${rindex.level}; activos: ${active.join(', ')||'ninguno'}; comparables: ${availableTypes.join(', ')||'ninguno'}. Máximo activo: ${ratio??'no disponible'}.`}},
       brief:{headline:text.en,what_happened:text.en,confidence:evaluation.confidence,sources:sources.map(s=>s.url)},
       explanation:explain,sources,gdelt:{...counts,event_count:counts.event_count??0,observed_count_status:(counts.event_count??0)===0?'observed_zero':'observed',total_window_estimate:null,avg_tone:counts.avg_tone??null},
       v4_scoring:signal||{level:'unknown',reason:'no_data',bundles:0},
       r_scores:signal?.r_scores_adj||{},r_scores_raw:signal?.r_scores_raw||{},
       index:{level:level,score:evaluation.display_score,method:evaluation.method,unit:evaluation.score_unit},
-      surge_r:{level:ratioLevel,max_ratio_active:ratio,active_types:active,bundle_count:active.length,available_types:availableTypes,method:'same-offset-observed-pairs-v2',color_role:'Comparison diagnostic; primary map uses monitoring_level'},
+      surge_r:{level:rindex.level,max_ratio_active:ratio,max_ratio_observed:rindex.max_ratio_observed,active_types:active,bundle_count:active.length,available_types:availableTypes,thresholds:rindex.thresholds,method:rindex.method,color_role:rindex.color_role},
       surge_r_by_type:byType,r_signal_labels:rnames,
       history_reference:reference(history,date,iso,'event_count'),
       weekly_history:{weeks:[],pattern:{overall:'unknown'},window:latestCompletedWeek(input.cutoff_utc),
@@ -88,10 +90,24 @@ const levels={red:0,orange:0,yellow:0,green:0,unknown:0};for(const row of Object
 const leaders=Object.values(output.countries).filter(c=>c.monitoring_level==='red').map(c=>c.code).join(', ')||'—';
 const currentImpacts=output.confirmed_impacts.filter(e=>e.assessment?.current_at_cutoff).map(e=>`${e.country}: ${e.scope}`).join('; ')||'—';
 output.monitoring_counts=levels;
+output.national_functional_assessment={status:'not_assessed',method_status:'research_and_design_review_only',reason:'News counts/ratios and operator-scoped incidents do not establish national political-goods delivery or response capacity'};
+output.mode_counts={};for(const mode of ['surge_r','raw','monitoring']){
+ const counts={red:0,orange:0,yellow:0,green:0,unknown:0};
+ for(const row of Object.values(output.countries))counts[mode==='surge_r'?row.rindex_evaluation.level:mode==='raw'?row.evaluation.initial_level:row.monitoring_level]++;
+ output.mode_counts[mode]=counts;
+}
+output.daily_briefing_rindex={};for(const [lang,label] of Object.entries({ja:'R-INDEX：同じ取得時間枠の比較・旧guard適用後',en:'R-INDEX: matched-time comparison with restored guards',es:'R-INDEX: comparación coincidente con controles restaurados'})){
+ const c=output.mode_counts.surge_r;
+ output.daily_briefing_rindex[lang]=[`${label} · Red ${c.red} / Orange ${c.orange} / Yellow ${c.yellow} / Green ${c.green} / Unknown ${c.unknown}`,
+  {ja:'緑は比較可能な指標に発火なし。比較不能の指標は未評価で、国の安全を意味しません。確認済み影響は別欄・総合監視に表示します。',en:'Green means no guard-qualified activation in available comparisons. Unavailable components remain unassessed. Accepted impacts belong to the separate monitoring view.',es:'Verde indica ausencia de activación válida entre indicadores comparables. Los faltantes quedan sin evaluar. Los impactos confirmados se presentan en seguimiento integral.'}[lang]];
+}
+output.daily_briefing_raw={};for(const [lang,label] of Object.entries({ja:'RAW：観測の絶対数・構成比による初期評価',en:'RAW: initial observed counts and composition',es:'RAW: conteos y composición observados'})){
+ const c=output.mode_counts.raw;output.daily_briefing_raw[lang]=[`${label} · Red ${c.red} / Orange ${c.orange} / Yellow ${c.yellow} / Green ${c.green} / Unknown ${c.unknown}`];
+}
 output.daily_briefing_ops={
- ja:[`固定48時間：取得${input.coverage.available_slots}/${input.coverage.expected_slots}枠。赤${levels.red}・橙${levels.orange}・黄${levels.yellow}・緑${levels.green}・判定不能${levels.unknown}。赤の対象：${leaders}。`,`絶対数・構成比による初期評価に、同じ取得時間枠の比較と確認済み影響を追加。現在の確認済み業務影響：${currentImpacts}。`,`緑は条件を満たす観測範囲で上昇信号なし。欠測部分は未評価で、国全体の安全・国家機能・財政能力を示しません。`],
- en:[`Fixed48h: ${input.coverage.available_slots}/${input.coverage.expected_slots} source slots. Red ${levels.red}; orange ${levels.orange}; yellow ${levels.yellow}; green ${levels.green}; unknown ${levels.unknown}. Red: ${leaders}.`,`Counts/composition startup assessment, with qualified matched-time comparisons and accepted scoped impacts. Current confirmed service disruption: ${currentImpacts}.`,`Green means no elevated signal in a qualified observed sample. Missing portions remain unassessed; no claim about national safety, state functions or fiscal capacity.`],
- es:[`Ventana fija48h: ${input.coverage.available_slots}/${input.coverage.expected_slots} intervalos. Rojo ${levels.red}; naranja ${levels.orange}; amarillo ${levels.yellow}; verde ${levels.green}; sin evaluación ${levels.unknown}. Rojo: ${leaders}.`,`Evaluación inicial por conteos y composición, con comparaciones coincidentes e impactos confirmados de alcance explícito. Interrupción confirmada vigente: ${currentImpacts}.`,`Verde significa sin señal elevada en la muestra suficiente. Los faltantes quedan sin evaluar; no demuestra seguridad nacional, funciones estatales ni capacidad fiscal.`]};
+ ja:[`固定48時間：取得${input.coverage.available_slots}/${input.coverage.expected_slots}枠。赤${levels.red}・橙${levels.orange}・黄${levels.yellow}・緑${levels.green}・判定不能${levels.unknown}。赤の対象：${leaders}。`,`絶対数・構成比による初期評価に、同じ取得時間枠の比較と確認済み影響を追加。最近の確認資料（サービス範囲限定）：${currentImpacts}。`,`緑は条件を満たす観測範囲で上昇信号なし。欠測部分は未評価で、国全体の安全・国家機能・財政能力を示しません。`],
+ en:[`Fixed48h: ${input.coverage.available_slots}/${input.coverage.expected_slots} source slots. Red ${levels.red}; orange ${levels.orange}; yellow ${levels.yellow}; green ${levels.green}; unknown ${levels.unknown}. Red: ${leaders}.`,`Counts/composition startup assessment, with qualified matched-time comparisons and accepted scoped impacts. Recent accepted statements (service scope only): ${currentImpacts}.`,`Green means no elevated signal in a qualified observed sample. Missing portions remain unassessed; no claim about national safety, state functions or fiscal capacity.`],
+ es:[`Ventana fija48h: ${input.coverage.available_slots}/${input.coverage.expected_slots} intervalos. Rojo ${levels.red}; naranja ${levels.orange}; amarillo ${levels.yellow}; verde ${levels.green}; sin evaluación ${levels.unknown}. Rojo: ${leaders}.`,`Evaluación inicial por conteos y composición, con comparaciones coincidentes e impactos confirmados de alcance explícito. Fuentes recientes aceptadas (alcance de servicio): ${currentImpacts}.`,`Verde significa sin señal elevada en la muestra suficiente. Los faltantes quedan sin evaluar; no demuestra seguridad nacional, funciones estatales ni capacidad fiscal.`]};
 // The public projection never publishes input artifact paths, full observations,
 // review bodies, Google raw feeds or authentication settings.
 output.snapshot_id=hash(output);

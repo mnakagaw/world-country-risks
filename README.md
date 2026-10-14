@@ -1,6 +1,14 @@
-# Engine v2.0
+# Engine v2.0.2
 
-Current production uses **v2.0**, with a separate namespace and fixed observation
+Current method: [R-INDEX purpose, modes, restored guards and design review](docs/RINDEX_V202.md).
+R1–R4 are project reporting proxies for concern about expected political goods
+and possible trust/legitimacy pressure. News intensity is not measured public
+opinion. Functional conditions are independent context and evidence, not a
+replacement for this early signal. R-INDEX, RAW and combined news monitoring
+have deliberately separate colors; verified provider impacts remain separately
+scoped facts. No new national perception/function index is deployed.
+
+Current production uses **v2.0.2**, with a separate namespace and fixed observation
 cutoff. It shows reporting-derived monitoring signals, coverage and unknown/stale
 states separately; it does not measure state capacity or count verified independent
 incidents from GDELT rows. R4 means aid, sanctions and economic pressure records.

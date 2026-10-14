@@ -6,7 +6,7 @@ import CountryModal from './components/CountryModal';
 import Header from './components/Header';
 import CountryDetailView from './components/CountryDetailView';
 import { translations, languages } from './i18n';
-import { alertCounts as countAlerts } from './display';
+import { alertCounts as countAlerts,greenLabel } from './display';
 import './Styles.css';
 
 // Reusable Dashboard Component
@@ -20,7 +20,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
     const [error, setError] = useState(null);
     const [popupSide, setPopupSide] = useState('left');
     const [availableDates, setAvailableDates] = useState([]);
-    const [viewMode, setViewMode] = useState(() => localStorage.getItem('rw_view_mode') || 'raw');
+    const [viewMode, setViewMode] = useState(() => {const saved=localStorage.getItem('rw_view_mode');return ['surge_r','raw','monitoring'].includes(saved)?saved:saved?'monitoring':'surge_r';});
     const [historyIndex, setHistoryIndex] = useState({});
     const [regressionReport, setRegressionReport] = useState(null);
     const v2Manifest = useRef({});
@@ -192,7 +192,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
     if (error) return <div className="app app--error"><div className="error-message">{t.error}: {error}</div></div>;
 
     return (
-        <div className="app" data-snapshot-id={riskData?.snapshot_id}>
+        <div className="app" data-snapshot-id={riskData?.snapshot_id} data-view-mode={viewMode}>
             <Header
                 t={t}
                 alertCounts={alertCounts}
@@ -238,7 +238,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                         <div className="legend-item"><span className="legend-color legend-color--red"></span><span>{t.legend.critical}</span></div>
                         <div className="legend-item"><span className="legend-color legend-color--orange"></span><span>{t.legend.warning}</span></div>
                         <div className="legend-item"><span className="legend-color legend-color--yellow"></span><span>{t.legend.watch}</span></div>
-                        <div className="legend-item"><span className="legend-color legend-color--green"></span><span>{t.legend.stable}</span></div>
+                        <div className="legend-item"><span className="legend-color legend-color--green"></span><span>{greenLabel(viewMode,t)}</span></div>
                         <div className="legend-item"><span className="legend-color legend-color--unknown"></span><span>{t.legend.unknown}</span></div>
                     </div>
                 </div>

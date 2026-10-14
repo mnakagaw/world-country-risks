@@ -1,9 +1,10 @@
 import { useRef, useEffect, useMemo, useState } from 'react';
-import { briefingLines, countryLevel, monitoringMethod } from '../display';
+import { briefingLines, countryLevel, monitoringMethod,greenLabel } from '../display';
 
 export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry, onSignalSelect, selectedSignal, hoveredSignal, hoveredCountry, t, lang, viewMode, onViewModeChange }) {
     const scrollRef = useRef(null);
     const [levelFilter,setLevelFilter]=useState('all');
+    const [countryQuery,setCountryQuery]=useState('');
 
     // 1) BRIEFING Logic
     const getBriefingContent = () => {
@@ -54,7 +55,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
     // 2) HEAT LIST Logic
     const sortedCountries = useMemo(() => {
         if (!riskData?.countries) return [];
-        const allRows = Object.entries(riskData.countries).map(([iso2, data]) => ({ iso2, ...data }));
+        const allRows = Object.entries(riskData.countries).map(([iso2, data]) => ({ iso2, ...data })).filter(country=>[country.iso2,country.name_en,country.name_ja,country.name_es].some(value=>value?.toLowerCase().includes(countryQuery.toLowerCase().trim())));
         if(allRows.some(country=>country.evaluation)) {
             const levels={red:4,orange:3,yellow:2,green:1,unknown:0};
             return allRows.filter(country=>levelFilter==='all' ? countryLevel(country,viewMode)!=='unknown' : countryLevel(country,viewMode)===levelFilter)
@@ -91,7 +92,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
             .filter(c => ['red', 'orange', 'yellow'].includes(c.alert_level))
             .sort((a, b) => (levels[b.alert_level] || 0) - (levels[a.alert_level] || 0) || b.composite_score - a.composite_score || a.iso2.localeCompare(b.iso2))
             .slice(0, 15);
-    }, [riskData, viewMode,levelFilter]);
+    }, [riskData, viewMode,levelFilter,countryQuery]);
 
     const getAlertStyle = (country) => {
         if(country.evaluation) {
@@ -208,8 +209,9 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
 
                 {riskData?.engine_version && <label className="level-filter">{t.global.levelFilter} <select value={levelFilter} onChange={event=>setLevelFilter(event.target.value)}>
                     <option value="all">{t.global.assessed}</option>
-                    {['red','orange','yellow','green','unknown'].map(level=><option key={level} value={level}>{level==='green'?t.green:level==='unknown'?t.legend.unknown:t.alertLabels[level]}</option>)}
+                    {['red','orange','yellow','green','unknown'].map(level=><option key={level} value={level}>{level==='green'?greenLabel(viewMode,t):level==='unknown'?t.legend.unknown:t.alertLabels[level]}</option>)}
                 </select></label>}
+                {riskData?.engine_version && <label className="country-search"><input aria-label={t.global.countrySearch} placeholder={t.global.countrySearch} value={countryQuery} onChange={event=>setCountryQuery(event.target.value)} /></label>}
                 {sortedCountries.length === 0 && <div className="heat-list-empty" role="status">
                     <p>{viewMode === 'surge_r' ? t.global.rIndexUnavailable : t.global.noHeat}</p>
                     {viewMode === 'surge_r' && onViewModeChange && <button type="button" onClick={() => onViewModeChange('raw')}>{t.global.showRaw}</button>}
@@ -234,7 +236,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
                             <div className="col-country">
                                 <span className="country-name">{lang === 'ja' ? (country.name_ja || country.name_en) : (lang === 'es' ? (country.name_es || country.name_en) : country.name_en)}</span>
                                 <span className="country-driver">
-                                    {country.evaluation ? monitoringMethod(country,t) : viewMode === 'index' ? `Index: ${country.index?.score?.toFixed(1) ?? t.legend.unknown}` :
+                                    {country.evaluation ? monitoringMethod(country,t,viewMode) : viewMode === 'index' ? `Index: ${country.index?.score?.toFixed(1) ?? t.legend.unknown}` :
                                         viewMode === 'surge' ? `Surge: ${country.surge?.score.toFixed(1)}` :
                                             viewMode === 'surge_r' ? `SurgeR: ${country.surge_r?.max_ratio_active?.toFixed(1)}` :
                                                 `Rank Score: ${country.composite_score?.toFixed(1) ?? t.legend.unknown}`}
@@ -242,7 +244,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
                             </div>
                             <span className="col-risk" style={getAlertStyle(country)}>{getAlertLabel(country)}</span>
                             <span className="col-summary">
-                                {((country.evaluation ? (lang==='ja'?country.summary_ja:lang==='es'?country.summary_es:country.summary_en) : null) || country.brief?.headline ||
+                                {(country.mode_summaries?.[viewMode]?.[lang] || (country.evaluation ? (lang==='ja'?country.summary_ja:lang==='es'?country.summary_es:country.summary_en) : null) || country.brief?.headline ||
                                     (lang === 'ja' ? country.summary_ja : (lang === 'es' ? (country.summary_es || country.summary_en) : country.summary_en)) ||
                                     country.brief?.what_happened) || "..."}
                             </span>

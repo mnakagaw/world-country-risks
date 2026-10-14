@@ -211,7 +211,7 @@ function SignalView({ history, range, paperMode, t }) {
                                 const sr = h.weekly_surge_r_by_type?.[rKey];
                                 const isActive = sr?.is_active;
                                 const ratio7 = sr?.ratio7 || h.ratios?.[rKey] || 0;
-                                const level = h.levels?.[rKey] || 'NoData';
+                                const level = h.rindex_evaluation ? sr?.level || 'unknown' : h.levels?.[rKey] || 'NoData';
                                 const bg = h.evaluation ? ({red:'#ff3b3b',orange:'#ff8c00',yellow:'#ffd700',green:'#388e3c',unknown:'#444'}[level] || '#444') : getGateColor(isActive, ratio7, level, h.weekly_surge_r?.thresholds);
                                 const reason = sr?.reason;
                                 const tooltipText = h.evaluation ? `${rKey} @ ${labels[i]}\nObserved7d: ${h.counts?.[rKey]}\nComparison: ${sr?.ratio7==null?'Unavailable':sr.ratio7.toFixed(2)+'x'}\n${h.evaluation.method}\nLevel: ${level}` : `${rKey} @ ${labels[i]}\nRatio: ${ratio7.toFixed(2)}x\nLevel: ${level}${!isActive && reason && reason !== 'active' ? `\nGate: ${reason}` : ''}`;

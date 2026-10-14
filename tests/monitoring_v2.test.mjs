@@ -6,15 +6,18 @@ const config=JSON.parse(fs.readFileSync('config/scoring.json'));
 const input={source_status:'partial',coverage:{expected_slots:192,available_slots:120,rejected_rows:0},input_artifacts:Array.from({length:192},(_,i)=>({status:i%8<5?'available':'missing'}))};
 const row={event_count:400,tone_count:400,denom_actor_geo:300,avg_tone:-2,r1_security:40,r2_living_count:0,r3_governance:30,r4_fiscal_count:0,observation_quality:{source_urls:40,source_domains:10,observed_hours:28,span_hours:46}};
 const refs=Object.fromEntries(['R1','R2','R3','R4'].map(key=>[key,{ratio:null,is_stable_input:false}]));
-test('All5 monitoring states keep one color across persisted modes and counts',()=>{
+test('All5 monitoring states stay consistent inside their selected mode',()=>{
  const countries={};for(const level of ['red','orange','yellow','green','unknown']){
   const evaluation=evaluateMonitoring(level==='unknown'?null:row,input,{level},refs,[],config);
   assert.equal(evaluation.level,level);countries[level]={evaluation,monitoring_level:level,baseline_status:'baseline_insufficient',data_status:'partial'};
-  for(const mode of ['raw','surge_r','surge','index'])assert.equal(countryLevel(countries[level],mode),level);
- }assert.deepEqual(alertCounts(countries,'surge_r'),{red:1,orange:1,yellow:1,green:1,unknown:1});
+  countries[level].evaluation.initial_level=level;
+  countries[level].rindex_evaluation={level:'unknown'};
+  for(const mode of ['raw','monitoring','index'])assert.equal(countryLevel(countries[level],mode),level);
+  assert.equal(countryLevel(countries[level],'surge_r'),'unknown');
+ }assert.deepEqual(alertCounts(countries,'monitoring'),{red:1,orange:1,yellow:1,green:1,unknown:1});
 });
 test('Sparse R2/R4 and observed zeros do not suppress available strong R1',()=>{
- const by={...refs,R1:{ratio:4,is_stable_input:true}};
+ const by={...refs,R1:{ratio:4,is_stable_input:true,is_active:true}};
  const e=evaluateMonitoring(row,input,{level:'green'},by,[],config);assert.equal(e.level,'red');assert.deepEqual(e.available_comparisons,['R1']);assert.equal(e.components.R2.value_status,'observed_zero');assert.equal(e.components.R2.total_window_estimate,null);
 });
 test('Partial inputs can qualify conditional Green; gaps, stale and no inputs cannot',()=>{

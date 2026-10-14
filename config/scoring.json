@@ -58,6 +58,13 @@
         "epsilon": 1
     },
     "surge_r": {
+        "method_version": "matched-offset-rindex-v2.0.2",
+        "min_observed_records": 50,
+        "external_pressure_guard": {
+            "max_domestic_share": 0.20,
+            "min_known_actor_geographies": 50,
+            "unknown_policy": "orange_threshold_for_R1_R3"
+        },
         "min_baseline_median_for_surge": 3,
         "smoothing_k": 5,
         "high_volume_floor": 5000,

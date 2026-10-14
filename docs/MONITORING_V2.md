@@ -1,5 +1,11 @@
 # Country monitoring v2.0.1
 
+**Superseded historical contract.** The all-modes color substitution and local
+impact country-color promotion below are corrected in [RINDEX_V202.md](RINDEX_V202.md).
+Current production preserves separate R-INDEX/RAW/combined news assessments and
+does not turn operator scope into national failure. The original public snapshots
+and method history remain available.
+
 The main map assesses a qualified observed news sample. Its five levels are red,
 orange, yellow, conditional green and Unknown. Comparison availability is a
 separate property of each R component. Missing R2/R4 baselines cannot suppress

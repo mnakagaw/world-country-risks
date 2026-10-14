@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {countryLevel,monitoringMethod} from '../display';
+import {countryLevel,monitoringMethod,greenLabel} from '../display';
 
 function ScoreBar({ label, score, max = 10 }) {
     const percentage = (score / max) * 100;
@@ -71,7 +71,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
     }, [iso2, hasHistory]);
 
     const alertLevel = countryLevel(country,viewMode);
-    const alertLabel = alertLevel==='green' ? t.legend.stable : alertLevel==='unknown' ? t.legend.unknown : t?.alertLabels?.[alertLevel] || alertLevel.toUpperCase();
+    const alertLabel = alertLevel==='green' ? greenLabel(viewMode,t) : alertLevel==='unknown' ? t.legend.unknown : t?.alertLabels?.[alertLevel] || alertLevel.toUpperCase();
 
     const getName = () => {
         if (lang === 'ja') return country.name_ja || country.name_en;
@@ -80,6 +80,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
     };
 
     const getSummary = () => {
+        if(country.mode_summaries?.[viewMode]?.[lang])return country.mode_summaries[viewMode][lang];
         if (lang === 'ja') return country.summary_ja || country.summary_en || '—';
         if (lang === 'es') return country.summary_es || country.summary_en || '—';
         return country.summary_en || country.summary_ja || '—';
@@ -99,7 +100,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
     const getDisplayScores = () => {
         if (viewMode === 'surge_r') return country.surge_r_score_by_type || {};
-        if (viewMode === 'surge' || viewMode === 'index' || viewMode === 'adj') return country.r_scores_adj || country.r_scores || {};
+        if (viewMode === 'monitoring' || viewMode === 'surge' || viewMode === 'index' || viewMode === 'adj') return country.r_scores_adj || country.r_scores || {};
         // RAW mode: use r_scores_raw (absolute level) if available
         return country.r_scores_raw || country.r_scores || {};
     };
@@ -164,7 +165,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                     <span style={{ fontSize: '0.7rem', color: '#666', fontWeight: 'bold' }}>
                         {viewMode === 'surge_r'
                             ? `R-INDEX · ${t.comparisonMax}: ${country.surge_r?.max_ratio_active?.toFixed(2) ?? '—'}`
-                            : `${t.panel.riskScores} (${viewMode === 'surge' ? t.viewMode.surge : (viewMode === 'index' ? t.viewMode.index : (viewMode === 'adj' ? t.viewMode.adj : t.viewMode.raw))})`
+                            : `${t.panel.riskScores} (${viewMode === 'monitoring' ? t.viewMode.monitoring : viewMode === 'surge' ? t.viewMode.surge : (viewMode === 'index' ? t.viewMode.index : (viewMode === 'adj' ? t.viewMode.adj : t.viewMode.raw))})`
                         }
                     </span>
                     {viewMode !== 'surge_r' && (
@@ -223,14 +224,16 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                 )}
 
                 {country.evaluation && <div className="country-evaluation">
-                    <p><strong>{monitoringMethod(country,t)}</strong> · {country.evaluation.partial_observation ? t.global.partial : t.global.observed}</p>
+                    <p><strong>{monitoringMethod(country,t,viewMode)}</strong> · {country.evaluation.partial_observation ? t.global.partial : t.global.observed}</p>
+                    <p className="mode-comparison">R-INDEX: {countryLevel(country,'surge_r')} · RAW: {countryLevel(country,'raw')} · {t.viewMode.monitoring}: {countryLevel(country,'monitoring')}</p>
                     <p>{t.global.observedRecords}: {country.evaluation.country_input.records} · {t.global.domains}: {country.evaluation.country_input.source_domains || 0} · {t.global.observedHours}: {country.evaluation.country_input.observed_hours || 0}</p>
                     <p>{t.global.availableComparisons}: {country.evaluation.available_comparisons.join(', ') || t.global.none}</p>
-                    {alertLevel==='unknown' && <p>{country.evaluation.reasons.map(reason=>t.reasons[reason] || reason).join(' / ')}</p>}
-                    {alertLevel==='green' && <p>{t.global.greenScope}</p>}
+                    {alertLevel==='unknown' && <p>{(viewMode==='surge_r'?country.rindex_evaluation?.reasons || []:country.evaluation.reasons).map(reason=>t.reasons[reason] || reason).join(' / ')}</p>}
+                    {alertLevel==='green' && <p>{viewMode==='surge_r'?t.global.rindexGreenScope:t.global.greenScope}</p>}
                     <small>{t.global.partialScope}</small>
                 </div>}
                 {viewMode === 'surge_r' && country.evaluation && <p className="comparison-note">{t.global.matchedNote}</p>}
+                {viewMode === 'surge_r' && country.evaluation && <p className="comparison-note">{t.global.activeZeroNote}</p>}
                 {viewMode === 'surge_r' && country.surge_r_by_type && (
                     <div style={{ marginTop: '1rem', padding: '10px', background: theme === 'light' ? 'rgba(0,0,0,0.03)' : 'rgba(0,0,0,0.2)', borderRadius: '4px', border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(255,255,255,0.1)' }}>
                         <div style={{ fontSize: '0.7rem', fontWeight: 'bold', color: '#6fa5b5', marginBottom: '8px' }}>{t.comparisonTitle}</div>
@@ -251,7 +254,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                     const th = country.surge_r?.thresholds || { yellow: 1.75, orange: 2.75, red: 3.75 };
                                     const ratio = Number(data.ratio || 0);
 
-                                    const displayLevel = data.ratio == null ? 'unknown' : ratio >= th.red ? 'red' : ratio >= th.orange ? 'orange' : ratio >= th.yellow ? 'yellow' : 'green';
+                                    const displayLevel = data.comparison_level || (data.ratio == null ? 'unknown' : data.is_active ? ratio >= th.red ? 'red' : ratio >= th.orange ? 'orange' : 'yellow' : 'green');
                                     const levelColor = {red:'var(--color-red)',orange:'var(--color-orange)',yellow:'var(--color-yellow)',green:'var(--color-green)',unknown:'#aaa'}[displayLevel];
                                     const levelLabel = data.ratio == null ? t.comparisonStatus[data.data_status] || t.legend.unknown : `${data.reference?.valid_days || 0} / ${data.reference?.required_days || 10} ${t.comparisonDays}`;
 
@@ -262,6 +265,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                                                     {key} {data.is_active ? '●' : ''} {levelLabel}
                                                 </div>
                                                 <div style={{ fontSize: '0.55rem', opacity: 0.6 }}>{t.panel.rLabels[key.toLowerCase()]}</div>
+                                                <div style={{fontSize:'0.6rem'}}>{data.gate_reasons?.map(reason=>t.reasons[reason] || reason).join(' / ')}</div>
                                             </td>
                                             <td style={{ textAlign: 'center', padding: '4px' }}>{data.today}</td>
                                             <td style={{ textAlign: 'center', padding: '4px' }}>{data.baseline_median ?? '—'}</td>
@@ -487,7 +491,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
             </div>
 
             {/* KEY SOURCES (Moved above Signals) */}
-            {country.confirmed_impacts?.length > 0 && <section className="confirmed-impacts"><h4>{t.methods.verified}</h4>{country.confirmed_impacts.map(impact => <article key={impact.event_id}><p>{impact.impact_localized?.[lang] || impact.impact} · {impact.scope}</p><small>{impact.period?.publication_date} · {impact.assessment?.current_at_cutoff ? t.impactCurrent : t.impactHistorical} · {impact.verification.verified_at} · {impact.confidence}</small><p>{impact.evidence.map(e => <a key={e.url} href={e.url} target="_blank" rel="noopener noreferrer">{e.original_source_id} ↗ </a>)}</p></article>)}</section>}
+            {country.confirmed_impacts?.length > 0 && <section className="confirmed-impacts"><h4>{t.methods.verified}</h4><p>{t.global.localImpactScope}</p>{country.confirmed_impacts.map(impact => <article key={impact.event_id}><p>{impact.impact_localized?.[lang] || impact.impact} · {impact.scope}</p><small>{impact.period?.publication_date} · {impact.assessment?.current_at_cutoff ? t.impactCurrent : t.impactHistorical} · {impact.verification.verified_at} · {impact.confidence}</small><p>{impact.evidence.map(e => <a key={e.url} href={e.url} target="_blank" rel="noopener noreferrer">{e.original_source_id} ↗ </a>)}</p></article>)}</section>}
             {country.sources && country.sources.length > 0 && (
                 <div className="modal-sources" style={{ marginBottom: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '0.5rem' }}>
                     <h4>{t?.panel?.sources || 'KEY SOURCES'}</h4>

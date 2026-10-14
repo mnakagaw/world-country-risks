@@ -1,6 +1,7 @@
-# CountryRisks v2.0.1: source, release and restoration
+# CountryRisks v2.0.2: source, release and restoration
 
-Current assessment and acceptance contract: [MONITORING_V2.md](MONITORING_V2.md).
+Current assessment and acceptance contract: [RINDEX_V202.md](RINDEX_V202.md).
+The former v2.0.1 contract is retained in MONITORING_V2.md as superseded history.
 
 The v2 engine separates reporting-derived monitoring signals, data availability,
 search interest and verified functional impact. It does not turn a method change

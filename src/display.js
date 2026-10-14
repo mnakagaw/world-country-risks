@@ -3,7 +3,8 @@ const levels = new Set(['red', 'orange', 'yellow', 'green']);
 // One display state for the map, counts and country list. Missing is never green.
 export function countryLevel(country, mode) {
     if (country?.evaluation && typeof country.monitoring_level === 'string') {
-        return levels.has(country.monitoring_level) ? country.monitoring_level : 'unknown';
+        const selected=mode==='surge_r' ? country.rindex_evaluation?.level || country.surge_r?.level?.toLowerCase() : mode==='raw' ? country.evaluation.initial_level : country.monitoring_level;
+        return levels.has(selected) ? selected : 'unknown';
     }
     if (!country || country.data_status && !['observed', 'partial'].includes(country.data_status)) return 'unknown';
     if (mode === 'surge_r') {
@@ -21,7 +22,9 @@ export function countryLevel(country, mode) {
     return levels.has(level) ? level : 'unknown';
 }
 
-export function monitoringMethod(country,t) {
+export function monitoringMethod(country,t,mode='monitoring') {
+    if(mode==='surge_r')return t.methods.rindex || t.methods.paired;
+    if(mode==='raw')return t.methods.initial;
     const method=country?.evaluation?.method;
     return method==='accepted-functional-impact-v2' ? t.methods.verified :
         method==='initial-plus-matched-comparison-v2' ? t.methods.paired : t.methods.initial;
@@ -36,7 +39,9 @@ export function alertCounts(countries, mode) {
 export function briefingLines(data, mode, lang) {
     if (!data) return [];
     const fallback = data.daily_briefing || data.daily_briefing_ops;
-    const source = mode === 'surge' ? data.daily_briefing_trending || fallback
+    const source = mode === 'surge_r' && data.daily_briefing_rindex ? data.daily_briefing_rindex
+        : mode === 'raw' && data.daily_briefing_raw ? data.daily_briefing_raw
+        : mode === 'surge' ? data.daily_briefing_trending || fallback
         : ['raw', 'surge_r'].includes(mode) ? data.daily_briefing_ops || fallback : fallback;
     const localized = typeof source === 'object' ? source?.[lang] ?? source?.en : source;
     const value = localized ?? data[`daily_briefing_${lang}`] ?? data.daily_briefing_en;
@@ -49,3 +54,5 @@ export const mapColors = {
     dark: { red: '#ee2c2c', orange: '#f57c00', yellow: '#dca01d', green: '#388e3c', unknown: '#3d4654' },
     light: { red: '#ee2c2c', orange: '#f57c00', yellow: '#fbc02d', green: '#388e3c', unknown: '#c7cdd4' }
 };
+
+export function greenLabel(mode,t){return mode==='surge_r' ? t.global.rindexGreen : t.legend.stable;}

@@ -144,10 +144,10 @@ export default function Header({
                             {t.viewMode.raw}
                         </button>
                         <button
-                            className={`view-mode-btn ${viewMode === 'surge' ? 'view-mode-btn--active' : ''}`}
-                            onClick={() => onViewModeChange('surge')}
+                            className={`view-mode-btn ${viewMode === 'monitoring' ? 'view-mode-btn--active' : ''}`}
+                            onClick={() => onViewModeChange('monitoring')}
                         >
-                            {t.viewMode.surge}
+                            {t.viewMode.monitoring}
                         </button>
                     </div>
                 </div>

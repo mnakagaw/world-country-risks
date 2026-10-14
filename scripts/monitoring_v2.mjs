@@ -1,5 +1,7 @@
 import { aggregateToIso2, fipsToIso2 } from './fips_to_iso2.js';
 import { calendarDates,METHOD } from './engine_v2.mjs';
+import fs from 'node:fs';
+const DEFAULT_CONFIG=JSON.parse(fs.readFileSync(new URL('../config/scoring.json',import.meta.url)));
 
 export const METRICS = { R1: 'r1_security', R2: 'r2_living_count', R3: 'r3_governance', R4: 'r4_fiscal_count' };
 const ORDER = { unknown: -1, green: 0, yellow: 1, orange: 2, red: 3 };
@@ -44,6 +46,8 @@ export function temporalQuality(input) {
 // Compare canonical observations from exactly the same archive-time offsets in
 // each 48h pair. No missing slot becomes zero; no observed count is scaled up.
 export function matchedReferences(current,history,date,country,policy={}) {
+    const config=policy.config || DEFAULT_CONFIG,settings=config.surge_r;
+    const k=settings.smoothing_k,minBaseline=settings.min_baseline_median_for_surge;
     const pairs=[];const currentOffsets=new Set(current.offsets);
     const dates=policy.dates || calendarDates(date,14),required=policy.required_days || 10,expected=policy.expected_slots || 192;
     for(const day of dates) {
@@ -66,10 +70,10 @@ export function matchedReferences(current,history,date,country,policy={}) {
     const records={};
     for(const [type,metric] of Object.entries(METRICS)) {
         const baseline=median(pairs.map(pair=>pair.baseline[metric]));
-        const enough=pairs.length>=required && baseline!==null && baseline>=3;
-        const ratio=enough ? median(pairs.map(pair=>(pair.current[metric]+5)/(pair.baseline[metric]+5))) : null;
+        const enough=pairs.length>=required && baseline!==null && baseline>=minBaseline;
+        const ratio=enough ? median(pairs.map(pair=>(pair.current[metric]+k)/(Math.max(1,pair.baseline[metric])+k))) : null;
         records[type]={today:median(pairs.map(pair=>pair.current[metric])),observed_today:current.data[country]?.[metric] ?? 0,
-            baseline_median:baseline,ratio,is_active:ratio!==null && ratio>=1.75,is_stable_input:enough,
+            baseline_median:baseline,ratio,is_active:false,ratio_threshold_hit:ratio!==null && ratio>=settings.thresholds.yellow,is_stable_input:enough,smoothing_k:k,min_baseline:minBaseline,
             data_status:enough ? 'matched_observations' : pairs.length<required ? 'baseline_days_insufficient' : 'low_or_zero_baseline',
             method:policy.method || 'same-offset-observed-pairs-v2',reference:{start:dates[0],end:dates.at(-1),required_days:required,
                 valid_days:pairs.length,valid_dates:pairs.map(pair=>pair.day),
@@ -82,6 +86,7 @@ export function matchedReferences(current,history,date,country,policy={}) {
 }
 
 export function evaluateMonitoring(row,input,scored,byType,impacts=[],config={}) {
+    const thresholds=(config.surge_r || DEFAULT_CONFIG.surge_r).thresholds;
     const temporal=temporalQuality(input),quality=row?.observation_quality || {};
     const scale=Math.max(1,temporal.expected_slots/192);
     const n=row?.event_count ?? 0;const reasons=[];
@@ -109,9 +114,9 @@ export function evaluateMonitoring(row,input,scored,byType,impacts=[],config={})
         const smallActive=sampleReady && n<200*scale && composition;
         const active=sampleReady && (smallActive || n>=200*scale && (absolute || count>=floor && share>=block.ratio_threshold));
         let level=active ? 'yellow' : greenReady ? 'green' : 'unknown';
-        if(sampleReady && base?.ratio>=3.75)level='red';
-        else if(sampleReady && base?.ratio>=2.75)level='orange';
-        else if(sampleReady && base?.ratio>=1.75)level='yellow';
+        if(sampleReady && base?.is_active && base.ratio>=thresholds.red)level='red';
+        else if(sampleReady && base?.is_active && base.ratio>=thresholds.orange)level='orange';
+        else if(sampleReady && base?.is_active && base.ratio>=thresholds.yellow)level='yellow';
         components[type]={observed_count:count,value_status:count===0 ? 'observed_zero' : 'observed',
             total_window_estimate:null,level,initial_active:active,observed_share:share,conservative_share_guard:lower,
             count_floor:floor,absolute_threshold:block.absolute_threshold,share_threshold:block.ratio_threshold,
@@ -120,18 +125,19 @@ export function evaluateMonitoring(row,input,scored,byType,impacts=[],config={})
     }
     if(sampleReady && n<200*scale) {
         const active=Object.values(components).filter(c=>c.initial_active).length;
-        initial=active>=3 ? 'red' : active>=2 ? 'orange' : active && row.avg_tone<=-1.8 ? 'yellow' : 'unknown';
+        initial=active>=3 ? 'red' : active>=2 ? 'orange' : active && row.avg_tone<=(config.tone || DEFAULT_CONFIG.tone).mild_threshold ? 'yellow' : 'unknown';
     }
     if(initial==='green' && !greenReady)initial='unknown';
     let level=initial,method='initial-absolute-composition-v2';
     for(const component of Object.values(components)) {
-        if(component.comparison?.ratio>=1.75 && ORDER[component.level]>ORDER[level]) {
+        if(component.comparison?.is_active && ORDER[component.level]>ORDER[level]) {
             level=component.level;method='initial-plus-matched-comparison-v2';
         }
     }
     const eligibleImpacts=impacts.filter(impact=>impact.assessment?.current_at_cutoff===true &&
         ['orange','red','yellow'].includes(impact.assessment?.level) && impact.assessment?.method==='accepted-functional-impact-v2');
-    for(const impact of eligibleImpacts)if(ORDER[impact.assessment.level]>ORDER[level]) {level=impact.assessment.level;method='accepted-functional-impact-v2';}
+    // Operator-scoped impacts remain separate facts. Without population/service
+    // coverage and state-relationship evidence, they cannot set a country color.
     if(level==='unknown') {
         if(!n)reasons.push('no_country_records_in_observed_archives');else if(n<50*scale)reasons.push('country_record_count_below_50');
         if(!timeReady)reasons.push('time_coverage_gap_staleness_or_schema_insufficient');
@@ -139,7 +145,8 @@ export function evaluateMonitoring(row,input,scored,byType,impacts=[],config={})
         if(sampleReady && n<200*scale)reasons.push('small_sample_without_supported_positive_signal');
         if(initial==='unknown' && !greenReady)reasons.push('no_signal_requires_stronger_coverage_than_positive_detection');
     } else reasons.push(level==='green' ? 'no_elevated_signal_in_qualified_observed_sample' : method==='accepted-functional-impact-v2' ? 'accepted_current_functional_disruption' : 'supported_observed_monitoring_signal');
-    return {level,method,initial_level:initial,confidence:eligibleImpacts.length ? 'verified_scoped_impact' : level==='unknown' ? 'insufficient' : input.source_status==='complete' ? 'medium' : 'low',
+    return {level,method,initial_level:initial,confidence:level==='unknown' ? 'insufficient' : input.source_status==='complete' ? 'medium' : 'low',
+        scoped_impacts:eligibleImpacts.map(impact=>impact.event_id),national_functional_state:'not_assessed',
         components,reasons,temporal_coverage:temporal,country_input:{records:n,...quality},
         available_comparisons:Object.keys(byType).filter(type=>byType[type].is_stable_input),
         unevaluated_comparisons:Object.keys(byType).filter(type=>!byType[type].is_stable_input),
