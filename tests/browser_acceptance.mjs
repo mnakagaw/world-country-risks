@@ -1,9 +1,9 @@
 import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url),{chromium}=require(path.join(os.homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'));
-const url=process.argv[2]||'http://127.0.0.1:4173/',tag=process.argv[3]||'local',out=path.resolve('.local/rindex-v202-evidence');fs.mkdirSync(out,{recursive:true});
+const url=process.argv[2]||'http://127.0.0.1:4173/',tag=process.argv[3]||'local',out=path.resolve('.local/rindex-v203-evidence');fs.mkdirSync(out,{recursive:true});
 const snapshot=JSON.parse(fs.readFileSync('public/data/v2/latest.json')),colors={red:'#ee2c2c',orange:'#f57c00',yellow:'#dca01d',green:'#388e3c',unknown:'#3d4654'};
 const level=(c,m)=>m==='surge_r'?c.rindex_evaluation.level:m==='raw'?c.evaluation.initial_level:c.monitoring_level;
-const context=await chromium.launchPersistentContext(path.resolve('work/edge-rindex-v202'),{headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',viewport:{width:390,height:844},locale:'ja-JP',timezoneId:'Asia/Tokyo'});
+const context=await chromium.launchPersistentContext(path.resolve('work/edge-rindex-v203'),{headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',viewport:{width:390,height:844},locale:'ja-JP',timezoneId:'Asia/Tokyo'});
 const page=await context.newPage(),errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));
 await context.addInitScript(()=>{localStorage.setItem('rw_view_mode','surge_r');localStorage.setItem('rw_lang','ja');localStorage.setItem('rw_theme','dark');});
 async function popup(iso,mode){
@@ -37,6 +37,14 @@ try{
    }
   }
  }
- const weekly=JSON.parse(fs.readFileSync('public/data/history/weekly_5y/index.json'));await page.goto(url+'#/country/US',{waitUntil:'domcontentloaded'});const section=page.locator(`[data-weekly-epoch="${weekly.epoch}"]`);await section.waitFor({timeout:120000});assert.equal(await section.locator('tbody tr').count(),4);
+ await page.locator('.view-mode-btn').first().click();await page.locator('.level-filter select').selectOption('yellow');const early=page.locator('.heat-list-item').first();await early.click();assert.ok(await page.locator('.country-popup--pinned .practical-alert').isVisible());await page.locator('.modal-close').click();checks.push({firstYellowPracticalCard:true});
+ assert.ok(await page.locator('.source-ledger').count());
+ const weekly=JSON.parse(fs.readFileSync('public/data/history/weekly_5y/index.json'));await page.goto(url+'#/country/US',{waitUntil:'domcontentloaded'});const section=page.locator(`[data-weekly-epoch="${weekly.epoch}"]`);await section.waitFor({timeout:120000});
+ const series=page.getByLabel('Historical calculation series');assert.equal(await series.inputValue(),'legacy');assert.equal(await page.locator('.signal-view tbody tr').count(),6);assert.ok(await page.locator('.first-lit-analysis').isVisible());assert.equal(await page.locator('.signal-view [data-r="R1"]').count(),52);
+ await series.selectOption('v2');assert.equal(await page.locator('.signal-view [data-r="R1"]').count(),4);assert.equal(await page.locator('.signal-view [data-signal-state="unknown"]').count(),16);checks.push({existingWeeklyMatrix:true,legacyWeeks:52,v2Weeks:4,unknownNeverOff:true});
+ await page.goto(url+'#/country/JP',{waitUntil:'domcontentloaded'});await page.getByLabel('Historical calculation series').waitFor();await page.getByLabel('Historical calculation series').selectOption('legacy');await page.locator('.detail-header input[type="date"]').fill('2026-08-09');
+ for(const [week,state] of [['2026-W31','on'],['2026-W32','off']])assert.equal(await page.locator(`.signal-view [data-r="R2"][data-week="${week}"]`).getAttribute('data-signal-state'),state);checks.push({originalJPsingleThenOff:true,physicalRecoveryNotAsserted:true});
+ const historyAudit=JSON.parse(fs.readFileSync(path.join(out,'weekly-design-audit.json'))),spread=historyAudit.observed_R4_R1_R3_adjacent_example || historyAudit.other_observed_R4_spread_example;
+ if(spread){await page.goto(url+'#/country/'+spread.iso2,{waitUntil:'domcontentloaded'});await page.getByLabel('Historical calculation series').waitFor();await page.getByLabel('Historical calculation series').selectOption('legacy');await page.locator('.detail-header input[type="date"]').fill('2022-01-23');for(const h of spread.weeks)assert.match(await page.locator(`[title^="Bundle @ ${h.week}"]`).getAttribute('title'),new RegExp(h.level.toUpperCase()));checks.push({originalSpreadCountry:spread.iso2,observedOrder:spread.first_lit.order,causalityNotAsserted:true});}
  assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,`${tag}-browser.json`),JSON.stringify({url,snapshot_id:snapshot.snapshot_id,mode_counts:snapshot.mode_counts,checks,page_errors:errors},null,2));console.log(JSON.stringify({status:'verified',tag,checks:checks.length,snapshot:snapshot.snapshot_id}));
 }finally{await context.close();}

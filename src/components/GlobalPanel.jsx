@@ -201,6 +201,7 @@ export default function GlobalPanel({ riskData, onCountrySelect, selectedCountry
             </div>
 
             {/* 2) Global Heat List */}
+            {riskData?.source_ledger?.length>0 && <details className="source-ledger"><summary>{t.global.sourceLedger}</summary>{riskData.source_ledger.map(s=><p key={s.source}>{s.source} · {String(s.active)} · {s.role}</p>)}<p>{t.global.snsScope}</p></details>}
             <div className="heat-list-section">
                 <div className="section-header">
                     <h3><span className="icon">📈</span> {t?.global?.heatList || 'Global Heat List'}</h3>

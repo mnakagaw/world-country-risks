@@ -11,12 +11,14 @@ import {assessRIndex,validateRIndexConfig} from './rindex_v2.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const bytesHash=value=>crypto.createHash('sha256').update(value).digest('hex');
-const computationHash=bytesHash(['scripts/generate_v2.mjs','scripts/engine_v2.mjs','scripts/monitoring_v2.mjs','scripts/rindex_v2.mjs','scripts/scoring.mjs','scripts/fips_to_iso2.js','src/country-codes.js','config/scoring.json','config/r_definitions.json'].map(p=>bytesHash(fs.readFileSync(path.join(root,p)))).join('|'));
+const computationHash=bytesHash(['scripts/generate_v2.mjs','scripts/engine_v2.mjs','scripts/monitoring_v2.mjs','scripts/rindex_v2.mjs','scripts/r_bundles.mjs','scripts/scoring.mjs','scripts/fips_to_iso2.js','src/country-codes.js','config/scoring.json','config/r_definitions.json'].map(p=>bytesHash(fs.readFileSync(path.join(root,p)))).join('|'));
 const arg=key=>{const i=process.argv.indexOf(key);return i>=0?process.argv[i+1]:null;};
 const inputPath=arg('--input');if(!inputPath)throw new Error('--input private shared-source DTO required');
 const raw=fs.readFileSync(inputPath),input=JSON.parse(raw);
 const verifiedPath=arg('--verified-impacts'),verifiedRaw=verifiedPath?fs.readFileSync(verifiedPath):Buffer.from('[]');
 const verifiedHash=bytesHash(verifiedRaw);
+const contextPath=path.join(path.dirname(verifiedPath || inputPath),'article-classification-context.json');
+const contextRaw=fs.existsSync(contextPath)?fs.readFileSync(contextPath):Buffer.from('{}'),contextHash=bytesHash(contextRaw),articleContext=JSON.parse(contextRaw);
 if(input.schema!=='country-risk-observations-v2'||input.code_system!=='FIPS 10-4'||!input.cutoff_utc||!['complete','partial'].includes(input.source_status))throw new Error('Invalid source contract');
 if(Date.parse(input.window?.end_utc)-Date.parse(input.window?.start_utc)!==48*3600000||input.window?.semantics!=='[start,end)'||input.window?.time_field!=='DATEADDED')throw new Error('Source population/window must be the fixed48h DATEADDED contract');
 const date=input.edition_date,dir=path.join(root,'public/data/v2'),historyPath=path.join(root,'.local/v2-history.json');
@@ -24,7 +26,7 @@ fs.mkdirSync(dir,{recursive:true});fs.mkdirSync(path.dirname(historyPath),{recur
 const history=fs.existsSync(historyPath)?JSON.parse(fs.readFileSync(historyPath)):{};
 const priorHistory=Object.fromEntries(Object.entries(history).filter(([day])=>day>=new Date(Date.parse(date)-14*86400000).toISOString().slice(0,10)&&day<date));
 const baselineHash=hash(priorHistory);
-if(history[date]?.input_sha256===bytesHash(raw)&&history[date]?.computation_sha256===computationHash&&history[date]?.verified_input_sha256===verifiedHash&&history[date]?.baseline_input_sha256===baselineHash){
+if(history[date]?.input_sha256===bytesHash(raw)&&history[date]?.computation_sha256===computationHash&&history[date]?.verified_input_sha256===verifiedHash&&history[date]?.annotation_input_sha256===contextHash&&history[date]?.baseline_input_sha256===baselineHash){
     console.log(JSON.stringify({status:'reused',snapshot_id:history[date].snapshot_id,history_days:Object.keys(history).length}));process.exit(0);
 }
 const observed=aggregateObservation(input),data=observed.data,names=loadCountryNameMap();
@@ -38,13 +40,14 @@ const urls={};for(const [code,items] of Object.entries(input.source_urls||{})){
 }
 const output={schema:'country-risk-snapshot-v2',engine_version:VERSION,method:METHOD,date,
     cutoff_utc:input.cutoff_utc,generated_at:new Date().toISOString(),window:input.window,
-    source_status:input.source_status,coverage:input.coverage,
-    input_sha256:bytesHash(raw),verified_input_sha256:verifiedHash,baseline_input_sha256:baselineHash,computation_sha256:computationHash,source_manifest_sha256:input.source_manifest_sha256,
+    source_status:input.source_status,coverage:input.coverage,support_evidence:input.support_evidence,
+    input_sha256:bytesHash(raw),verified_input_sha256:verifiedHash,annotation_input_sha256:contextHash,baseline_input_sha256:baselineHash,computation_sha256:computationHash,source_manifest_sha256:input.source_manifest_sha256,
     method_change:'v2 separate series; no day-to-day comparison to legacy or mismatched baselines',
     metric:'GDELT Event table monitoring signals; not verified incident totals or measured state capacity',
     google_trends:[],polymarket:[],countries:{},confirmed_impacts:[],
     daily_briefing_ops:{en:'News-derived monitoring signals. Search interest and verified impact are separate.',ja:'報道由来の監視信号です。検索関心と確認済みの実影響は別に表示します。',es:'Señales de seguimiento derivadas de noticias. El interés de búsqueda y los impactos verificados se muestran por separado.'}};
 const comparisonAudit={};
+output.source_ledger=articleContext?.source_ledger || [];
 if(verifiedPath){const events=JSON.parse(verifiedRaw);const seen=new Set();
   for(const event of events){const valid=verifyImpact(event,input.window,arg('--verification-root'));if(seen.has(valid.event_id))continue;seen.add(valid.event_id);output.confirmed_impacts.push(valid);}}
 for(const [iso,name] of Object.entries(names)){
@@ -75,11 +78,13 @@ for(const [iso,name] of Object.entries(names)){
       summary_en:text.en,summary_ja:text.ja,summary_es:text.es,
       mode_summaries:{surge_r:{en:`R-INDEX: ${rindex.level}; active R: ${active.join(', ')||'none'}; comparable R: ${availableTypes.join(', ')||'none'}. Active maximum: ${ratio??'unavailable'}.`,ja:`R-INDEX：${rindex.level}。発火した指標：${active.join(', ')||'なし'}。比較可能：${availableTypes.join(', ')||'なし'}。発火指標の最大倍率：${ratio??'比較不能'}。`,es:`R-INDEX: ${rindex.level}; activos: ${active.join(', ')||'ninguno'}; comparables: ${availableTypes.join(', ')||'ninguno'}. Máximo activo: ${ratio??'no disponible'}.`}},
       brief:{headline:text.en,what_happened:text.en,confidence:evaluation.confidence,sources:sources.map(s=>s.url)},
-      explanation:explain,sources,gdelt:{...counts,event_count:counts.event_count??0,observed_count_status:(counts.event_count??0)===0?'observed_zero':'observed',total_window_estimate:null,avg_tone:counts.avg_tone??null},
+      explanation:explain,sources,gdelt:{...counts,domain_support:undefined,event_count:counts.event_count??0,observed_count_status:(counts.event_count??0)===0?'observed_zero':'observed',total_window_estimate:null,avg_tone:counts.avg_tone??null},
+      article_interpretations:(articleContext?.articles || []).filter(a=>a.country_locator===iso).map(a=>({article_id:a.stable_article_id,url:a.canonical_url,event_id:a.event_id,verification:a.body_verification,claims:a.r_claims.map(({original_excerpt_anchor,...claim})=>claim),body_sha256:a.body_sha256,policy_sha256:a.policy_sha256,source_publication_day:a.source_publication_day,scope_role:a.counts_role,public_reaction:'not_established'})),
       v4_scoring:signal||{level:'unknown',reason:'no_data',bundles:0},
       r_scores:signal?.r_scores_adj||{},r_scores_raw:signal?.r_scores_raw||{},
       index:{level:level,score:evaluation.display_score,method:evaluation.method,unit:evaluation.score_unit},
       surge_r:{level:rindex.level,max_ratio_active:ratio,max_ratio_observed:rindex.max_ratio_observed,active_types:active,bundle_count:active.length,available_types:availableTypes,thresholds:rindex.thresholds,method:rindex.method,color_role:rindex.color_role},
+      practical_alert:{active_types:active,detection_window:input.window,detection_time_basis:'Model observation window/cutoff, not event onset or predictive accuracy',unassessed_types:rindex.unevaluated_types},
       surge_r_by_type:byType,r_signal_labels:rnames,
       history_reference:reference(history,date,iso,'event_count'),
       weekly_history:{weeks:[],pattern:{overall:'unknown'},window:latestCompletedWeek(input.cutoff_utc),
@@ -119,7 +124,7 @@ const revisionPath=path.join(dir,output.snapshot_id+'.json');if(!fs.existsSync(r
 const existing=history[date];
 // Exact same input is idempotent; source corrections are new snapshot IDs.
 history[date]={method:METHOD,coverage:input.source_status,cutoff_utc:input.cutoff_utc,
-  input_sha256:output.input_sha256,verified_input_sha256:verifiedHash,baseline_input_sha256:baselineHash,computation_sha256:computationHash,countries:data,quarters:observed.quarters,offsets:observed.offsets,source_coverage:input.coverage,snapshot_id:output.snapshot_id};
+  input_sha256:output.input_sha256,verified_input_sha256:verifiedHash,annotation_input_sha256:contextHash,baseline_input_sha256:baselineHash,computation_sha256:computationHash,countries:data,quarters:observed.quarters,offsets:observed.offsets,source_coverage:input.coverage,snapshot_id:output.snapshot_id};
 atomic(historyPath,JSON.stringify(history,null,2)+'\n');
 const manifestPath=path.join(dir,'manifest.json');
 const manifest=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath)):{};

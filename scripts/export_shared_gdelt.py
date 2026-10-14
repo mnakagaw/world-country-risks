@@ -138,13 +138,16 @@ def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,
             urls.setdefault(code,[]).append({'url':url,'event_date':event_date,'gdelt_added_at':added,
               'article_published_at':None,'normalized_ingested_at':str(ingested),'gdelt_record_id':eid,'verification_status':'discovery_metadata_only'})
         rejected=sum(r['rows_rejected'] for r in available)
+        from r_support import extract_support
+        producer=execbrief_root or json.loads((ROOT/'.local/controller.json').read_bytes())['execbrief_root']
+        r_support,support_audit=extract_support(db,definitions,condition,producer)
         result={'schema':'country-risk-observations-v2','producer':'execbrief-immutable-gdelt-export',
           'edition_date':(cutoff+timedelta(hours=9)).date().isoformat(),
           'cutoff_utc':cutoff.isoformat().replace('+00:00','Z'),
           'window':{'start_utc':start.isoformat().replace('+00:00','Z'),'end_utc':cutoff.isoformat().replace('+00:00','Z'),'semantics':'[start,end)','time_field':'DATEADDED'},
           'source_status':'complete' if len(available)==len(rows) and rejected==0 else 'partial',
           'coverage':{'expected_slots':len(rows),'available_slots':len(available),'missing_slots':[r['slot'] for r in rows if r['status']=='missing'],'rejected_rows':rejected,'source_series':'English export'},
-          'code_system':'FIPS 10-4','countries':countries,'samples':samples,'quarter_counts':quarter_counts,'source_urls':urls,
+          'code_system':'FIPS 10-4','countries':countries,'samples':samples,'quarter_counts':quarter_counts,'source_urls':urls,'r_support':r_support,'support_evidence':support_audit,
           'population':'Unique GDELT Event table IDs added within window; sports URL filter v2; not independent incidents',
           'source_manifest_sha256':sha256(json.dumps(rows,sort_keys=True).encode()).hexdigest(),
           'input_artifacts':[{key:value for key,value in row.items() if key!='read_path'} for row in rows]}

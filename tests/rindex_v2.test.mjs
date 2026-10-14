@@ -2,10 +2,10 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {assessRIndex} from '../scripts/rindex_v2.mjs';import {matchedReferences,evaluateMonitoring} from '../scripts/monitoring_v2.mjs';import {calendarDates} from '../scripts/engine_v2.mjs';import {countryLevel,alertCounts} from '../src/display.js';
 const cfg=JSON.parse(fs.readFileSync('config/scoring.json'));
 const input={source_status:'partial',coverage:{expected_slots:192,available_slots:120,rejected_rows:0},input_artifacts:Array.from({length:192},(_,i)=>({status:i%8<5?'available':'missing'}))};
-const row={event_count:400,tone_count:400,denom_actor_geo:300,domestic_event_count:210,avg_tone:-2,r1_security:40,r2_living_count:0,r3_governance:30,r4_fiscal_count:0,observation_quality:{source_urls:40,source_domains:10,observed_hours:28,span_hours:46}};
+const row={event_count:400,tone_count:400,denom_actor_geo:300,domestic_event_count:210,avg_tone:-2,r1_security:40,r2_living_count:0,r3_governance:30,r4_fiscal_count:0,domain_support:{R1:{exclusive_count:40,article_keys:['a']},R2:{exclusive_count:40,article_keys:['b']},R3:{exclusive_count:30,article_keys:['c']},R4:{exclusive_count:40,article_keys:['d']}},observation_quality:{source_urls:40,source_domains:10,observed_hours:28,span_hours:46}};
 const empty=()=>Object.fromEntries(['R1','R2','R3','R4'].map(r=>[r,{ratio:null,is_stable_input:false,data_status:'low_or_zero_baseline'}]));
 const refs=(ratio=4)=>({...empty(),R1:{ratio,is_stable_input:true,baseline_median:10}});
-test('Strong R1 remains active when R2/R4 cannot compare',()=>{const r=assessRIndex(row,input,refs(),cfg);assert.equal(r.level,'red');assert.deepEqual(r.active_types,['R1']);assert.equal(r.by_type.R2.comparison_level,'unknown');});
+test('Extreme single R1 is Yellow, with Red domain intensity; unavailable others do not erase it',()=>{const r=assessRIndex(row,input,refs(),cfg);assert.equal(r.level,'yellow');assert.equal(r.by_type.R1.comparison_level,'red');assert.deepEqual(r.active_types,['R1']);assert.equal(r.by_type.R2.comparison_level,'unknown');});
 test('High-volume absolute-only gate suppresses false activation',()=>{const r=assessRIndex({...row,event_count:10000,r1_security:400},input,refs(8),cfg);assert.equal(r.level,'green');assert.equal(r.max_ratio_active,0);assert.ok(r.by_type.R1.gate_reasons.includes('high_volume_absolute_only_suppressed'));});
 test('Active maximum excludes even a larger gated ratio, unavailable maximum is null',()=>{
  const base={...refs(3),R2:{ratio:30,is_stable_input:true,baseline_median:5}};const r=assessRIndex(row,input,base,cfg);assert.equal(r.max_ratio_active,3);assert.equal(r.max_ratio_observed,30);assert.equal(assessRIndex(row,input,empty(),cfg).max_ratio_active,null);
@@ -28,5 +28,5 @@ test('US-type composite Red and R-INDEX Green are intentionally different',()=>{
 });
 test('A local operator Orange impact cannot rewrite R-INDEX or national news color',()=>{
  const r=assessRIndex(row,input,refs(1),cfg);const impact={event_id:'local:N L',assessment:{current_at_cutoff:true,level:'orange',method:'accepted-functional-impact-v2'}};
- const monitoring=evaluateMonitoring(row,input,{level:'green'},r.by_type,[impact],cfg);assert.equal(r.level,'green');assert.equal(monitoring.level,'green');assert.equal(monitoring.national_functional_state,'not_assessed');assert.deepEqual(monitoring.scoped_impacts,['local:N L']);
+ const monitoring=evaluateMonitoring({...row,r1_security:0,r3_governance:0},input,{level:'green'},r.by_type,[impact],cfg);assert.equal(r.level,'green');assert.equal(monitoring.level,'green');assert.equal(monitoring.national_functional_state,'not_assessed');assert.deepEqual(monitoring.scoped_impacts,['local:N L']);
 });

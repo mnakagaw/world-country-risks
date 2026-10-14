@@ -1,6 +1,7 @@
 import { aggregateToIso2, fipsToIso2 } from './fips_to_iso2.js';
 import { calendarDates,METHOD } from './engine_v2.mjs';
 import fs from 'node:fs';
+import {bundleLevel} from './r_bundles.mjs';
 const DEFAULT_CONFIG=JSON.parse(fs.readFileSync(new URL('../config/scoring.json',import.meta.url)));
 
 export const METRICS = { R1: 'r1_security', R2: 'r2_living_count', R3: 'r3_governance', R4: 'r4_fiscal_count' };
@@ -23,6 +24,14 @@ export function aggregateObservation(input) {
         const sample=seen[iso]; row.observation_quality=sample ? { observed_hours:sample.hours.size,
             source_domains:sample.domains.size,source_urls:sample.urls.size,
             span_hours:(sample.last-sample.first)/3600000 } : {observed_hours:0,source_domains:0,source_urls:0,span_hours:0};
+    }
+    for(const [code,types] of Object.entries(input.r_support || {})){
+        const iso=fipsToIso2(code).iso2;if(!iso || !data[iso])continue;
+        const support=data[iso].domain_support ||= {};
+        for(const [type,item] of Object.entries(types)){
+            const target=support[type] ||= {exclusive_count:0,article_keys:[],examples:[]};target.exclusive_count+=item.exclusive_count;
+            target.article_keys=[...new Set([...target.article_keys,...item.article_keys])].sort();target.examples=[...new Set([...target.examples,...item.examples])].sort().slice(0,3);
+        }
     }
     const quarters={};for(const [offset,rows] of Object.entries(input.quarter_counts || {}))quarters[offset]=aggregateToIso2(rows).data;
     const start=Date.parse(input.window.start_utc);
@@ -97,7 +106,7 @@ export function evaluateMonitoring(row,input,scored,byType,impacts=[],config={})
     const sampleReady=timeReady && diversityReady && n>=50*scale;
     const greenReady=sampleReady && n>=200*scale && quality.source_urls>=20 && quality.source_domains>=5 && quality.observed_hours>=12*scale &&
         (row.tone_count || 0)/n>=0.8 && (row.denom_actor_geo || 0)>=50;
-    let initial=sampleReady && n>=200*scale ? scored?.level || 'unknown' : 'unknown';
+    let initial='unknown';
     const components={};
     for(const [type,metric] of Object.entries(METRICS)) {
         const count=row?.[metric] ?? 0,base=byType[type];
@@ -123,17 +132,17 @@ export function evaluateMonitoring(row,input,scored,byType,impacts=[],config={})
             comparison:base,confidence:sampleReady ? input.source_status==='complete' ? 'medium' : 'low' : 'insufficient',
             method:base?.is_stable_input ? 'initial-plus-matched-comparison-v2' : 'initial-absolute-composition-v2'};
     }
-    if(sampleReady && n<200*scale) {
-        const active=Object.values(components).filter(c=>c.initial_active).length;
-        initial=active>=3 ? 'red' : active>=2 ? 'orange' : active && row.avg_tone<=(config.tone || DEFAULT_CONFIG.tone).mild_threshold ? 'yellow' : 'unknown';
+    if(sampleReady) {
+        const active=Object.entries(components).filter(([,c])=>c.initial_active).map(([type])=>type);
+        initial=bundleLevel(active,config.surge_r ? config : DEFAULT_CONFIG);
     }
     if(initial==='green' && !greenReady)initial='unknown';
     let level=initial,method='initial-absolute-composition-v2';
-    for(const component of Object.values(components)) {
-        if(component.comparison?.is_active && ORDER[component.level]>ORDER[level]) {
-            level=component.level;method='initial-plus-matched-comparison-v2';
-        }
-    }
+    const comparativeTypes=Object.entries(byType).filter(([,r])=>r.is_active && r.bundle_eligible).map(([type])=>type);
+    const initialTypes=Object.entries(components).filter(([,c])=>c.initial_active).map(([type])=>type);
+    const activeTypes=[...new Set([...initialTypes,...comparativeTypes])].sort();
+    const comparative=bundleLevel(activeTypes,config.surge_r ? config : DEFAULT_CONFIG);
+    if(sampleReady && comparativeTypes.length>0 && ORDER[comparative]>ORDER[level]){level=comparative;method='initial-plus-matched-comparison-v2';}
     const eligibleImpacts=impacts.filter(impact=>impact.assessment?.current_at_cutoff===true &&
         ['orange','red','yellow'].includes(impact.assessment?.level) && impact.assessment?.method==='accepted-functional-impact-v2');
     // Operator-scoped impacts remain separate facts. Without population/service
@@ -145,7 +154,7 @@ export function evaluateMonitoring(row,input,scored,byType,impacts=[],config={})
         if(sampleReady && n<200*scale)reasons.push('small_sample_without_supported_positive_signal');
         if(initial==='unknown' && !greenReady)reasons.push('no_signal_requires_stronger_coverage_than_positive_detection');
     } else reasons.push(level==='green' ? 'no_elevated_signal_in_qualified_observed_sample' : method==='accepted-functional-impact-v2' ? 'accepted_current_functional_disruption' : 'supported_observed_monitoring_signal');
-    return {level,method,initial_level:initial,confidence:level==='unknown' ? 'insufficient' : input.source_status==='complete' ? 'medium' : 'low',
+    return {level,method,initial_level:initial,initial_active_types:initialTypes,active_types:activeTypes,confidence:level==='unknown' ? 'insufficient' : input.source_status==='complete' ? 'medium' : 'low',
         scoped_impacts:eligibleImpacts.map(impact=>impact.event_id),national_functional_state:'not_assessed',
         components,reasons,temporal_coverage:temporal,country_input:{records:n,...quality},
         available_comparisons:Object.keys(byType).filter(type=>byType[type].is_stable_input),

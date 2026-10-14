@@ -21,7 +21,7 @@ const config=JSON.parse(fs.readFileSync(path.join(root,'config/scoring.json')));
 for(const key of ['r1_security','r2_living','r3_governance','r4_fiscal'])config[key].absolute_threshold*=3.5;
 config.surge_r.high_volume_floor*=3.5;
 const names=loadCountryNameMap(),dir=path.join(root,'public/data/history/weekly_5y');
-const epoch=week+'-'+crypto.createHash('sha256').update(JSON.stringify(input)+JSON.stringify(paired)+JSON.stringify(config)+fs.readFileSync(fileURLToPath(import.meta.url))+fs.readFileSync(path.join(root,'scripts/monitoring_v2.mjs'))+fs.readFileSync(path.join(root,'scripts/rindex_v2.mjs'))).digest('hex').slice(0,20);
+const epoch=week+'-'+crypto.createHash('sha256').update(JSON.stringify(input)+JSON.stringify(paired)+JSON.stringify(config)+fs.readFileSync(fileURLToPath(import.meta.url))+fs.readFileSync(path.join(root,'scripts/monitoring_v2.mjs'))+fs.readFileSync(path.join(root,'scripts/rindex_v2.mjs'))+fs.readFileSync(path.join(root,'scripts/r_bundles.mjs'))).digest('hex').slice(0,20);
 const release=path.join(dir,'releases',epoch);fs.mkdirSync(release,{recursive:true});
 if(fs.existsSync(path.join(release,'index.json'))){
  const fixed=fs.readFileSync(path.join(release,'index.json'));fs.writeFileSync(path.join(dir,'index.json.pending'),fixed);fs.renameSync(path.join(dir,'index.json.pending'),path.join(dir,'index.json'));
@@ -46,8 +46,12 @@ for(const [iso,name] of Object.entries(names)){
    overall_level:evaluation.level,evaluation,rindex_evaluation:rindex,weekly_surge_r:{level:rindex.level,max_ratio_active:rindex.max_ratio_active,active_types:rindex.active_types,thresholds:rindex.thresholds},baseline_status:Object.values(refs).some(r=>r.is_stable_input)?'matching_7d_comparison_available':'matching_7d_comparison_insufficient',
    meaning:'Exact7d canonical observations; counts/composition startup plus4 of previous8 matched7d weeks. Absolute count thresholds are scaled for7d, observed counts are never extrapolated.',weekly_surge_r_by_type:{}};
  for(const [type,r] of Object.entries(refs))item.weekly_surge_r_by_type[type]={today7:r.today,observed_today7:r.observed_today,baseline7:r.baseline_median,ratio7:r.ratio,is_active:r.is_active,reason:r.gate_reasons.join(';'),level:r.comparison_level,reference:r.reference,method:r.method};
- const history=legacy.history.filter(h=>h.week!==week).map(h=>({...h,method:h.method||'legacy-weekly;not-comparable-to-v2'}));history.push(item);history.sort((a,b)=>a.week.localeCompare(b.week));
- const value={...legacy,generated_at:new Date().toISOString(),latest_completed_week:week,epoch,source_status:input.source_status,coverage:input.coverage,window:input.window,history,weeks_total:history.length,
+ const originalPath=path.join(dir,iso+'.json');const originalRaw=fs.existsSync(originalPath)?fs.readFileSync(originalPath):null,original=originalRaw?JSON.parse(originalRaw):null;
+ const priorV2=legacy.history.filter(h=>h.method==='gdelt-events-calendar-v2-weekly'&&h.week!==week);
+ const v2Weeks=new Set([...priorV2.map(h=>h.week),week]);
+ const history=(original?.history || legacy.history).filter(h=>!v2Weeks.has(h.week)).map(h=>({...h,method:h.method||'legacy-weekly;not-comparable-to-v2'}));history.push(...priorV2,item);history.sort((a,b)=>a.week.localeCompare(b.week));
+ const replacedWeeks=new Set(history.filter(h=>h.method==='gdelt-events-calendar-v2-weekly').map(h=>h.week));
+ const value={...legacy,legacy_history_overrides:original?.history?.filter(h=>replacedWeeks.has(h.week)) || [],legacy_original_sha256:originalRaw?crypto.createHash('sha256').update(originalRaw).digest('hex'):null,generated_at:new Date().toISOString(),latest_completed_week:week,epoch,source_status:input.source_status,coverage:input.coverage,window:input.window,history,weeks_total:history.length,
    legacy_warning:'Legacy ratio histories use a different population/baseline and are not v2 comparisons'};
  const payload=JSON.stringify(value,null,2)+'\n',target=path.join(release,iso+'.json');
  fs.writeFileSync(target+'.pending',payload);fs.renameSync(target+'.pending',target);

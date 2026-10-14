@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const VERSION = '2.0.2';
+export const VERSION = '2.0.3';
 export const METHOD = 'gdelt-events-calendar-v2';
 export const hash = value => crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 

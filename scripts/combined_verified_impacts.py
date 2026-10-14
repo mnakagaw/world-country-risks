@@ -21,4 +21,6 @@ def export(policy,cutoff,output,namespace):
             (namespace/capture_path).write_bytes(capture_raw);(namespace/'verified-bodies'/name).write_bytes(raw)
         records.append(record)
     output.write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    from semantic_article_bridge import export as annotate
+    annotate(policy,records,output.with_name('article-classification-context.json'),namespace,cutoff)
     return {'records':len(records),'accepted_status':report['status']}

@@ -58,7 +58,14 @@
         "epsilon": 1
     },
     "surge_r": {
-        "method_version": "matched-offset-rindex-v2.0.2",
+        "method_version": "matched-offset-r-bundles-v2.0.3",
+        "bundle_aggregation": {
+            "red_bundles": 3,
+            "orange_bundles": 2,
+            "yellow_min_bundles": 1,
+            "tone_role": "context_only_not_a_bundle_or_R_INDEX_yellow_gate",
+            "support_policy": "exclusive_CAMEO_records_and_distinct_canonical_article_groups"
+        },
         "min_observed_records": 50,
         "external_pressure_guard": {
             "max_domestic_share": 0.20,

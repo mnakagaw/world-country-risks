@@ -1,3 +1,5 @@
+> Historical v2.0.2 contract. Superseded by [v2.0.3](RINDEX_V203.md); the max-only country severity below is retained as release history.
+
 # R-INDEX v2.0.2: purpose, preserved guards and changed comparison
 
 R1–R4 retain the project's intended role: reporting proxies for concern about

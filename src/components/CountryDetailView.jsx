@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
+import {weeklyBundle,firstLit,signalState} from '../alert-contract';
 import { getIsoWeek, weekKeyToInt, getWeeksFromEnum, getEnumFromWeeks, RANGE_ENUMS } from '../utils/dateUtils';
 
 /* ================= UTILS ================= */
@@ -152,7 +153,8 @@ function SignalView({ history, range, paperMode, t }) {
 
     const overallData = displayHistory.map(h => {
         const sr = h.weekly_surge_r || {};
-        const level = sr.level || h.overall_level?.toLowerCase() || 'green';
+        const aggregate=h.rindex_evaluation || weeklyBundle(h);
+        const level = aggregate.level;
         const levelColors = {
             'red': '#ff3b3b', 'orange': '#ff8c00', 'yellow': '#ffd700', 'green': '#388e3c', 'unknown':LEVELS['NoData'].color, 'nodata': LEVELS['NoData'].color
         };
@@ -166,7 +168,7 @@ function SignalView({ history, range, paperMode, t }) {
             level,
             color: levelColors[level] || LEVELS['None'].color,
             maxRatio,
-            activeTypes: sr.active_types || (h.overall_level !== 'None' ? ['Historic'] : [])
+            activeTypes: aggregate.active_types || aggregate.active
         };
     });
 
@@ -181,7 +183,7 @@ function SignalView({ history, range, paperMode, t }) {
                     <tr>
                         <th style={{ width: 80, color: textColor, textAlign: 'right', paddingRight: '1rem', fontSize: '0.8rem' }}>Week</th>
                         {labels.map((l, idx) => (
-                            <th key={l} style={{ fontSize: range > 52 ? '0.45rem' : '0.65rem', color: textColor, padding: '8px 0', textAlign: 'center', borderLeft: `1px solid ${borderColor}` }}>
+                            <th key={`${l}-${idx}`} style={{ fontSize: range > 52 ? '0.45rem' : '0.65rem', color: textColor, padding: '8px 0', textAlign: 'center', borderLeft: `1px solid ${borderColor}` }}>
                                 {(range <= 52 || idx % 10 === 0) ? l : ''}
                             </th>
                         ))}
@@ -212,19 +214,23 @@ function SignalView({ history, range, paperMode, t }) {
                                 const isActive = sr?.is_active;
                                 const ratio7 = sr?.ratio7 || h.ratios?.[rKey] || 0;
                                 const level = h.rindex_evaluation ? sr?.level || 'unknown' : h.levels?.[rKey] || 'NoData';
-                                const bg = h.evaluation ? ({red:'#ff3b3b',orange:'#ff8c00',yellow:'#ffd700',green:'#388e3c',unknown:'#444'}[level] || '#444') : getGateColor(isActive, ratio7, level, h.weekly_surge_r?.thresholds);
+                                const state = signalState(h,rKey);
+                                const bg = state==='unknown' ? LEVELS.NoData.color : getGateColor(isActive, ratio7, level, h.weekly_surge_r?.thresholds);
                                 const reason = sr?.reason;
                                 const tooltipText = h.evaluation ? `${rKey} @ ${labels[i]}\nObserved7d: ${h.counts?.[rKey]}\nComparison: ${sr?.ratio7==null?'Unavailable':sr.ratio7.toFixed(2)+'x'}\n${h.evaluation.method}\nLevel: ${level}` : `${rKey} @ ${labels[i]}\nRatio: ${ratio7.toFixed(2)}x\nLevel: ${level}${!isActive && reason && reason !== 'active' ? `\nGate: ${reason}` : ''}`;
 
                                 return (
                                     <td key={i} style={{ padding: 2 }}>
                                         <div
+                                            data-signal-state={state}
+                                            data-r={rKey}
+                                            data-week={h.week}
                                             title={tooltipText}
                                             style={{
                                                 height: 24, background: bg, borderRadius: 2,
                                                 opacity: (level === 'None' || level === 'NoData') ? 0.2 : 0.9,
                                                 border: `1px solid ${paperMode ? '#eee' : '#111'}`
-                                            }} />
+                                            }}>{state==='unknown'?'?':''}</div>
                                     </td>
                                 );
                             })}
@@ -379,6 +385,7 @@ export default function CountryDetailView({ lang, t, theme }) {
     const { iso2 } = useParams();
     const [searchParams, setSearchParams] = useSearchParams();
     const [data, setData] = useState(null);
+    const [methodSeries,setMethodSeries]=useState('legacy');
 
     // Initialize state from URL params
     const initialRangeEnum = searchParams.get('range') || '52w';
@@ -455,7 +462,8 @@ export default function CountryDetailView({ lang, t, theme }) {
     const t0WeekInt = weekKeyToInt(t0WeekStr);
 
     // Sort data just in case
-    const allItems = (data.history || []).sort((a, b) => weekKeyToInt(a.week) - weekKeyToInt(b.week));
+    const allHistory = methodSeries==='legacy' ? [...(data.history||[]).filter(h=>h.method!=='gdelt-events-calendar-v2-weekly'),...(data.legacy_history_overrides||[])] : (data.history||[]).filter(h=>h.method==='gdelt-events-calendar-v2-weekly');
+    const allItems = allHistory.sort((a, b) => weekKeyToInt(a.week) - weekKeyToInt(b.week));
 
     // Check if T0 is beyond latest data
     const lastDataWeekStr = allItems.length > 0 ? allItems[allItems.length - 1].week : '';
@@ -490,20 +498,13 @@ export default function CountryDetailView({ lang, t, theme }) {
                 warnings={warnings}
             />
             <div className="view-container">
-                {displayItems.some(h=>h.evaluation) && <section style={{padding:'1rem',overflowX:'auto'}} data-weekly-epoch={data.epoch}>
-                    <h3>{t.global.heatList} · 7d · v2</h3>
-                    <p>{t.global.greenScope} {t.comparisonStatus.baseline_days_insufficient}: 4 / 8 · 7d</p>
-                    <table style={{width:'100%',minWidth:650,fontSize:'0.85rem',borderCollapse:'collapse'}}>
-                        <thead><tr><th>UTC week</th><th>{t.global.levelFilter}</th><th>{t.global.observedRecords}</th><th>Coverage</th>{['R1','R2','R3','R4'].map(r=><th key={r}>{r} · 7d / ratio</th>)}</tr></thead>
-                        <tbody>{displayItems.filter(h=>h.evaluation).map(h=><tr key={h.week}>
-                            <td>{h.week}<br/><small>{h.window.start_utc} — {h.window.end_utc}</small></td>
-                            <td style={{color:({red:'#ff3b3b',orange:'#ff8c00',yellow:'#ffd700',green:'#388e3c',unknown:'#aaa'})[h.overall_level]}}>{h.overall_level==='unknown'?t.legend.unknown:t.alertLabels[h.overall_level]}<br/><small>{h.evaluation.method.includes('matched')?t.methods.paired:t.methods.initial}</small></td>
-                            <td>{h.event_count}</td><td>{h.coverage.available_slots}/{h.coverage.expected_slots}<br/>{h.source_status}</td>
-                            {['R1','R2','R3','R4'].map(r=><td key={r}>{h.counts[r]} / {h.ratios[r]==null?'—':h.ratios[r].toFixed(2)+'x'}<br/><small>{h.weekly_surge_r_by_type[r].reference.valid_days} / 4</small></td>)}
-                        </tr>)}</tbody>
-                    </table>
-                    <p>{t.global.partialScope}</p>
-                </section>}
+                <div className="historical-method-control" style={{padding:'0.6rem 1rem'}} data-weekly-epoch={data.epoch}>
+                    <select aria-label="Historical calculation series" value={methodSeries} onChange={e=>setMethodSeries(e.target.value)}>
+                        <option value="legacy">Legacy: original 5y / 52w history</option><option value="v2">v2: exact7d matched source observations</option>
+                    </select>
+                    <p>{t.global.retrospective} · {methodSeries==='legacy'?'Original R activations retained; Bundle row reconstructed from concurrent R count. Original max level remains in source.':'Matching7d baseline/coverage required; unavailable is Unknown.'}</p>
+                    <p className="first-lit-analysis">First Lit · {firstLit(displayItems).order.map(([r,w])=>`${r}: ${w}`).join(' · ')||'Unknown / not observed'} · {t.global.firstLitScope}</p>
+                </div>
                 {config.view === 'signal' ? (
                     <SignalView history={displayItems} range={config.range} paperMode={paperMode} t={t} />
                 ) : config.view === 'state' ? (

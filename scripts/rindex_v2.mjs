@@ -1,7 +1,9 @@
 import {temporalQuality,METRICS} from './monitoring_v2.mjs';
+import {assignDistinctSupports,bundleLevel} from './r_bundles.mjs';
 const BLOCKS={R1:'r1_security',R2:'r2_living',R3:'r3_governance',R4:'r4_fiscal'};
 export function validateRIndexConfig(config){
- const s=config.surge_r,t=s?.thresholds,g=s?.external_pressure_guard;
+ const s=config.surge_r,t=s?.thresholds,g=s?.external_pressure_guard,bundle=s?.bundle_aggregation;
+ if(!bundle || ![bundle.yellow_min_bundles,bundle.orange_bundles,bundle.red_bundles].every(Number.isInteger) || !(bundle.yellow_min_bundles===1 && bundle.orange_bundles===2 && bundle.red_bundles===3))throw Error('Invalid R bundle thresholds');
  if(!s || !Number.isFinite(s.smoothing_k) || s.smoothing_k<0 || !Number.isFinite(s.min_baseline_median_for_surge) || s.min_baseline_median_for_surge<0 ||
     !Number.isFinite(s.high_volume_floor) || s.high_volume_floor<=0 || !Number.isFinite(s.min_observed_records) || s.min_observed_records<1 ||
     !t || ![t.yellow,t.orange,t.red].every(Number.isFinite) || !(t.yellow>1 && t.orange>t.yellow && t.red>t.orange) ||
@@ -45,14 +47,24 @@ export function assessRIndex(row,input,comparisons,config){
    comparison_level:!sampleReady || !comparable?'unknown':isActive ? base.ratio>=t.red?'red':base.ratio>=t.orange?'orange':'yellow':'green'};
  }
  const available=Object.keys(byType).filter(type=>byType[type].is_stable_input && Number.isFinite(byType[type].ratio));
- const active=Object.keys(byType).filter(type=>byType[type].is_active);
+ const candidates=Object.keys(byType).filter(type=>byType[type].is_active),support=row?.domain_support || {};
+ const backed=candidates.filter(type=>{const b=config[BLOCKS[type]],count=support[type]?.exclusive_count || 0;return count/n>=b.ratio_threshold || count>=b.absolute_threshold && !highVol;});
+ const assignments=assignDistinctSupports(backed,support),active=Object.keys(assignments).sort();
+ for(const [type,r] of Object.entries(byType)){
+  r.candidate_ratio_activation=r.is_active;
+  r.bundle_eligible=active.includes(type);r.support={exclusive_count:support[type]?.exclusive_count??null,canonical_article_groups:support[type]?.article_keys?.length??null,examples:support[type]?.examples||[]};
+  if(r.is_active && !r.bundle_eligible)r.gate_reasons.push('distinct_domain_or_article_support_insufficient');
+  if(r.is_active && !r.bundle_eligible)r.comparison_level='unknown';
+  r.is_active=r.is_active && r.bundle_eligible;
+ }
  const evaluable=sampleReady && available.length>0;
- const maxActive=evaluable ? active.length ? Math.max(...active.map(type=>byType[type].ratio)) : 0 : null;
- const level=!evaluable?'unknown':maxActive>=t.red?'red':maxActive>=t.orange?'orange':maxActive>=t.yellow?'yellow':'green';
+ const maxActive=evaluable ? active.length ? Math.max(...active.map(type=>byType[type].ratio)) : candidates.length?null:0 : null;
+ const unsupported=candidates.filter(type=>!active.includes(type));
+ const level=!evaluable?'unknown':active.length?bundleLevel(active,config):unsupported.length?'unknown':'green';
  return {level,method:s.method_version,thresholds:{...t},smoothing_k:s.smoothing_k,by_type:byType,
-  active_types:active,available_types:available,unevaluated_types:Object.keys(byType).filter(type=>!available.includes(type)),
+  active_types:active,candidate_active_types:candidates,unsupported_bundle_types:unsupported,bundle_count:active.length,aggregation:config.surge_r.bundle_aggregation,available_types:available,unevaluated_types:Object.keys(byType).filter(type=>!available.includes(type)),
   max_ratio_active:maxActive,max_ratio_observed:available.length?Math.max(...available.map(type=>byType[type].ratio)):null,
-  reasons:!denominatorReady?['insufficient_country_denominator']:!sampleReady?['insufficient_observation_coverage']:!available.length?['no_comparable_components']:active.length?['active_after_all_guards']:['no_active_in_available_comparisons'],
+  reasons:!denominatorReady?['insufficient_country_denominator']:!sampleReady?['insufficient_observation_coverage']:!available.length?['no_comparable_components']:active.length?['active_after_all_guards']:unsupported.length?['distinct_domain_or_article_support_insufficient']:['no_active_in_available_comparisons'],
   sample_ready:sampleReady,temporal_coverage:temporal,partial_observation:input.source_status!=='complete',
   actor_geography:{status:geographyKnown?'observed':'unknown',known_geography_denominator:Number.isFinite(denom)?denom:null,domestic_records:Number.isFinite(domestic)?domestic:null,domestic_ratio:domesticRatio,external_pressure_noise:pressureProxy,
    meaning:'Actor/action geographic alignment proxy, not verified external pressure or domestic impact',unknown_policy:geo.unknown_policy},

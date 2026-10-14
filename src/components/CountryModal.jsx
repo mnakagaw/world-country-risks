@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {countryLevel,monitoringMethod,greenLabel} from '../display';
+import {alertCard} from '../alert-contract';
 
 function ScoreBar({ label, score, max = 10 }) {
     const percentage = (score / max) * 100;
@@ -72,6 +73,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
 
     const alertLevel = countryLevel(country,viewMode);
     const alertLabel = alertLevel==='green' ? greenLabel(viewMode,t) : alertLevel==='unknown' ? t.legend.unknown : t?.alertLabels?.[alertLevel] || alertLevel.toUpperCase();
+    const practical=alertCard(viewMode==='surge_r' ? country.practical_alert?.active_types || [] : viewMode==='raw' ? country.evaluation?.initial_active_types || [] : country.evaluation?.active_types || [],lang);
 
     const getName = () => {
         if (lang === 'ja') return country.name_ja || country.name_en;
@@ -160,6 +162,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
                 <p className="modal-summary">{getSummary()}</p>
             )}
 
+            {practical.active.length>0 && <section className="practical-alert"><h4>{practical.title}</h4>{practical.checks.map(c=><p key={c.r}><strong>{c.r}</strong> · {c.text}</p>)}<p>{practical.next}: {practical.candidates.join(' → ')||'—'}</p><small>{practical.conditions}</small></section>}
             <div className="modal-scores">
                 <div className="modal-scores-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                     <span style={{ fontSize: '0.7rem', color: '#666', fontWeight: 'bold' }}>
@@ -491,6 +494,7 @@ export default function CountryModal({ country, onClose, t, lang, isPinned, hasH
             </div>
 
             {/* KEY SOURCES (Moved above Signals) */}
+            {country.article_interpretations?.length>0 && <section className="article-interpretations"><h4>R / Article context</h4><small>{t.global.articleContextScope}</small>{country.article_interpretations.map(a=><article key={a.article_id}><a href={a.url} target="_blank" rel="noopener noreferrer">{a.article_id} ↗</a>{a.claims.map((c,i)=><p key={i}>{c.r || 'Unknown'} · {c.subcategory} · {c.direction}: {c.reason}</p>)}</article>)}</section>}
             {country.confirmed_impacts?.length > 0 && <section className="confirmed-impacts"><h4>{t.methods.verified}</h4><p>{t.global.localImpactScope}</p>{country.confirmed_impacts.map(impact => <article key={impact.event_id}><p>{impact.impact_localized?.[lang] || impact.impact} · {impact.scope}</p><small>{impact.period?.publication_date} · {impact.assessment?.current_at_cutoff ? t.impactCurrent : t.impactHistorical} · {impact.verification.verified_at} · {impact.confidence}</small><p>{impact.evidence.map(e => <a key={e.url} href={e.url} target="_blank" rel="noopener noreferrer">{e.original_source_id} ↗ </a>)}</p></article>)}</section>}
             {country.sources && country.sources.length > 0 && (
                 <div className="modal-sources" style={{ marginBottom: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '0.5rem' }}>
