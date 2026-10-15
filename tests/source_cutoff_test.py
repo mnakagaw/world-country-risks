@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime,timedelta,timezone
 from hashlib import sha256
 import tempfile,unittest,sys,shutil,duckdb
+from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 import export_shared_gdelt as adapter
 
@@ -19,6 +20,10 @@ class Cutoff(unittest.TestCase):
             try:
                 result=adapter.export(root/'archive',cutoff,root/'output.json',producer.parent,candidates=candidates,quiet=True,strict_candidates=True)
                 self.assertEqual(result['countries']['JA']['event_count'],1);self.assertEqual(result['coverage']['available_slots'],1);self.assertEqual(result['coverage']['expected_slots'],192);self.assertEqual(result['window']['end_utc'],'2026-10-13T18:00:00Z');self.assertEqual(result['window']['start_utc'],'2026-10-11T18:00:00Z');self.assertEqual(result['source_status'],'partial')
+                rows=adapter.artifacts(root/'archive',cutoff-timedelta(hours=48),cutoff,candidates=candidates,strict_candidates=True)
+                with patch.object(adapter,'artifacts',side_effect=AssertionError('Already checked rows must not be reacquired')):
+                    reused=adapter.export(root/'archive',cutoff,root/'prepared.json',producer.parent,candidates=candidates,quiet=True,strict_candidates=True,artifact_rows=rows)
+                self.assertEqual(reused,result)
                 self.assertTrue(all(r['status']=='missing' for r in adapter.artifacts(root/'archive',cutoff-timedelta(minutes=15),cutoff,candidates={},strict_candidates=True)))
             finally:adapter.ROOT=old
 

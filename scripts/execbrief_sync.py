@@ -160,7 +160,7 @@ def freeze_inputs(policy,day,cutoff,root,fetch=None):
     if not p.exists():p.write_bytes(raw)
     return folder,binding
 
-def selected_raw_sources(bundle,archive):
+def selected_raw_sources(bundle,archive,metadata=None):
     """Same accepted raw Event IDs/SHA; missing upstream slots stay missing."""
     selected={};archive=Path(archive).resolve()
     for name in ['previous-selected-input.json','selected-input.json']:
@@ -170,7 +170,8 @@ def selected_raw_sources(bundle,archive):
         for ref in obj.get('retained_events_mentions',{}).get('manifest_references',[]):
             source=Path(ref['path']).resolve()
             if not source.is_relative_to(archive/'manifests'):raise Waiting('selected_original_outside_archive')
-            raw=source.read_bytes();bulk=checked_json(raw,ref['sha256'])
+            if metadata:bulk=metadata.document(source,ref['sha256']).value
+            else:bulk=checked_json(source.read_bytes(),ref['sha256'])
             for r in bulk['files']:
                 if re.fullmatch(r'\d{14}\.export',r['file_id']) and r.get('status') in ['downloaded','reused']:selected[r['file_id']]=r['sha256']
     return selected

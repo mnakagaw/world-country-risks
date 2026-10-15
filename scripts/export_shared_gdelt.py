@@ -23,8 +23,8 @@ def sha(path):
     return h.hexdigest()
 
 
-def artifacts(archive,start,end,columns=None,candidates=None,verified=None,strict_candidates=False):
-    candidates = candidates if candidates is not None else catalog(archive,start,end)[0]
+def artifacts(archive,start,end,columns=None,candidates=None,verified=None,strict_candidates=False,metadata=None):
+    candidates = candidates if candidates is not None else catalog(archive,start,end,metadata=metadata)[0]
     verified = verified if verified is not None else {}
     tasks=[];clock=start
     while clock<end:
@@ -52,19 +52,25 @@ def artifacts(archive,start,end,columns=None,candidates=None,verified=None,stric
         folder=archive/'manifests'/clock.strftime('%Y-%m-%d')/(clock.strftime('%Y%m%dT%H%M%SZ')+'_'+(clock+timedelta(minutes=15)).strftime('%Y%m%dT%H%M%SZ'))
         source=folder/'gdelt-bulk-manifest.json'
         try:
-            raw=source.read_bytes();bulk=json.loads(raw)
+            if metadata:
+                doc=metadata.document(source);raw=doc.raw;bulk=doc.value
+            else:raw=source.read_bytes();bulk=json.loads(raw)
             index_path=archive/'indexes'/('index-v2-'+bulk['dataset_hash'][:16]+'.json')
-            index_raw=index_path.read_bytes();index=json.loads(index_raw)
-            if index['bulk_manifest_sha256']!=sha256(raw).hexdigest():raise ValueError('Source epoch changed')
+            if metadata:
+                index_doc=metadata.document(index_path);index_raw=index_doc.raw;index=index_doc.value
+                bulk_sha=doc.sha256;index_sha=index_doc.sha256
+            else:
+                index_raw=index_path.read_bytes();index=json.loads(index_raw);bulk_sha=sha256(raw).hexdigest();index_sha=sha256(index_raw).hexdigest()
+            if index['bulk_manifest_sha256']!=bulk_sha:raise ValueError('Source epoch changed')
             fid=clock.strftime('%Y%m%d%H%M%S')+'.export'
             item=next(i for i in index['files'] if i['source_file_id']==fid and i['status']=='available')
             normalized=Path(item['parquet_path']).resolve()
             if not normalized.is_relative_to((archive/'normalized').resolve()):raise ValueError('Unexpected normalized path')
             if sha(normalized)!=item['parquet_sha256']:raise ValueError('Normalized artifact changed')
-            if source.read_bytes()!=raw or index_path.read_bytes()!=index_raw:raise ValueError('Manifest epoch changed')
+            if metadata is None and (source.read_bytes()!=raw or index_path.read_bytes()!=index_raw):raise ValueError('Manifest epoch changed')
             return {'slot':clock.isoformat(),'status':'available','path':str(normalized),
-              'sha256':item['parquet_sha256'],'bulk_manifest_sha256':sha256(raw).hexdigest(),
-              'index_sha256':sha256(index_raw).hexdigest(),'rows_rejected':item.get('rows_rejected',0)}
+              'sha256':item['parquet_sha256'],'bulk_manifest_sha256':bulk_sha,
+              'index_sha256':index_sha,'rows_rejected':item.get('rows_rejected',0)}
         except (OSError,ValueError,KeyError,StopIteration) as error:
             return {'slot':clock.isoformat(),'status':'missing','error_type':type(error).__name__,
               'reason':'candidate_hash_or_read_failure' if options else
@@ -86,13 +92,13 @@ def condition(definition):
     return '('+' OR '.join(clauses)+')' if clauses else 'FALSE'
 
 
-def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,verified=None,quiet=False,strict_candidates=False):
+def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,verified=None,quiet=False,strict_candidates=False,artifact_rows=None,metadata=None):
     cutoff=cutoff.astimezone(timezone.utc)
     if cutoff.minute%15 or cutoff.second or cutoff.microsecond:raise ValueError('Cutoff must close a 15-minute boundary')
     if cutoff>datetime.now(timezone.utc):raise ValueError('Future cutoff')
     if hours not in (24,48,168):raise ValueError('Explicit 24h,48h or7d unit required')
     start=cutoff-timedelta(hours=hours)
-    rows=artifacts(archive,start,cutoff,candidates=candidates,verified=verified,strict_candidates=strict_candidates);available=[r for r in rows if r['status']=='available']
+    rows=artifact_rows if artifact_rows is not None else artifacts(archive,start,cutoff,candidates=candidates,verified=verified,strict_candidates=strict_candidates,metadata=metadata);available=[r for r in rows if r['status']=='available']
     if not available:raise ValueError('No verified source artifacts; preserve previous snapshot')
     definitions=json.loads((ROOT/'config/r_definitions.json').read_text())
     db=duckdb.connect(':memory:');db.execute("SET memory_limit='512MB'");db.execute('SET threads=2')

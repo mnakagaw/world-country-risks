@@ -39,3 +39,9 @@ Both WCR repositories have Actions enabled=false. Keep all4 canonical workflows
 disabled and Pages in workflow mode; never restore old Actions or branch auto-build.
 Read docs/PEOPLE_INTEREST_AND_ACTIONS.md for the125-country daily reader, popup
 edition validation and legacy SNS provider retirement.
+
+Read docs/SOURCE_IO_TIMING.md for run-local metadata reuse/full NAS end rechecks
+and real stage timing. The old13-day DTO reuse is existing behavior. Validate
+changes with small isolated fixtures and the next normal owner only; never replay
+an already published day for measurement. Shared worker/profile edits belong to
+the upstream owner, not this consumer.

@@ -9,7 +9,8 @@ from execbrief_sync import Waiting
 
 class Resume(unittest.TestCase):
     def setUp(self):
-        base=ROOT/'work/sync-cycle-fixtures';base.mkdir(parents=True,exist_ok=True);self.temp=tempfile.TemporaryDirectory(dir=base);self.root=Path(self.temp.name);self.events=[];self.now=datetime(2026,10,14,22,tzinfo=timezone.utc)
+        # Keep rapid atomic-write logic fixtures off the live OneDrive sync tree.
+        self.temp=tempfile.TemporaryDirectory(prefix='countryrisks-cycle-fixture-');self.root=Path(self.temp.name);self.events=[];self.now=datetime(2026,10,14,22,tzinfo=timezone.utc)
         self.policy={'enabled':True,'sync_effective_date':'2026-10-15','series_root':str(self.root/'series'),'max_daily_checks':84,'node':'fixture-node','credential_file':'never-read-by-fixture'};self.config=self.root/'controller.json';self.config.write_text(json.dumps(self.policy))
         self.binding={'bundle_id':'accepted-15-source-v1','date':'2026-10-15','cutoff_utc':'2026-10-14T18:00:00Z','execbrief_release':'release-15'};self.bundle=self.root/'bundle';self.bundle.mkdir()
         self.original=cycle.ROOT;cycle.ROOT=self.root;self.p1=patch.object(cycle,'method_epoch',return_value='calculation-v1');self.p1.start();self.p2=patch('sync_article_context.export',side_effect=lambda policy,bundle,p:Path(p).write_text('{}'));self.p2.start();self.p3=patch('handoff_v2.save',return_value={'status':'verified'});self.p3.start()
@@ -33,6 +34,21 @@ class Resume(unittest.TestCase):
     def test_failure_resumes_same_stage_and_same_inputs_reuse(self):
         self.fail_once=True;self.assertEqual(self.call()['status'],'retry_sync_stage');self.assertEqual(self.events,['source','generate','build'])
         self.assertEqual(self.call()['status'],'verified');self.assertEqual(self.events,['source','generate','build','build','publish']);self.assertTrue(self.call()['reused']);self.assertEqual(len(self.events),5)
+    def test_real_stage_times_failures_and_reuse_are_recorded_without_reexecution(self):
+        self.fail_once=True;failed=self.call();self.assertEqual(failed['stage_attempts']['build'][0]['status'],'failed')
+        result=self.call();self.assertEqual(result['reuse_counts']['source'],1);self.assertEqual(result['reuse_counts']['generate'],1)
+        for name in ['source','generate','build','publish','handoff']:
+            stage=result['stages'][name];self.assertGreaterEqual(datetime.fromisoformat(stage['finished_at_utc']),datetime.fromisoformat(stage['started_at_utc']));self.assertGreaterEqual(stage['elapsed_seconds'],0)
+        started=result['stages']['source']['started_at_utc'];again=self.call();self.assertEqual(again['stages']['source']['started_at_utc'],started);self.assertEqual(again['reuse_counts']['complete_cycle'],1);self.assertEqual(self.events.count('source'),1);self.assertEqual(len(again['stage_attempts']['build']),2)
+    def test_source_metrics_are_linked_to_the_actual_attempt(self):
+        def runner(command,log,timeout):
+            started=cycle.utc();self.runner(command,log,timeout)
+            if log.stem=='source':(log.parent/'source-metrics.json').write_text(json.dumps({'started_at_utc':started,'finished_at_utc':cycle.utc(),'reuse_counts':{'baseline_dto_existing_cache':13}}))
+        result=cycle.cycle(self.config,self.now,self.gate,runner);self.assertEqual(result['stages']['source']['performance']['reuse_counts']['baseline_dto_existing_cache'],13)
+    def test_failed_attempt_does_not_claim_an_old_attempts_metrics(self):
+        def runner(command,log,timeout):
+            (log.parent/'source-metrics.json').write_text('{"started_at_utc":"2020-01-01T00:00:00+00:00"}');raise RuntimeError('fixture early failure')
+        result=cycle.cycle(self.config,self.now,self.gate,runner);attempt=result['stage_attempts']['source'][0];self.assertEqual(attempt['status'],'failed');self.assertNotIn('performance',attempt);self.assertEqual(attempt['performance_status'],'not_available_for_this_attempt')
     def test_same_date_different_release_or_selected_input_is_new_identity(self):
         self.assertEqual(self.call()['status'],'verified');self.binding['bundle_id']='accepted-15-source-v2';self.binding['execbrief_release']='release-15-r1';self.assertEqual(self.call()['status'],'verified');self.assertEqual(self.events.count('source'),2)
     def test_completed_source_SHA_corruption_is_not_reused(self):
