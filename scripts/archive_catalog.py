@@ -23,14 +23,17 @@ def catalog(archive,start,end,metadata=None):
     # SMB, including years outside this run. Acquisition labels remain ignored.
     with os.scandir(archive/'manifests') as parents:
         for parent in parents:
-            if not parent.is_dir(follow_symlinks=False):continue
-            with os.scandir(parent.path) as windows:
+            # The actual read validates existence/type. Pre-statting each SMB
+            # directory would add a separate round trip without a byte proof.
+            try:windows=os.scandir(parent.path)
+            except NotADirectoryError:continue
+            with windows:
                 for window in windows:
                     match=re.fullmatch(r'(\d{8}T\d{6}Z)_(\d{8}T\d{6}Z)',window.name)
                     if not match:continue
                     begin=datetime.strptime(match[1],'%Y%m%dT%H%M%SZ').replace(tzinfo=timezone.utc)
                     finish=datetime.strptime(match[2],'%Y%m%dT%H%M%SZ').replace(tzinfo=timezone.utc)
-                    if finish>start and begin<end and window.is_dir(follow_symlinks=False):
+                    if finish>start and begin<end:
                         paths.append(Path(window.path)/'gdelt-bulk-manifest.json')
     own=metadata is None;metadata=metadata or RunMetadata(read_bytes)
     normalized_root=(archive/'normalized').resolve()

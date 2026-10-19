@@ -60,6 +60,8 @@ live DB/queues/authentication, verified input bundles and publication history.
 October19 transport follow-up: inspect each window directory's timestamp before
 probing its manifest filename, including under acquisition labels such as
 `historical-year`. Out-of-window years no longer incur a manifest existence probe.
+Directory existence/type is established by enumeration and the actual bound
+file read, without an extra per-window SMB stat before that full read.
 Missing selected-window manifests are reported as missing and never become zeros.
 The final full-byte/SHA metadata recheck uses at most four concurrent readers;
 every original is still reread. Any changed/missing document blocks bootstrap.
