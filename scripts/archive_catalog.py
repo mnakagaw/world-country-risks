@@ -52,7 +52,7 @@ def catalog(archive,start,end,metadata=None):
                 if not start<=clock<end:continue
                 record=indexed.get(fid)
                 if source.get('status') not in ('downloaded','reused') or not record or record.get('status')!='available':continue
-                normalized=Path(record['parquet_path']).resolve()
+                normalized=metadata.resolve(record['parquet_path'])
                 if not normalized.is_relative_to(normalized_root):raise ValueError('Normalized path outside producer')
                 result.append({'slot':clock.isoformat(),'status':'candidate','path':str(normalized),'sha256':record['parquet_sha256'],
                   'bulk_manifest_path':str(path),'bulk_manifest_sha256':bulk_sha,'index_path':str(index_path),

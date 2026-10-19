@@ -62,6 +62,11 @@ probing its manifest filename, including under acquisition labels such as
 `historical-year`. Out-of-window years no longer incur a manifest existence probe.
 Directory existence/type is established by enumeration and the actual bound
 file read, without an extra per-window SMB stat before that full read.
+Canonical normalized paths shared by overlapping manifests are resolved once
+within this run, with per-path locks. Every row still checks canonical containment;
+all metadata/normalized byte and SHA checks remain. Path caching alone certifies
+no bytes, is never persisted, and a new source process starts cold. Counters
+`path_resolutions` and `path_resolution_hits` distinguish this from DTO reuse.
 Missing selected-window manifests are reported as missing and never become zeros.
 The final full-byte/SHA metadata recheck uses at most four concurrent readers;
 every original is still reread. Any changed/missing document blocks bootstrap.

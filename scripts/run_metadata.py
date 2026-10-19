@@ -15,12 +15,24 @@ class Document:
 class RunMetadata:
     def __init__(self,read=None):
         self.read=read or (lambda path:Path(path).read_bytes())
-        self._guard=Lock();self._locks={};self._entries={}
-        self.counts={'files_read':0,'sha256_calculations':0,'json_parses':0,'cache_hits':0,'bytes_read':0,'end_recheck_reads':0,'end_recheck_sha256':0}
+        self._guard=Lock();self._locks={};self._entries={};self._resolved={}
+        self.counts={'files_read':0,'sha256_calculations':0,'json_parses':0,'cache_hits':0,'bytes_read':0,'end_recheck_reads':0,'end_recheck_sha256':0,'path_resolutions':0,'path_resolution_hits':0}
         self.verified=False
     def __enter__(self):return self
     def __exit__(self,kind,value,trace):
         if kind is None:self.verify_all()
+    def resolve(self,path):
+        """Pin a canonical path once per run; this never substitutes for SHA."""
+        key=os.path.normcase(os.path.abspath(path))
+        with self._guard:lock=self._locks.setdefault('resolve:'+key,Lock())
+        with lock:
+            with self._guard:
+                if key in self._resolved:
+                    self.counts['path_resolution_hits']+=1;return self._resolved[key]
+            resolved=Path(path).resolve()
+            with self._guard:
+                self._resolved[key]=resolved;self.counts['path_resolutions']+=1
+            return resolved
     def document(self,path,expected=None):
         key=os.path.normcase(os.path.abspath(path))
         with self._guard:lock=self._locks.setdefault(key,Lock())

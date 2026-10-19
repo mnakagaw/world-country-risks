@@ -44,6 +44,20 @@ class RunEpoch(unittest.TestCase):
         p.write_text('{"n":2}')
         with RunMetadata() as b:self.assertNotEqual(b.document(p).sha256,original.sha256)
         self.assertEqual(b.summary()['cache_hits'],0)
+    def test_path_resolution_is_once_per_run_and_never_a_byte_proof(self):
+        p=self.root/'original.json';p.write_text('{"v":1}');epoch=RunMetadata()
+        with ThreadPoolExecutor(max_workers=4) as pool:paths=list(pool.map(lambda _:epoch.resolve(p),range(20)))
+        self.assertEqual(len(set(paths)),1);self.assertEqual(epoch.summary()['path_resolutions'],1);self.assertEqual(epoch.summary()['path_resolution_hits'],19);self.assertEqual(epoch.summary()['files_read'],0)
+        epoch.document(p);p.write_text('{"v":2}')
+        with self.assertRaises(ValueError):epoch.verify_all()
+        other=RunMetadata();other.resolve(p);self.assertEqual(other.summary()['path_resolutions'],1);self.assertEqual(other.summary()['path_resolution_hits'],0)
+    def test_resolved_outside_path_still_fails_each_catalog_containment_check(self):
+        start,bulk,index,bundle=self.fixture();v=json.loads(index.read_bytes());outside=self.root/'outside.parquet';outside.write_bytes(b'fixture artifact, only used for SHA tests')
+        for row in v['files']:row['parquet_path']=str(outside)
+        index.write_text(json.dumps(v))
+        with RunMetadata() as epoch:
+            rows,failures=catalog(self.root,start,start+timedelta(minutes=30),metadata=epoch)
+            self.assertFalse(rows);self.assertEqual(failures[0]['reason'],'ValueError')
     def fixture(self):
         start=datetime(2026,10,1,tzinfo=timezone.utc);bulkpath=self.root/'manifests/acquired-later/20261001T000000Z_20261001T003000Z/gdelt-bulk-manifest.json';bulkpath.parent.mkdir(parents=True)
         normalized=self.root/'normalized/fixed.parquet';normalized.parent.mkdir();normalized.write_bytes(b'fixture artifact, only used for SHA tests')
