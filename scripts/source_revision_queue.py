@@ -88,7 +88,7 @@ def parent_binding(root,policy,request):
     if current.get('snapshot_id')!=parent['snapshot_id'] or current.get('sha256')!=parent['snapshot_sha256']:raise InvalidRequest('request_parent_already_superseded')
     return snapshot
 
-def register(root,policy,request,now=None):
+def register(root,policy,request,now=None,coalesce_by_date=False):
     """Register only a SHA-pinned hint. This makes no claim of source acceptance."""
     now=now or datetime.now(timezone.utc);validate(request,policy,now)
     queue=queue_root(root);raw=canonical(request)+b'\n'
@@ -117,6 +117,13 @@ def register(root,policy,request,now=None):
             if state.get('request_sha256')!=checksum:raise InvalidRequest('state_request_identity_mismatch')
             if state.get('status') in ('completed','blocked'):
                 return {'id':request['id'],'request_sha256':checksum,'registered':True,'source_accepted':False,'existing_terminal_hint':True}
+        if coalesce_by_date and not matches:
+            for row in live:
+                previous_raw,previous=control(queue/row['id']/'request.json')
+                if sha256(previous_raw).hexdigest()!=row['request_sha256']:raise InvalidRequest('request_SHA_mismatch')
+                if previous.get('date')==request['date']:
+                    return {'registered':False,'coalesced':True,'pending_id':row['id'],'pending_request_sha256':row['request_sha256'],
+                        'latest_receipt_sha256':request['source_revision_receipt']['sha256'],'source_accepted':False}
         if not matches and len(live)>=MAX_ITEMS:raise InvalidRequest('queue_full')
         if moment(request['expires_at_utc'])<=now:raise InvalidRequest('request_expired')
         parent_binding(root,policy,request)

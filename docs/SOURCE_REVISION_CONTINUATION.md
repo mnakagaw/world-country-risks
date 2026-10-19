@@ -70,6 +70,43 @@ are **not claimed implemented or exercised by the transport fixtures**.
 
 ## Shared-owner configuration proposal
 
+The source owner installed this hook on October19 and verified an empty-queue
+native tick. That installation does not enable source acceptance.
+
+## One-shot producer registration
+
+After emitting an immutable **accepted normalized supplement receipt**, the
+existing producer capture phase may invoke, with cwd set to this checkout:
+
+```
+{python} -X utf8 -B scripts/register_source_revision.py
+  --date YYYY-MM-DD
+  --expected-parent-publication-sha256 <original upstream publication full SHA>
+  --receipt-path <absolute immutable accepted supplement receipt>
+  --receipt-sha256 <receipt full SHA>
+```
+
+Resolve `.daily-work/source-supplements/latest.json` in the producer to its bound
+immutable receipt descriptor first. Do not enqueue that mutable pointer, a raw-only
+capture receipt, a guessed path or an unaccepted normalized output. The final
+producer schema and consumer gate remain prerequisites for a live invocation.
+
+The registrar derives the date's currently selected WCR snapshot and frozen bundle,
+checks the caller's expected upstream publication SHA, checks receipt bytes/SHA and
+allowed producer roots, and registers the exact seven-field transport request.
+Registration does not accept source facts or publish anything. Its default expiry
+is24 hours (maximum7 days). The stable ID includes the full receipt SHA; repeating
+it preserves the original request, completion, expiry and retry state.
+
+Only one pending hint per date is registered through this CLI. Further receipts
+coalesce while it is pending, without rewriting that hint or the producer's latest
+pointer. After completion/closure, the next existing capture phase may register
+the producer's then-latest immutable receipt. Missing bytes defer without a hint;
+invalid input exits2. Log registration failure without rolling back source capture.
+No new watcher, scheduler, collector or cross-job invocation is introduced.
+
+## Shared-owner hook details
+
 Only the shared runtime/profile owner may install the generated proposal's
 `continuation` field on the existing `countryrisks-daily` job, under its existing
 profile update lock, with byte backups and all other job fields unchanged.

@@ -2,13 +2,19 @@ from pathlib import Path
 from datetime import datetime,timezone,timedelta
 from hashlib import sha256
 import json,sys,tempfile,unittest
+from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from archive_catalog import catalog
 from export_shared_gdelt import artifacts,ROOT
+import export_shared_gdelt as adapter
 
 class ArchiveBinding(unittest.TestCase):
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory(prefix='wcr-archive-catalog-')
+        self.private=Path(self.temp.name);self.guard=patch.object(adapter,'ROOT',self.private/'private');self.guard.start()
+    def tearDown(self):self.guard.stop();self.temp.cleanup()
     def test_acquisition_day_batch_window_epoch_and_actual_missing(self):
-        base=ROOT/'work/archive-fixtures';base.mkdir(parents=True,exist_ok=True)
+        base=self.private/'archive-fixtures';base.mkdir(parents=True,exist_ok=True)
         with tempfile.TemporaryDirectory(dir=base) as folder:
             root=Path(folder);start=datetime(2026,10,1,0,tzinfo=timezone.utc);end=start+timedelta(minutes=30)
             bulkpath=root/'manifests/2026-10-15/20261001T000000Z_20261001T030000Z/gdelt-bulk-manifest.json';bulkpath.parent.mkdir(parents=True)
