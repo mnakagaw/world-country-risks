@@ -216,6 +216,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                 {' · '}{Date.now() - Date.parse(riskData?.cutoff_utc || riskData?.date) > 36 * 3600000 ? 'Stale / 更新期限超過' : '固定版 / Fixed snapshot'}
                 {' · '}<a href="./country-interest/">各国の検索関心 / Search interest</a>
                 <span className="source-edition-binding" data-source-edition={riskData?.upstream_sync?.execbrief_release||'legacy-05-v1'}>{riskData?.upstream_sync ? `ExecBrief ${riskData.upstream_sync.date} · ${riskData.upstream_sync.execbrief_edition} · ${riskData.upstream_sync.execbrief_release}` : riskData?.cutoff_utc?.endsWith('20:00:00Z') ? '旧05:00 JST固定版 / Original05:00 JST snapshot' : 'Legacy / ExecBrief edition not bound'}</span>
+                {riskData?.upstream_sync?.historical_recovery && <span>履歴復元 / Reconstructed history · 当日のCountryRisks公開版ではありません / Recovered after the original date</span>}
                 <span>{t.global.scopeNote}</span>
                 {riskData?.countries && Object.values(riskData.countries).some(country=>country.evaluation) && <span>{t.global.primaryColorNote}</span>}
             </div>
