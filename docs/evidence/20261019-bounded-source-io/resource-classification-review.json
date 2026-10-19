@@ -1,0 +1,25 @@
+{
+  "kind": "source-resource-defer-classification-v1",
+  "at_utc": "2026-10-19T08:28:28.448816+00:00",
+  "resource_status": "deferred_resource",
+  "genuine_validation_status": "failed",
+  "missing_output_on_resource_refusal": false,
+  "retryable": true,
+  "ai_required": false,
+  "tests": {
+    "suite": "tests/rebuild_reuse_test.py",
+    "passed": 4,
+    "elapsed_seconds": 1.411,
+    "cases": [
+      "13 existing DTOs reused",
+      "metadata drift blocks bootstrap",
+      "receipt capacity refusal defers",
+      "source limit defers without missing output or history overwrite"
+    ]
+  },
+  "source_run_or_publication": false,
+  "files": {
+    "scripts/rebuild_baselines.py": "26ea08a69b3af96112c00a58bfffc919395c636c5e193226e8257c44279a7c1c",
+    "tests/rebuild_reuse_test.py": "252e2f7e37ecddd9016b6b00fd8ad05a9237896f685ec8b856415d6508c96633"
+  }
+}

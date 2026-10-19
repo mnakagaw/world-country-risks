@@ -16,7 +16,9 @@ const arg=key=>{const i=process.argv.indexOf(key);return i>=0?process.argv[i+1]:
 const inputPath=arg('--input');if(!inputPath)throw new Error('--input private shared-source DTO required');
 const raw=fs.readFileSync(inputPath),input=JSON.parse(raw);
 const historical=process.argv.includes('--historical');
-if(historical&&!input.upstream_sync?.historical_recovery)throw Error('Historical generation requires verified original-edition recovery binding');
+if(historical&&!input.upstream_sync?.historical_recovery&&input.upstream_sync?.source_revision?.history_only!==true)throw Error('Historical generation requires a verified recovery or late-source binding');
+const sourceRevision=input.upstream_sync?.source_revision;
+if(sourceRevision && (sourceRevision.known_after_original_cutoff!==true || !/^[a-f0-9]{64}$/.test(sourceRevision.accepted_receipt_sha256||'') || Date.parse(sourceRevision.accepted_at_utc)<=Date.parse(input.cutoff_utc)))throw Error('Invalid late-source availability provenance');
 const verifiedPath=arg('--verified-impacts'),verifiedRaw=verifiedPath?fs.readFileSync(verifiedPath):Buffer.from('[]');
 const verifiedHash=bytesHash(verifiedRaw);
 const contextPath=path.join(path.dirname(verifiedPath || inputPath),'article-classification-context.json');
@@ -30,7 +32,8 @@ const history=fs.existsSync(historyPath)?JSON.parse(fs.readFileSync(historyPath)
 const priorHistory=Object.fromEntries(Object.entries(history).filter(([day])=>day>=new Date(Date.parse(date)-14*86400000).toISOString().slice(0,10)&&day<date));
 if(input.cutoff_series==='execbrief-03-v1' && Object.values(priorHistory).some(h=>!h.cutoff_utc?.endsWith('18:00:00Z')))throw Error('Old05:00 baselines cannot enter the03:00 series');
 const baselineHash=hash(priorHistory);
-if(history[date]?.input_sha256===bytesHash(raw)&&history[date]?.computation_sha256===computationHash&&history[date]?.verified_input_sha256===verifiedHash&&history[date]?.annotation_input_sha256===contextHash&&history[date]?.baseline_input_sha256===baselineHash){
+const selectedManifest=fs.existsSync(path.join(dir,'manifest.json'))?JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'))):{};
+if(history[date]?.input_sha256===bytesHash(raw)&&history[date]?.computation_sha256===computationHash&&history[date]?.verified_input_sha256===verifiedHash&&history[date]?.annotation_input_sha256===contextHash&&history[date]?.baseline_input_sha256===baselineHash&&selectedManifest[date]?.snapshot_id===history[date]?.snapshot_id&&fs.existsSync(path.join(dir,history[date].snapshot_id+'.json'))){
     console.log(JSON.stringify({status:'reused',snapshot_id:history[date].snapshot_id,history_days:Object.keys(history).length}));process.exit(0);
 }
 const observed=aggregateObservation(input),data=observed.data,names=loadCountryNameMap();
@@ -133,7 +136,15 @@ history[date]={method:METHOD,coverage:input.source_status,cutoff_utc:input.cutof
 atomic(historyPath,JSON.stringify(history,null,2)+'\n');
 const manifestPath=path.join(dir,'manifest.json');
 const manifest=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath)):{};
-manifest[date]={snapshot_id:output.snapshot_id,path:output.snapshot_id+'.json',sha256:bytesHash(render),method:METHOD,cutoff_utc:input.cutoff_utc};
+const previous=manifest[date];
+const record={snapshot_id:output.snapshot_id,path:output.snapshot_id+'.json',sha256:bytesHash(render),method:METHOD,cutoff_utc:input.cutoff_utc};
+if(sourceRevision){
+ if(!previous || previous.snapshot_id!==sourceRevision.parent_snapshot_id)throw Error('Late-source generation parent is no longer selected');
+ const revisions=[...(previous.revisions||[{snapshot_id:previous.snapshot_id,path:previous.path,sha256:previous.sha256,kind:'original'}])];
+ revisions.push({snapshot_id:record.snapshot_id,path:record.path,sha256:record.sha256,kind:'late_source_revision',accepted_at_utc:sourceRevision.accepted_at_utc,parent_snapshot_id:sourceRevision.parent_snapshot_id});
+ record.revisions=revisions;
+}
+manifest[date]=record;
 atomic(manifestPath,JSON.stringify(manifest,null,2)+'\n');
 if(!historical){atomic(path.join(dir,'latest.json'),render);
 atomic(path.join(dir,'status.json'),JSON.stringify({engine_version:VERSION,date,cutoff_utc:input.cutoff_utc,

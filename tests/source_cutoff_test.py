@@ -14,7 +14,7 @@ class Cutoff(unittest.TestCase):
             root=Path(folder);(root/'config').mkdir();shutil.copyfile(ROOT/'config/r_definitions.json',root/'config/r_definitions.json');producer=root/'producer/engine';producer.mkdir(parents=True);(producer/'gdelt.py').write_text('TRACKING_PARAMETERS=set()\ndef canonical_url(url):return url\n')
             db=duckdb.connect(':memory:');db.execute("CREATE TABLE fixture(GlobalEventID VARCHAR,DATEADDED VARCHAR,source_file_id VARCHAR,ActionGeo_CountryCode VARCHAR,SOURCEURL VARCHAR,EventRootCode VARCHAR,EventCode VARCHAR,AvgTone VARCHAR,Actor1Geo_CountryCode VARCHAR,Actor2Geo_CountryCode VARCHAR,SQLDATE VARCHAR,NumMentions VARCHAR,ingested_at_utc VARCHAR)")
             for n,added in enumerate(['20261013174500','20261013180000','20261013180100']):db.execute('INSERT INTO fixture VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',[str(n),added,'20261013174500.export','JA','https://source.invalid/'+str(n),'18','180','-2','JA','','20261013','1','2026-10-14T00:00:00Z'])
-            parquet=root/'fixed.parquet';db.execute('COPY fixture TO ? (FORMAT PARQUET)',[str(parquet)]);db.close();cutoff=datetime(2026,10,13,18,tzinfo=timezone.utc);slot=cutoff-timedelta(minutes=15)
+            parquet=root/'archive/normalized/fixed.parquet';parquet.parent.mkdir(parents=True);db.execute('COPY fixture TO ? (FORMAT PARQUET)',[str(parquet)]);db.close();cutoff=datetime(2026,10,13,18,tzinfo=timezone.utc);slot=cutoff-timedelta(minutes=15)
             candidates={slot.isoformat():[{'path':str(parquet),'sha256':sha256(parquet.read_bytes()).hexdigest(),'rows_rejected':0,'slot':slot.isoformat(),'source_file_id':'20261013174500.export','source_sha256':'0'*64}]}
             old=adapter.ROOT;adapter.ROOT=root
             try:

@@ -115,8 +115,12 @@ backups are written under the registered external root's
 `world-country-risks/daily/<date>/<stage-key>/` directory. Before source work and
 each build/transfer, `storage_placement.py` verifies the configured volume GUID,
 label/filesystem/serial, marker, and capacity reserve. F requires50GiB remaining
-after the estimated build peak. Bounded active source work stays on C with20GiB
-remaining plus8GiB of expected temporary headroom. External unavailability
+after the estimated build peak. Active DuckDB work and its explicitly capped
+512MiB random-I/O spill stay on C; immutable read objects and completed DTOs
+use the registered F project root. The ordinary caller retains20GiB on C plus
+8GiB of expected temporary headroom. A smaller explicit C plan is unavailable
+until its complete writer code chain and every per-file ceiling are reviewed;
+see SOURCE_IO_TIMING.md. External unavailability
 defers the existing owner; it never silently creates the cold build on C.
 Restoration must provide the registered external destination and keep jobs
 disabled until paths, credentials, inputs, and ownership have been checked.

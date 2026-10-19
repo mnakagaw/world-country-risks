@@ -111,7 +111,7 @@ class Revision(Fixture,unittest.TestCase):
         self.policy['execbrief_handoff_root']=str(self.root/'producer-NAS')
         obj=Path(self.policy['execbrief_handoff_root'])/'completed-objects-v1/objects'/checksum[:2]/(checksum+'.gz');obj.parent.mkdir(parents=True);obj.write_bytes(gzip.compress(raw));self.source.unlink()
         result=self.run_request();self.assertEqual(result['status'],'pending');self.assertFalse(result['source_accepted'])
-        self.assertEqual(result['wait_reason'],'producer_source_revision_contract_not_yet_available')
+        self.assertEqual(result['wait_reason'],'accepted_source_supplement_required')
     def test_per_request_OS_lock_prevents_second_execution(self):
         ref=self.register()
         with publication_lock(queue.queue_root(self.root)/ref['id']/'run.lock') as held:

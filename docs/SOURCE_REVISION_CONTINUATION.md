@@ -1,4 +1,4 @@
-# Late source revisions: prepared continuation transport
+# Late source revisions: strict producer gate and native continuation
 
 The original October19 edition remains snapshot
 `bd140b4b7bde63af8f14bd0bd4e3559f04fbcf1d6acf0a27d6dd76307d7a5485`,
@@ -40,33 +40,56 @@ an existing completed/blocked state.
 
 If a newer day is current, the transport withholds a current-only consumer before
 invocation. Only a handler explicitly supporting history-only operation may run,
-and latest/status byte drift prevents completion. The real historical publication
-transaction still needs validation when that handler is implemented. A producer
+and latest/status byte drift prevents completion. Isolated staged transaction and
+real Node history-only generation fixtures cover this handler; an actual historical
+supplement publication has not been exercised yet. A producer
 receipt removed by cleanup may resolve by its original SHA from the existing NAS
 completed-object store, without restoring or rewriting producer state.
 
-## Deliberately unavailable until the producer contract arrives
+## Formal producer contract and staged consumption
 
-The production `consume_revision()` gate currently returns
-`producer_source_revision_contract_not_yet_available`. A matching queue hint or
-a receipt file with an `accepted` flag cannot start generation. The normal
-`freeze_inputs`, R math/config, coverage rules, source selection, generator and
-daily/weekly adapters are unchanged by this preparation.
+`source_supplement_gate.py` consumes only the producer's immutable
+`execbrief-em-source-supplement-acceptance-v1` plus its SHA/byte-bound catalog and
+passed checks. The reviewed producer validator is pinned to
+`f21011d02064be61410193ef912b329e978220c953bc6811477b9ebd3c7a74b4`.
+An unknown validator, accepted flag alone, mutable pointer or raw-only receipt
+cannot authorize a source revision. Source registration still makes no acceptance
+claim. No producer receipt or original WCR input bundle is rewritten.
 
-The actual producer receipt schema/path must come from the upstream owner after
-real capture. Its acceptance must bind the original19 release/publication/selected
-input/seal, exact added source IDs/full raw SHA, normalized index/full SHA, actual
-acquisition times, review/check results and publication/retention proof. No private
-or public producer receipt is rewritten to synthesize that acceptance.
+The gate matches the original publication/release checks/editorial acceptance,
+both selected-input hashes and their original producer seals, plus the unchanged
+Google03:00 seal in the original WCR bundle. Every supplemental English export ID
+stays inside the original half-open48h window, binds raw SHA, bulk/index SHA,
+normalized path/SHA/bytes and row quality, and has a bound acquisition receipt or
+an explicit already-in-parent normalization statement. A strict cumulative ID/SHA
+union rejects conflicting raw versions or dropping earlier accepted sources.
 
-When that contract arrives, implement and fixture-test its strict consumer gate
-and the new-snapshot pipeline before registering a live hint. Retain14/15/16/19v1
-payloads and their source receipts. Preserve the original48h DATEADDED cutoff;
-post-cutoff acquisition/acceptance remains explicit. If a newer day is already
-current, a19 supplement must stay historical and cannot roll latest/status or the
-NAS current-day pointer back. Add an explicit revision label and discoverable
-original/new snapshot records before actual release. These data-path integrations
-are **not claimed implemented or exercised by the transport fixtures**.
+The producer's English-priority subset manifest has a separate, strict namespace
+under `.daily-work/rolling-search/em-english-priority/<dataset>/`. Its original
+NAS manifest references and raw-priority receipts are independently checked.
+`select_current_candidates` inserts its exact accepted candidate even if the
+general NAS catalog has no corresponding quarter. Other normalized versions of
+that supplemental ID cannot substitute for it. The source run rehashes actual
+normalized bytes and rechecks its bound manifests at the end as before.
+
+`source_revision_cycle.py` runs under the same publication lock and native job.
+Large source/history/DTO/audit/generation/build/publication artifacts and subprocess
+TEMP/cache/logs use the verified external run directory. Source DuckDB remains
+in memory with the existing bounded512MiB C spill. Public input hydration and
+per-file C promotion caps remain explicit. The default8GiB additional C peak and
+20GiB reserve remain in force; an empty reviewed-plan allowlist cannot lower them.
+The existing resource guard is rechecked at each stage and promotion; oversize
+outputs defer without truncation or relabeling them as missing observations.
+
+Stages resume by exact bytes and full transport-code identity. A checkpoint after
+HTTP publication and NAS verification permits completion after a crash without
+republishing. Local public selection is promoted only after those proofs. Older
+payloads remain immutable and the daily manifest exposes original/revised records;
+the reader labels late availability and allows selecting the original snapshot.
+When a newer day is current, historical revisions retain latest/status and the
+NAS current-day pointer. The normal daily state/deadline and stopped historical
+recovery queue are unchanged. Fixture completion is not evidence that real new
+source has arrived or that coverage has recovered.
 
 ## Shared-owner configuration proposal
 

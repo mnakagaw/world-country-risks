@@ -12,6 +12,7 @@ import json
 import re
 import duckdb
 from archive_catalog import catalog
+from bounded_source_io import SourceIO,StorageDeferred
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -23,9 +24,11 @@ def sha(path):
     return h.hexdigest()
 
 
-def artifacts(archive,start,end,columns=None,candidates=None,verified=None,strict_candidates=False,metadata=None):
+def artifacts(archive,start,end,columns=None,candidates=None,verified=None,strict_candidates=False,metadata=None,*,source_io=None,materialize=True):
     candidates = candidates if candidates is not None else catalog(archive,start,end,metadata=metadata)[0]
     verified = verified if verified is not None else {}
+    source_io=source_io or SourceIO(ROOT)
+    normalized_root=metadata.resolve(Path(archive)/'normalized') if metadata else (Path(archive)/'normalized').resolve()
     tasks=[];clock=start
     while clock<end:
         tasks.append(clock);clock+=timedelta(minutes=15)
@@ -33,18 +36,11 @@ def artifacts(archive,start,end,columns=None,candidates=None,verified=None,stric
         options=candidates.get(clock.isoformat(),[])
         for option in options:
             try:
-                normalized=Path(option['path'])
-                signature=(str(normalized),option['sha256'])
-                if signature not in verified:
-                    from archive_catalog import read_bytes
-                    content=read_bytes(normalized)
-                    if sha256(content).hexdigest()!=option['sha256']:raise ValueError('Normalized SHA mismatch')
-                    cache=ROOT/'work/archive-objects';cache.mkdir(parents=True,exist_ok=True)
-                    copy=cache/(option['sha256']+'.parquet')
-                    if not copy.exists():copy.write_bytes(content)
-                    if sha(copy)!=option['sha256']:raise ValueError('Private read cache SHA mismatch')
-                    verified[signature]=str(copy)
-                return {**option,'status':'available','read_path':verified[signature]}
+                normalized=metadata.resolve(option['path']) if metadata else Path(option['path']).resolve()
+                if not normalized.is_relative_to(normalized_root):raise ValueError('Unexpected normalized path')
+                read_path=source_io.verify(normalized,option['sha256'],verified,materialize,option.get('bytes'))
+                return {**option,'status':'available',**({'read_path':read_path} if read_path else {})}
+            except StorageDeferred:raise
             except (OSError,ValueError):pass
         if strict_candidates:return {'slot':clock.isoformat(),'status':'missing','reason':'not_in_upstream_selected_raw_SHA_or_normalized_unavailable','rows_rejected':0}
         # Exact-quarter diagnosis is retained when the historical catalog has
@@ -66,11 +62,12 @@ def artifacts(archive,start,end,columns=None,candidates=None,verified=None,stric
             item=next(i for i in index['files'] if i['source_file_id']==fid and i['status']=='available')
             normalized=Path(item['parquet_path']).resolve()
             if not normalized.is_relative_to((archive/'normalized').resolve()):raise ValueError('Unexpected normalized path')
-            if sha(normalized)!=item['parquet_sha256']:raise ValueError('Normalized artifact changed')
+            read_path=source_io.verify(normalized,item['parquet_sha256'],verified,materialize,item.get('bytes'))
             if metadata is None and (source.read_bytes()!=raw or index_path.read_bytes()!=index_raw):raise ValueError('Manifest epoch changed')
             return {'slot':clock.isoformat(),'status':'available','path':str(normalized),
               'sha256':item['parquet_sha256'],'bulk_manifest_sha256':bulk_sha,
-              'index_sha256':index_sha,'rows_rejected':item.get('rows_rejected',0)}
+              'index_sha256':index_sha,'rows_rejected':item.get('rows_rejected',0),**({'read_path':read_path} if read_path else {})}
+        except StorageDeferred:raise
         except (OSError,ValueError,KeyError,StopIteration) as error:
             return {'slot':clock.isoformat(),'status':'missing','error_type':type(error).__name__,
               'reason':'candidate_hash_or_read_failure' if options else
@@ -92,17 +89,19 @@ def condition(definition):
     return '('+' OR '.join(clauses)+')' if clauses else 'FALSE'
 
 
-def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,verified=None,quiet=False,strict_candidates=False,artifact_rows=None,metadata=None):
+def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,verified=None,quiet=False,strict_candidates=False,artifact_rows=None,metadata=None,source_io=None):
     cutoff=cutoff.astimezone(timezone.utc)
     if cutoff.minute%15 or cutoff.second or cutoff.microsecond:raise ValueError('Cutoff must close a 15-minute boundary')
     if cutoff>datetime.now(timezone.utc):raise ValueError('Future cutoff')
     if hours not in (24,48,168):raise ValueError('Explicit 24h,48h or7d unit required')
     start=cutoff-timedelta(hours=hours)
-    rows=artifact_rows if artifact_rows is not None else artifacts(archive,start,cutoff,candidates=candidates,verified=verified,strict_candidates=strict_candidates,metadata=metadata);available=[r for r in rows if r['status']=='available']
+    own_io=source_io is None;source_io=source_io or SourceIO(ROOT);verified=verified if verified is not None else {}
+    rows=source_io.materialize_rows(artifact_rows,verified,archive) if artifact_rows is not None else artifacts(archive,start,cutoff,candidates=candidates,verified=verified,strict_candidates=strict_candidates,metadata=metadata,source_io=source_io);available=[r for r in rows if r['status']=='available']
     if not available:raise ValueError('No verified source artifacts; preserve previous snapshot')
     definitions=json.loads((ROOT/'config/r_definitions.json').read_text())
     db=duckdb.connect(':memory:');db.execute("SET memory_limit='512MB'");db.execute('SET threads=2')
     try:
+        for key,value in source_io.duckdb_settings().items():db.execute('SET '+key+' = ?',[value])
         db.from_parquet([r.get('read_path',r['path']) for r in available]).create_view('raw')
         sports=r'(\/|\.|^)(sport|sports|football|soccer|nba|nfl|mlb|nhl|f1|ufc)(\/|\.|$)|espn\.|goal\.com|bleacherreport\.|skysports\.|marca\.com|sports\.yahoo\.'
         # DATEADDED is discovery time. SQLDATE is retained independently; old event
@@ -158,11 +157,12 @@ def export(archive,cutoff,output,execbrief_root=None,hours=48,*,candidates=None,
           'population':'Unique GDELT Event table IDs added within window; sports URL filter v2; not independent incidents',
           'source_manifest_sha256':sha256(json.dumps(rows,sort_keys=True).encode()).hexdigest(),
           'input_artifacts':[{key:value for key,value in row.items() if key!='read_path'} for row in rows]}
-        output.parent.mkdir(parents=True,exist_ok=True)
-        pending=output.with_suffix('.tmp');pending.write_text(json.dumps(result,ensure_ascii=False)+'\n',encoding='utf-8');pending.replace(output)
+        source_io.atomic_json(output,result)
         if not quiet:print(json.dumps({'status':result['source_status'],'countries':len(countries),'available_slots':len(available),'expected_slots':len(rows),'output':str(output)},ensure_ascii=False))
         return result
-    finally:db.close()
+    finally:
+        db.close()
+        if own_io:source_io.close()
 
 
 if __name__=='__main__':

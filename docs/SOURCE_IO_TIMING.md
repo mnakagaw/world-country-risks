@@ -76,3 +76,57 @@ every original is still reread. Any changed/missing document blocks bootstrap.
 Loaded source subprocesses keep their original code; the next existing owner's
 source subprocess loads this change. Scoring, source SHA gates and scheduling
 are unchanged. Fixture results are not a measured production speedup.
+
+## Bounded immutable transport, October19 follow-up
+
+`rebuild_baselines.py` first verifies each normalized source by a complete
+streaming SHA256 read, with no read-copy write, and calculates the existing DTO
+epoch from those verified rows. A matching historical DTO therefore needs no
+normalized read object. A cache miss materializes only its required objects,
+streaming bounded chunks, checking the source SHA and byte length, and fully
+reading the destination SHA back. Overlapping windows still share only this
+source subprocess's verified-source map. The final full original manifest/index
+recheck remains mandatory before bootstrap. Selected supplemental normalized
+versions cannot fall back to a different Parquet version for the same raw ID.
+
+With `external_storage=true`, immutable source objects and completed DTOs use
+`F:\Codex-Storage\world-country-risks\immutable\source-objects` and the
+series-specific `immutable\source-dtos\<namespace>\baseline-sources` cache.
+The registered volume GUID, marker and capacity are checked before admission and
+each transport write; no external failure falls back to C. Existing DTO inputs
+remain preserved. A matching legacy DTO can be read under its byte cap and
+SHA-verified into the F DTO cache during the same normal source stage. No manual
+migration or second copier is introduced. Frozen policy may set
+`source_io.history_path` and `source_io.report_path` to scoped registered F
+paths, and `series_root` may be under that same project root.
+
+The Python transport enforces a256MiB per-source object ceiling,16GiB of new
+source-object writes per run,32MiB per DTO/output, and bounded concurrent pending
+reservations. Cold DTO and other Python output categories each have a512MiB
+write ceiling. Resource excess defers the source stage; it never changes
+available sources into missing records or truncates data. DuckDB retains its
+512MB memory limit and two threads; its explicit temporary directory stays in
+the task-owned C work area with a512MiB spill ceiling. The isolated spill
+directory is removed after the connection closes.
+
+The ordinary daily caller keeps its8GiB expected C peak plus20GiB reserve.
+`daily_paths(..., c_write_plan=...)` accepts a smaller calculated peak only for
+an exact, reviewed writer code chain and a finite enforced per-file inventory.
+The versioned plan binds full source hashes,512MiB spill, and every scoped C
+promotion/control/log ceiling. Storage code itself counts the complete public
+logical hydration size,64KiB per public file, twice every new file ceiling for
+pending/replacement,64KiB per planned copy, and256MiB miscellaneous allowance.
+Unknown/changed writer code is rejected. A declaration without reviewed complete
+writer coverage cannot lower admission. Node bootstrap/history/public writers
+must be covered by the caller's F placement and caps before using this path.
+
+Small isolated tests verify hash-only/no-copy behavior, full source/destination
+hashes, bounded external placement, resource refusals, reserve preservation,
+explicit spill settings/cleanup and the reviewed-plan gate. A2507-byte Parquet
+fixture covers duplicate IDs, cutoff boundaries, sports, invalid Tone and three
+countries. Its numerical aggregation AST and condition AST match the original;
+semantic DTO fields match after accounting only for pre-existing unordered SQL
+DISTINCT sets. Moving read objects changes the existing source-manifest hash
+because it binds private `read_path`; that transport change is retained. Full
+calculation/transport signatures remain truthful. These are correctness and
+bounded-write checks, not measured production timing or a publication.

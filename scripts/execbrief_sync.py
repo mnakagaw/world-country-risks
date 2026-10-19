@@ -232,4 +232,52 @@ def selected_raw_sources(bundle,archive,metadata=None):
             else:bulk=checked_json(source.read_bytes(),ref['sha256'])
             for r in bulk['files']:
                 if re.fullmatch(r'\d{14}\.export',r['file_id']) and r.get('status') in ['downloaded','reused']:selected[r['file_id']]=r['sha256']
+    supplemental=Path(bundle)/'source-revision-catalog.json'
+    if supplemental.exists():
+        meta=checked_json((Path(bundle)/'manifest.json').read_bytes())
+        raw=supplemental.read_bytes();obj=checked_json(raw,meta['files']['source-revision-catalog.json'])
+        revision=meta['binding'].get('source_revision',{})
+        if obj.get('kind')!='execbrief-em-source-catalog-v1' or digest(raw)!=revision.get('catalog_sha256'):raise Waiting('invalid_frozen_supplement_catalog')
+        start=moment(obj['window_start_utc']);end=moment(obj['information_cutoff_utc'])
+        if end-start!=timedelta(hours=48) or end!=moment(meta['binding']['cutoff_utc']):raise Waiting('supplement_cutoff_mismatch')
+        for row in obj['sources']:
+            fid=row['file_id'];checksum=row['raw']['sha256']
+            if not re.fullmatch(r'\d{14}\.export',fid) or not start<=datetime.strptime(fid[:14],'%Y%m%d%H%M%S').replace(tzinfo=timezone.utc)<end:raise Waiting('supplement_ID_outside_cutoff')
+            if fid in selected and selected[fid]!=checksum:raise Waiting('supplement_raw_ID_SHA_conflict')
+            selected[fid]=checksum
     return selected
+
+def select_current_candidates(bundle,archive,rows,metadata=None):
+    """Original raw strict union, with accepted supplemental normalized versions pinned."""
+    selected=selected_raw_sources(bundle,archive,metadata=metadata);supplemental=Path(bundle)/'source-revision-catalog.json';constraints={}
+    if supplemental.exists():
+        catalog=checked_json(supplemental.read_bytes());constraints={r['file_id']:r for r in catalog['sources']}
+    result={}
+    for slot,options in rows.items():
+        qualified=[]
+        for row in options:
+            fid=row['source_file_id']
+            if selected.get(fid)!=row['source_sha256']:continue
+            accepted=constraints.get(fid)
+            if accepted:
+                normalized=accepted['normalized_parquet']
+                if (Path(row['path']).resolve()!=Path(normalized['path']).resolve() or row['sha256']!=normalized['sha256']
+                    or row['bulk_manifest_sha256']!=accepted['bulk_manifest']['sha256'] or row['index_sha256']!=accepted['normalized_index']['sha256']):continue
+            qualified.append(row)
+        if qualified:result[slot]=qualified
+    # English-priority normalization uses a producer-owned immutable subset
+    # manifest outside the general NAS catalog. Add its exact accepted candidate
+    # even when that catalog has no corresponding quarter. No alternate version.
+    for fid,row in constraints.items():
+        def document(ref):
+            return metadata.document(ref['path'],ref['sha256']).value if metadata else checked_json(Path(ref['path']).read_bytes(),ref['sha256'])
+        bulk=document(row['bulk_manifest']);index=document(row['normalized_index'])
+        if index.get('bulk_manifest_sha256')!=row['bulk_manifest']['sha256']:raise Waiting('supplement_normalized_index_epoch_mismatch')
+        clock=datetime.strptime(fid[:14],'%Y%m%d%H%M%S').replace(tzinfo=timezone.utc);slot=clock.isoformat();normalized=row['normalized_parquet']
+        candidate={'slot':slot,'status':'candidate','path':normalized['path'],'sha256':normalized['sha256'],'bytes':normalized['bytes'],
+            'bulk_manifest_path':row['bulk_manifest']['path'],'bulk_manifest_sha256':row['bulk_manifest']['sha256'],
+            'index_path':row['normalized_index']['path'],'index_sha256':row['normalized_index']['sha256'],
+            'rows_rejected':row['rows_rejected'],'source_file_id':fid,'source_sha256':row['raw']['sha256'],
+            'source_generated_at':bulk.get('generated_at'),'source_window':bulk.get('window')}
+        result[slot]=[candidate]
+    return result

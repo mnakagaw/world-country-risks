@@ -1,0 +1,27 @@
+{
+  "kind": "reviewed-exact-transport-calculation-equivalence-v1",
+  "at_utc": "2026-10-19T08:24:11.691655+00:00",
+  "reviewer": "root",
+  "legacy_calculation": "43ebbb4859fb216896ab6f4b5b78f8fbcba6261c66d758abc302d041ac229431",
+  "approved_exact_calculations": [
+    "43ebbb4859fb216896ab6f4b5b78f8fbcba6261c66d758abc302d041ac229431",
+    "ffaecaeed7cd0f980b1c6ab1bb02c8c0727c2dde147047893025c6e9e271944b"
+  ],
+  "method_sha256": "f499329b95993f2553d7e8b40908b2ddebc745877b3eba06140a9dd8964d4bb8",
+  "R_SQL_cutoff_filter_support_AST_unchanged": true,
+  "source_manifest_read_path_provenance_preserved": true,
+  "other_signatures_reuse_legacy": false,
+  "regression": {
+    "suite": "tests/run_metadata_test.py",
+    "passed": 11,
+    "elapsed_seconds": 0.567,
+    "real_SQL_count_mutation_invalidates_epoch": true
+  },
+  "source_publication_not_run_for_testing": true,
+  "C_admission_default_8_plus_20_GiB_unchanged": true,
+  "files": {
+    "scripts/aggregation_epoch.py": "3478bfcd0f4757b372c5d89147f39066aa98be861d8a7aa8f1f26094b86511f7",
+    "tests/run_metadata_test.py": "9fd66c0bd3bc4047a0ccca0722bee53cbccf123a876ff2bc86aad8228c0f6111",
+    "scripts/export_shared_gdelt.py": "94f2a311e9b3b4493b8b4db85f267c464841e4263b1c1cceff51139db2c960b8"
+  }
+}

@@ -5,6 +5,13 @@ import ast,json
 
 LEGACY_METHOD='f499329b95993f2553d7e8b40908b2ddebc745877b3eba06140a9dd8964d4bb8'
 LEGACY_CALCULATION='43ebbb4859fb216896ab6f4b5b78f8fbcba6261c66d758abc302d041ac229431'
+# Exact reviewed transport-only revision: bounded spill/output, SHA-streamed
+# immutable read copies and cleanup. Condition and the complete numerical SQL
+# block are AST-identical; outputs retain the changed read-path provenance.
+# Evidence: outputs/bounded-source-io-20261019/validation.json. Any other
+# calculation/config/support signature still creates a new method epoch.
+TRANSPORT_EQUIVALENT_CALCULATIONS=frozenset({LEGACY_CALCULATION,
+    'ffaecaeed7cd0f980b1c6ab1bb02c8c0727c2dde147047893025c6e9e271944b'})
 
 def calculation_signature(root):
     root=Path(root);tree=ast.parse((root/'scripts/export_shared_gdelt.py').read_text(encoding='utf-8'))
@@ -24,4 +31,4 @@ def aggregation_method(root):
     value=calculation_signature(root)
     # Exact known pre-optimization aggregation/config/support implementation.
     # No arbitrary old version is accepted and source row SHA epochs still bind.
-    return LEGACY_METHOD if value==LEGACY_CALCULATION else value
+    return LEGACY_METHOD if value in TRANSPORT_EQUIVALENT_CALCULATIONS else value

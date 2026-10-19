@@ -124,9 +124,11 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
             .catch(err => console.warn("Regression Report Load Error (Data quality badges disabled):", err));
     }, []);
 
-    const fetchData = (dateKey) => {
+    const fetchData = (dateKey, snapshotId = null) => {
         setLoading(true);
-        const fileName = v2Manifest.current[dateKey]?.path ? `v2/${v2Manifest.current[dateKey].path}` : `${dateKey}.json`;
+        const record=v2Manifest.current[dateKey];
+        const revision=snapshotId ? record?.revisions?.find(r=>r.snapshot_id===snapshotId) : null;
+        const fileName = record?.path ? `v2/${revision?.path || record.path}` : `${dateKey}.json`;
         fetch(`./data/${fileName}`)
             .then(res => {
                 if (!res.ok) throw new Error("Data load failed");
@@ -217,6 +219,8 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                 {' · '}<a href="./country-interest/">各国の検索関心 / Search interest</a>
                 <span className="source-edition-binding" data-source-edition={riskData?.upstream_sync?.execbrief_release||'legacy-05-v1'}>{riskData?.upstream_sync ? `ExecBrief ${riskData.upstream_sync.date} · ${riskData.upstream_sync.execbrief_edition} · ${riskData.upstream_sync.execbrief_release}` : riskData?.cutoff_utc?.endsWith('20:00:00Z') ? '旧05:00 JST固定版 / Original05:00 JST snapshot' : 'Legacy / ExecBrief edition not bound'}</span>
                 {riskData?.upstream_sync?.historical_recovery && <span>履歴復元 / Reconstructed history · 当日のCountryRisks公開版ではありません / Recovered after the original date</span>}
+                {riskData?.upstream_sync?.source_revision && <span className="source-revision-note">{{ja:'後着データによる再計算版。元の03:00締切後に利用可能となった追補を含みます。',en:'Recalculated with source data available after the original03:00 cutoff.',es:'Recalculado con datos disponibles después del corte original03:00.'}[lang]} {riskData.upstream_sync.source_revision.accepted_at_utc}</span>}
+                {v2Manifest.current[riskData?.date]?.revisions?.length>1 && <label className="snapshot-revision-picker">{{ja:'公開版',en:'Published version',es:'Versión publicada'}[lang]}{' '}<select aria-label="Published snapshot version" value={riskData.snapshot_id} onChange={event=>fetchData(riskData.date,event.target.value)}>{v2Manifest.current[riskData.date].revisions.map((r,i)=><option key={r.snapshot_id} value={r.snapshot_id}>{r.kind==='original'?{ja:'元の固定版',en:'Original snapshot',es:'Versión original'}[lang]:`${{ja:'追補版',en:'Supplement',es:'Suplemento'}[lang]} ${i} · ${r.accepted_at_utc}`}</option>)}</select></label>}
                 {riskData?.mode_counts?.[viewMode]?.unknown > 0 && riskData.mode_counts[viewMode].unknown === Object.keys(riskData.countries || {}).length && <span className="data-insufficiency-note">{{ja:`評価に必要な原本・比較データが不足し、${riskData.mode_counts[viewMode].unknown}か国すべて判定不能です。`,en:`Insufficient original and comparison data: all ${riskData.mode_counts[viewMode].unknown} countries are unassessed.`,es:`Faltan datos originales o de comparación: ${riskData.mode_counts[viewMode].unknown} países sin evaluación.`}[lang]}</span>}
                 <span>{t.global.scopeNote}</span>
                 {riskData?.countries && Object.values(riskData.countries).some(country=>country.evaluation) && <span>{t.global.primaryColorNote}</span>}

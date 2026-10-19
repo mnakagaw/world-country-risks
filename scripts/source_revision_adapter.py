@@ -41,17 +41,19 @@ def native_owner(job_root,runtime,request_id,checksum,parent_pid=None):
     if module.process_identity(parent_pid)!=active.get('process_identity'):raise InvalidRequest('native_parent_identity_mismatch')
 
 def consume_revision(policy,request):
-    # The actual producer schema/path is not agreed or delivered. Do not invent
-    # an acceptance adapter, execute normal19 again, or accept a queue hint as facts.
-    raise Waiting('producer_source_revision_contract_not_yet_available')
+    if json_artifact(source_receipt_bytes(policy,request)).get('kind')!='execbrief-em-source-supplement-acceptance-v1':raise Waiting('accepted_source_supplement_required')
+    from source_revision_cycle import consume
+    return consume(policy,request)
 
-def completed_proof(root,request,proof):
+consume_revision.supports_history_only=True
+
+def completed_proof(root,request,proof,snapshot_path=None):
     """Only concrete immutable snapshot + publication + NAS bytes close a hint."""
     if not isinstance(proof,dict) or set(proof)!={'snapshot_id','snapshot_sha256','publication_receipt','publication_sha256','nas_manifest','nas_manifest_sha256'}:raise InvalidRequest('invalid_completion_proof')
     from source_revision_queue import digest
     identifier=proof['snapshot_id'];digest(identifier);digest(proof['snapshot_sha256'])
     if identifier==request['parent']['snapshot_id']:raise InvalidRequest('unchanged_snapshot_is_not_source_revision')
-    path=Path(root)/'public/data/v2'/(identifier+'.json');raw=artifact(path,128*1024*1024)
+    path=Path(snapshot_path) if snapshot_path is not None else Path(root)/'public/data/v2'/(identifier+'.json');raw=artifact(path,128*1024*1024)
     if sha256(raw).hexdigest()!=proof['snapshot_sha256']:raise InvalidRequest('revision_snapshot_SHA_mismatch')
     value=json_artifact(raw);binding=value.get('upstream_sync',{}).get('source_revision',{})
     cutoff=datetime.fromisoformat(request['date']).replace(tzinfo=timezone.utc)-timedelta(hours=6)
@@ -85,6 +87,13 @@ def execute(root,policy,request_id,checksum,now=None,consumer=consume_revision):
         if state.get('status')=='blocked':return {**result,'status':'blocked','wait_reason':state.get('wait_reason')}
         if state.get('retry_after') and moment(state['retry_after'])>now:return {**result,'status':'deferred','wait_reason':'revision_backoff'}
         try:
+            if consumer is consume_revision:
+                from source_revision_cycle import recover
+                recovered=recover(root,policy,request)
+                if recovered:
+                    state.update(status='completed',source_accepted=True,completion_proof=recovered,completed_at_utc=now.isoformat())
+                    state.pop('retry_after',None);state.pop('wait_reason',None);atomic(folder/'state.json',state)
+                    return {**result,'status':'completed','source_accepted':True,'handoff_complete':True,'publication_verified':True,'recovered_completion':True}
             if moment(request['expires_at_utc'])<=now:raise InvalidRequest('request_expired')
             if type(state.get('attempts')) is not int or not 0<=state['attempts']<MAX_ATTEMPTS:raise InvalidRequest('revision_attempt_limit')
             parent_binding(root,policy,request)

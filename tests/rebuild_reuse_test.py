@@ -7,6 +7,7 @@ import tempfile,sys,json,unittest
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 import rebuild_baselines as rebuild
 from aggregation_epoch import LEGACY_METHOD
+from bounded_source_io import StorageDeferred
 
 class ExistingReuse(unittest.TestCase):
     def setUp(self):
@@ -25,6 +26,8 @@ class ExistingReuse(unittest.TestCase):
         return {'fixture':[self.rows[0],{**self.rows[0],'source_sha256':'f'*64}]},[]
     def artifacts(self,archive,start,end,**kwargs):
         self.calls.append(kwargs)
+        self.assertIs(kwargs['materialize'],False)
+        self.assertIsNotNone(kwargs['source_io'])
         if kwargs['strict_candidates']:
             self.assertEqual(kwargs['candidates'],{'fixture':[self.rows[0]]})
         return self.rows
@@ -47,5 +50,20 @@ class ExistingReuse(unittest.TestCase):
         self.drift=True
         with self.assertRaises(ValueError):self.call()
         self.assertEqual(self.bootstraps,0);self.assertEqual(self.history.read_bytes(),b'prior history');metrics=json.loads((self.root/'run/source-metrics.json').read_bytes());self.assertEqual(metrics['status'],'failed');self.assertEqual(metrics['phases']['metadata_end_recheck']['status'],'failed')
+    def test_receipt_write_refusal_does_not_claim_successful_source_metrics(self):
+        original=rebuild.SourceIO.atomic_json
+        def write(instance,path,*args,**kwargs):
+            if Path(path).name=='rebuild-receipt.json':raise StorageDeferred('fixture receipt capacity refusal')
+            return original(instance,path,*args,**kwargs)
+        with patch.object(rebuild.SourceIO,'atomic_json',write),self.assertRaises(StorageDeferred):self.call()
+        metrics=json.loads((self.root/'run/source-metrics.json').read_bytes());self.assertEqual(metrics['status'],'deferred_resource');self.assertEqual(metrics['error_type'],'StorageDeferred');self.assertTrue(metrics['retryable']);self.assertFalse(metrics['ai_required'])
+    def test_source_resource_limit_defers_without_bootstrap_or_missing_output(self):
+        def limited(*args,**kwargs):raise StorageDeferred('fixture normalized size limit')
+        self.artifacts=limited
+        with self.assertRaises(StorageDeferred):self.call()
+        metrics=json.loads((self.root/'run/source-metrics.json').read_bytes())
+        self.assertEqual(metrics['status'],'deferred_resource');self.assertEqual(metrics['error_type'],'StorageDeferred')
+        self.assertEqual(metrics['phases']['day_2026-10-02']['status'],'deferred_resource')
+        self.assertEqual(self.bootstraps,0);self.assertFalse((self.root/'run/source.json').exists());self.assertEqual(self.history.read_bytes(),b'prior history')
 
 if __name__=='__main__':unittest.main()

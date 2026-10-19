@@ -37,7 +37,7 @@ def store(folder,name,raw):
     return digest
 
 
-def save(policy,source,publication,upstream_bundle=None,snapshot_path=None):
+def save(policy,source,publication,upstream_bundle=None,snapshot_path=None,audit_path=None):
     nas=Path(policy['handoff_root']);nas.mkdir(parents=True,exist_ok=True)
     snapshot=Path(snapshot_path or ROOT/'public/data/v2/latest.json');latest=json.loads(snapshot.read_bytes())
     folder=nas/'daily'/latest['date']/latest['snapshot_id'];folder.mkdir(parents=True,exist_ok=True)
@@ -49,7 +49,7 @@ def save(policy,source,publication,upstream_bundle=None,snapshot_path=None):
     if upstream_bundle:
         for file in Path(upstream_bundle).iterdir():
             if file.is_file():files['upstream-'+file.name]=file.read_bytes()
-    audit=ROOT/'.local/comparison-audits'/(latest['snapshot_id']+'.json')
+    audit=Path(audit_path) if audit_path is not None else ROOT/'.local/comparison-audits'/(latest['snapshot_id']+'.json')
     if audit.exists():files['comparison-audit.private.json']=audit.read_bytes()
     for name in ['baseline-reconstruction.json','baseline-sources/rebuild-receipt.json']:
         file=Path(policy.get('series_root',ROOT/'.local'))/name

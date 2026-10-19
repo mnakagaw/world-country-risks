@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from run_metadata import RunMetadata
 from archive_catalog import catalog,read_bytes
 from execbrief_sync import selected_raw_sources
-from aggregation_epoch import aggregation_method,calculation_signature,LEGACY_METHOD,LEGACY_CALCULATION
+from aggregation_epoch import aggregation_method,calculation_signature,LEGACY_METHOD,TRANSPORT_EQUIVALENT_CALCULATIONS
 import export_shared_gdelt as adapter
 
 class RunEpoch(unittest.TestCase):
@@ -91,7 +91,7 @@ class RunEpoch(unittest.TestCase):
             catalog(self.root,start,start+timedelta(minutes=30),metadata=epoch)
             with self.assertRaises(ValueError):selected_raw_sources(bundle,self.root,metadata=epoch)
     def test_unchanged_aggregation_keeps_existing_DTO_epoch_but_real_formula_changes_do_not(self):
-        self.assertEqual(calculation_signature(ROOT),LEGACY_CALCULATION);self.assertEqual(aggregation_method(ROOT),LEGACY_METHOD)
+        self.assertIn(calculation_signature(ROOT),TRANSPORT_EQUIVALENT_CALCULATIONS);self.assertEqual(aggregation_method(ROOT),LEGACY_METHOD)
         (self.root/'scripts').mkdir();(self.root/'config').mkdir()
         for name in ['scripts/export_shared_gdelt.py','scripts/r_support.py','config/r_definitions.json']:shutil.copyfile(ROOT/name,self.root/name)
         p=self.root/'scripts/export_shared_gdelt.py';p.write_text(p.read_text(encoding='utf-8').replace('count(*) AS event_count','count(*)+1 AS event_count'),encoding='utf-8');self.assertNotEqual(aggregation_method(self.root),LEGACY_METHOD)
