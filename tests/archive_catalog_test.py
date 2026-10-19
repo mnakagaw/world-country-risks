@@ -17,6 +17,12 @@ class ArchiveBinding(unittest.TestCase):
             indexpath=root/'indexes'/('index-v2-'+('a'*16)+'.json');indexpath.parent.mkdir()
             index={'bulk_manifest_sha256':sha256(raw).hexdigest(),'files':[{'source_file_id':'20261001000000.export','status':'available','parquet_path':str(normalized),'parquet_sha256':sha256(normalized.read_bytes()).hexdigest(),'rows_rejected':0}]};indexpath.write_text(json.dumps(index))
             candidates,errors=catalog(root,start,end);self.assertFalse(errors);self.assertEqual(len(candidates),1)
+            # Out-of-window and non-timestamp directory names must not cause
+            # manifest probes; a selected empty window remains explicitly missing.
+            old=root/'manifests/historical-year/20200101T000000Z_20200102T000000Z';old.mkdir(parents=True)
+            (old/'gdelt-bulk-manifest.json').write_bytes(b'not JSON; outside the selected interval')
+            empty=root/'manifests/acquired-later/20261001T001500Z_20261001T003000Z';empty.mkdir(parents=True)
+            candidates,errors=catalog(root,start,end);self.assertEqual(len(candidates),1);self.assertEqual(len(errors),1);self.assertEqual(errors[0]['reason'],'FileNotFoundError')
             values=artifacts(root,start,end,candidates=candidates);self.assertEqual(values[0]['status'],'available');self.assertEqual(values[1]['status'],'missing');self.assertEqual(values[1]['reason'],'bulk_manifest_missing')
             normalized.write_bytes(b'changed');values=artifacts(root,start,end,candidates=candidates);self.assertEqual(values[0]['reason'],'candidate_hash_or_read_failure')
             index['bulk_manifest_sha256']='f'*64;indexpath.write_text(json.dumps(index));candidates,errors=catalog(root,start,end);self.assertFalse(candidates);self.assertEqual(errors[0]['reason'],'index_epoch_mismatch')

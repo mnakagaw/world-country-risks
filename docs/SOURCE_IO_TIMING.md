@@ -56,3 +56,13 @@ shortening percentage or next-run success is claimed before its normal receipt.
 
 Restore all native controllers/profiles/jobs stopped and Actions disabled. Preserve
 live DB/queues/authentication, verified input bundles and publication history.
+
+October19 transport follow-up: inspect each window directory's timestamp before
+probing its manifest filename, including under acquisition labels such as
+`historical-year`. Out-of-window years no longer incur a manifest existence probe.
+Missing selected-window manifests are reported as missing and never become zeros.
+The final full-byte/SHA metadata recheck uses at most four concurrent readers;
+every original is still reread. Any changed/missing document blocks bootstrap.
+Loaded source subprocesses keep their original code; the next existing owner's
+source subprocess loads this change. Scoring, source SHA gates and scheduling
+are unchanged. Fixture results are not a measured production speedup.

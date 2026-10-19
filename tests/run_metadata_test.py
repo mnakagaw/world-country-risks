@@ -28,6 +28,14 @@ class RunEpoch(unittest.TestCase):
             with RunMetadata() as epoch:
                 epoch.document(p);p.write_bytes(b'{"value":2}');os.utime(p,ns=(stamp.st_atime_ns,stamp.st_mtime_ns))
         self.assertFalse(epoch.verified)
+    def test_parallel_full_recheck_rejects_any_changed_document_and_resets_prior_success(self):
+        epoch=RunMetadata();files=[]
+        for i in range(9):
+            p=self.root/(str(i)+'.json');p.write_text('{"v":1}');files.append(p);epoch.document(p)
+        epoch.verify_all();self.assertTrue(epoch.verified);self.assertEqual(epoch.summary()['end_recheck_reads'],9)
+        files[-1].write_text('{"v":2}')
+        with self.assertRaises(ValueError):epoch.verify_all()
+        self.assertFalse(epoch.verified)
     def test_expected_SHA_is_checked_on_a_cache_hit_and_new_run_is_cold(self):
         p=self.root/'doc.json';p.write_text('{"n":1}')
         with RunMetadata() as a:

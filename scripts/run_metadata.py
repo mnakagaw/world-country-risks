@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from hashlib import sha256
 from pathlib import Path
 from threading import Lock
+from concurrent.futures import ThreadPoolExecutor
 import json,os
 
 @dataclass(frozen=True)
@@ -39,11 +40,16 @@ class RunMetadata:
     def verify_all(self):
         # Full NAS reads, not stat/mtime substitutes. A changed/missing producer
         # artifact blocks this entire source run before its bootstrap can commit.
-        for path,doc in self._entries.values():
+        self.verified=False
+        def check(entry):
+            path,doc=entry
             raw=self.read(path);digest=sha256(raw).hexdigest()
             with self._guard:
                 self.counts['end_recheck_reads']+=1;self.counts['end_recheck_sha256']+=1;self.counts['bytes_read']+=len(raw)
-            if digest!=doc.sha256 or raw!=doc.raw:raise ValueError('Metadata epoch changed during source run')
+            return digest==doc.sha256 and raw==doc.raw
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            for unchanged in pool.map(check,list(self._entries.values())):
+                if not unchanged:raise ValueError('Metadata epoch changed during source run')
         self.verified=True
     def summary(self):
         with self._guard:return {**self.counts,'distinct_files':len(self._entries),'full_end_recheck_passed':self.verified,'scope':'one_source_run_only'}

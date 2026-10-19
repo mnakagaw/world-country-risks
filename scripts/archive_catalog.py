@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,timezone
 from hashlib import sha256
 from pathlib import Path
-import json,re
+import json,re,os
 from run_metadata import RunMetadata
 
 
@@ -18,12 +18,20 @@ def catalog(archive,start,end,metadata=None):
     # Folders are labelled by acquisition date in some historical runs. Filter
     # by the declared UTC window and each file ID, never by that date label.
     paths=[]
-    for path in (archive/'manifests').glob('*/*/gdelt-bulk-manifest.json'):
-        match=re.fullmatch(r'(\d{8}T\d{6}Z)_(\d{8}T\d{6}Z)',path.parent.name)
-        if not match:continue
-        begin=datetime.strptime(match[1],'%Y%m%dT%H%M%SZ').replace(tzinfo=timezone.utc)
-        finish=datetime.strptime(match[2],'%Y%m%dT%H%M%SZ').replace(tzinfo=timezone.utc)
-        if finish>start and begin<end:paths.append(path)
+    # Inspect timestamp directory names before probing any manifest file. A
+    # three-part glob stats the literal filename in every historical window on
+    # SMB, including years outside this run. Acquisition labels remain ignored.
+    with os.scandir(archive/'manifests') as parents:
+        for parent in parents:
+            if not parent.is_dir(follow_symlinks=False):continue
+            with os.scandir(parent.path) as windows:
+                for window in windows:
+                    match=re.fullmatch(r'(\d{8}T\d{6}Z)_(\d{8}T\d{6}Z)',window.name)
+                    if not match:continue
+                    begin=datetime.strptime(match[1],'%Y%m%dT%H%M%SZ').replace(tzinfo=timezone.utc)
+                    finish=datetime.strptime(match[2],'%Y%m%dT%H%M%SZ').replace(tzinfo=timezone.utc)
+                    if finish>start and begin<end and window.is_dir(follow_symlinks=False):
+                        paths.append(Path(window.path)/'gdelt-bulk-manifest.json')
     own=metadata is None;metadata=metadata or RunMetadata(read_bytes)
     normalized_root=(archive/'normalized').resolve()
     def load(path):
