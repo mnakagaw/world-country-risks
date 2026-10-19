@@ -61,6 +61,14 @@ class Revision(Fixture,unittest.TestCase):
         first=self.run_request(self.proof);second=self.run_request(self.proof)
         self.assertEqual(first['status'],'completed');self.assertTrue(second['reused']);self.assertEqual(self.calls,1)
         self.assertEqual(self.original,(self.root/'public/data/v2/manifest.json').read_bytes())
+    def test_completion_records_the_actual_finish_instead_of_the_entry_clock(self):
+        finished=self.now+timedelta(minutes=2)
+        class Clock(datetime):
+            @classmethod
+            def now(cls,tz=None):return finished
+        with patch.object(adapter,'datetime',Clock):result=self.run_request(self.proof)
+        self.assertEqual(result['status'],'completed');state=queue.control(queue.queue_root(self.root)/self.request['id']/'state.json')[1]
+        self.assertEqual(state['completed_at_utc'],finished.isoformat());self.assertEqual(state['started_at_utc'],self.now.isoformat())
     def test_corrupted_completed_publication_cannot_be_reported_verified(self):
         self.run_request(self.proof);(self.root/'fixture-publication.json').write_text('{}')
         with self.assertRaisesRegex(queue.InvalidRequest,'completion_receipt_SHA_mismatch'):self.run_request(self.proof)

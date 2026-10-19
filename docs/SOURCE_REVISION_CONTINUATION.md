@@ -2,9 +2,13 @@
 
 The original October19 edition remains snapshot
 `bd140b4b7bde63af8f14bd0bd4e3559f04fbcf1d6acf0a27d6dd76307d7a5485`,
-partial63/192 with239 Unknown countries. No new source has been accepted by this
-transport, no corrected snapshot has been generated/published, and the completed
-October16 recovery queue stays disabled.
+partial63/192 with239 Unknown countries. The first accepted late-source revision
+was published on October19 at09:02 UTC and closed by the same native owner at
+09:05:23 UTC, snapshot
+`ba2be9ae094deff9dcbb969a74b3d14d18498ece28ab2705fdf1339a277df1ac`.
+It has75/192 partial coverage and still239 Unknown countries in all three modes.
+The original snapshot remains selectable; this is not full source recovery or
+restored assessment coverage. The completed October16 recovery queue stays disabled.
 
 ## Implemented and tested
 
@@ -14,6 +18,12 @@ at most7 days, and execution at most84 attempts with15-minute deferred retries.
 Completed/blocked controls leave the pending frontier on new registrations; their
 small immutable request/evidence files are preserved. Commands cannot be supplied
 by a request. Queue IDs cannot contain paths.
+
+Completion timestamps are captured after the consumer finishes, separately from
+the entry/retry clock. The first run's raw queue record incorrectly reused its
+entry timestamp; keep that record as forensic evidence and use the existing native
+receipt's actual finish09:05:23.843897 UTC for that run. Producer receipts and
+published snapshot times are not rewritten to conceal the old lifecycle defect.
 
 `source_revision_adapter.py` is an entry for the installed shared runtime's
 `execute_continuation`, using the **same countryrisks-daily job/run.lock** after

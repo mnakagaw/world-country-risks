@@ -130,3 +130,26 @@ DISTINCT sets. Moving read objects changes the existing source-manifest hash
 because it binds private `read_path`; that transport change is retained. Full
 calculation/transport signatures remain truthful. These are correctness and
 bounded-write checks, not measured production timing or a publication.
+
+## JSON chunk coalescing after the first real supplement
+
+The first accepted12-source correction completed under source commit87d163b and
+the original bounded helper SHAa04fa39d. Its actual source stage took1380.187
+seconds, reused12 DTOs and rebuilt3. All2373 source metadata documents passed
+the final full-SHA recheck. New JSON writes in that run exposed excessive calls:
+passing every small `JSONEncoder.iterencode` fragment to the guarded writer made
+the16/18/19 DTO stages take627.544/243.253/248.753 seconds. Keep these timings
+with that executed code version; they are not a benchmark for the later fix.
+
+After the publication/NAS transaction naturally released its OS lock, the owner
+installed the exact reviewed helper SHA7763c92bfb385a179ace2a008e156fdfd9ccdfd58727453df39f904c7bbb017a.
+It coalesces UTF-8 fragments into at most64KiB chunks, splitting large fragments
+as needed. Every chunk still checks volume identity, marker, capacity, reservation
+and byte limit before writing. No reserve, source/row quality, SQL or R rule changes.
+
+Installed-code isolated checks passed18 cases. A358891-byte fixture produces
+exactly the same bytes while reducing84002 encoder fragments to8 actual guard
+calls (including admission). Unicode, escaping, oversized fragments, short writes,
+overflow/capacity refusal and original-file preservation are covered. These are
+fixture counts; a production speedup has not yet been measured. The stable DTO
+namespace proposal remains separate and unapplied.

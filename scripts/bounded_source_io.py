@@ -15,6 +15,7 @@ from storage_placement import external_root
 MIB=1024**2
 GIB=1024**3
 CHUNK=MIB
+JSON_CHUNK=64*1024
 C_RESERVE=20*GIB
 OBJECT_LIMIT=256*MIB
 OBJECT_RUN_LIMIT=16*GIB
@@ -80,6 +81,24 @@ class WriteLedger:
             with self.lock:
                 self.pending-=limit-used
                 if bucket is not None:self.buckets[bucket]-=limit-used
+
+def json_byte_chunks(value):
+    """Coalesce encoder fragments; guards run once per bounded byte chunk."""
+    encoder=json.JSONEncoder(ensure_ascii=False);pending=bytearray()
+    def text_parts():
+        yield from encoder.iterencode(value)
+        yield '\n'
+    for text in text_parts():
+        # At most16Ki Unicode characters become at most64KiB of UTF-8.
+        # This also bounds encoding of a single oversized encoder fragment.
+        for start in range(0,len(text),JSON_CHUNK//4):
+            raw=memoryview(text[start:start+JSON_CHUNK//4].encode('utf-8'))
+            while raw:
+                count=min(JSON_CHUNK-len(pending),len(raw))
+                pending.extend(raw[:count]);raw=raw[count:]
+                if len(pending)==JSON_CHUNK:
+                    yield bytes(pending);pending.clear()
+    if pending:yield bytes(pending)
 
 class SourceIO:
     def __init__(self,repo,policy=None,series=None,external_guard=None):
@@ -151,11 +170,7 @@ class SourceIO:
         finally:
             if pending.exists():pending.unlink()
     def atomic_json(self,path,value,limit=DTO_LIMIT):
-        encoder=json.JSONEncoder(ensure_ascii=False)
-        def chunks():
-            for part in encoder.iterencode(value):yield part.encode('utf-8')
-            yield b'\n'
-        result=self.atomic_chunks(path,chunks(),limit)
+        result=self.atomic_chunks(path,json_byte_chunks(value),limit)
         if self.external and Path(path).resolve().is_relative_to(self.dto_folder):self._count(dto_bytes_written=result[1])
         return result
     def copy(self,source,target,limit=DTO_LIMIT):

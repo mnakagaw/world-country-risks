@@ -47,6 +47,11 @@ def consume_revision(policy,request):
 
 consume_revision.supports_history_only=True
 
+def completion_time(started):
+    # The request clock is captured before potentially long source/publication
+    # work. Record actual completion; retain monotonicity for injected test clocks.
+    return max(started,datetime.now(timezone.utc)).isoformat()
+
 def completed_proof(root,request,proof,snapshot_path=None):
     """Only concrete immutable snapshot + publication + NAS bytes close a hint."""
     if not isinstance(proof,dict) or set(proof)!={'snapshot_id','snapshot_sha256','publication_receipt','publication_sha256','nas_manifest','nas_manifest_sha256'}:raise InvalidRequest('invalid_completion_proof')
@@ -91,7 +96,7 @@ def execute(root,policy,request_id,checksum,now=None,consumer=consume_revision):
                 from source_revision_cycle import recover
                 recovered=recover(root,policy,request)
                 if recovered:
-                    state.update(status='completed',source_accepted=True,completion_proof=recovered,completed_at_utc=now.isoformat())
+                    state.update(status='completed',source_accepted=True,completion_proof=recovered,completed_at_utc=completion_time(now))
                     state.pop('retry_after',None);state.pop('wait_reason',None);atomic(folder/'state.json',state)
                     return {**result,'status':'completed','source_accepted':True,'handoff_complete':True,'publication_verified':True,'recovered_completion':True}
             if moment(request['expires_at_utc'])<=now:raise InvalidRequest('request_expired')
@@ -112,7 +117,7 @@ def execute(root,policy,request_id,checksum,now=None,consumer=consume_revision):
             proof=consumer(policy,request)
             if any(sha256(path.read_bytes()).hexdigest()!=checksum for path,checksum in protected.items()):raise InvalidRequest('historical_revision_changed_newer_current_pointer')
             completed_proof(root,request,proof)
-            state.update(status='completed',source_accepted=True,completion_proof=proof,completed_at_utc=now.isoformat())
+            state.update(status='completed',source_accepted=True,completion_proof=proof,completed_at_utc=completion_time(now))
             state.pop('retry_after',None);state.pop('wait_reason',None);atomic(folder/'state.json',state)
             return {**result,'status':'completed','source_accepted':True,'handoff_complete':True,'publication_verified':True}
         except InvalidRequest as error:
