@@ -2,7 +2,7 @@
 from pathlib import Path
 from hashlib import sha256
 from datetime import datetime,timezone,timedelta
-import json,subprocess,sys,os
+import json,subprocess,sys,os,stat
 from cycle_lock import publication_lock
 from execbrief_sync import canonical,Waiting
 from source_revision_queue import queue_root,control,atomic,parent_binding,InvalidRequest
@@ -33,6 +33,65 @@ def replace(path,raw,limit):
     if len(raw)>limit:raise Waiting('revision_control_output_limit')
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);pending=path.with_suffix('.revision-pending');pending.write_bytes(raw);pending.replace(path)
     require(path.read_bytes()==raw,'revision_promotion_readback_mismatch')
+
+def checked_path(path,anchor):
+    """Reject lexical escapes and every original reparse ancestor before resolve."""
+    path=Path(path).absolute();anchor=Path(anchor).absolute()
+    require('..' not in path.parts and path.is_relative_to(anchor),'revision_path_escape')
+    for part in [path,*path.parents]:
+        try:info=part.lstat()
+        except FileNotFoundError:info=None
+        if info is not None:require(not stat.S_ISLNK(info.st_mode) and not (getattr(info,'st_file_attributes',0)&1024),'revision_reparse_point')
+        if part==anchor:break
+    resolved=path.resolve()
+    require(resolved.is_relative_to(anchor),'revision_path_escape')
+    return resolved
+
+
+def daily_public_files(public):
+    """The existing non-weekly deploy allowlist; never enumerate old history."""
+    public=Path(public).absolute();public=checked_path(public,public.parent);files=[]
+    def include(path):
+        checked_path(path,public);files.append(path)
+        require(len(files)<=4096,'revision_daily_file_count_limit')
+    for name in ['assets','country-interest','data/v2']:
+        folder=public/name
+        if not folder.exists():continue
+        checked_path(folder,public)
+        for directory,dirs,names in os.walk(folder,followlinks=False):
+            for child in dirs:checked_path(Path(directory)/child,public)
+            for child in names:include(Path(directory)/child)
+    for name in ['country-interest.js','country-interest.css','country-interest-cards.js','country-interest-cards.css','country-interest-alerts.js','country-interest-alerts.css','geo/countries.overview.geojson','geo/countries.overview.metadata.json']:
+        path=public/name
+        if path.exists():include(path)
+    total=sum(p.stat().st_size for p in files)
+    require(total<=1024*MIB and all(p.stat().st_size<=64*MIB for p in files),'revision_daily_public_size_limit')
+    return sorted(files),total
+
+
+def stage_daily_public(public,dist):
+    """SHA/readback checked, bounded F-only static copies before generated overlay."""
+    public=Path(public).absolute();files,total=daily_public_files(public);public=checked_path(public,public.parent)
+    external=Path(external_root(2*total+len(files)*65536)).absolute()
+    require(Path(dist).absolute().is_relative_to(external/'world-country-risks'),'revision_dist_outside_external')
+    dist=checked_path(dist,external)
+    def target_for(source):return checked_path(dist/source.relative_to(public),dist)
+    # Refuse compiled-asset collisions before writing any public data. Retried
+    # data/v2 controls may differ from an earlier generated overlay and are reset.
+    plan=[]
+    for source in files:
+        raw=artifact(source,64*MIB);digest=sha256(raw).hexdigest();target=target_for(source)
+        if source.relative_to(public).parts[0]=='assets' and target.exists():require(file_sha(target)==digest,'revision_compiled_asset_collision')
+        plan.append((source,target,digest,len(raw)))
+    copied={}
+    for source,target,digest,size in plan:
+        checked_path(source,public)
+        raw=artifact(source,64*MIB);require(len(raw)==size and sha256(raw).hexdigest()==digest,'revision_public_changed_during_copy')
+        require(Path(external_root(2*size+65536)).absolute()==external,'revision_external_identity_changed')
+        target_for(source);replace(target,raw,64*MIB)
+        copied[source.relative_to(public).as_posix()]={'sha256':digest,'bytes':size}
+    return {'files':copied,'bytes':total,'client_only':True}
+
 
 def run(command,log,timeout):
     temp=Path(log).parent/'temp';temp.mkdir(exist_ok=True)
@@ -132,7 +191,7 @@ def consume(policy,request,runner=run):
         dist,releases=admission(root,policy,request,key,bundle,blobs)
         write_bundle(bundle,blobs,writer=replace)
         require(policy.get('external_storage') is True,'late_revision_requires_verified_external_staging')
-        public_size=sum(f.stat().st_size for f in (root/'public').rglob('*') if f.is_file())
+        _,public_size=daily_public_files(root/'public')
         external_root(public_size*3+8*1024**3)
         base=dist.parent;base.mkdir(parents=True,exist_ok=True);series=base/'series';series.mkdir(exist_ok=True)
         state=base/'revision-stages.json';report=control(state)[1] if state.exists() else {'stages':{},'bundle_id':binding['bundle_id']}
@@ -154,7 +213,7 @@ def consume(policy,request,runner=run):
         commands={
             'source':[sys.executable,'-X','utf8','-B','scripts/rebuild_baselines.py','--config',str(config),'--cutoff',binding['cutoff_utc'],'--output',str(source),'--upstream-bundle',str(bundle)],
             'generate':[policy['node'],'--max-old-space-size=1024','scripts/generate_v2.mjs','--input',str(source),'--verified-impacts',str(verified),'--history',str(history),'--output-dir',str(generated),'--audit-dir',str(audit)],
-            'build':[policy['node'],'--max-old-space-size=1024','scripts/build_source_revision.mjs','--outDir',str(dist),'--cache-dir',str(base/'temp/vite-cache')],
+            'build':[policy['node'],'--max-old-space-size=1024','scripts/build_source_revision.mjs','--client-only','--outDir',str(dist),'--cache-dir',str(base/'temp/vite-cache')],
             'publish':[sys.executable,'-X','utf8','-B','scripts/deploy_v2.py','--credentials',policy['credential_file'],'--dist',str(dist),'--release-root',str(releases)]}
         if historical:commands['generate'].append('--historical')
         for name,command in commands.items():
@@ -179,6 +238,7 @@ def consume(policy,request,runner=run):
                 require(value['snapshot_id']==record['snapshot_id'] and file_sha(payload)==record['sha256'],'generated_revision_SHA_mismatch')
                 require(value['upstream_sync']==binding,'generated_revision_binding_mismatch');row.update(snapshot_id=value['snapshot_id'],snapshot_sha256=record['sha256'])
             elif name=='build':
+                row['static_public']=stage_daily_public(root/'public',dist)
                 for f in generated.iterdir():
                     if f.is_file():replace(dist/'data/v2'/f.name,artifact(f,64*MIB),64*MIB)
                 row['outputs']=build_proof(dist)

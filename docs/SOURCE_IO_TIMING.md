@@ -153,3 +153,33 @@ calls (including admission). Unicode, escaping, oversized fragments, short write
 overflow/capacity refusal and original-file preservation are covered. These are
 fixture counts; a production speedup has not yet been measured. The stable DTO
 namespace proposal remains separate and unapplied.
+
+## Bounded daily revision build
+
+The later cumulative36-source native continuation completed with99/192 observed
+slots. Its actual source stage took251.939 seconds, with12 DTO reuse/3 rebuild
+and2402 successful full metadata end rechecks. This run used the64KiB helper,
+but input and cache states differ from the first run; the entire elapsed-time
+difference cannot be attributed to batching. RAW and monitoring assess63 countries;
+R-INDEX still has239Unknown because the comparison requirements remain unmet.
+
+Late-source revisions now build the client with `--client-only` and Vite's
+`copyPublicDir:false`. An inline copier stages only the existing non-weekly
+deployment contract: recursive assets, country-interest and data/v2; the six
+country-interest root scripts/styles; and the two country overview geo files.
+The compiled root index is retained. All old daily date/revision JSON remains
+available before the generated-v2 overlay; weekly/history data is not copied.
+Conflicting public/compiled assets, escaped/reparse paths, changed source bytes,
+more than4096 files, more than1GiB total or64MiB per file defer before publication.
+Every copy verifies SHA/readback and registered F identity/capacity. A retry resets
+static daily data before reapplying generated outputs. C originals are untouched.
+
+One isolated client build and positive-copy/overlay produced exactly the same
+28 paths and SHA values as the verified99-slot publication. Its completed dist
+was110183198 bytes, compared with the earlier full-public copy of about1.43GB.
+That is a file-copy equivalence check, not a source replay or another publication.
+Temporary validation output was removed. The native run lock and publication
+lock must both be held when installing this code at a natural owner boundary.
+Default C admission8GiB plus20GiB reserve and F reserve50GiB remain unchanged;
+the reviewed lower-C-plan allowlist stays empty. Stable DTO namespaces remain
+separate and unapplied.
