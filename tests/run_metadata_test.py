@@ -7,7 +7,7 @@ from unittest.mock import patch
 import json,os,sys,tempfile,unittest,shutil
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from run_metadata import RunMetadata
-from archive_catalog import catalog
+from archive_catalog import catalog,read_bytes
 from execbrief_sync import selected_raw_sources
 from aggregation_epoch import aggregation_method,calculation_signature,LEGACY_METHOD,LEGACY_CALCULATION
 import export_shared_gdelt as adapter
@@ -16,6 +16,9 @@ class RunEpoch(unittest.TestCase):
     def setUp(self):
         base=ROOT/'work/metadata-fixtures';base.mkdir(parents=True,exist_ok=True);self.temp=tempfile.TemporaryDirectory(dir=base);self.root=Path(self.temp.name)
     def tearDown(self):self.temp.cleanup()
+    def test_full_original_byte_reader_keeps_multiblock_tail_and_SHA(self):
+        value=(b'bound-original-byte-proof-'*150000)+b'final-short-tail';p=self.root/'original.bin';p.write_bytes(value)
+        actual=read_bytes(p);self.assertEqual(actual,value);self.assertEqual(sha256(actual).hexdigest(),sha256(value).hexdigest())
     def test_parallel_reuse_still_fully_reads_and_hashes_each_original_at_end(self):
         p=self.root/'doc.json';p.write_bytes(b'{"value":1}')
         with RunMetadata() as epoch:

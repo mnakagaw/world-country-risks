@@ -8,7 +8,9 @@ from run_metadata import RunMetadata
 
 
 def read_bytes(path):
-    with path.open('rb') as file:
+    # FileIO returns each available block directly. A buffered read(size) may
+    # issue another SMB EOF read internally before our own loop's EOF read.
+    with path.open('rb',buffering=0) as file:
         chunks=[]
         while part:=file.read(1024*1024):chunks.append(part)
     return b''.join(chunks)

@@ -67,6 +67,9 @@ within this run, with per-path locks. Every row still checks canonical containme
 all metadata/normalized byte and SHA checks remain. Path caching alone certifies
 no bytes, is never persisted, and a new source process starts cold. Counters
 `path_resolutions` and `path_resolution_hits` distinguish this from DTO reuse.
+The normalized byte reader uses unbuffered binary FileIO to avoid a duplicate
+SMB EOF read by the buffered layer. It still reads until EOF and preserves both
+the full source-byte SHA and the private read-copy SHA checks.
 Missing selected-window manifests are reported as missing and never become zeros.
 The final full-byte/SHA metadata recheck uses at most four concurrent readers;
 every original is still reread. Any changed/missing document blocks bootstrap.
