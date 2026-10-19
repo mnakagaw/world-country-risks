@@ -105,6 +105,11 @@ is already verified. A completed history queue is disabled automatically. Privat
 `source_timeout_seconds` may allow a bounded slow NAS read (1800–5400 seconds);
 this does not start a second reader/worker or modify the shared scheduler.
 
+NAS deltas write bounded1MiB chunks, fully hash pending bytes, and reuse a
+SHA-matched pending file after an interrupted transfer. Final files remain
+immutable. An uncertain rename is resolved by reading the final SHA before retry;
+NAS I/O diagnostics stay in the owning private cycle's `handoff-error.json`.
+
 With private controller `external_storage=true`, daily builds and publication
 backups are written under the registered external root's
 `world-country-risks/daily/<date>/<stage-key>/` directory. Before source work and

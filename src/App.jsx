@@ -217,6 +217,7 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                 {' · '}<a href="./country-interest/">各国の検索関心 / Search interest</a>
                 <span className="source-edition-binding" data-source-edition={riskData?.upstream_sync?.execbrief_release||'legacy-05-v1'}>{riskData?.upstream_sync ? `ExecBrief ${riskData.upstream_sync.date} · ${riskData.upstream_sync.execbrief_edition} · ${riskData.upstream_sync.execbrief_release}` : riskData?.cutoff_utc?.endsWith('20:00:00Z') ? '旧05:00 JST固定版 / Original05:00 JST snapshot' : 'Legacy / ExecBrief edition not bound'}</span>
                 {riskData?.upstream_sync?.historical_recovery && <span>履歴復元 / Reconstructed history · 当日のCountryRisks公開版ではありません / Recovered after the original date</span>}
+                {riskData?.mode_counts?.[viewMode]?.unknown > 0 && riskData.mode_counts[viewMode].unknown === Object.keys(riskData.countries || {}).length && <span className="data-insufficiency-note">{{ja:`評価に必要な原本・比較データが不足し、${riskData.mode_counts[viewMode].unknown}か国すべて判定不能です。`,en:`Insufficient original and comparison data: all ${riskData.mode_counts[viewMode].unknown} countries are unassessed.`,es:`Faltan datos originales o de comparación: ${riskData.mode_counts[viewMode].unknown} países sin evaluación.`}[lang]}</span>}
                 <span>{t.global.scopeNote}</span>
                 {riskData?.countries && Object.values(riskData.countries).some(country=>country.evaluation) && <span>{t.global.primaryColorNote}</span>}
             </div>
