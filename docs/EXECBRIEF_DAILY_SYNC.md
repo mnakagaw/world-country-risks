@@ -100,6 +100,10 @@ An unavailable original or seal leaves a gap. Generated history explicitly says
 it was reconstructed later and does not claim WCR published on that past date.
 Historical generation adds its manifest entry and immutable snapshot while
 preserving the current `latest.json`, `status.json`, and NAS daily-latest pointer.
+Incomplete history keeps the same native job retryable even when today's release
+is already verified. A completed history queue is disabled automatically. Private
+`source_timeout_seconds` may allow a bounded slow NAS read (1800–5400 seconds);
+this does not start a second reader/worker or modify the shared scheduler.
 
 With private controller `external_storage=true`, daily builds and publication
 backups are written under the registered external root's

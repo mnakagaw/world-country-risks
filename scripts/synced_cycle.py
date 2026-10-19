@@ -115,7 +115,8 @@ def cycle(config,now=None,gate=freeze_inputs,runner=run,recovery=None):
                 active_timing=begin_stage(report,name)
                 report['active_stage']=name;report['status']='running';write(receipt,report)
                 if name in ['build','publish']:daily_paths(ROOT,policy,day,key)
-                runner(command,state/(name+'.log'),1800 if name=='source' else 900)
+                source_timeout=min(5400,max(1800,int(policy.get('source_timeout_seconds',1800))))
+                runner(command,state/(name+'.log'),source_timeout if name=='source' else 900)
                 if recovery and sha256((ROOT/'public/data/v2/latest.json').read_bytes()).hexdigest()!=current_sha:raise ValueError('Historical recovery changed current edition')
                 if name=='source':
                     obj=json.loads(source.read_bytes());obj['upstream_sync']=binding;obj['cutoff_series']='execbrief-03-v1';obj['baseline_semantics']='Retrospective same48h/03:00 English Event observations and current classification; not old05:00 or historical published forecasts';write(source,obj)
