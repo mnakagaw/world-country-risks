@@ -55,6 +55,17 @@ class Resume(unittest.TestCase):
         self.assertEqual(self.call()['status'],'verified');source=next((self.root/'series/cycles').rglob('source.json'));source.write_text('tampered fixture');r=self.call();self.assertEqual(r['status'],'retry_sync_stage');self.assertEqual(r['reason'],'completed_input_or_publication_receipt_SHA_mismatch');self.assertEqual(self.events.count('publish'),1)
     def test_effective_date_does_not_replace_original05_today(self):
         self.assertEqual(self.call(now=datetime(2026,10,14,12,tzinfo=timezone.utc))['status'],'awaiting_sync_effective_date');self.assertEqual(self.events,[])
+    def test_history_recovery_preserves_current_pointer_and_uses_separate_receipt(self):
+        self.binding.update(date='2026-10-16',cutoff_utc='2026-10-15T18:00:00Z',historical_recovery={'countryrisks_published_at_original_date':False})
+        before=(self.root/'public/data/v2/latest.json').read_bytes()
+        def runner(command,log,timeout):
+            if log.stem=='generate':
+                self.assertIn('--historical',command);d=self.root/'public/data/v2';(d/'recovered.json').write_text('{"snapshot_id":"recovered16","date":"2026-10-16"}');(d/'manifest.json').write_text('{"2026-10-16":{"path":"recovered.json"}}');self.events.append('generate');log.write_text('fixture')
+            else:self.runner(command,log,timeout)
+        def gate(*args,**kwargs):
+            self.assertEqual(args[1],'2026-10-16');self.assertEqual(args[2].isoformat(),'2026-10-15T18:00:00+00:00');self.assertEqual(kwargs['historical_latest_path'],'original-bound-pointer');return self.gate()
+        result=cycle.cycle(self.config,datetime(2026,10,19,3,tzinfo=timezone.utc),gate,runner,recovery={'date':'2026-10-16','latest_edition_path':'original-bound-pointer'})
+        self.assertEqual(result['status'],'verified');self.assertEqual((self.root/'public/data/v2/latest.json').read_bytes(),before);self.assertTrue((self.root/'series/recovery-requests/2026-10-16/receipt.json').exists());self.assertFalse((self.root/'series/requests/2026-10-16/receipt.json').exists())
     def test_retries_are_bounded_and_expired_date_keeps_previous(self):
         self.policy['max_daily_checks']=1;self.config.write_text(json.dumps(self.policy))
         def wait(*a):raise Waiting('parent_unfinished')

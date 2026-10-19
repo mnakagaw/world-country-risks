@@ -15,6 +15,8 @@ const computationHash=bytesHash(['scripts/generate_v2.mjs','scripts/engine_v2.mj
 const arg=key=>{const i=process.argv.indexOf(key);return i>=0?process.argv[i+1]:null;};
 const inputPath=arg('--input');if(!inputPath)throw new Error('--input private shared-source DTO required');
 const raw=fs.readFileSync(inputPath),input=JSON.parse(raw);
+const historical=process.argv.includes('--historical');
+if(historical&&!input.upstream_sync?.historical_recovery)throw Error('Historical generation requires verified original-edition recovery binding');
 const verifiedPath=arg('--verified-impacts'),verifiedRaw=verifiedPath?fs.readFileSync(verifiedPath):Buffer.from('[]');
 const verifiedHash=bytesHash(verifiedRaw);
 const contextPath=path.join(path.dirname(verifiedPath || inputPath),'article-classification-context.json');
@@ -119,7 +121,7 @@ output.daily_briefing_ops={
 // The public projection never publishes input artifact paths, full observations,
 // review bodies, Google raw feeds or authentication settings.
 output.snapshot_id=hash(output);
-const auditDir=path.join(root,'.local/comparison-audits');fs.mkdirSync(auditDir,{recursive:true});
+const auditDir=path.resolve(arg('--audit-dir')||path.join(root,'.local/comparison-audits'));fs.mkdirSync(auditDir,{recursive:true});
 fs.writeFileSync(path.join(auditDir,output.snapshot_id+'.json'),JSON.stringify({snapshot_id:output.snapshot_id,input_sha256:output.input_sha256,baseline_input_sha256:baselineHash,countries:comparisonAudit})+'\n');
 const render=JSON.stringify(output,null,2)+'\n';
 function atomic(target,text){const tmp=target+'.pending';fs.writeFileSync(tmp,text);fs.renameSync(tmp,target);}
@@ -133,10 +135,10 @@ const manifestPath=path.join(dir,'manifest.json');
 const manifest=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath)):{};
 manifest[date]={snapshot_id:output.snapshot_id,path:output.snapshot_id+'.json',sha256:bytesHash(render),method:METHOD,cutoff_utc:input.cutoff_utc};
 atomic(manifestPath,JSON.stringify(manifest,null,2)+'\n');
-atomic(path.join(dir,'latest.json'),render);
+if(!historical){atomic(path.join(dir,'latest.json'),render);
 atomic(path.join(dir,'status.json'),JSON.stringify({engine_version:VERSION,date,cutoff_utc:input.cutoff_utc,
   source_status:input.source_status,last_success_at:output.generated_at,snapshot_id:output.snapshot_id,
-  expected_slots:input.coverage.expected_slots,available_slots:input.coverage.available_slots},null,2)+'\n');
+  expected_slots:input.coverage.expected_slots,available_slots:input.coverage.available_slots},null,2)+'\n');}
 console.log(JSON.stringify({status:'generated',engine_version:VERSION,snapshot_id:output.snapshot_id,
   source_status:input.source_status,countries:Object.keys(output.countries).length,
   history_days:Object.keys(history).length,previous_same_input:existing?.input_sha256===output.input_sha256}));

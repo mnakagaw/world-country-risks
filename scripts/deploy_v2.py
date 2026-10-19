@@ -29,8 +29,8 @@ def read(ftp,name):
         raise
 
 
-def deploy(credentials,weekly=False,ui_only=False):
-    dist=ROOT/'dist'
+def deploy(credentials,weekly=False,ui_only=False,dist=None,release_root=None):
+    dist=Path(dist or ROOT/'dist')
     files=[]
     for base in ['assets','country-interest','data/v2']:
         if (dist/base).is_dir():files.extend(p for p in (dist/base).rglob('*') if p.is_file())
@@ -72,7 +72,7 @@ def deploy(credentials,weekly=False,ui_only=False):
         names={name:file for name,file in names.items() if name in payloads}
     deferred=['data/history/weekly_5y/index.json','data/v2/status.json','data/v2/latest.json','data/v2/manifest.json','index.html']
     ordered=sorted(n for n in names if n not in deferred)+[n for n in deferred if n in names]
-    folder=ROOT/'.local/releases'/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ');folder.mkdir(parents=True,exist_ok=False)
+    folder=Path(release_root or ROOT/'.local/releases')/datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ');folder.mkdir(parents=True,exist_ok=False)
     receipt={'schema':'country-risk-publication-v2','files':{},'status':'running','latest_last':True,'ui_only':ui_only}
     ftp=connect(credentials);known=set()
     try:
@@ -108,4 +108,4 @@ def deploy(credentials,weekly=False,ui_only=False):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--credentials',type=Path,required=True);p.add_argument('--weekly',action='store_true');p.add_argument('--ui-only',action='store_true');a=p.parse_args();deploy(a.credentials,weekly=a.weekly,ui_only=a.ui_only)
+    p=argparse.ArgumentParser();p.add_argument('--credentials',type=Path,required=True);p.add_argument('--weekly',action='store_true');p.add_argument('--ui-only',action='store_true');p.add_argument('--dist',type=Path);p.add_argument('--release-root',type=Path);a=p.parse_args();deploy(a.credentials,weekly=a.weekly,ui_only=a.ui_only,dist=a.dist,release_root=a.release_root)

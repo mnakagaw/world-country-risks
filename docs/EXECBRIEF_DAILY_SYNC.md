@@ -22,7 +22,7 @@ It must be verified with exit0 and point to a SHA-matched, verified deployment
 manifest and a passed release-checks receipt. The checks must bind a completed
 final editorial acceptance to the same editorial SHA.
 
-Two producer receipt contracts are explicit. The earlier final receipt has
+The earlier final receipt has
 `content_check_complete=true` and `accepted_final_editorial_snapshot.sha256`.
 The October15 exact-source receipt instead has
 `status=accepted_exact_source_awaiting_root_release_checks`, the accepted
@@ -34,6 +34,15 @@ close those root stages. The prepublication final receipt is not rewritten or
 given fabricated completion flags. Unknown remaining work, pending/missing content
 review fields, failed checks, wrong source paths/SHA or an unverified publication
 remain blocked. Both formats retain the same date/cutoff/public/private SHA gates.
+
+The producer's current `release_checks.editorial_acceptance` contract binds
+`content_check_complete=true`, integer `summary_review.pending_apply=0`, and
+`projection.edition_sha256`. The consumer also requires canonical dated source
+paths, a bound stress SHA, and successful SHA-bound validate/tests/syntax checks.
+The explicit `execbrief-final-incremental-acceptance-v1` contract instead binds
+`accepted=true`, zero pending/material findings, `current_files` raw SHA, and
+the verified built editorial SHA. Normalized-text hashes are not raw-byte hashes.
+These adapters do not edit producer receipts or waive publication/source checks.
 
 Then WCR verifies:
 
@@ -76,6 +85,32 @@ separate persisted receipts. Successful source/generation stages have payload
 SHA/snapshot checks; a failed build or transfer resumes its stage. Publication
 is certified only by the actual TLS/remote readback receipt. An incomplete or
 failed stage keeps its pinned inputs and does not fabricate completion.
+
+## Original-edition recovery and cold staging
+
+After the current edition completes, the same native invocation may process an
+explicit private `.local/history-recovery.json` queue. Recovery uses the existing
+publication lock and separate `recovery-requests` receipts; no extra worker is
+created. Each date requires its original accepted receipt/checks/publication
+manifest, SHA-matched preserved latest pointer and editorial/stress bytes, source
+selection, and exact03:00 search seal. The original upstream publication must
+have been verified within that edition's day. Later changed public files are
+recorded separately; their bytes cannot replace the accepted original SHA.
+An unavailable original or seal leaves a gap. Generated history explicitly says
+it was reconstructed later and does not claim WCR published on that past date.
+Historical generation adds its manifest entry and immutable snapshot while
+preserving the current `latest.json`, `status.json`, and NAS daily-latest pointer.
+
+With private controller `external_storage=true`, daily builds and publication
+backups are written under the registered external root's
+`world-country-risks/daily/<date>/<stage-key>/` directory. Before source work and
+each build/transfer, `storage_placement.py` verifies the configured volume GUID,
+label/filesystem/serial, marker, and capacity reserve. F requires50GiB remaining
+after the estimated build peak. Bounded active source work stays on C with20GiB
+remaining plus8GiB of expected temporary headroom. External unavailability
+defers the existing owner; it never silently creates the cold build on C.
+Restoration must provide the registered external destination and keep jobs
+disabled until paths, credentials, inputs, and ownership have been checked.
 
 ## Cutoff migration and evidence scope
 

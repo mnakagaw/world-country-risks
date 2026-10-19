@@ -62,8 +62,14 @@ def source_selection(policy,day):
 
 ROOT_RELEASE_REMAINING='Root full required checks, scoped commit/push, allowlist FTPS and HTTPS verification; publication not yet claimed'
 
+def root_checks_complete(checks):
+    if (checks.get('schema_version')!='release-checks-v1' or checks.get('scope')!='daily-excluding-live-search'
+        or set(checks.get('checks',{}))!={'validate','python_tests','syntax'}
+        or any(row.get('returncode')!=0 for row in checks['checks'].values())):
+        raise Waiting('execbrief_root_release_checks_not_complete')
+
 def accepted_projection(final,acceptance,checks,day,producer):
-    """Two explicit producer contracts; publication/checks close only root work.
+    """Producer acceptance contracts; publication/checks close only root work.
 
     The exact-source receipt is intentionally recorded before root release checks.
     Its content acceptance is immutable; later SHA-bound checks and publication
@@ -71,16 +77,51 @@ def accepted_projection(final,acceptance,checks,day,producer):
     """
     if final.get('run_date')!=day:raise Waiting('execbrief_final_review_not_accepted')
     expected=acceptance['edition_sha256']
+    projection=final.get('projection',{})
+    if final.get('schema')=='execbrief-final-incremental-acceptance-v1' or final.get('schema_version')=='execbrief-final-incremental-acceptance-v1':
+        root_checks_complete(checks)
+        summary=final.get('summary_review',{});bounded=final.get('bounded_verification',{})
+        if (final.get('accepted') is not True or type(summary.get('pending_apply')) is not int
+            or summary['pending_apply']!=0 or summary.get('material_findings') or final.get('findings')
+            or bounded.get('built_final_SHA_verified') is not True):
+            raise Waiting('execbrief_final_review_not_accepted')
+        hashes={}
+        for kind,folder in [('editorial','daily-editorial'),('system_stress','world-stress')]:
+            rows=[r for r in final.get('current_files',[]) if Path(r.get('path','')).resolve()==(producer/'content'/folder/(day+'.json')).resolve()]
+            if len(rows)!=1 or not re.fullmatch(r'[a-f0-9]{64}',rows[0].get('sha256','')):raise Waiting('execbrief_projection_binding_mismatch')
+            hashes[kind]=rows[0]['sha256']
+        if (hashes['editorial']!=expected or projection.get('edition_sha256')!=expected
+            or bounded.get('dist_dated_editorial',{}).get('sha256')!=expected):
+            raise Waiting('execbrief_editorial_acceptance_binding_mismatch')
+        return hashes
+    # release_checks.editorial_acceptance binds the checker's projection, not
+    # the former accepted_final_editorial_snapshot field.  Match that contract
+    # while retaining both canonical-path and editorial/stress byte bindings.
+    if (final.get('content_check_complete') is True
+        and 'accepted_final_editorial_snapshot' not in final
+        and final.get('status')!='accepted_exact_source_awaiting_root_release_checks'):
+        summary=final.get('summary_review',{})
+        if (type(summary.get('pending_apply')) is not int or summary['pending_apply']!=0
+            or final.get('unapplied_findings') or summary.get('remaining_required_corrections')
+            or summary.get('new_unresolved_material_findings',0)!=0):
+            raise Waiting('execbrief_final_review_not_accepted')
+        root_checks_complete(checks)
+        stress=projection.get('world_stress',{})
+        hashes={'editorial':projection.get('edition_sha256'),'system_stress':projection.get('stress_sha256') or stress.get('sha256')}
+        paths={'editorial':projection.get('edition_path'),'system_stress':projection.get('stress_path') or stress.get('path')}
+        if hashes['editorial']!=expected:raise Waiting('execbrief_editorial_acceptance_binding_mismatch')
+        for kind,folder in [('editorial','daily-editorial'),('system_stress','world-stress')]:
+            if (not re.fullmatch(r'[a-f0-9]{64}',hashes[kind] or '') or not paths[kind]
+                or Path(paths[kind]).resolve()!=(producer/'content'/folder/(day+'.json')).resolve()):
+                raise Waiting('execbrief_projection_binding_mismatch')
+        return hashes
     if final.get('status')!='accepted_exact_source_awaiting_root_release_checks':
         if final.get('content_check_complete') is not True or final.get('unapplied_findings'):
             raise Waiting('execbrief_final_review_not_accepted')
         if final.get('accepted_final_editorial_snapshot',{}).get('sha256')!=expected:
             raise Waiting('execbrief_editorial_acceptance_binding_mismatch')
         return {'editorial':expected}
-    if (checks.get('schema_version')!='release-checks-v1' or checks.get('scope')!='daily-excluding-live-search'
-        or set(checks.get('checks',{}))!={'validate','python_tests','syntax'}
-        or any(row.get('returncode')!=0 for row in checks['checks'].values())):
-        raise Waiting('execbrief_root_release_checks_not_complete')
+    root_checks_complete(checks)
     pending=final.get('summary_review',{}).get('pending_apply')
     if (type(pending) is not int or pending!=0 or final.get('unapplied_findings')
         or final.get('remaining')!=[ROOT_RELEASE_REMAINING]
@@ -102,7 +143,7 @@ def accepted_projection(final,acceptance,checks,day,producer):
             or matches[0].get('sha256')!=hashes[kind]):
             raise Waiting('execbrief_exact_read_boundary_mismatch')
     return hashes
-def freeze_inputs(policy,day,cutoff,root,fetch=None):
+def freeze_inputs(policy,day,cutoff,root,fetch=None,historical_latest_path=None,historical_artifact_paths=None):
     if fetch is None:
         # Producer's existing boundary transport: public pointer over HTTPS,
         # protected accepted editorial/stress bytes over certificate-checked FTPS.
@@ -121,23 +162,39 @@ def freeze_inputs(policy,day,cutoff,root,fetch=None):
     if acceptance.get('run_date')!=day:raise Waiting('execbrief_acceptance_date_mismatch')
     final_raw=producer_bytes(policy,acceptance['final_receipt'],acceptance['final_receipt_sha256'],day);final=checked_json(final_raw,acceptance['final_receipt_sha256'])
     accepted_hashes=accepted_projection(final,acceptance,checks,day,producer)
-    latest_raw=fetch('/data/latest-edition.json');latest=checked_json(latest_raw)
-    local_latest=checked_json((producer/'dist/data/latest-edition.json').read_bytes())
-    if latest!=local_latest or latest.get('date')!=day or moment(latest['information_cutoff_utc'])!=cutoff:raise Waiting('execbrief_latest_date_cutoff_or_local_mismatch')
+    current_pointer_raw=fetch('/data/latest-edition.json')
     files=manifest['files']
+    if historical_latest_path:
+        # Recovery is a present-day reconstruction of a contemporaneously
+        # accepted/published edition. It never claims WCR published then.
+        verified_at=moment(receipt['verified_at_utc'])
+        deadline=datetime.fromisoformat(day).replace(tzinfo=JST)+timedelta(days=1)
+        if not cutoff<=verified_at<deadline:raise Waiting('historical_publication_not_contemporaneous')
+        latest_raw=producer_bytes(policy,historical_latest_path,files['data/latest-edition.json'],day)
+        local_latest=checked_json(latest_raw)
+    else:
+        latest_raw=current_pointer_raw
+        local_latest=checked_json((producer/'dist/data/latest-edition.json').read_bytes())
+    latest=checked_json(latest_raw)
+    if latest!=local_latest or latest.get('date')!=day or moment(latest['information_cutoff_utc'])!=cutoff:raise Waiting('execbrief_latest_date_cutoff_or_local_mismatch')
     if digest(latest_raw)!=files.get('data/latest-edition.json'):raise Waiting('execbrief_latest_release_SHA_mismatch')
     blobs={'publication-receipt.json':receipt_raw,'publication-manifest.json':manifest_raw,'checks-receipt.json':checks_raw,'acceptance.json':final_raw,'latest-edition.json':latest_raw}
+    live_historical_hashes={}
     for kind in ['editorial','system_stress']:
-        ref=latest[kind];raw=fetch(ref['path']);obj=checked_json(raw,ref['sha256'])
+        ref=latest[kind];live_raw=fetch(ref['path'])
+        original_path=(historical_artifact_paths or {}).get(kind) if historical_latest_path else None
+        raw=producer_bytes(policy,original_path,ref['sha256'],day) if original_path else live_raw
+        if original_path:live_historical_hashes[kind]=digest(live_raw)
+        obj=checked_json(raw,ref['sha256'])
         if files.get(ref['path'].lstrip('/'))!=digest(raw) or obj.get('date')!=day:raise Waiting('execbrief_public_artifact_release_mismatch')
-        local=(producer/'dist'/ref['path'].lstrip('/')).read_bytes()
+        local=producer_bytes(policy,original_path or producer/'dist'/ref['path'].lstrip('/'),ref['sha256'],day)
         if digest(local)!=digest(raw):raise Waiting('execbrief_public_local_artifact_SHA_mismatch')
         if kind=='editorial':
             if moment(obj['information_cutoff_utc'])!=cutoff or digest(raw)!=accepted_hashes['editorial']:raise Waiting('execbrief_editorial_acceptance_binding_mismatch')
         elif accepted_hashes.get(kind) and digest(raw)!=accepted_hashes[kind]:raise Waiting('execbrief_stress_acceptance_binding_mismatch')
         blobs[kind+'.json']=raw
     # Recheck both producer and public identity across the read, before sealing.
-    if checked_json(fetch('/data/latest-edition.json'))!=latest or (work/'publication-receipt.json').read_bytes()!=receipt_raw:raise Waiting('execbrief_epoch_changed_during_read')
+    if fetch('/data/latest-edition.json')!=current_pointer_raw or (work/'publication-receipt.json').read_bytes()!=receipt_raw:raise Waiting('execbrief_epoch_changed_during_read')
     editorial=checked_json(blobs['editorial.json']);gkg_raw=producer_bytes(policy,work/'gkg-run-manifest-v1.json',editorial['gkg_manifest_sha256'],day);gkg=checked_json(gkg_raw,editorial['gkg_manifest_sha256'])
     if gkg.get('run_date')!=day or moment(gkg['cutoff_utc'])!=cutoff or gkg.get('dataset_hash')!=editorial.get('gdelt_dataset_hash'):raise Waiting('execbrief_selected_input_cutoff_mismatch')
     blobs['selected-input.json']=gkg_raw
@@ -148,7 +205,8 @@ def freeze_inputs(policy,day,cutoff,root,fetch=None):
     seal_raw=seal_path.read_bytes();seal=checked_json(seal_raw)
     if moment(seal['window']['end_utc'])!=cutoff or moment(seal['window']['start_utc'])!=cutoff-timedelta(days=1) or seal['window']['semantics']!='[start,end)':raise Waiting('search_interest_seal_cutoff_mismatch')
     blobs['search-interest-seal.json']=seal_raw
-    binding={'schema':'execbrief-countryrisks-sync-v1','date':day,'cutoff_utc':cutoff.isoformat().replace('+00:00','Z'),'execbrief_edition':latest['edition'],'execbrief_release':receipt['release'],'publication_receipt_sha256':digest(receipt_raw),'publication_manifest_sha256':digest(manifest_raw),'acceptance_receipt_sha256':digest(final_raw),'accepted_editorial_sha256':digest(blobs['editorial.json']),'selected_input_manifest_sha256':digest(gkg_raw),'previous_selected_input_manifest_sha256':digest(past) if past else None,'search_interest_snapshot_id':seal['snapshot_id'],'search_interest_seal_sha256':digest(seal_raw),'information_confirmed_at_utc':final.get('checked_at_utc') or final.get('recorded_at_utc'),'execbrief_publication_verified_at_utc':receipt.get('verified_at_utc'),'R_semantics_manifest_status':'not_supplied_by_accepted_edition; do not substitute generic desk/topic classifications'}
+    binding={'schema':'execbrief-countryrisks-sync-v1','date':day,'cutoff_utc':cutoff.isoformat().replace('+00:00','Z'),'execbrief_edition':latest['edition'],'execbrief_release':receipt['release'],'publication_receipt_sha256':digest(receipt_raw),'publication_manifest_sha256':digest(manifest_raw),'acceptance_receipt_sha256':digest(final_raw),'accepted_editorial_sha256':digest(blobs['editorial.json']),'selected_input_manifest_sha256':digest(gkg_raw),'previous_selected_input_manifest_sha256':digest(past) if past else None,'search_interest_snapshot_id':seal['snapshot_id'],'search_interest_seal_sha256':digest(seal_raw),'information_confirmed_at_utc':final.get('checked_at_utc') or final.get('recorded_at_utc') or final.get('completed_at_utc'),'execbrief_publication_verified_at_utc':receipt.get('verified_at_utc'),'R_semantics_manifest_status':'not_supplied_by_accepted_edition; do not substitute generic desk/topic classifications'}
+    if historical_latest_path:binding['historical_recovery']={'kind':'accepted_original_edition_recovery','reconstructed_after_publication':True,'original_upstream_publication_verified_at_utc':receipt['verified_at_utc'],'countryrisks_published_at_original_date':False,'later_live_artifact_sha256':live_historical_hashes}
     binding['bundle_id']=digest(canonical(binding));folder=Path(root)/binding['bundle_id'];folder.mkdir(parents=True,exist_ok=True)
     for name,raw in blobs.items():
         p=folder/name

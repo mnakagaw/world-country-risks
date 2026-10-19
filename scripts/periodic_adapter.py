@@ -9,7 +9,14 @@ def main():
     if a.weekly:
         from weekly_cycle import cycle as weekly
         report=weekly(ROOT/'.local/controller.json')
-    else:report=cycle(ROOT/'.local/controller.json')
+    else:
+        report=cycle(ROOT/'.local/controller.json')
+        queue=ROOT/'.local/history-recovery.json'
+        if report.get('status')=='verified' and queue.is_file():
+            requests=json.loads(queue.read_bytes())
+            # Same invocation/OS lock, after current-day publication. No new job.
+            if requests.get('enabled') is True:
+                report['historical_recoveries']=[cycle(ROOT/'.local/controller.json',recovery=row) for row in requests.get('editions',[])]
     result={'kind':'countryrisks-weekly-v2' if a.weekly else 'countryrisks-daily-v2','status':'completed' if report.get('status')=='verified' else report.get('status','failed'),
       'ai_required':False,'source_receipt':report,'source_owner':'existing-shared-windows-tick','raw_collection_added':False}
     a.result.parent.mkdir(parents=True,exist_ok=True);pending=a.result.with_suffix('.pending');pending.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8');pending.replace(a.result)

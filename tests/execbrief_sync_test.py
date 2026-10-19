@@ -42,6 +42,39 @@ class Gate(unittest.TestCase):
         return final
     def test_exact_source_acceptance_is_closed_by_bound_root_checks_and_publication(self):
         final=self.modern();folder,binding=self.gate();self.assertNotIn('content_check_complete',final);self.assertEqual(binding['information_confirmed_at_utc'],final['recorded_at_utc']);self.assertEqual((folder/'acceptance.json').read_bytes(),raw(final))
+    def projected(self,change=None):
+        final=self.modern();final.pop('remaining');final.pop('exact_read_boundary');final.pop('checks')
+        final.update(kind='checker-prepublication-final-receipt-v1',status='passed_for_existing_build_and_release_checks',content_check_complete=True)
+        p=final['projection'];p['edition_path']=str(self.producer/'content/daily-editorial'/(self.day+'.json'));p['stress_path']=str(self.producer/'content/world-stress'/(self.day+'.json'));p['stress_sha256']=p.pop('world_stress_sha256')
+        if change:change(final)
+        c=json.loads((self.work/'checks.json').read_bytes());c['editorial_acceptance']['final_receipt_sha256']=sha(self.put(self.work/'final.json',final));self.receipt['local_gate']['checks_receipt_sha256']=sha(self.put(self.work/'checks.json',c));self.put(self.work/'publication-receipt.json',self.receipt)
+    def test_published_projection_contract_keeps_both_byte_bindings(self):
+        self.projected();self.assertEqual(self.gate()[1]['date'],self.day)
+    def incremental(self,change=None):
+        final=self.modern();final={'schema':'execbrief-final-incremental-acceptance-v1','accepted':True,'run_date':self.day,'projection':{'edition_sha256':final['projection']['edition_sha256']},'summary_review':{'pending_apply':0,'material_findings':[]},'findings':[],
+          'current_files':[{'path':r['canonical_path'],'sha256':r['sha256']} for r in final['exact_read_boundary']['rows']],
+          'bounded_verification':{'built_final_SHA_verified':True,'dist_dated_editorial':{'sha256':final['projection']['edition_sha256']}}}
+        if change:change(final)
+        c=json.loads((self.work/'checks.json').read_bytes());c['editorial_acceptance']['final_receipt_sha256']=sha(self.put(self.work/'final.json',final));self.receipt['local_gate']['checks_receipt_sha256']=sha(self.put(self.work/'checks.json',c));self.put(self.work/'publication-receipt.json',self.receipt)
+    def test_incremental_acceptance_binds_current_raw_bytes_not_normalized_text_hash(self):
+        self.incremental();self.assertEqual(self.gate()[1]['date'],self.day)
+        for change in [lambda f:f.update(accepted=False),lambda f:f['current_files'].pop(),lambda f:f['bounded_verification']['dist_dated_editorial'].update(sha256='0'*64)]:
+            self.incremental(change)
+            with self.assertRaises(Waiting):self.gate()
+    def test_historical_original_pointer_is_SHA_bound_and_never_replaces_current_pointer(self):
+        old=self.put(self.work/'old-latest.json',json.loads(self.remote['/data/latest-edition.json']))
+        self.remote['/data/latest-edition.json']=raw({'date':'2026-10-19'})
+        (self.producer/'dist/data/latest-edition.json').write_bytes(self.remote['/data/latest-edition.json'])
+        folder,binding=freeze_inputs(self.policy,self.day,self.cutoff,self.root/'frozen',self.remote.__getitem__,historical_latest_path=self.work/'old-latest.json')
+        self.assertEqual((folder/'latest-edition.json').read_bytes(),old);self.assertFalse(binding['historical_recovery']['countryrisks_published_at_original_date'])
+        (self.work/'old-latest.json').write_bytes(old+b' ')
+        with self.assertRaises(Waiting):freeze_inputs(self.policy,self.day,self.cutoff,self.root/'frozen',self.remote.__getitem__,historical_latest_path=self.work/'old-latest.json')
+    def test_projection_pending_wrong_paths_and_hashes_remain_blocked(self):
+        changes=[lambda f:f['summary_review'].update(pending_apply=1),lambda f:f['projection'].update(edition_sha256='0'*64),lambda f:f['projection'].update(stress_sha256='0'*64),lambda f:f['projection'].update(edition_path=str(self.producer/'other.json')),lambda f:f['projection'].pop('stress_path'),lambda f:f['summary_review'].update(new_unresolved_material_findings=1),lambda f:f.update(content_check_complete=False)]
+        for change in changes:
+            with self.subTest(change=changes.index(change)):
+                self.projected(change)
+                with self.assertRaises(Waiting):self.gate()
     def test_modern_missing_content_proofs_or_unapplied_findings_stay_blocked(self):
         changes=[lambda f:f['summary_review'].pop('pending_apply'),lambda f:f['summary_review'].update(pending_apply=1),lambda f:f.update(remaining=['Review unaccepted content']),lambda f:f['projection'].update(edition_sha256='0'*64),lambda f:f['exact_read_boundary']['rows'].pop(),lambda f:f['exact_read_boundary']['rows'][0].update(sha256='0'*64),lambda f:f['checks'].update(edition_schema='failed'),lambda f:f.update(content_check_complete=False)]
         for change in changes:
