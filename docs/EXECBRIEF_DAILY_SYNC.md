@@ -241,6 +241,37 @@ stays null. Synthetic source_scope/priority indexes cannot certify original
 acquisition. Seven/twelve-parent contracts, the original Google seal,48h window,
 cutoff, classifications and quality thresholds remain unchanged.
 
+An English-priority original reference may also retain exactly
+`path,sha256,coverage_status,selected_files` from the frozen daily selection.
+This form must exactly belong to a SHA/seal-verified current or previous daily
+input. `selected_files` means downloaded/reused rows of every series inside that
+input's24h window; it is neither all original rows nor the English subset size.
+The receiver recounts those original rows and checks coverage against the full
+SHA-bound manifest. Unknown/partial decoration, boolean counts and mismatches
+are rejected. General original references remain strict two-field identities.
+For an English subset row already present in the original frozen raw inventory,
+the exact original Event ID/SHA replaces the recent-transfer requirement only.
+Its original fullSHA/path binding and all normalization/quality checks remain;
+unknown raw sources still require the verified transfer receipt. A historical
+raw source is not described as a new download.
+Only the reviewed ba2e/8db pair may instead supply that exact catalog row's
+immutable-bulk-acquisition proof to the existing original-acquisition verifier.
+It must pass canonical archive path/window, kind/schema/English source, full
+manifest SHA, unique downloaded/reused row and acquisition-time upper bound.
+Original raw SHA/storage path, normalized SHA and final union/quality gates
+remain mandatory. Old validators do not receive this alternative.
+
+Baseline/current original selection uses the existing metadata adapter with the
+receiver's bounded read, owner and full expected SHA checks. Identical references
+may share one read within the run; every original is read and compared again at
+gate completion. NAS read errors are not interpreted as missing observations.
+The explicit repair registrar additionally supports the former
+`invalid_original_reference` and `english_priority_original_binding_mismatch`
+rejections only when the old90c2 gate, changed new gate and the distinct
+reason-specific review proof match. It creates a new generation while
+preserving the old request, parent, expiry and attempt credit; it never starts
+a consumer or replays a completed publication.
+
 See [SOURCE_IO_TIMING.md](SOURCE_IO_TIMING.md) for the installed SHA-bound DTO
 views, bounded object NAS handoff, exact-byte staged recovery and measurement
 limits. Restoration never activates another PC's jobs, databases or controllers.

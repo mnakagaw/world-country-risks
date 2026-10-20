@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime,timedelta,timezone
 from hashlib import sha256
 import json,re
+from types import SimpleNamespace
 from execbrief_sync import canonical,checked_json,selected_raw_sources,Waiting
 from source_revision_queue import digest,utc,parent_binding,InvalidRequest
 from source_revision_adapter import artifact,json_artifact,source_receipt_bytes
@@ -18,7 +19,7 @@ def require(value,reason):
 
 class Reader:
     def __init__(self,policy):
-        self.producer=Path(policy['execbrief_root']).resolve();self.archive=Path(policy['archive_root']).resolve();self.entries={}
+        self.producer=Path(policy['execbrief_root']).resolve();self.archive=Path(policy['archive_root']).resolve();self.entries={};self.frozen_selections=[]
     def reference(self,ref,root,read=True):
         require(isinstance(ref,dict) and set(ref)=={'path','sha256','bytes'},'invalid_supplement_reference')
         digest(ref['sha256']);require(type(ref['bytes']) is int and 0<=ref['bytes']<=256*1024**2,'invalid_supplement_byte_length')
@@ -32,6 +33,10 @@ class Reader:
         return json_artifact(self.entries[key])
     def recheck(self):
         for (p,checksum),raw in self.entries.items():require(artifact(p)==raw,'supplement_changed_during_read')
+    def document(self,path,expected):
+        # The selection helper's existing metadata entrance avoids SMB read-all.
+        # Every original is SHA-bound here and fully rechecked at gate completion.
+        return SimpleNamespace(value=self.bound({'path':str(path),'sha256':expected},self.archive/'manifests'))
     def bound(self,ref,root):
         require(isinstance(ref,dict) and set(ref)=={'path','sha256'},'invalid_original_reference')
         digest(ref['sha256']);p=Path(ref['path']);require(p.is_absolute() and p.resolve().is_relative_to(Path(root).resolve()),'original_reference_outside_owner')
@@ -45,7 +50,35 @@ class Reader:
             total=sum(len(raw) for (p,_),raw in self.entries.items() if Path(p).anchor==self.producer.anchor)
             if total+size>24*1024**2:raise Waiting('supplement_C_control_hydration_limit')
 
-def read_bulk(reader,reference):
+def priority_original(reader,reference):
+    # Real raw-priority metadata may decorate an exact original identity. Only
+    # this explicit shape is supported, and its annotations are verified against
+    # the SHA-bound original rather than treated as acquisition evidence.
+    keys=set(reference) if isinstance(reference,dict) else set()
+    if keys=={'path','sha256'}:return reader.bound(reference,reader.archive/'manifests')
+    require(keys=={'path','sha256','coverage_status','selected_files'},'invalid_original_reference')
+    count=reference['selected_files']
+    require(type(count) is int and 0<count<=16384 and reference['coverage_status'] in ('complete','partial'),'invalid_original_annotations')
+    original=reader.bound({k:reference[k] for k in ('path','sha256')},reader.archive/'manifests')
+    require(original.get('kind')=='gdelt_bulk_manifest' and original.get('schema_version')==1
+        and isinstance(original.get('files'),list) and 0<len(original['files'])<=16384
+        and original.get('coverage_status')==reference['coverage_status'] and not original.get('source_scope'),'original_annotations_mismatch')
+    # selected_files is the successful-row count in the frozen daily window.
+    # It is neither the whole original row count nor the English subset size.
+    matches=[]
+    for selection in reader.frozen_selections:
+        if reference not in selection.get('retained_events_mentions',{}).get('manifest_references',[]):continue
+        lo=utc(selection.get('window_start_utc'));hi=utc(selection.get('cutoff_utc'))
+        require(hi-lo==timedelta(days=1),'original_annotation_window_mismatch')
+        low=lo.strftime('%Y%m%d%H%M%S');high=hi.strftime('%Y%m%d%H%M%S')
+        selected=[r for r in original['files'] if isinstance(r,dict) and isinstance(r.get('file_id'),str)
+            and low<=r['file_id'][:14]<high and r.get('status') in ('downloaded','reused')]
+        matches.append(len(selected)==count)
+    require(any(matches),'original_annotation_selection_mismatch')
+    return original
+
+
+def read_bulk(reader,reference,frozen_raw=None,acquisition_rows=None,accepted_at=None):
     path=Path(reference['path']).resolve();priority=reader.producer/'.daily-work/rolling-search/em-english-priority'
     if not path.is_relative_to(priority):return reader.reference(reference,reader.archive/'manifests')
     bulk=reader.reference(reference,priority)
@@ -57,7 +90,7 @@ def read_bulk(reader,reference):
     require(isinstance(rows,list) and 0<len(rows)<=12 and isinstance(origins,list) and 0<len(origins)<=12 and isinstance(receipts,list) and 0<len(receipts)<=33,'invalid_english_priority_source_bounds')
     original={}
     for ref in origins:
-        obj=reader.bound(ref,reader.archive/'manifests')
+        obj=priority_original(reader,ref)
         for r in obj.get('files',[]):
             if r.get('status') in ('downloaded','reused'):original.setdefault(r.get('file_id'),[]).append(r)
     transferred=[]
@@ -68,8 +101,16 @@ def read_bulk(reader,reference):
     ids=set()
     for row in rows:
         fid=row.get('file_id','');require(re.fullmatch(r'\d{14}\.export',fid) and fid not in ids and row.get('status') in ('downloaded','reused'),'invalid_english_priority_source');ids.add(fid)
+        transfer=any(r.get('file_id')==fid and r.get('sha256')==row.get('sha256') and r.get('status') in ('downloaded','reused') for r in transferred)
+        frozen=isinstance(frozen_raw,dict) and frozen_raw.get(fid)==row.get('sha256')
+        if not transfer and not frozen and acquisition_rows is not None:
+            source=acquisition_rows.get(fid);evidence=source.get('acquisition_evidence') if isinstance(source,dict) else None
+            require(isinstance(evidence,dict) and evidence.get('kind')=='immutable-bulk-acquisition'
+                and source.get('raw',{}).get('sha256')==row.get('sha256'),'english_priority_acquisition_binding_mismatch')
+            original_acquisition(reader,evidence,source,fid,accepted_at)
+            transfer=True
         require(any(r.get('sha256')==row.get('sha256') and Path(r.get('storage_path','')).resolve()==Path(row.get('storage_path','')).resolve() for r in original.get(fid,[]))
-            and any(r.get('file_id')==fid and r.get('sha256')==row.get('sha256') and r.get('status') in ('downloaded','reused') for r in transferred),'english_priority_original_binding_mismatch')
+            and (transfer or frozen),'english_priority_original_binding_mismatch')
     return bulk
 
 
@@ -204,16 +245,20 @@ def _freeze(policy,request,root,history_only=False,persist=True):
         selection=json_artifact(blobs[name]);require(seal.get('run_date')==selection.get('run_date')==day
             and seal.get('gkg_run_manifest_sha256')==sha256(blobs[name]).hexdigest()
             and utc(seal.get('information_cutoff_utc'))==utc(selection.get('cutoff_utc')),'supplement_original_input_seal_mismatch')
-    baseline=selected_raw_sources(original,reader.archive)
-    current=selected_raw_sources(series/'inputs'/parent['upstream_bundle_id'],reader.archive)
+        reader.frozen_selections.append(selection)
+    baseline=selected_raw_sources(original,reader.archive,metadata=reader)
+    current=selected_raw_sources(series/'inputs'/parent['upstream_bundle_id'],reader.archive,metadata=reader)
     sources=catalog.get('sources');require(isinstance(sources,list) and 0<len(sources)<=192,'invalid_supplement_source_count')
+    require(all(isinstance(r,dict) and isinstance(r.get('file_id'),str) for r in sources)
+        and len({r['file_id'] for r in sources})==len(sources),'invalid_supplement_source_id')
+    acquisition_rows={r['file_id']:r for r in sources} if validator==ORIGIN_VALIDATOR else None
     seen=set();union=dict(baseline)
     for row in sources:
         fid=row.get('file_id','');require(re.fullmatch(r'\d{14}\.export',fid) and fid not in seen and row.get('kind')=='english-export','invalid_supplement_source_id');seen.add(fid)
         clock=datetime.strptime(fid[:14],'%Y%m%d%H%M%S').replace(tzinfo=timezone.utc)
         require(cutoff-timedelta(hours=48)<=clock<cutoff and clock.minute%15==0 and clock.second==0,'supplement_source_outside_original_window')
         reader.reference(row['raw'],reader.archive,read=False);reader.reference(row['normalized_parquet'],reader.archive/'normalized',read=False)
-        bulk=read_bulk(reader,row['bulk_manifest']);index=reader.reference(row['normalized_index'],reader.archive/'indexes')
+        bulk=read_bulk(reader,row['bulk_manifest'],baseline,acquisition_rows,at);index=reader.reference(row['normalized_index'],reader.archive/'indexes')
         require(index.get('bulk_manifest_sha256')==row['bulk_manifest']['sha256'] and index.get('dataset_version')==bulk.get('dataset_hash'),'supplement_normalized_index_epoch_mismatch')
         raw_rows=[r for r in bulk.get('files',[]) if r.get('file_id')==fid];norm_rows=[r for r in index.get('files',[]) if r.get('source_file_id')==fid]
         require(len(raw_rows)==len(norm_rows)==1,'supplement_ambiguous_source_identity');raw_row=raw_rows[0];norm=norm_rows[0]

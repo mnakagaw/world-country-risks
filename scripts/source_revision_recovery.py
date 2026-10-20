@@ -14,12 +14,17 @@ def recover(root,policy,original_id,expected_state_sha,prior_gate_sha,evidence_p
     request_raw,request=queue.control(old/'request.json');state_raw,state=queue.control(old/'state.json');old_sha=sha256(request_raw).hexdigest()
     queue.validate(request,policy,now);queue.digest(prior_gate_sha)
     if sha256(state_raw).hexdigest()!=expected_state_sha or state.get('request_sha256')!=old_sha:raise queue.InvalidRequest('recovery_original_identity_mismatch')
-    if state.get('status')!='blocked' or state.get('source_accepted') is not False or state.get('wait_reason')!='unreviewed_source_supplement_validator':raise queue.InvalidRequest('recovery_reason_not_reviewed')
+    reason=state.get('wait_reason')
+    if state.get('status')!='blocked' or state.get('source_accepted') is not False or reason not in ('unreviewed_source_supplement_validator','invalid_original_reference','english_priority_original_binding_mismatch'):raise queue.InvalidRequest('recovery_reason_not_reviewed')
     attempts=state.get('attempts')
     if type(attempts) is not int or not 1<=attempts<queue.MAX_ATTEMPTS:raise queue.InvalidRequest('recovery_attempt_budget_exhausted')
     raw,evidence=queue.control(evidence_path)
     if sha256(raw).hexdigest()!=evidence_sha:raise queue.InvalidRequest('recovery_review_SHA_mismatch')
     graph={name:sha256((CODE_ROOT/'scripts'/name).read_bytes()).hexdigest() for name in ['source_supplement_gate.py','source_revision_cycle.py','sync_article_context.py']}
+    reviewed_reason={'invalid_original_reference':'frozen_daily_decorated_original_reference','english_priority_original_binding_mismatch':'frozen_original_raw_identity_without_recent_transfer'}
+    if reason in reviewed_reason and (prior_gate_sha!='90c2bde626c4aeba5ceba3ed865407979d0f381ecff78feda4da0b852d816f51'
+        or graph['source_supplement_gate.py']==prior_gate_sha or evidence.get('repair_reason')!=reviewed_reason[reason]
+        or evidence.get('prior_gate_sha256')!=prior_gate_sha):raise queue.InvalidRequest('recovery_reason_not_reviewed')
     if (evidence.get('kind')!='real-formal-source-and-bounded-F-context-validation-v1' or evidence.get('code_sha256')!=graph['source_supplement_gate.py']
         or evidence.get('code_graph')!=graph or evidence.get('request_sha256')!=old_sha or evidence.get('receipt_sha256')!=request['source_revision_receipt']['sha256']
         or evidence.get('persist') is not False or evidence.get('Google_projection_and_article_interpretations_unchanged') is not True):raise queue.InvalidRequest('recovery_review_binding_mismatch')
