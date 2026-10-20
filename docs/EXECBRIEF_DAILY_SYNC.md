@@ -44,6 +44,27 @@ The explicit `execbrief-final-incremental-acceptance-v1` contract instead binds
 the verified built editorial SHA. Normalized-text hashes are not raw-byte hashes.
 These adapters do not edit producer receipts or waive publication/source checks.
 
+The changed-only composite contract may instead contain
+`editorial_acceptance=null`. It is accepted only with the known execution kind,
+passed root checks, SHA-bound independent semantic acceptance and its identical
+authoritative-production source list. The dated editorial and stress must each
+have one canonical source path and raw-byte SHA. Null or unknown contracts wait;
+they never become an AttributeError or a substitute acceptance.
+
+For an accepted same-date focus correction, the public latest-pointer SHA selects
+one verified same-day publication receipt from at most16 candidates. Filename or
+modification time does not select a version. The effective publication manifest
+must be exactly the union of the SHA-bound verified original and correction
+manifests. The correction binds its original publication receipt, baseline checks
+and semantic acceptance, before/after source hashes, current independent semantic
+acceptance and authoritative source hashes. Only the known corrective status is
+supported. The chosen publication and canonical starting receipt, plus the public
+pointer, are rechecked across the read. All supporting controls are retained in
+the immutable consumer bundle. A changed/unmatched/ambiguous version stays waiting
+with the prior WCR publication. The producer originals and03:00 cutoff are preserved.
+When a corrective receipt has no separate verified-at field, its verified exit0
+completion time (`ended_at_utc`) records publication completion.
+
 Then WCR verifies:
 
 - Public `/data/latest-edition.json` date, edition,03:00 cutoff, deployment SHA,
