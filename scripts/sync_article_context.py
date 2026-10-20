@@ -1,11 +1,11 @@
 """Reuse sealed ExecBrief interpretations; no fresh body fetch or new R model."""
 from pathlib import Path
 from hashlib import sha256
-import json
+import json,os
 from execbrief_sync import moment
 from r_support import canonicalizer
 
-def export(policy,bundle,output):
+def export(policy,bundle,output,writer=None):
     bundle=Path(bundle);meta=json.loads((bundle/'manifest.json').read_bytes());binding=meta['binding'];cutoff=moment(binding['cutoff_utc']);editorial=json.loads((bundle/'editorial.json').read_bytes());canonical,canonical_sha=canonicalizer(policy['execbrief_root']);articles=[];excluded=[]
     version=sha256(Path(__file__).read_bytes()).hexdigest()
     for story in editorial.get('stories',[]):
@@ -27,4 +27,8 @@ def export(policy,bundle,output):
     result={'schema':'r-article-evidence-v1','policy_sha256':version,'upstream_binding':binding,'articles':selected,'accepted_articles_total':len(editorial.get('stories',[])),'display_subset':True,'explicit_post_cutoff_articles_excluded':excluded,'new_ai_calls':0,'new_collection':False,'source_ledger':[{'source':'GDELT English Events','active':True,'role':'Fixed48h DATEADDED; current raw Event SHA matched to the accepted upstream source selection; not article counts or resident opinion'},{'source':'ExecBrief accepted daily article interpretations','active':True,'role':'Same edition/cutoff/publication and acceptance SHA; bounded context subset, no reclassification'},{'source':'Verified R/subcategory/direction interpretation','active':any(s.get('r_claims_verified') is True and s.get('r_claims') for s in editorial.get('stories',[])),'role':'Use supplied accepted fields only; generic desk/topic classification does not supply R semantics'},{'source':'Google Trending Now daily03:00 seal','active':True,'role':'Cutoff-bound search interest; external country-interest page is a separate live view; no R bundle'},{'source':'Resident SNS post/context corpus','active':False,'role':'Not connected or validated; no measured resident sentiment'}]}
     seal=json.loads((bundle/'search-interest-seal.json').read_bytes())
     result['search_interest_daily']={'snapshot_id':seal['snapshot_id'],'window':seal['window'],'metric':seal.get('metric'),'source_sha256':binding['search_interest_seal_sha256'],'countries':seal.get('countries',{}),'role':'Search-interest context only; never a risk bundle or resident-opinion measurement'}
-    output=Path(output);output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');return result
+    output=Path(output);text=json.dumps(result,ensure_ascii=False,indent=2)+'\n'
+    if writer:writer(output,text.replace('\n',os.linesep).encode('utf-8'))
+    else:
+        output.parent.mkdir(parents=True,exist_ok=True);output.write_text(text,encoding='utf-8')
+    return result

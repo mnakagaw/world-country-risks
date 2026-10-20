@@ -198,4 +198,33 @@ removed after validation; unique inputs, published history and recovery remain.
 
 ## First verified synchronized production edition
 
+### Reviewed supplementary-source contracts (October20)
+
+The supplement gate retains the original validator's exact seven-parent contract.
+The reviewed newer validator/resolver pair must be pinned in both acceptance and
+checks. A normal publication still has exactly seven parents and must satisfy
+the frozen explicit editorial acceptance, local gate, root checks and publication
+inventory bindings. A focus correction has exactly twelve parents: its accepted
+context, authoritative production, effective inventory, HTTPS proof and normal
+acceptance additionally bind the original frozen publication. A composite with
+null editorial acceptance cannot downgrade to the normal seven-parent path.
+
+The original frozen search seal alone may be up to8MiB; generic control artifacts
+remain capped at4MiB. Its namespace, binding ID and full SHA must match the frozen
+input manifest. The full supplement bundle, including all extra controls, is
+capped at16MiB. Derived article context has its own16MiB writer restricted to the
+registered F daily namespace, with pending-byte SHA verification and readback.
+These bounds do not change the Google projection, article interpretation, R math,
+cutoff, quality thresholds or global storage reserves.
+
+`source_revision_recovery.py` is an explicit repair registrar, not a consumer or
+worker. Under the existing native and publication locks, a reviewed validator
+repair may create one new gate generation from an immutable blocked request. It
+requires exact request/state/code/review hashes, preserves the source, parent,
+original expiry and inherited attempts, and uses only the existing queue writer.
+Its sidecar retains the executed operator SHA. A request written before an index
+failure can re-enter registration only with the unchanged inherited seed; progressed
+state is never reset. Matching indexed or verified terminal work is reused.
+Restoring this helper never activates a job or replays completed publication.
+
 October15,2026 completed via the existing countryrisks-daily native retry/check19. The accepted/published upstream is `20261014T223037Z-f8e526f4`, editorial SHA `b0d32d02af1d1b0574137b3a7d3422ed373676b49f4cc17de6d2422eba610ea6` and Google03:00 seal `2127df899093abc2898776e0e0b845c040fb5190c2036e8eea19e0ea122eedd9`. The WCR48h window ends `2026-10-14T18:00:00Z`; snapshot `3c55e7efba11526cd5cd00c9cd48ce8b591850bd90e54a9d38c63956acfd3eb7` was TLS/public-SHA verified. The old October14 05:00 snapshot and completed-week index retained their exact SHA. Availability remains `partial`; this is source coverage, not a claim of zero risk or verified national impact. Native profile/jobs were unchanged.

@@ -31,7 +31,8 @@ def bounded_copy(source,target,limit):
 
 def replace(path,raw,limit):
     if len(raw)>limit:raise Waiting('revision_control_output_limit')
-    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);pending=path.with_suffix('.revision-pending');pending.write_bytes(raw);pending.replace(path)
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);pending=path.with_suffix('.revision-pending');pending.write_bytes(raw)
+    require(sha256(pending.read_bytes()).digest()==sha256(raw).digest(),'revision_pending_readback_mismatch');pending.replace(path)
     require(path.read_bytes()==raw,'revision_promotion_readback_mismatch')
 
 def checked_path(path,anchor):
@@ -91,6 +92,13 @@ def stage_daily_public(public,dist):
         target_for(source);replace(target,raw,64*MIB)
         copied[source.relative_to(public).as_posix()]={'sha256':digest,'bytes':size}
     return {'files':copied,'bytes':total,'client_only':True}
+
+
+def write_context(path,raw):
+    if len(raw)>16*MIB:raise Waiting('revision_context_size_deferred')
+    external=external_root(2*len(raw)+65536).absolute();path=Path(path).absolute()
+    require(path.is_relative_to(external/'world-country-risks/daily') and path.name=='article-classification-context.json','revision_context_outside_external_daily')
+    checked_path(path,external);replace(path,raw,16*MIB)
 
 
 def run(command,log,timeout):
@@ -231,7 +239,7 @@ def consume(policy,request,runner=run):
                 obj=json_artifact(artifact(source,64*MIB));obj.update(upstream_sync=binding,cutoff_series='execbrief-03-v1',baseline_semantics='Retrospective same48h/03:00 English Events; source supplement became available after the original seal')
                 replace(source,json.dumps(obj).encode()+b'\n',64*MIB);replace(verified,b'[]\n',65536)
                 from sync_article_context import export
-                export(policy,bundle,context);artifact(context,4*MIB)
+                export(policy,bundle,context,writer=write_context);artifact(context,16*MIB)
                 row.update(source_sha256=file_sha(source),context_sha256=file_sha(context))
             elif name=='generate':
                 record=json_artifact(artifact(generated/'manifest.json'))[request['date']];payload=generated/record['path'];value=json_artifact(artifact(payload,64*MIB))

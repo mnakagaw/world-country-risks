@@ -15,7 +15,7 @@ class RevisionCycle(ContractFixture,unittest.TestCase):
         save(self.series/'v2-history.json',{});save(self.series/'baseline-sources'/(self.day+'.json'),{'fixture_only':True})
         save(Path(self.policy['handoff_root'])/'daily-latest.json',{'path':'daily/'+self.day+'/'+self.parent,'snapshot_id':self.parent})
         self.patches=[patch.object(cycle,'ROOT',self.root),patch.object(cycle,'method_epoch',return_value='fixture-method'),patch.object(cycle,'external_root',return_value=self.external),
-            patch.object(cycle,'daily_paths',side_effect=self.paths),patch.object(cycle,'c_plan',return_value={'writer_chain':{},'fixture_only':True}),patch('sync_article_context.export',side_effect=lambda p,b,o:Path(o).write_bytes(b'{}'))]
+            patch.object(cycle,'daily_paths',side_effect=self.paths),patch.object(cycle,'c_plan',return_value={'writer_chain':{},'fixture_only':True}),patch('sync_article_context.export',side_effect=lambda p,b,o,writer=None:writer(o,b'{}') if writer else Path(o).write_bytes(b'{}'))]
         for p in self.patches:p.start()
     def tearDown(self):
         for p in reversed(self.patches):p.stop()
