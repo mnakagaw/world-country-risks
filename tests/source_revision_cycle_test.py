@@ -30,7 +30,7 @@ class RevisionCycle(ContractFixture,unittest.TestCase):
             save(Path(command[command.index('--output')+1]),{'schema':'fixture-source','fixture_only':True})
         elif log.stem=='generate':
             generated=Path(command[command.index('--output-dir')+1]);source=json.loads((base/'source.json').read_bytes());binding=source['upstream_sync'];identifier='c'*64
-            value={'snapshot_id':identifier,'date':self.day,'cutoff_series':'execbrief-03-v1','cutoff_utc':self.binding['cutoff_utc'],'upstream_sync':binding,'fixture_only':True}
+            value={'snapshot_id':identifier,'date':self.day,'cutoff_series':'execbrief-03-v1','cutoff_utc':self.binding['cutoff_utc'],'upstream_sync':binding,'fixture_only':True,'coverage':{'available_slots':2,'expected_slots':192},'mode_counts':{'surge_r':{'unknown':1}}}
             checksum=save(generated/(identifier+'.json'),value);records=json.loads((generated/'manifest.json').read_bytes());old=records[self.day]
             record={'snapshot_id':identifier,'path':identifier+'.json','sha256':checksum,'revisions':[{'snapshot_id':old['snapshot_id'],'path':old['path'],'sha256':old['sha256'],'kind':'original'},{'snapshot_id':identifier,'path':identifier+'.json','sha256':checksum,'kind':'late_source_revision','accepted_at_utc':self.at.isoformat()}]};records[self.day]=record;save(generated/'manifest.json',records)
             if '--historical' not in command:save(generated/'latest.json',value);save(generated/'status.json',{'date':self.day,'snapshot_id':identifier})

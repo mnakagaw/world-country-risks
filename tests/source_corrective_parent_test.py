@@ -8,6 +8,12 @@ from source_revision_test import save
 from source_revision_queue import InvalidRequest
 
 class Corrective(fixture.ContractFixture,unittest.TestCase):
+    def test_old_and_new_reviewed_resolver_pairs_remain_independently_accepted(self):
+        for resolver in ['d14d72d26fbb723257b3c8931521075377c1ccbf40e2db3d0160817fe6f73a39','8db5952c8096f1232ac4cf5155968212d2aa5b8d80996e36124341916e8bd873']:
+            self.resolver=resolver;self.emit();_,binding=self.freeze();self.assertEqual(binding['source_revision']['parent_resolver_sha256'],resolver)
+    def test_two_allowed_resolvers_cannot_be_mixed_between_checks_and_acceptance(self):
+        self.resolver='8db5952c8096f1232ac4cf5155968212d2aa5b8d80996e36124341916e8bd873';self.emit();checks=json.loads((self.folder/'checks.json').read_bytes());checks['parent_resolver_sha256']='d14d72d26fbb723257b3c8931521075377c1ccbf40e2db3d0160817fe6f73a39';save(self.folder/'checks.json',checks);self.acceptance['checks']=fixture.ref(self.folder/'checks.json');self.accept_change()
+        with self.assertRaisesRegex(InvalidRequest,'unreviewed_checks_parent_resolver'):self.freeze()
     def setUp(self):
         super().setUp();self.validator='b322d054f45e7d638e4d3085340d25f819055425f089c4f17ae04188d4fd0221';self.resolver='d14d72d26fbb723257b3c8931521075377c1ccbf40e2db3d0160817fe6f73a39'
         self.blobs={p.name:p.read_bytes() for p in self.original.iterdir() if p.name!='manifest.json'}
@@ -72,6 +78,8 @@ class Corrective(fixture.ContractFixture,unittest.TestCase):
             Path(self.parents[name]['path']).write_bytes(old);self.parents[name]=fixture.ref(Path(self.parents[name]['path']));self.emit()
 
 class Normal7(fixture.ContractFixture,unittest.TestCase):
+    def test_explicit_normal7_accepts_the_new_reviewed_reader_without_replacing_old(self):
+        self.resolver='8db5952c8096f1232ac4cf5155968212d2aa5b8d80996e36124341916e8bd873';self.normal();_,binding=self.freeze();self.assertEqual(binding['source_revision']['parent_resolver_sha256'],self.resolver)
     def setUp(self):
         super().setUp();self.validator='b322d054f45e7d638e4d3085340d25f819055425f089c4f17ae04188d4fd0221';self.resolver='d14d72d26fbb723257b3c8931521075377c1ccbf40e2db3d0160817fe6f73a39';self.base_blobs={p.name:p.read_bytes() for p in self.original.iterdir() if p.name!='manifest.json'};self.normal()
     def normal(self,change_checks=None,change_final=None,change_publication=None):

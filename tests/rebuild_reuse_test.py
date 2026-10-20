@@ -65,5 +65,13 @@ class ExistingReuse(unittest.TestCase):
         self.assertEqual(metrics['status'],'deferred_resource');self.assertEqual(metrics['error_type'],'StorageDeferred')
         self.assertEqual(metrics['phases']['day_2026-10-02']['status'],'deferred_resource')
         self.assertEqual(self.bootstraps,0);self.assertFalse((self.root/'run/source.json').exists());self.assertEqual(self.history.read_bytes(),b'prior history')
+    def test_optional_progress_lock_does_not_hide_original_source_drift(self):
+        original=rebuild.SourceIO.atomic_json
+        def locked(instance,path,*args,**kwargs):
+            if Path(path).name=='source-progress.json':raise StorageDeferred('fixture diagnostic share lock')
+            return original(instance,path,*args,**kwargs)
+        self.drift=True
+        with patch.object(rebuild.SourceIO,'atomic_json',locked),self.assertRaises(ValueError):self.call()
+        metrics=json.loads((self.root/'run/source-metrics.json').read_bytes());self.assertEqual(metrics['status'],'failed');self.assertGreater(metrics['optional_progress_write_failures'],0);self.assertEqual(self.bootstraps,0)
 
 if __name__=='__main__':unittest.main()

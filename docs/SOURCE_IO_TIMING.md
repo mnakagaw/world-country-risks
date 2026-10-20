@@ -183,3 +183,73 @@ lock must both be held when installing this code at a natural owner boundary.
 Default C admission8GiB plus20GiB reserve and F reserve50GiB remain unchanged;
 the reviewed lower-C-plan allowlist stays empty. Stable DTO namespaces remain
 separate and unapplied.
+
+## SHA-bound DTO views and versioned NAS objects (applied October20)
+
+The reviewed generation installed at05:09:22 UTC on October20 keeps all original normalized-source SHA reads,
+private-object readbacks, and full original metadata end rechecks. It does not
+incrementally sum Event IDs, change SQL/R/classification, or infer data from raw
+presence. Source progress has a bounded64KiB optional receipt for artifact SHA
+verification, DTO lookup/reuse, exact aggregation, metadata end check and bootstrap.
+A locked optional progress file records a diagnostic failure; mandatory input,
+storage and final metric guards remain authoritative.
+
+Historical DTOs that already pass the existing row/method epoch gate become
+read-only SHA-bound inputs to `bootstrap_baseline.mjs --source-index`. A revision
+does not copy all old DTO seeds into its series or rewrite them into another DTO
+namespace. A newly computed DTO enters a stable F object cache only after the
+original metadata end check. Its epoch key binds all input rows; its contract
+also binds the complete writer, calculation/config/R code, producer canonicalizer,
+archive identity, cutoff hour and series. Old-writer DTOs are not labelled as
+new-writer cache objects. The new and original bootstrap entrances produce the
+same history/report bytes for the same fixture. Bootstrap retains its original
+calculation, now with a1GiB heap bound,512MiB history ceiling and storage peak guard.
+
+`wcr-daily-handoff-objects-v2` keeps source, snapshot and publication as flat
+members. History and upstream controls use SHA256-addressed NAS objects. History
+is read as at most64KiB line fragments and emitted as at most4MiB exact-byte
+parts, resetting alignment at pretty-JSON top-level date keys. Compact/long-line
+history is also lossless and bounded. No whole-history JSON parse or reserialization
+is used. A first new-format generation seeds objects; later unchanged parts are
+fully SHA-verified and referenced, while changed parts alone are written.
+
+The existing publication lock and one NAS object-store OS lock serialize writes.
+Each object retains pending-byte SHA, final readback and immutable-conflict checks.
+Before writes NAS reserves20GiB plus the bounded peak; F identity/marker and50GiB,
+C20GiB plus the existing8GiB admission, and the empty lower-plan allowlist remain.
+Per-file expansion is capped at512MiB, packet expansion at1GiB, parts at4MiB and
+8192 references. Unknown kinds, wrong lengths/order/whole SHA, missing/corrupt
+objects, escaped/reparse paths and interrupted output are rejected. Original flat
+packets and their manifests are never rewritten or retired by this change.
+
+The actual recovery entrance is `python scripts/handoff_objects.py --latest
+<NAS>/daily-latest.json` for verification, or `--manifest <packet>/manifest.json
+--sha256 <full-manifest-SHA>`. A new latest locator binds its manifest SHA and
+schema; an old locator requires an explicit manifest SHA. Add `--output
+F:/Codex-Storage/world-country-risks/restores/<new-name>` to materialize every
+original member byte into a new, guarded F staging directory. Every recipe is
+verified before creation and again while restoring; pending bytes get full local
+readback. The destination must not exist, and restored jobs/databases remain
+disabled. This does not restore live queues, DBs, profiles or credentials.
+
+Handoff receipts distinguish local input reading, NAS writes, pending/final SHA
+reads, reused objects/bytes, per-member time and total elapsed time. Revision
+receipts now record handoff separately from generation/build/publication. The
+published slot label means verified15-minute inputs used in that aggregate,
+separately from raw inventory, normalization and formal acceptance. Unknown reasons
+and mode counts retain their original quality gates. Fixture reuse/operation counts
+are not a production speedup; only the next existing native receipt measures it.
+
+The installation held both the native run lock and publication lock, after the
+94/192-slot continuation reached its verified NAS terminal. No worker was started
+or restarted and no completed source epoch was replayed. The10-path reviewed graph
+is `a44d121df8d7a3492cfa9477a461e031d97d4e75aafbe958a5ad5199779fc5b3`.
+Earlier paragraphs describing stable namespaces as unapplied are historical
+checkpoints. Their deployment state is superseded by this installation.
+
+The preceding continuation used the previous implementation: source2205.335s,
+bootstrap11.221s, generate10.411s, client10.583s, publication782.966s and about657s
+between public verification and the native NAS terminal. These are separate
+operational observations, not a before/after speedup comparison. The new source
+cache and NAS object reuse still require a genuinely new formal input through the
+existing native owner; the first object-format packet will seed the object store.

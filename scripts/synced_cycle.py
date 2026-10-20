@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def write(path,value):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);pending=path.with_suffix('.pending');pending.write_text(json.dumps(value,indent=2)+'\n',encoding='utf-8');pending.replace(path)
 def method_epoch():
-    names=['scripts/synced_cycle.py','scripts/execbrief_sync.py','scripts/storage_placement.py','scripts/bounded_source_io.py','scripts/sync_article_context.py','scripts/rebuild_baselines.py','scripts/bootstrap_baseline.mjs','scripts/export_shared_gdelt.py','scripts/archive_catalog.py','scripts/run_metadata.py','scripts/aggregation_epoch.py','scripts/r_support.py','scripts/generate_v2.mjs','scripts/engine_v2.mjs','scripts/monitoring_v2.mjs','scripts/rindex_v2.mjs','scripts/r_bundles.mjs','config/scoring.json','config/r_definitions.json']
+    names=['scripts/synced_cycle.py','scripts/execbrief_sync.py','scripts/storage_placement.py','scripts/bounded_source_io.py','scripts/source_dto_cache.py','scripts/handoff_v2.py','scripts/handoff_objects.py','scripts/sync_article_context.py','scripts/rebuild_baselines.py','scripts/bootstrap_baseline.mjs','scripts/export_shared_gdelt.py','scripts/archive_catalog.py','scripts/run_metadata.py','scripts/aggregation_epoch.py','scripts/r_support.py','scripts/generate_v2.mjs','scripts/engine_v2.mjs','scripts/monitoring_v2.mjs','scripts/rindex_v2.mjs','scripts/r_bundles.mjs','config/scoring.json','config/r_definitions.json']
     return sha256('|'.join(sha256((ROOT/n).read_bytes()).hexdigest() for n in names).encode()).hexdigest()
 def run(command,log,timeout):
     r=subprocess.run(command,cwd=ROOT,capture_output=True,text=True,encoding='utf-8',timeout=timeout)

@@ -7,8 +7,10 @@ from execbrief_sync import canonical,checked_json,selected_raw_sources,Waiting
 from source_revision_queue import digest,utc,parent_binding,InvalidRequest
 from source_revision_adapter import artifact,json_artifact,source_receipt_bytes
 
+ORIGIN_VALIDATOR='ba2e1f1b7dd5be6d12bc9ed54f0eca93ffd32140baf8e0cf9501eec3a5c27817'
 LEGACY_VALIDATOR='f21011d02064be61410193ef912b329e978220c953bc6811477b9ebd3c7a74b4'
-REVIEWED_PARENT_RESOLVERS={'b322d054f45e7d638e4d3085340d25f819055425f089c4f17ae04188d4fd0221':'d14d72d26fbb723257b3c8931521075377c1ccbf40e2db3d0160817fe6f73a39'}
+REVIEWED_PARENT_RESOLVERS={'b322d054f45e7d638e4d3085340d25f819055425f089c4f17ae04188d4fd0221':frozenset({'d14d72d26fbb723257b3c8931521075377c1ccbf40e2db3d0160817fe6f73a39','8db5952c8096f1232ac4cf5155968212d2aa5b8d80996e36124341916e8bd873'})}
+REVIEWED_PARENT_RESOLVERS[ORIGIN_VALIDATOR]=frozenset({'8db5952c8096f1232ac4cf5155968212d2aa5b8d80996e36124341916e8bd873'})
 APPROVED_VALIDATORS={LEGACY_VALIDATOR,*REVIEWED_PARENT_RESOLVERS}
 
 def require(value,reason):
@@ -69,6 +71,21 @@ def read_bulk(reader,reference):
         require(any(r.get('sha256')==row.get('sha256') and Path(r.get('storage_path','')).resolve()==Path(row.get('storage_path','')).resolve() for r in original.get(fid,[]))
             and any(r.get('file_id')==fid and r.get('sha256')==row.get('sha256') and r.get('status') in ('downloaded','reused') for r in transferred),'english_priority_original_binding_mismatch')
     return bulk
+
+
+def original_acquisition(reader,evidence,row,fid,accepted_at):
+    reference=evidence['manifest'];path=reader.reference(reference,reader.archive/'manifests',read=False).resolve()
+    require(re.fullmatch(r'gdelt-bulk-manifest(?:[-.][A-Za-z0-9_-]{1,128})?\.json',path.name)
+        and re.fullmatch(r'\d{8}T\d{6}Z_\d{8}T\d{6}Z',path.parent.name),'supplement_original_manifest_location_mismatch')
+    prior=reader.reference(reference,reader.archive/'manifests');files=prior.get('files');window=prior.get('window',{})
+    require(prior.get('kind')=='gdelt_bulk_manifest' and prior.get('schema_version')==1
+        and isinstance(prior.get('source_series'),list) and 'english' in prior['source_series']
+        and not prior.get('source_scope') and not str(prior.get('manifest_id','')).startswith('retained-english-priority-')
+        and isinstance(files,list) and 0<len(files)<=16384 and isinstance(window,dict),'supplement_original_manifest_shape_mismatch')
+    start=utc(window.get('start_utc'));end=utc(window.get('end_utc'));clock=datetime.strptime(fid[:14],'%Y%m%d%H%M%S').replace(tzinfo=timezone.utc)
+    require(start<=clock<end and path.parent.name==start.strftime('%Y%m%dT%H%M%SZ')+'_'+end.strftime('%Y%m%dT%H%M%SZ'),'supplement_original_manifest_window_mismatch')
+    matches=[r for r in files if r.get('file_id')==fid and r.get('sha256')==row['raw']['sha256'] and r.get('status') in ('downloaded','reused')]
+    require(len(matches)==1 and utc(prior.get('generated_at'))==utc(evidence.get('acquisition_completed_by_utc'))<=accepted_at,'supplement_original_acquisition_mismatch')
 
 def normal_parent_proofs(reader,parents,blobs,binding,day):
     """New reviewed resolver's ordinary7 path must retain explicit old acceptance."""
@@ -143,8 +160,9 @@ def _freeze(policy,request,root,history_only=False,persist=True):
         and accepted.get('availability_status')=='partial'
         and accepted.get('consumer_must_strict_union_ID_SHA_and_retain_quality_gate') is True,'source_supplement_acceptance_mismatch')
     validator=accepted.get('validator_sha256');require(validator in APPROVED_VALIDATORS,'unreviewed_source_supplement_validator')
-    resolver=REVIEWED_PARENT_RESOLVERS.get(validator)
-    if resolver:require(accepted.get('parent_resolver_sha256')==resolver,'unreviewed_supplement_parent_resolver')
+    resolvers=REVIEWED_PARENT_RESOLVERS.get(validator)
+    resolver=accepted.get('parent_resolver_sha256') if resolvers else None
+    if resolvers:require(resolver in resolvers,'unreviewed_supplement_parent_resolver')
     cutoff=utc(binding['cutoff_utc']);at=utc(accepted.get('at_utc'))
     require(cutoff<at<=utc(request['requested_at_utc']),'source_supplement_acceptance_time_mismatch')
     reader=Reader(policy);catalog=reader.reference(accepted['catalog'],reader.producer/'.daily-work/source-supplements')
@@ -211,8 +229,10 @@ def _freeze(policy,request,root,history_only=False,persist=True):
             require(len(matches)==1,'supplement_acquisition_receipt_mismatch')
             window=evidence['acquisition_window_utc'];require(isinstance(window,list) and len(window)==2 and utc(window[0])<=utc(window[1])<=at,'supplement_acquisition_time_mismatch')
         elif kind=='immutable-bulk-acquisition':
-            prior=reader.reference(evidence['manifest'],reader.archive/'manifests')
-            require(utc(prior['generated_at'])==utc(evidence['acquisition_completed_by_utc'])<=at and any(r.get('file_id')==fid and r.get('sha256')==row['raw']['sha256'] and r.get('status')=='downloaded' for r in prior.get('files',[])),'supplement_acquisition_manifest_mismatch')
+            if validator==ORIGIN_VALIDATOR:original_acquisition(reader,evidence,row,fid,at)
+            else:
+                prior=reader.reference(evidence['manifest'],reader.archive/'manifests')
+                require(utc(prior['generated_at'])==utc(evidence['acquisition_completed_by_utc'])<=at and any(r.get('file_id')==fid and r.get('sha256')==row['raw']['sha256'] and r.get('status')=='downloaded' for r in prior.get('files',[])),'supplement_acquisition_manifest_mismatch')
         else:raise InvalidRequest('unsupported_supplement_acquisition_evidence')
     require(all(union.get(fid)==checksum for fid,checksum in current.items()),'supplement_drops_previous_accepted_source')
     require(type(checks.get('added_sources_full_SHA_ZIP_CRC_and_normalized_SHA_verified')) is int and type(checks.get('prior_accepted_sources_reused')) is int

@@ -1,3 +1,4 @@
+import { coverageText } from './coverage-text.js';
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import MapView from './components/MapView';
@@ -214,14 +215,14 @@ function Dashboard({ lang, setLang, t, theme, toggleTheme }) {
                 <strong>{riskData?.engine_version ? `Engine v${riskData.engine_version}` : 'Legacy engine'}</strong>
                 {' · '}締切 / Cutoff: {riskData?.cutoff_utc || riskData?.date || 'Unknown'}
                 {' · '}データ / Data: {riskData?.source_status || 'legacy; coverage unverified'}
-                {riskData?.coverage && ` · ${riskData.coverage.available_slots}/${riskData.coverage.expected_slots} slots`}
+                {coverageText(riskData?.coverage,lang) && <div className="aggregation-slot-count">{' · '}{coverageText(riskData.coverage,lang).summary}<details><summary>{coverageText(riskData.coverage,lang).help}</summary>{coverageText(riskData.coverage,lang).detail}</details></div>}
                 {' · '}{Date.now() - Date.parse(riskData?.cutoff_utc || riskData?.date) > 36 * 3600000 ? 'Stale / 更新期限超過' : '固定版 / Fixed snapshot'}
                 {' · '}<a href="./country-interest/">各国の検索関心 / Search interest</a>
                 <span className="source-edition-binding" data-source-edition={riskData?.upstream_sync?.execbrief_release||'legacy-05-v1'}>{riskData?.upstream_sync ? `ExecBrief ${riskData.upstream_sync.date} · ${riskData.upstream_sync.execbrief_edition} · ${riskData.upstream_sync.execbrief_release}` : riskData?.cutoff_utc?.endsWith('20:00:00Z') ? '旧05:00 JST固定版 / Original05:00 JST snapshot' : 'Legacy / ExecBrief edition not bound'}</span>
                 {riskData?.upstream_sync?.historical_recovery && <span>履歴復元 / Reconstructed history · 当日のCountryRisks公開版ではありません / Recovered after the original date</span>}
                 {riskData?.upstream_sync?.source_revision && <span className="source-revision-note">{{ja:'後着データによる再計算版。元の03:00締切後に利用可能となった追補を含みます。',en:'Recalculated with source data available after the original03:00 cutoff.',es:'Recalculado con datos disponibles después del corte original03:00.'}[lang]} {riskData.upstream_sync.source_revision.accepted_at_utc}</span>}
                 {v2Manifest.current[riskData?.date]?.revisions?.length>1 && <label className="snapshot-revision-picker">{{ja:'公開版',en:'Published version',es:'Versión publicada'}[lang]}{' '}<select aria-label="Published snapshot version" value={riskData.snapshot_id} onChange={event=>fetchData(riskData.date,event.target.value)}>{v2Manifest.current[riskData.date].revisions.map((r,i)=><option key={r.snapshot_id} value={r.snapshot_id}>{r.kind==='original'?{ja:'元の固定版',en:'Original snapshot',es:'Versión original'}[lang]:`${{ja:'追補版',en:'Supplement',es:'Suplemento'}[lang]} ${i} · ${r.accepted_at_utc}`}</option>)}</select></label>}
-                {riskData?.mode_counts?.[viewMode]?.unknown > 0 && riskData.mode_counts[viewMode].unknown === Object.keys(riskData.countries || {}).length && <span className="data-insufficiency-note">{{ja:`評価に必要な原本・比較データが不足し、${riskData.mode_counts[viewMode].unknown}か国すべて判定不能です。`,en:`Insufficient original and comparison data: all ${riskData.mode_counts[viewMode].unknown} countries are unassessed.`,es:`Faltan datos originales o de comparación: ${riskData.mode_counts[viewMode].unknown} países sin evaluación.`}[lang]}</span>}
+                {riskData?.mode_counts?.[viewMode]?.unknown > 0 && riskData.mode_counts[viewMode].unknown === Object.keys(riskData.countries || {}).length && <span className="data-insufficiency-note">{{ja:`この版の観測・比較条件が足りず、${riskData.mode_counts[viewMode].unknown}か国すべて判定不能です。`,en:`Insufficient observation or comparison conditions in this edition: all ${riskData.mode_counts[viewMode].unknown} countries are unassessed.`,es:`Faltan condiciones de observación o comparación en esta edición: ${riskData.mode_counts[viewMode].unknown} países sin evaluación.`}[lang]}</span>}
                 <span>{t.global.scopeNote}</span>
                 {riskData?.countries && Object.values(riskData.countries).some(country=>country.evaluation) && <span>{t.global.primaryColorNote}</span>}
             </div>

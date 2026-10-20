@@ -227,4 +227,22 @@ failure can re-enter registration only with the unchanged inherited seed; progre
 state is never reset. Matching indexed or verified terminal work is reused.
 Restoring this helper never activates a job or replays completed publication.
 
+The October20 receiver also pins the producer acquisition pair. Validator
+`b322d054f45e7d638e4d3085340d25f819055425f089c4f17ae04188d4fd0221`
+allows resolver `d14d72d26fbb723257b3c8931521075377c1ccbf40e2db3d0160817fe6f73a39`
+or `8db5952c8096f1232ac4cf5155968212d2aa5b8d80996e36124341916e8bd873`.
+Validator `ba2e1f1b7dd5be6d12bc9ed54f0eca93ffd32140baf8e0cf9501eec3a5c27817`
+allows only the latter resolver. Acceptance and checks must agree on the exact
+pair. The original legacy seven-parent validator remains supported separately.
+New archive-backed acquisition verifies the original manifest's SHA, canonical
+filename, kind, window, ID and source SHA, and exactly one downloaded/reused row.
+Its generation time is bounded by acceptance; an unknown download timestamp
+stays null. Synthetic source_scope/priority indexes cannot certify original
+acquisition. Seven/twelve-parent contracts, the original Google seal,48h window,
+cutoff, classifications and quality thresholds remain unchanged.
+
+See [SOURCE_IO_TIMING.md](SOURCE_IO_TIMING.md) for the installed SHA-bound DTO
+views, bounded object NAS handoff, exact-byte staged recovery and measurement
+limits. Restoration never activates another PC's jobs, databases or controllers.
+
 October15,2026 completed via the existing countryrisks-daily native retry/check19. The accepted/published upstream is `20261014T223037Z-f8e526f4`, editorial SHA `b0d32d02af1d1b0574137b3a7d3422ed373676b49f4cc17de6d2422eba610ea6` and Google03:00 seal `2127df899093abc2898776e0e0b845c040fb5190c2036e8eea19e0ea122eedd9`. The WCR48h window ends `2026-10-14T18:00:00Z`; snapshot `3c55e7efba11526cd5cd00c9cd48ce8b591850bd90e54a9d38c63956acfd3eb7` was TLS/public-SHA verified. The old October14 05:00 snapshot and completed-week index retained their exact SHA. Availability remains `partial`; this is source coverage, not a claim of zero risk or verified national impact. Native profile/jobs were unchanged.

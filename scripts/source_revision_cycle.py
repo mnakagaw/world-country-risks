@@ -120,7 +120,7 @@ def candidate_path(root,request):return Path(root)/'.local/source-revision-compl
 def c_plan(root,request,bundle,blobs,snapshot_id=None):
     names=['scripts/source_revision_cycle.py','scripts/source_supplement_gate.py','scripts/source_revision_adapter.py','scripts/source_revision_queue.py','scripts/execbrief_sync.py',
         'scripts/cycle_lock.py','scripts/bounded_source_io.py','scripts/export_shared_gdelt.py','scripts/rebuild_baselines.py','scripts/aggregation_epoch.py','scripts/run_metadata.py',
-        'scripts/archive_catalog.py','scripts/sync_article_context.py','scripts/handoff_v2.py','scripts/generate_v2.mjs','scripts/bootstrap_baseline.mjs','scripts/build_source_revision.mjs']
+        'scripts/archive_catalog.py','scripts/sync_article_context.py','scripts/handoff_v2.py','scripts/handoff_objects.py','scripts/source_dto_cache.py','scripts/generate_v2.mjs','scripts/bootstrap_baseline.mjs','scripts/build_source_revision.mjs']
     writes={str(Path(bundle)/name):max(1,len(raw)) for name,raw in blobs.items()}
     writes.update({str(queue_root(root)/request['id']/'state.json'):65536,str(queue_root(root)/request['id']/'run.lock'):1,
         str(candidate_path(root,request)):65536,str(Path(root)/'.local/publication.lock'):1})
@@ -171,7 +171,7 @@ def finalize(root,policy,request,candidate):
         if str(old.get('path','')).replace('\\','/').split('/')[1:2]<=[request['date']]:
             target=Path(proof['nas_manifest']).parent;relative=target.relative_to(Path(policy['handoff_root'])).as_posix()
             require(relative.startswith('daily/'+request['date']+'/'),'revision_NAS_pointer_outside_date')
-            raw=canonical({'path':relative,'snapshot_id':proof['snapshot_id']})+b'\n'
+            raw=canonical({'path':relative,'snapshot_id':proof['snapshot_id'],'manifest_sha256':proof['nas_manifest_sha256'],'handoff_schema':json_artifact(artifact(proof['nas_manifest'])).get('schema','legacy-flat-v1')})+b'\n'
             pending=nas_pointer.with_suffix('.revision-pending');pending.write_bytes(raw)
             require((artifact(nas_pointer) if nas_pointer.exists() else None)==before,'revision_NAS_pointer_changed_concurrently');pending.replace(nas_pointer)
             require(artifact(nas_pointer)==raw,'revision_NAS_pointer_readback_mismatch')
@@ -205,7 +205,7 @@ def consume(policy,request,runner=run):
         state=base/'revision-stages.json';report=control(state)[1] if state.exists() else {'stages':{},'bundle_id':binding['bundle_id']}
         require(report['bundle_id']==binding['bundle_id'],'revision_stage_bundle_mismatch')
         generated=base/'generated-v2';generated.mkdir(exist_ok=True);audit=base/'audits';source=base/'source.json';context=base/'article-classification-context.json';verified=base/'verified-impacts.json'
-        run_policy={**policy,'series_root':str(series)};config=base/'controller.private.json'
+        run_policy={**policy,'series_root':str(series),'source_io':{**policy.get('source_io',{}),'legacy_dto_root':str(Path(policy['series_root'])/'baseline-sources'),'history_path':str(series/'v2-history.json'),'report_path':str(series/'baseline-reconstruction.json')}};config=base/'controller.private.json'
         replace(config,json.dumps(run_policy).encode()+b'\n',65536)
         if not state.exists():
             original_series=Path(policy['series_root'])
@@ -214,7 +214,7 @@ def consume(policy,request,runner=run):
             seeds=[old for old in (original_series/'baseline-sources').glob('*.json') if earliest<=old.name[:10]<=request['date'] and old.name[10:] in ('.json','.epoch.json')]
             if (original_series/'v2-history.json').stat().st_size+sum(p.stat().st_size for p in seeds)>192*MIB:raise Waiting('revision_C_seed_hydration_limit')
             bounded_copy(original_series/'v2-history.json',series/'v2-history.json',512*MIB)
-            for old in seeds:bounded_copy(old,cache/old.name,64*MIB)
+            # Historical DTOs are read-only SHA-bound views; never recopy every seed.
             bounded_copy(root/'public/data/v2/manifest.json',generated/'manifest.json',MIB)
             atomic(state,report)
         history=series/'v2-history.json'
@@ -244,7 +244,7 @@ def consume(policy,request,runner=run):
             elif name=='generate':
                 record=json_artifact(artifact(generated/'manifest.json'))[request['date']];payload=generated/record['path'];value=json_artifact(artifact(payload,64*MIB))
                 require(value['snapshot_id']==record['snapshot_id'] and file_sha(payload)==record['sha256'],'generated_revision_SHA_mismatch')
-                require(value['upstream_sync']==binding,'generated_revision_binding_mismatch');row.update(snapshot_id=value['snapshot_id'],snapshot_sha256=record['sha256'])
+                require(value['upstream_sync']==binding,'generated_revision_binding_mismatch');row.update(snapshot_id=value['snapshot_id'],snapshot_sha256=record['sha256'],aggregate_coverage={k:value['coverage'][k] for k in ['available_slots','expected_slots']},mode_counts=value.get('mode_counts',{}));del value
             elif name=='build':
                 row['static_public']=stage_daily_public(root/'public',dist)
                 for f in generated.iterdir():
@@ -257,7 +257,9 @@ def consume(policy,request,runner=run):
         generated_record=report['stages']['generate'];snapshot_path=generated/(generated_record['snapshot_id']+'.json')
         publication_row=report['stages']['publish'];publication=json_artifact(artifact(publication_row['receipt']))
         from handoff_v2 import save
+        handoff_started=datetime.now(timezone.utc).isoformat()
         nas=save(run_policy,source,publication,upstream_bundle=bundle,snapshot_path=snapshot_path,audit_path=audit/(generated_record['snapshot_id']+'.json'))
+        report['stages']['handoff']={'started_at_utc':handoff_started,'finished_at_utc':datetime.now(timezone.utc).isoformat(),'performance':nas.get('performance'),'NAS_manifest_sha256':nas['manifest_sha256']};atomic(state,report)
         proof={'snapshot_id':generated_record['snapshot_id'],'snapshot_sha256':generated_record['snapshot_sha256'],
             'publication_receipt':publication_row['receipt'],'publication_sha256':publication_row['sha256'],
             'nas_manifest':str(Path(nas['path'])/'manifest.json'),'nas_manifest_sha256':nas['manifest_sha256']}

@@ -34,6 +34,15 @@ class ProducerPush(Fixture,unittest.TestCase):
         self.assertEqual(second['status'],'registered');self.assertNotEqual(first['id'],second['id'])
         rows=queue.control(queue.queue_root(self.root)/'pending.json')[1]['items'];self.assertEqual([r['id'] for r in rows],[second['id']])
         self.assertEqual(self.push()['status'],'already_known')
+    def test_same_latest_hint_coalesced_during_work_registers_after_completion(self):
+        first=self.push();path,checksum=self.second_receipt();original=path.read_bytes()
+        for minute in [1,2]:
+            deferred=self.push(path,checksum,now=self.now+timedelta(minutes=minute));self.assertEqual(deferred['status'],'coalesced_pending');self.assertFalse(deferred['registered'])
+        adapter.execute(self.root,self.policy,first['id'],first['request_sha256'],self.now,self.proof)
+        latest=self.push(path,checksum,now=self.now+timedelta(minutes=15));self.assertEqual(latest['status'],'registered')
+        request=queue.control(queue.queue_root(self.root)/latest['id']/'request.json')[1]
+        self.assertEqual(request['source_revision_receipt']['sha256'],checksum);self.assertEqual(path.read_bytes(),original)
+        self.assertEqual(self.push(path,checksum,now=self.now+timedelta(minutes=16))['status'],'already_known')
     def test_source_SHA_wrong_parent_and_mutable_latest_cannot_create_controls(self):
         for call in [lambda:self.push(checksum='f'*64),lambda:self.push(parent='f'*64),lambda:self.push(path=self.source.with_name('latest.json'))]:
             with self.subTest(call=call),self.assertRaises(queue.InvalidRequest):call()
