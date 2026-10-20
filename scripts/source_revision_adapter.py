@@ -2,12 +2,35 @@
 from pathlib import Path
 from datetime import datetime,timedelta,timezone
 from hashlib import sha256
-import argparse,importlib.util,json,os
+import argparse,importlib.util,json,os,sys,traceback
 from cycle_lock import publication_lock
 from execbrief_sync import Waiting,moment,producer_bytes
 from source_revision_queue import control,atomic,load,parent_binding,InvalidRequest,MAX_ATTEMPTS,utc
 
 ROOT=Path(__file__).resolve().parents[1]
+
+def report_oserror(error):
+    """Private bounded diagnostic only; never change transport/retry semantics."""
+    try:
+        frames=[{'file':f.filename[:1024],'line':f.lineno,'function':f.name[:128]}
+            for f in traceback.extract_tb(error.__traceback__)[-8:]]
+        message=str(error);filename=str(error.filename) if error.filename else None;filename2=str(error.filename2) if error.filename2 else None
+        row={'kind':'wcr-native-oserror-v1','at_utc':datetime.now(timezone.utc).isoformat(),
+            'error_type':type(error).__name__,'errno':getattr(error,'errno',None),
+            'winerror':getattr(error,'winerror',None),'filename':filename[:2048] if filename else None,
+            'filename2':filename2[:2048] if filename2 else None,
+            'message':message[:2048],'trace':frames,'truncated':any(len(v)>2048 for v in [message,filename or '',filename2 or ''])}
+        def encoded():return json.dumps(row,ensure_ascii=False,separators=(',',':'))+'\n'
+        while len(encoded().encode('utf-8'))>16384 and len(row['trace'])>1:
+            row['trace'].pop(0);row['truncated']=True
+        if len(encoded().encode('utf-8'))>16384:
+            row.update(message=row['message'][:256],filename=row['filename'][:512] if row['filename'] else None,
+                filename2=row['filename2'][:512] if row['filename2'] else None,truncated=True)
+        raw=encoded()
+        if len(raw.encode('utf-8'))<=16384:sys.stderr.write(raw);sys.stderr.flush()
+    except Exception:
+        # Optional stderr must not hide the mandatory state/backoff transition.
+        pass
 
 def artifact(path,limit=4*1024*1024):
     with Path(path).open('rb') as stream:raw=stream.read(limit+1)
@@ -124,6 +147,7 @@ def execute(root,policy,request_id,checksum,now=None,consumer=consume_revision):
             state.update(status='blocked',source_accepted=False,wait_reason=str(error));atomic(folder/'state.json',state)
             return {**result,'status':'blocked','wait_reason':str(error)}
         except (Waiting,OSError) as error:
+            if isinstance(error,OSError):report_oserror(error)
             reason=str(error) if isinstance(error,Waiting) else type(error).__name__
             state.update(status='pending',source_accepted=False,wait_reason=reason,retry_after=(now+timedelta(seconds=900)).isoformat());atomic(folder/'state.json',state)
             return {**result,'status':'pending','wait_reason':reason}

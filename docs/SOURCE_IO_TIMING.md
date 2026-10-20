@@ -253,3 +253,31 @@ between public verification and the native NAS terminal. These are separate
 operational observations, not a before/after speedup comparison. The new source
 cache and NAS object reuse still require a genuinely new formal input through the
 existing native owner; the first object-format packet will seed the object store.
+
+### First normal object-format receipt, October20
+
+The genuine120-source supplement produced snapshot
+`f168d2d3a42d4e122d4f051b187701b335f53bc1dc72c3defa9eac10c5b154d0`:
+154/192 aggregate slots. R-INDEX assesses110 countries (0red,5orange,9yellow,
+96green,129Unknown); RAW/monitoring assess85 (2/25/40/18,154Unknown).
+The source subprocess took262.460s, with11 legacy DTO views and4 new cache
+objects, and all2506 original metadata end rechecks passed. Stable object hits
+were0 on this first contract generation. Different source inputs and NAS/cache
+conditions prevent attributing the entire difference from the previous2205s run
+to the code change; no published input was replayed as a benchmark.
+
+The first object NAS packet used136711387 write bytes and273433036 verification
+read bytes, wrote66 objects and reused1. Its measured save took532.965s; history
+seeding alone took375.118s. The manifest is
+`4d9e92c8e13209e7c620fb477e84019810e99c4baac5e4b92fc7220bb3575fab`.
+Later unchanged-object reuse remains a separate future production measurement.
+
+Publication and NAS save succeeded before an OSError in local finalization.
+The persisted completion candidate resumed at06:55:53 UTC and completed at
+06:55:56 UTC with attempt2 unchanged. Source, context, generation/build stage
+records, publication and NAS save were not repeated. The original handler kept
+only the exception type, so the historical path/errno cannot be established.
+Current read-only proof and capacity checks passed; no reader or storage guard
+was relaxed. The adapter now emits at most16KiB of private OSError JSON containing
+path/errno/winerror/message and file/line/function frames, without locals. Logging
+failure cannot change the existing pending/backoff/attempt/proof behavior.
