@@ -97,5 +97,10 @@ class Composite(unittest.TestCase):
         a={'authoritative_production_sources':self.final['authoritative_production_sources']};ref={'path':str(self.work/'corrected-authoritative.json'),'sha256':sha(self.put(self.work/'corrected-authoritative.json',a))}
         self.final['authoritative_receipt']=ref;self.focus['composite_acceptance']['authoritative_production']=ref;self.rebind()
         with self.assertRaises(Waiting):self.gate()
+        self.correction();self.focus.pop('snapshot_sha256');self.focus['composite_acceptance'].pop('current_snapshot_sha256');self.rebind()
+        with self.assertRaises(Waiting):self.gate()
+        for invalid in [None,'not-a-hash','g'*64]:
+            self.correction();self.focus['snapshot_sha256']=invalid;self.focus['composite_acceptance']['current_snapshot_sha256']=invalid;self.rebind()
+            with self.assertRaises(Waiting):self.gate()
 
 if __name__=='__main__':unittest.main()

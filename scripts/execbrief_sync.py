@@ -162,7 +162,8 @@ def composite_projection(policy,checks,day,producer,blobs,prefix='',depth=0):
         raise Waiting('execbrief_unknown_composite_acceptance')
     if any(checks.get(k) is not True for k in ['passed','inputs_unchanged','editorial_acceptance_unchanged']):raise Waiting('execbrief_acceptance_not_complete')
     composite=checks.get('composite_acceptance')
-    if not isinstance(composite,dict) or composite.get('current_snapshot_sha256')!=checks.get('snapshot_sha256'):
+    if (not isinstance(composite,dict) or not isinstance(checks.get('snapshot_sha256'),str)
+        or not re.fullmatch(r'[a-f0-9]{64}',checks['snapshot_sha256']) or composite.get('current_snapshot_sha256')!=checks['snapshot_sha256']):
         raise Waiting('execbrief_composite_snapshot_mismatch')
     final=bound_reference(policy,composite.get('semantic_acceptance'),day,blobs,prefix+'acceptance.json')
     contracts={'changed-only-composite-v1':('independent-overall-semantic-source-acceptance-v2','accepted_content_for_parent_remaining_release_gates'),
